@@ -1,0 +1,15 @@
+<section name="blurb"><title>Official Blurb</title>
+
+<para>
+  <emphasis role="strong">CSC 207 - Algorithms and Object-Oriented Design</emphasis>
+</para>
+
+<para>
+An introduction to the ideas and practices of computation: message passing, information hiding, classes and interfaces, inheritance, polymorphism, and reflection. The course also includes data structures and the associated algorithms, packages and libraries, exceptions, and the use of an integrated software-development environment. Includes formal laboratory work.
+</para>
+
+<para>
+  Prerequisite: CSC 161
+</para>
+
+</section> <!-- blurb -->
