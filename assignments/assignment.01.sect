@@ -149,12 +149,12 @@
   </listitem>
  
   <listitem>
-    Do you agree to abide by my 
-    <ulink url="../handouts/academic-honesty.html">policies on
-    academic honesty</ulink>?  If you feel that you can't agree with them, 
-    we'll need to have a meeting ASAP to discuss your concerns or questions,
-    as they are in effect for the course.  (If I fell that your concerns
-    or questions are reasonable, I may revise the policy.)
+    Do you agree to abide by my <ulink
+    url="../handouts/academic-honesty.html">policies on academic
+    honesty</ulink>?  If you feel that you can't agree with them, we'll
+    need to have a meeting ASAP to discuss your concerns or questions,
+    as these polices are in effect for the course.  (If I fell that your
+    concerns or questions are reasonable, I may revise the policy.)
   </listitem>
 
   <listitem>
@@ -203,7 +203,7 @@
   </listitem>
 
   <listitem>
-    <emphasis>Optional</emphasis>: What is your github account?
+    <emphasis>Optional</emphasis>: What is your <ulink url="../readings/git.html">github</ulink> account?
   </listitem>
 
   <listitem>
@@ -239,7 +239,7 @@
   </listitem>
 
   <listitem>
-    What were your biggest challenges in CSC 151?
+    What were your biggest challenges in CSC 151 and CSC 161?
   </listitem>
 
   <listitem>
@@ -286,10 +286,13 @@
 <section id="the-reading"><title>Part Three: Start Reading</title>
 
 <para>
-  Do <ulink url="../readings/linux-reading.html">the reading
-  for the next class</ulink>, which can be found at <code><ulink
-  url="&url;readings/linux-reading.html"/></code> and <code><ulink
-  url="&url;readings/linux-reading.pdf"/></code>.
+  Do <ulink url="../readings/tools.html"/> the readings for the
+  next class, which can be found at
+  <ulink url="&url;readings/git.html"/> 
+  (or <ulink url="&url;readings/git.pdf"/>) and
+  <ulink url="&url;readings/eclipse.html"/> 
+  (or <ulink url="&url;readings/eclipse.pdf"/>).  You may want to wait
+  until Saturday night to do these readings because I plan updates.
 </para>
 
 </section>  <!-- the-reading -->
@@ -313,13 +316,13 @@
 <para>
   Please submit this work via two separate email messages to
   <email>rebelsky@grinnell.edu</email>.  The first should have
-  a title of <quote>CSC 151.02 Course Details (<emphasis>Your
+  a title of <quote>CSC 207 Course Details (<emphasis>Your
   Name</emphasis>)</quote> and should contain your answers to the first
   part of this assignment.  The second should have a title of <quote>CSC
-  151.02 Survey Answers (<emphasis>Your Name</emphasis>)</quote> and
+  207 Survey Answers (<emphasis>Your Name</emphasis>)</quote> and
   should contain your answers to the second part of this assignment.
   For example, if I were to submit answers to the first set of
-  questions, it would be titled <quote>CSC 151.02 Course Details (Samuel
+  questions, it would be titled <quote>CSC 207 Course Details (Samuel
   A. Rebelsky)</quote>.
 </para>
 
