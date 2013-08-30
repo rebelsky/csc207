@@ -39,15 +39,21 @@
   [<a href="../readings/">Readings</a>]
 </p>
 <p class="links"> <b>Reference:</b> 
+  [<a href="http://docs.oracle.com/javase/7/docs/api/">Java 7 API</a>]
+  [<a href="http://www.oracle.com/technetwork/java/codeconv-138413.html">Java Code Conventions</a>]
 </p>
 <p class="links"><b>Related Courses:</b>
+  [<a href="http://www.cs.grinnell.edu/~rebelsky/Courses/CS152/2006S/">CSC 152 2006S (Rebelsky)</a>]
+  [<a href="http://www.cs.grinnell.edu/~walker/courses/207.sp13/">CSC 207 2013S (Walker)</a>]
+  [<a href="http://www.cs.grinnell.edu/~weinman/courses/CSC207/2011S/">CSC 207 2011S (Weinman)</a>]
 </p>
 <p class="links"> <b>Misc:</b> 
   [<a href="http://www.cs.grinnell.edu/~rebelsky/">SamR</a>]
   [<a href="http://www.cs.grinnell.edu/glimmer/">Glimmer Labs</a>]
   [<a href="http://www.cs.grinnell.edu/">CS@Grinnell</a>]
   [<a href="http://www.grinnell.edu/">Grinnell</a>]
-  [<a href="https://github.com/rebelsky/generic-course/issues">Issue Tracker</a>]
+  [<a href="https://github.com/rebelsky/csc207/issues">Issue Tracker (Course)</a>]
+  [<a href="https://github.com/Grinnell-CSC207/textbook/issues">Issue Tracker (Textbook)</a>]
 </p>
 
 </div><!--noprint-->
