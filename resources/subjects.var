@@ -1,14 +1,351 @@
-+week
-<!ENTITY week{$week} "Getting Started">
+<!ENTITY week01 "Getting Started">
+<!ENTITY week02 "Object Oriented Programming and Design in Java">
+<!ENTITY week03 "More Java Basics">
+<!ENTITY week04 "Android Development">
+<!ENTITY week05 "Analyzing Algorithms">
+<!ENTITY week06 "Designing a List ADT">
+<!ENTITY week07 "Implementing Lists">
+<!ENTITY week08 "Sorting">
+<!ENTITY week09 "Linear Structures">
+<!ENTITY week10 "Trees">
+<!ENTITY week11 "Dictionaries">
+<!ENTITY week12 "Priority Queues">
+<!ENTITY week13 "Additional Java and OOD Concepts">
+<!ENTITY week14 "Wrapup">
 
 +day
 <!ENTITY title{$day} "An Introduction to the Course">
 <!ENTITY abbrev{$day} "course-intro">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
 
 +day
-<!ENTITY title{$day} "Introduction, continued">
-<!ENTITY abbrev{$day} "intro-continued">
+<!ENTITY title{$day} "An Introduction to Java Development">
+<!ENTITY abbrev{$day} "intro-development">
+<!ENTITY reading{$day} "<ulink url='../readings/git.html'>An Introduction to Version Control with git</ulink> and <ulink url='../readings/eclipse.html'>The Eclipse IDE</ulink>">
+<!ENTITY lab{$day} "Programming Tools">
 
 +day
-<!ENTITY title{$day} "Real Work">
-<!ENTITY abbrev{$day} "real-work">
+<!ENTITY title{$day} "An Overview of Java">
+<!ENTITY abbrev{$day} "java-overview">
+<!ENTITY reading{$day} "An Overview of Java">
+<!ENTITY lab{$day} "Reading Java">
+
++day
+<!ENTITY title{$day} "Unit Testing">
+<!ENTITY abbrev{$day} "unit-testing">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Debugging">
+<!ENTITY abbrev{$day} "debugging">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Classes, Objects, and Interfaces">
+<!ENTITY abbrev{$day} "objects">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Standard Object Methods">
+<!ENTITY abbrev{$day} "standard-methods">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Inheritance and Polymorphism">
+<!ENTITY abbrev{$day} "inheritance">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Exceptional Programming">
+<!ENTITY abbrev{$day} "exceptions">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Strings in Java">
+<!ENTITY abbrev{$day} "strings">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Input and Output">
+<!ENTITY abbrev{$day} "io">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Arrays">
+<!ENTITY abbrev{$day} "arrays">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Pause for Breath">
+<!ENTITY abbrev{$day} "pause-03">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "An Introduction to APIs: Ushahidi">
+<!ENTITY abbrev{$day} "intro-ushahidi">
+<!ENTITY reading{$day} "Ushaihidi and a Ushahidi Java API">
+<!ENTITY lab{$day} "Using the Ushahidi Java API">
+
++day
+<!ENTITY title{$day} "An Introduction to Android Development">
+<!ENTITY abbrev{$day} "intro-android">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Building Your First App (1)">
+<!ENTITY abbrev{$day} "android-app-01">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Building Your First App (2)">
+<!ENTITY abbrev{$day} "android-app-02">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Analyzing Algorithms">
+<!ENTITY abbrev{$day} "algorithm-analysis">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Linear and Binary Search">
+<!ENTITY abbrev{$day} "search">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Reasoning About Loops with Loop Invariants">
+<!ENTITY abbrev{$day} "loop-invariants">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Pause for Breath">
+<!ENTITY abbrev{$day} "">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "OOD in Practice: Building a List Interface">
+<!ENTITY abbrev{$day} "list-interface">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Generics">
+<!ENTITY abbrev{$day} "generics">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Iterators">
+<!ENTITY abbrev{$day} "iterators">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "The Collections API">
+<!ENTITY abbrev{$day} "collections-api">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Implementing Lists with Arrays">
+<!ENTITY abbrev{$day} "array-lists">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Linked Lists in Java">
+<!ENTITY abbrev{$day} "linked-lists">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Doubly-Linked Lists">
+<!ENTITY abbrev{$day} "doubly-linked-lists">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Sorted Lists">
+<!ENTITY abbrev{$day} "sorted-lists">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "An Introduction to Sorting">
+<!ENTITY abbrev{$day} "sorting">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Quadratic Sorts">
+<!ENTITY abbrev{$day} "quadratic-sorts">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Quicksort">
+<!ENTITY abbrev{$day} "quicksort">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Merge Sort">
+<!ENTITY abbrev{$day} "mergesort">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "An Introduction to Linear Structures">
+<!ENTITY abbrev{$day} "linear-structures">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Implementing Stacks">
+<!ENTITY abbrev{$day} "stacks">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Implementing Queues with Linked Structures">
+<!ENTITY abbrev{$day} "linked-queues">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Implementing Queues with Arrays">
+<!ENTITY abbrev{$day} "array-queues">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "An Introduction to Trees">
+<!ENTITY abbrev{$day} "trees">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Implementing Trees">
+<!ENTITY abbrev{$day} "tree-implementation">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Tree Traversal">
+<!ENTITY abbrev{$day} "tree-traversal">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Project Work Time">
+<!ENTITY abbrev{$day} "project-time">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Designing a Dictionary API">
+<!ENTITY abbrev{$day} "dictionary-api">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Implementing Dictionaries with Arrays">
+<!ENTITY abbrev{$day} "dictionary-arrays">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Implementing Dictionaries with Binary Search Trees">
+<!ENTITY abbrev{$day} "bst">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Implementing Dictionaries with Hash Tables">
+<!ENTITY abbrev{$day} "hash-tables">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Priority Queues and their Basic Implementation">
+<!ENTITY abbrev{$day} "priority-queues">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Heaps">
+<!ENTITY abbrev{$day} "heaps">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Heap Sort">
+<!ENTITY abbrev{$day} "heap-sort">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Project Presentations">
+<!ENTITY abbrev{$day} "project-presentations">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Using Java from the Command Line">
+<!ENTITY abbrev{$day} "command-line-java">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Anonymous Inner Classes">
+<!ENTITY abbrev{$day} "anonymous-inner-classes">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Design Patterns, Revisited">
+<!ENTITY abbrev{$day} "design-patterns">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Patterns of Algorithm Design">
+<!ENTITY abbrev{$day} "algorithm-design">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Dynamic Programming">
+<!ENTITY abbrev{$day} "dynamic-programming">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Course Evaluation">
+<!ENTITY abbrev{$day} "evaluation">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
++day
+<!ENTITY title{$day} "Review for Final">
+<!ENTITY abbrev{$day} "final-review">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
+
