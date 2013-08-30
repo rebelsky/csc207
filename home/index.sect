@@ -1,7 +1,255 @@
 <section id="front-door"><title>Front Door</title>
 
+<section id="introduction"><title>Introduction</title>
+
 <para>
-  Welcome to the &semester; section of &courseid; - &coursename;.
+  Welcome to one of the Fall 2013 sessions of Grinnell College's CSC 207,
+  <emphasis>Algorithms and Object-Oriented Problem Solving</emphasis>,
+  which is described relatively briefly in the official <ulink
+  url="../handouts/blurb.html">blurb</ulink>.  My own take on this course
+  is that this is the course where you really start delving deeply
+  into what it means to be a computer scientist, computer programmer,
+  or software designer.  We will continue your exploration of the design
+  of algorithms, data types, and programs, but will delve more deeply
+  into the tools and analysis related to each.  We will use Java as our
+  programming language because it supports some tools and techniques you
+  have not learned previously, particularly through its support of the
+  object-oriented paradigm.  As in all Grinnell classes, we'll also be
+  working on general skills, from group work to thinking on your feet.
 </para>
 
-</section> <!-- front-door -->
+<para>
+  You have the fortune (or misfortune) to be in an experimental new
+  version of CSC 207.  This semester, we will be exploring some aspects
+  of Computing for Social Good (CSG), using techniques from the Free
+  and Open Source (FOSS) community, as well as the open-source 
+  application Ushahidi.  We will also be mixing in some Android 
+  development.  My research assistants and I have done our best to
+  limit the extra time these approaches require.  In the end, I think
+  working with the FOSS tools, Ushahidi, and Android will build many
+  skills you will find valuable, particularly if you continue in a
+  career in software development, but also in other domains.
+</para>
+
+<para>
+  I assume that you have mastered much of the material from CSC 151
+  and CSC 161.  Among other things, you should understand recursion,
+  the need for documentation, linked lists, higher-order programming,
+  and some basic algorithms for sorting and searching.
+</para>
+
+<para>
+  In an attempt to provide up-to-date information, and to spare a few
+  trees, I am making this as much of a <quote>paperless</quote> course as
+  I can.  Hence, materials will be in a course web.  If you are puzzled
+  by the organization of the Course Web, browse a bit and then ask me.
+  If you find that you want paper copies of pages, please read <link
+  linkend="anchor-printing">the notes on printing copies</link>.  If you
+  find that you are regularly printing pages, let me know and I can
+  provide them for you.
+</para>
+
+</section>  <!-- introduction -->
+
+<section id="warnings"><title>Important Warnings</title>
+
+<para>
+  <emphasis role="strong">Warning!</emphasis>  Computers are sentient,
+  stupid, and malicious.  When things go wrong, don't blame yourself.
+  Ask me, a tutor, or the class mentor for help.
+</para>
+
+<para>
+  <emphasis role="strong">Warning!</emphasis>  We are using some
+  cutting-edge software, which means that things will occasionally crash
+  for no good reason.
+</para>
+
+</section>  <!-- warnings -->
+
+<section id="basics"><title>Basics</title>
+
+<para>
+  <emphasis role="strong">Meets</emphasis>: MTWF 10:00-10:50, Science 3813
+</para>
+
+<para>
+  <emphasis role="strong">Instructor</emphasis>: 
+  <ulink url="http://www.cs.grinnell.edu/~rebelsky/">Samuel A. Rebelsky</ulink>,
+  <email>rebelsky@grinnell.edu</email>,
+  Science 3824.  269-4410 (office).  236-7445 (home).  
+  Office hours:  M 2:15-4:05, Tu 2:15-2:45, W 2:15-2:45, F 3:15-4:05.  I
+  may add additional Tuesday hours.
+  I also tend to follow an open door policy: Feel
+  free to stop by when my door is open or to make an appointment for
+  another time.
+</para>
+
+<para>
+  <emphasis role="strong">Class Mentor</emphasis>: Lea Marolt Sonnenschein <email>maroltso@grinnell.edu</email>.
+  Office hours TBD.
+</para>
+
+<para>
+  <emphasis role="strong">Grading</emphasis> (subject to change):
+</para>
+
+<itemizedlist>
+  <listitem>Class participation: 10%;</listitem>
+  <listitem>Regular homework: 20%;</listitem>
+  <listitem>Project: 10%;</listitem>
+  <listitem>Labs (writeups and surveys): 10%;</listitem>
+  <listitem>Two graded take-home exams: 30%;</listitem>
+  <listitem>In-class final exam (9:00 a.m., Wednesday, 2013-12-18): 15%;</listitem>
+  <listitem>Best of (homework; project, average exam, final): 5%.</listitem>
+</itemizedlist>
+
+<para>
+  More information on grading can be found in the
+  <ulink url="../handouts/grading.html">grading policies</ulink> page.
+</para>
+
+<para>
+  <emphasis role="strong">Labs</emphasis>: 
+  Like many courses in our department, computer science 207 is
+  taught in a <emphasis>collaborative workshop style</emphasis>.
+  Each day, you'll work on laboratory problems with other students in
+  the class.  We may also start or end each class session with a short
+  lecture/discussion or a clicker activity.  
+</para>
+
+<para>
+  <emphasis role="strong">Extra Credit</emphasis>:
+  I will often offer 1/2 point of extra credit for attending a particular
+  talk (e.g., a computer science talk or College convocation) or for
+  supporting your classmates in their public endeavors (e.g., attending
+  a concert or a dance recital).  Each category is capped at 1.5 points.
+  For any activity you wish to credit this way, you must send me a 
+  short (one paragraph) note about the activity within two days of the
+  activity.
+</para>
+
+<para>
+  <emphasis role="strong">Tutoring</emphasis>:
+  Evening tutors are not required to know 207 materials.  Some will be
+  able to help you.  Some will not.  I recommend that you use the
+  grinnell-cs IRC channel to get help (and to help each other).
+</para>
+
+<para>
+  <emphasis role="strong">Class Software</emphasis>:
+  For this course, we will be using a wide variety of plain
+  off-the-shelf software (POTS) as well as some locally developed
+  software.  Tools you will use include <code>git</code> (and <ulink
+  url="http://github.com">github</ulink>), Eclipse, JUnit, Ushahidi,
+  and the Android SDK.  Locally developed software includes a simplified
+  API for Ushahidi and a few frameworks for Android applications.
+</para>
+
+<para>
+  <anchor id="anchor-printing"/>
+  <emphasis role="strong">Printing Pages</emphasis>:
+  Most of the pages in the course web are designed for viewing onscreen.
+  If you'd like to print them, you may want to use PDF versions, which
+  are designed for paper.  To find the PDF version, simply replace
+  the <code>html</code> at the end of the URL with <code>pdf</code>.
+  If you do decide to print, you should consider printing the document
+  double-sided and two-up (that is, two pages side-by-side on one
+  physical page) so as to conserve paper.  When I distribute documents,
+  I will do my best to distribute them in this form.
+</para>
+
+</section> <!-- basics -->
+
+<section id="theme"><title>The Experimental Course Theme: Computing for Social Good with Ushahidi and Android</title>
+
+<para>
+  Computer science is the study of problem solving.  So, as we study CS,
+  we can choose particular domains for solving problems.  As you know,
+  in CSC 151 we use image making as our problem domain and in CSC 161
+  we use robotics as our problem domain.  For this course, we will explore
+  some basic issues of computing for social good and Android app development
+  (yes, they are related) as our problem domain.  Many, but not all, of
+  our activities will emphasize these issues.
+</para>
+
+<section id="ushahidi"><title>The Role of Ushahidi</title>
+
+<para>
+  As mentioned above, we will be using the open-source crowdmapping platform
+  Ushahidi in this course.  Ushahidi was originally developed to provide
+  a venue for people to report election violence in Kenya.  It permits
+  anyone to provide geographic reports of incidents, using either relatively
+  low tech approaches (SMS, Twitter) to relatively high tech (smart phone
+  or Web apps) and supports both anonymous reporting and independent 
+  verification of incidents.
+</para>
+ 
+<para>
+  Ushahidi will serve two primary roles in the course.  For most of the
+  semester, Ushahidi will serve as the primary data source for our work
+  in designing and implementing algorithms, abstract data types, and data
+  structures.  After fall break, you will also employ Ushahidi in a small
+  consulting project that you will do in a group with a community partner.
+  Further details on that project will come right before fall break.
+</para>
+
+</section> <!-- ushahidi -->
+
+<section id="android"><title>The Role of Android</title>
+
+<para>
+  The focus of this course is <emphasis>not</emphasis> Android 
+  development.  However, I think that you will understand some of our
+  work differently if you work with it in the context of building
+  simple Android applications.  Hence, we will spend about a week 
+  of the course exploring basic aspects of Android development, and
+  we will use a simple Android application to ground many of the
+  homework assignments for the semester.
+</para>
+
+</section> <!-- android -->
+
+</section> <!-- theme -->
+
+<section><title>Optional Books and Other Readings</title>
+
+<para>
+  Eckel, Bruce (2002).
+  <ulink url="http://www.mindview.net/Books/TIJ/">Thinking in Java</ulink>
+  (3rd Edition).
+</para>
+
+<blockquote>
+  A nice book about thinking like an object-oriented programmer.  The
+  3rd edition is a bit out of date (as is the 4th edition), but it's
+  still a nice resource, particularly since it's free on the Web.
+</blockquote>
+
+<para>
+  Rebelsky, Samuel (2013).
+  <ulink url="index.html">The CS207.01 2013F Course Web</ulink>.
+</para>
+
+<blockquote>
+  The hypertext that you are currently reading.  Many of these materials
+  (particularly those under <ulink url="../readings/">Readings</ulink>
+  and <ulink url="../labs/">Labs</ulink> are required.  You should make
+  it a point to load the page of the day at the beginning of each class
+  to check announcements and such.
+</blockquote>
+
+<para>
+  Weiss, Mark Alan.  <emphasis>Data Structures &amp; Problem Solving Using Java</emphasis>,
+  4th Edition.
+</para>
+
+<blockquote>
+  Some people learn better from textbooks than from my less polished
+  readings.  This is a nice textbook, one that has been successfully
+  used in other versions of the course.
+</blockquote>
+
+</section> <!-- books -->
+
+</section>  <!-- front-door -->
