@@ -52,3 +52,10 @@ forks/*
 # +---------------------+---------------------------------------------
 # | Fork-Specific Rules |
 # +---------------------+
+
+# Ignore the soft links to 151 and 152
+151
+152
+
+# Ignore the soft links to the Tao of Java
+tao
