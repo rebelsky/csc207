@@ -1,5 +1,10 @@
-<section id="index-&group;"><title>List of &group;</title>
+<section id="index-labs"><title>Labs</title>
 
-<para id="{$group}"></para>
+<itemizedlist>
+  <listitem>
+    &lab02; (held &date02;)
+  </listitem>
 
-</section> <!-- index-&group; -->
+</itemizedlist>
+
+</section> <!-- index-labs -->
