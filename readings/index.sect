@@ -1,9 +1,8 @@
 <section id="index-readings"><title>Readings</title>
 
 <itemizedlist>
-  <listitem>
-    &reading02; (due &date02;)
-  </listitem>
+  <listitem> &reading03; (due &date03;) </listitem>
+  <listitem> &reading02; (due &date02;) </listitem>
 </itemizedlist>
 
 </section> <!-- index-readings -->
