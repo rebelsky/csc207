@@ -1,0 +1,54 @@
+<section id="_GENERIC"><title>_GENERIC</title>
+
+<para>
+  <emphasis>Due:</emphasis> &_GENERIC-due;
+</para>
+
+<para>
+  <emphasis>Summary:</emphasis>
+</para>
+
+<para>
+  <emphasis>Purposes:</emphasis>  
+</para>
+
+<para>
+  <emphasis>Expected Time:</emphasis> 
+  Two to three hours.
+</para> 
+
+<para>
+  <emphasis>Collaboration:</emphasis>  
+  We encourage you to work in groups of size three. You may, however,
+  work alone or work in a group of size two or size four. You may discuss
+  this assignment with anyone, provided you credit such discussions when
+  you submit the assignment.
+</para>
+
+<para>
+  <emphasis>Submitting:</emphasis> 
+  Email your answer to <email>&grader-email;</email>.  The title of your email
+  should have the form <userinput>&_GENERIC-subject;</userinput> and
+  should contain your answers to all parts of the assignment.  Scheme code
+  should be in the body of the message.  
+</para>
+
+<para>
+  <emphasis>Warning:</emphasis> 
+  So that this assignment is a learning experience for everyone, we may
+  spend class time publicly critiquing your work.
+</para>
+
+<section id="_GENERIC-preliminaries"><title>Preliminaries</title>
+
+</section> <!-- id="_GENERIC-preliminaries" -->
+
+<section id="_GENERIC-assignment"><title>Assignment</title>
+
+</section> <!-- id="_GENERIC-assignment" -->
+
+<section id="_GENERIC-evaluation"><title>Important Evaluation Criteria</title>
+
+</section> <!-- id="_GENERIC-evaluation" -->
+
+</section> <!-- id="_GENERIC" -->
