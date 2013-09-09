@@ -149,8 +149,6 @@
       assertEquals("MAX_VALUE", true, TwoA.isOdd(Integer.MAX_VALUE));
       ...
     } // test_isOdd
-
-    void 
 </programlisting>
 
 <para>
