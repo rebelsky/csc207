@@ -1,0 +1,8 @@
+* [Reading: Git](../readings/git.html)
+* [Reading: Basics of OOD](../readings/oops-basics.html)
+* [Reading: Introduction to Java](../readings/intro-java.html)
+* [Lab: Git and Eclipse](../labs/git.html)
+* [Lab: Code Reading](../labs/reading-java.html)
+* [EBoard](../eboards/03.html) 
+  ([Source](../eboards/03.md))
+  ([PDF](../eboards/03.pdf))

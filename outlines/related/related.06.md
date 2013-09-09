@@ -1,0 +1,5 @@
+* [Reading: Debugging](../readings/debugging.html)
+* [Lab: Debugging](../labs/debugging.html)
+* [EBoard](../eboards/06.html) 
+  ([Source](../eboards/06.md))
+  ([PDF](../eboards/06.pdf))

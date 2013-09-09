@@ -1,0 +1,7 @@
+* [Reading: Git](../readings/git.html)
+* [Reading: Simple Java for C Programmers](../readings/simple-java-c.html)
+* [Lab: Git on the Command Line](../labs/git-command-line.html)
+* [Lab: Code Reading](../labs/reading-java.html)
+* [EBoard](../eboards/04.html) 
+  ([Source](../eboards/04.md))
+  ([PDF](../eboards/04.pdf))
