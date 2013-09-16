@@ -1,10 +1,21 @@
 <section id="index-labs"><title>Labs</title>
 
 <itemizedlist>
-  <listitem>
-    &lab02; (held &date02;)
-  </listitem>
+  <listitem>Class 10: &lab10; (held &date10;) </listitem>
+</itemizedlist>
 
+<itemizedlist>
+  <listitem>Class 9: &lab09; (held &date09;) </listitem>
+  <listitem>Class 8: <emphasis>No lab</emphasis> (&date08;) </listitem>
+  <listitem>Class 7: <emphasis>No lab</emphasis> (&date07;) </listitem>
+  <listitem>Class 6: &lab06; (held &date06;) </listitem>
+</itemizedlist>
+
+<itemizedlist>
+  <listitem>Class 5: &lab05; (held &date05;) </listitem>
+  <listitem>Class 4: &lab04; (held &date04;) </listitem>
+  <listitem>Class 3: &lab03; (held &date03;) </listitem>
+  <listitem>Class 2: &lab02; (held &date02;) </listitem>
 </itemizedlist>
 
 </section> <!-- index-labs -->
