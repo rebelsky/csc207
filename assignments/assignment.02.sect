@@ -6,20 +6,20 @@
 
 <para>
   <emphasis>Summary:</emphasis>
-  You will explore a variety of issues related to Java programming.
+  You will explore a variety of issues related to Java programming
 </para>
 
 <para>
   <emphasis>Purposes:</emphasis>  
   To get you used to programming in Java.  To get you used to submitting
-  homework via github.  To help you start thinking about objects.  To 
+  homework via GitHub.  To help you start thinking about objects.  To 
   get you accustomed to test-focused development.
 </para>
 
 <para>
   <emphasis>Collaboration:</emphasis>  
   I encourage you to work in groups of size three. You may, however,
-  work alone or work in a group of size two or size four. You may discuss
+  work alone or work in a group of size two or size four. You may not work with people you worked with on the previous assignment. You may discuss
   this assignment with anyone, provided you credit such discussions when
   you submit the assignment.
 </para>
@@ -45,7 +45,7 @@
 
 <para>
   <emphasis>Submitting:</emphasis> 
-  Please put all of your work in a github repository named
+  Please put all of your work in a GitHub repository named
   <code>csc207-hw2</code>.  Email me the address of that repository.
   Please title your email <quote>CSC207 2013F Assignment 2
   (<emphasis>Your Name</emphasis>)</quote>.
