@@ -28,19 +28,19 @@ outline.06.md: summaries/debugging.md \
         bodies/debugging.md \
         related/related.06.md \
         admin/admin.06.md
-outline.07.md: summaries/objects.md \
-        overviews/objects.md \
-        bodies/objects.md \
+outline.07.md: summaries/arrays.md \
+        overviews/arrays.md \
+        bodies/arrays.md \
         related/related.07.md \
         admin/admin.07.md
-outline.08.md: summaries/inheritance.md \
-        overviews/inheritance.md \
-        bodies/inheritance.md \
+outline.08.md: summaries/types.md \
+        overviews/types.md \
+        bodies/types.md \
         related/related.08.md \
         admin/admin.08.md
-outline.09.md: summaries/polymorphism.md \
-        overviews/polymorphism.md \
-        bodies/polymorphism.md \
+outline.09.md: summaries/io.md \
+        overviews/io.md \
+        bodies/io.md \
         related/related.09.md \
         admin/admin.09.md
 outline.10.md: summaries/exceptions.md \
@@ -48,24 +48,24 @@ outline.10.md: summaries/exceptions.md \
         bodies/exceptions.md \
         related/related.10.md \
         admin/admin.10.md
-outline.11.md: summaries/documentation.md \
-        overviews/documentation.md \
-        bodies/documentation.md \
+outline.11.md: summaries/objects.md \
+        overviews/objects.md \
+        bodies/objects.md \
         related/related.11.md \
         admin/admin.11.md
-outline.12.md: summaries/strings.md \
-        overviews/strings.md \
-        bodies/strings.md \
+outline.12.md: summaries/inheritance.md \
+        overviews/inheritance.md \
+        bodies/inheritance.md \
         related/related.12.md \
         admin/admin.12.md
-outline.13.md: summaries/io.md \
-        overviews/io.md \
-        bodies/io.md \
+outline.13.md: summaries/polymorphism.md \
+        overviews/polymorphism.md \
+        bodies/polymorphism.md \
         related/related.13.md \
         admin/admin.13.md
-outline.14.md: summaries/intro-ushahidi.md \
-        overviews/intro-ushahidi.md \
-        bodies/intro-ushahidi.md \
+outline.14.md: summaries/documentation.md \
+        overviews/documentation.md \
+        bodies/documentation.md \
         related/related.14.md \
         admin/admin.14.md
 outline.15.md: summaries/intro-android.md \
