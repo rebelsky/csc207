@@ -4,7 +4,7 @@
 * Reading for Monday: [Debugging](../readings/debugging.html)
 * EC opportunities:
     * CS Table, today,!  Alan Turing on AI.
-    * Humanties Center Speaker Sarah Hendron, Next Wednesday, 7:30 p.m., JRC101
+    * Humanities Center Speaker Sarah Hendron, Next Wednesday, 7:30 p.m., JRC101
       Waking the Machines: Art, Design, and Adaptive Technology
     * Learning from Alumni 2:15-4:05 next Thursday: Ian Lunderskov '08
     * Tentative Thursday Extra next week: Matt Atherton '95
