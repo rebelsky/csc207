@@ -1,0 +1,553 @@
+<section name="exam-01"><title>Exam 1: Object-Oriented Design, ADTs, and Algorithms</title>
+
+<para>
+  Assigned: &tue06;
+</para>
+
+<para>
+  Due: 10:30 p.m., &tue07; (electronic); 10:00 a.m., &wed07; (paper)
+</para>
+
+<section name="prelim"><title>Preliminaries</title>
+
+<section name="format"><title>Exam Format</title>
+
+<para>
+  This is a take-home examination. You may use any time or times you deem
+  appropriate to complete the exam, provided you return it to me by the
+  due date.
+</para>
+
+<para>
+  There are five problems on this examination. You must do your best
+  to answer all of them.  The problems are not necessarily
+  of equal difficulty. Problems may include subproblems. If you
+  complete five problems correctly or mostly correctly, you will 
+  earn an A.  If you complete four problems correctly or mostly
+  correctly, you will earn a B.  If you complete three problems
+  correctly or mostly correctly, you will earn a C.  If you complete
+  two problems correctly or mostly correctly, you will earn a D.
+  If you complete fewer than two problems correctly or mostly
+  correctly, you will earn an F.  If you do not attempt the examination,
+  you will earn a 0.  Partially correct solutions may or may not earn
+  you a partial grade, depending on the discretion of the grader.
+</para>
+
+<para>
+  <emphasis>Read the entire examination before you begin.</emphasis>
+</para>
+
+<para>
+  I expect that someone who has mastered the material and works at a
+  moderate rate should have little trouble completing the exam in a
+  reasonable amount of time. In particular, this exam is likely to take
+  you about five hours, depending on how well you've learned the topics
+  and how fast you work.
+</para>
+
+</section> <!-- format -->
+
+<section name="honesty"><title>Academic Honesty</title>
+
+<para>
+  This examination is open book, open notes, open mind, open computer,
+  and open Web. However, it is closed person. That means you should
+  not talk to other people about the exam. Other than as restricted by
+  that limitation, you should feel free to use all reasonable resources
+  available to you.
+</para>
+
+<para>
+  As always, you are expected to turn in your own work. If you find ideas
+  in a book or on the Web, be sure to cite them appropriately. If you use
+  code that you wrote for a previous lab or homework, cite that lab or
+  homework and the other members of your group. If you use code that you
+  found on the course Web site, be sure to cite that code. You need not
+  cite the code provided in the body of the examination.
+</para>
+
+<para>
+  Although you may use the Web for this exam, you may not post your
+  answers to this examination on the Web.  (You certainly should not post
+  them to GitHub.)  And, in case it's not clear, you may not ask others
+  (in person, via email, via IM, via IRC, by posting a <quote>please
+  help</quote> message, or in any other way) to put answers on the Web.
+</para>
+
+<para>
+  Because different students may be taking the exam at different times,
+  you are not permitted to discuss the exam with anyone until after I have
+  returned it. If you must say something about the exam, you are allowed
+  to say <quote>This is among the hardest exams I have ever taken. If
+  you don't start it early, you will have no chance of finishing the
+  exam.</quote> You may also summarize these policies. You may not tell
+  other students which problems you've finished. You may not tell other
+  students how long you've spent on the exam.
+</para>
+
+<para>
+  You must include both of the following statements on the cover sheet
+  of the examination.
+</para>
+
+<orderedlist>
+  <listitem>
+    I have neither received nor given inappropriate assistance on 
+    this examination.
+  </listitem>
+  <listitem>
+     I am not aware of any other students who have given or received 
+     inappropriate assistance on this examination. 
+  </listitem>
+</orderedlist>
+
+<para>
+  Please sign and date each statement. Note that the statements must be
+  true; if you are unable to sign either statement, please talk to me
+  at your earliest convenience. You need not reveal the particulars of
+  the dishonesty, simply that it happened. Note also that inappropriate
+  assistance is assistance from (or to) anyone other than Professor
+  Rebelsky (that's me).
+</para>
+
+</section> <!-- honesty -->
+
+<section name="presentation"><title>Presenting Your Work</title>
+
+<para>
+  You must present your exam to me in two forms, physically and
+  electronically. That is, you must write all of your answers using the
+  computer, print them out, number the pages, put your name on the top of
+  every page, and hand me the printed copy. You must also submit an
+  electronic copy of your exam.  You should create the electronic version
+  by making a tarball of any relevant code and emailing me the tarball.
+  (If you don't know how to make a tarball, let me know.)  If you fail
+  to name and number the printed pages, you may suffer a penalty.  If you
+  fail to turn in both versions, you may suffer a much worse penalty.
+  If you fail to turn in a legible version of the exam, you are also
+  likely to suffer some sort of penalty.
+</para>
+
+<para>
+  In many problems, I ask you to write code. Unless I specify otherwise
+  in a problem, you should write working code and include examples that
+  show that you've tested the code.   You should do your best to format that
+  code to the Sun/Oracle Java coding standards.
+</para>
+
+<para>
+  You should document classes, interfaces, fields, and methods using
+  Javadoc-style comments.  You should specify preconditions and
+  postconditions for each method.
+</para>
+
+<para>
+  Just as you should be careful and precise when you write code and
+  documentation, so should you be careful and precise when you write
+  prose. Please check your spelling and grammar. Since I should be equally
+  careful, the whole class will receive one point of extra credit for each
+  error in spelling or grammar you identify on this exam. I will limit
+  that form of extra credit to five points.
+</para>
+
+<para>
+  I may give partial credit for partially correct answers. I am best
+  able to give such partial credit if you include a clear set of work
+  that shows how you derived your answer. You ensure the best possible
+  grade for yourself by clearly indicating what part of your answer is
+  work and what part is your final answer.
+</para>
+
+</section> <!-- presentation -->
+
+<section name="getting-help"><title>Getting Help</title>
+
+<para>
+  I may not be available at the time you take the exam. If you feel that
+  a question is badly worded or impossible to answer, note the issue
+  you have observed and attempt to reword the question in such a way that
+  it is answerable.  You should also feel free to send me electronic mail
+  at any time of day.
+</para>
+
+<para>
+  I will also reserve time at the start of each class before the exam is
+  due to discuss any general questions you have on the exam.
+</para>
+
+</section> <!-- getting-help -->
+
+</section> <!-- prelim -->
+
+<section name="problems"><title>Problems</title>
+
+<section id="predicates"><title>Problem 1: Predicates</title>
+
+<para>
+  <emphasis>Topics:</emphasis> Polymorphic Data Types, Generics, 
+  Predicates, Strings.
+</para>
+
+<para>
+  Gentle Eric and Poly Em Orphic have been thinking about the reading
+  on searching arrays and want to set up a set of classes to help with
+  writing predicates.
+</para>
+
+<para>
+  They've started by writing an interface.
+</para>
+
+<programlisting>
+<xi:include href="../admin/exam1/src/Predicate.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<para>
+  They've even written a few simple predicates for integers.
+</para>
+
+<programlisting>
+<xi:include href="../admin/exam1/src/IsEven.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<programlisting>
+<xi:include href="../admin/exam1/src/GreaterThan.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<para>
+  And they've even come up with a quick experiment to demonstrate
+  to others how one might use these predicates.
+</para>
+
+<programlisting>
+<xi:include href="../admin/exam1/src/IPExpt.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<para>
+  a. Gen. Eric would like to be able to write some predicates that
+  involve strings.  Create a class, <code>Lowercase</code>, that
+  implements the predicate interface for strings and provides a
+  <methodname>test</methodname> method that takes a string as
+  input and determines whether or not the string consists only
+  of lowercase letters.
+</para>
+
+<para>
+  b. Create a class, <code>StringContains</code>, that allows you to 
+  construct predicates that determine whether or not a string
+  contains a certain string.  For example, one might build the
+  following predicate if they want to look for strings that
+  contain the word <code>sub</code>.
+</para>
+
+<programlisting>
+Predicate&lt;String&gt; peri = new StringContains("sub");
+</programlisting>
+
+<para>
+  c. Ms. Morphic would like to be able to combine the various
+  predicates in the normal ways.  Design and implement three classes,
+  <code>Both</code>, <code>Either</code>, and
+  <code>Negate</code>, that allow you to build new predicates 
+  from old.  For example, we might use these, along with their
+  prior predicates, to write a predicate that can test whether
+  a number is greater than 0 and less than or equal to 100.
+</para>
+
+<programlisting>
+Predicate&lt;Integer&gt; scope = new Both(new GreaterThan(0),
+          new Negate(new GreaterThan(100)));
+</programlisting>
+
+</section> <!-- predicates -->
+
+<section id="dutch"><title>Problem 2: The Dutch National Flag, Revisited</title>
+
+<para>
+  <emphasis>Topics:</emphasis> Loop invariants, Unit testing, Functional
+  design
+</para>
+
+<para>
+  As you may recall, the Dutch national flag problem is a famous problem
+  in arranging data.  You have an array of three different kinds of values
+  and your goal is to rearrange the values in the array so that you have
+  all the values of one kind at the front, all the values of the second
+  kind in the middle, and all the copies of the third kind at the end.
+</para>
+
+<para>
+  When done right, a solution to the Dutch national flag problem only
+  requires iterating through the array once.
+</para>
+
+<para>
+  Let's model that problem using an array of strings and some test
+  procedures.
+</para>
+
+<programlisting>
+<xi:include href="../admin/exam1/originals/DNF.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<para>
+  Tessa Ter and June It know that I implemented
+  <methodname>dnf</methodname> so that I could better help you with a
+  recent assignment.  But they have little faith in my ability to write
+  <methodname>dnf</methodname> correctly.  Write a set of unit tests that
+  will identify one or more cases in which my <methodname>dnf</methodname>
+  fails.  (No, you don't get my code.  Your goal is to write tests that
+  are comprehensive enough that they'll catch my error.  But I also won't
+  look at your tests before writing my code.  I expect that I'll write
+  five or so not-quite correct procedures; your goal is to catch at
+  least four of them.)
+</para>
+
+</section> <!-- dutch -->
+
+<section id="coffee"><title>Problem 3: The Coffee Bean Problem</title>
+
+<para>
+  <emphasis>Topics:</emphasis> Loop invariants, problem solving.
+</para>
+
+<para>
+  Bea and Joe are running a coffee roasting company.  One of the special
+  things about their coffee is that they use two colors of beans,
+  light (smooth and mild) and dark (really caffeinated).  Consultants
+  have suggested that the adopt a legendary method of assessing the
+  quality of their beans, a method people call <quote>greasing</quote>.
+  It goes something like this.
+</para>
+
+<literallayout>Grab a sample of the beans and throw them in a can
+While the can contains two or more beans
+    Grab two beans
+    If both are the same color, 
+        Throw them away
+        Add a new dark bean to the can
+    If both are different colors, 
+        Throw away the dark bean 
+        Return the light bean to the can
+</literallayout>
+
+<para>
+  They suspect that this advice, like most consultants' advice, takes
+  a simple decision and makes it much too complicated.  They've hired
+  you to do a bit more analysis.
+</para>
+
+<para>
+  a. Write a short argument that this loop terminates.
+</para>
+
+<para>
+  b. Write a good loop invariant for this loop.  You may find it useful
+  to express the loop invariant in terms of the original numbers of light
+  and dark beans.
+</para>
+
+<para>
+  c. Using the loop invariant and the termination condition, determine
+  what color the final bean will be as a function of the numbers of
+  light and dark beans in the original sample.
+</para>
+
+<section id="coffee-cite"><title>Citations</title>
+
+<para>
+  This problem is based on Jon Bentley's statement of David Gries's
+  <quote>Coffee Can Problem</quote>.
+</para>
+
+<para>
+  Jon Bentley. 1983. Programming pearls: Writing correct programs.
+  <emphasis>Commun. ACM</emphasis> 26, 12 (December 1983), 1040-1045.
+  DOI=10.1145/358476.358484 http://doi.acm.org/10.1145/358476.358484
+</para>
+
+<para>
+  David Gries.  1981.  <emphasis>The Science of Programming</emphasis>.
+  Springer-Verlag.
+</para>
+
+</section> <!-- coffee-cite -->
+
+</section> <!-- coffee -->
+
+<section id="expandable-arrays"><title>Problem 4: Expandable Arrays</title>
+
+<para>
+  <emphasis>Topics:</emphasis> Arrays, ADT Implementation, Vectors
+</para>
+
+<para>
+  Tara and Vic are a bit troubled by Java's structures that provide
+  indexed access to values.  They like that they know what the underlying
+  implementation of arrays.  However, they don't like that arrays are not
+  expandable.  On the other hand, while they like that vectors are
+  expandable, they don't like that the underlying implementation is
+  hidden from them.
+</para>
+
+<para>
+  And so, they've started to implement their own versions of expandable
+  arrays, which they name using their initials.
+</para>
+
+<programlisting>
+<xi:include href="../admin/exam1/originals/VT.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<para>
+  Finish implementing this class.
+</para>
+
+<para>
+  <emphasis>Note:</emphasis> I hope to set up a repository into which you
+  can place unit tests, so that the tests one student writes can easily
+  be used by other students.
+</para>
+
+</section> <!-- expandable-arrays -->
+
+<section id="sorted-arrays"><title>Problem 5: Sorted Arrays of Strings</title>
+
+<para>
+  <emphasis>Topics:</emphasis> Invariants, Comparators, Strings 
+</para>
+
+<para>
+  Theodore has recently been knighted and, as is the custom, has added a
+  suffix to his name in honor of one of the most respected monarchs of the
+  United Kingdom of Great Britain and Ireland.  To further commemorate his
+  knighthood, he has decided to design a data structure which he humbly
+  names after himself.  Because he has been studying loop invariants,
+  he's decided to create an ADT invariant.  He begins his code as follows.
+</para>
+
+<programlisting>
+<xi:include href="../admin/exam1/originals/SirTedVictoria.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<para>
+  Finish implementing this class.
+</para>
+
+</section> <!-- sorted-arrays -->
+
+</section> <!-- problems -->
+
+<section name="q-and-a"><title>Questions and Answers</title>
+
+<para>
+  Do you have any recommendations for getting started with problem 1?
+</para>
+
+<blockquote>
+  I would suggest rereading the section on polymorphism and looking at
+  the code for blocks.  You might also find it easier to start with a
+  slightly simpler problem, predicates over strings, and then generalize.
+  For 1a, you should be able to model your code after the even predicate,
+  since this predicate does not need to store information.
+  For 1b, you should be able to model your code after the greater than
+  predicate, since this predicate does need to store information.
+  For 1c, you'll need to store information (other predicates), so
+  thinking about the polymorphic data structures of blocks will be helpful.
+</blockquote>
+
+<para>
+  Could you please give me sample code that uses predicates?
+</para>
+
+<blockquote>
+  Done.
+</blockquote>
+
+<para>
+  What will the class header for <code>Both</code> look like?
+</para>
+
+<blockquote>
+  <code>public class Both&lt;T&gt; implements Predicate&lt;T&gt;</code>
+</blockquote>
+
+<para>
+  The original code for problem 5 wouldn't compile.
+</para>
+
+<blockquote>
+  Yeah.  Sun screwed up the design of generics so that it's impossible to
+  create a new array using a generic type.  I've simplified the problem
+  so that you only have to deal with sorted arrays of strings.  (And
+  just so you know, I caught this issue before any of you raised it.)
+</blockquote>
+
+<para>
+  The naming conventions in this document are very strange.
+</para>
+
+<blockquote>
+  Deal with it.
+</blockquote>
+
+<para>
+  How can we guarantee the postconditions for <code>VT.get</code> if the
+  client or subclass can mutate <code>values</code>.
+</para>
+
+<blockquote>
+  Good question.  I added another precondition to deal with it.
+</blockquote>
+
+<para>
+  Can we ever match the hex colors, given that we've converted to lowercase?
+</para>
+
+<blockquote>
+  No.  Fixed.
+</blockquote>
+
+</section> <!-- q-and-a -->
+
+<section name="errata"><title>Errata</title>
+
+<para>
+  Here you will find errors of spelling, grammar, and design that students 
+  have noted. Remember, each error found corresponds to a point of
+  extra credit for everyone. I usually limit such extra credit to five
+  points. However, if I make an astoundingly large number of errors,
+  then I will provide more extra credit.
+</para>
+
+<para>
+  I will not accept corrections for credit until after I have taken the
+  examination out of draft mode.
+</para>
+
+<para>
+  I will not credit corrections for text in the Q&amp;A and errata sections,
+  since those are often written quickly to get information out to students.
+</para>
+
+<itemizedlist>
+  <listitem>Missing period after <quote>(really caffeinated)</quote> [MD &amp; FB, 1 point]</listitem>
+  <listitem>Misspelled <quote>revisited</quote> [MD, 1 point]</listitem>
+  <listitem><quote>the know</quote> instead of <quote>they know</quote> [MD &amp; FB, 1 point]</listitem>
+  <listitem><quote>But they don't like that arrays are not expandable</quote> appears to be grammatically incorrect [AA, 1 point]</listitem>
+</itemizedlist>
+
+<para>
+  The next few problems were errors in the code that seem significant
+  enough that they should not count toward the 5 point limit.
+</para>
+
+<itemizedlist>
+  <listitem>Missing postcondition in <code>SirTedVector.get</code> [TN, 1 point]</listitem>
+  <listitem>In problem 4, needed precondition for <code>get</code> that ensured the state of <code>values</code> [BW, 1 point]</listitem>
+  <listitem>It's impossible to match the hex colors, given that they use capital letters and we convert to lowercase [TN &amp; JGS, 1 point]</listitem>
+</itemizedlist>
+
+</section> <!-- errata -->
+
+</section> <!-- exam01 -->

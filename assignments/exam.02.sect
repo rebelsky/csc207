@@ -1,0 +1,933 @@
+<section name="exam-02"><title>Exam 2: More Object-Oriented Design, ADTs, and Algorithms</title>
+
+<para>
+  <emphasis>This exam is now released.  The repository should be available.
+  The unit tests are are also now available.</emphasis>
+</para>
+
+<para>
+  Assigned: &tue11;
+</para>
+
+<para>
+  Prologue due: 5:00 p.m., &fri11;. 
+  Electronic version due: 10:30 p.m., &tue12;. 
+  Printed version due: 10:00 a.m., &wed12;.
+</para>
+
+<section name="prelim"><title>Preliminaries</title>
+
+<section name="format"><title>Exam Format</title>
+
+<para>
+  This is a take-home examination. You may use any time or times you deem
+  appropriate to complete the exam, provided you return it to me by the
+  due date.
+</para>
+
+<para>
+  This examination has a required <ulink
+  url="http://bit.ly/207exam2pro">prologue</ulink> that must be completed
+  by Friday afternoon.  The prologue is intended to help you think about
+  the examination.
+</para>
+
+<para>
+  There are four problems on this examination. You must do your best
+  to answer all of them.  The problems are not necessarily
+  of equal difficulty. Problems may include subproblems. If you
+  complete four problems correctly or mostly correctly, you will 
+  earn an A.  If you complete three problems correctly or mostly
+  correctly, you will earn a B.  If you complete two problems
+  correctly or mostly correctly, you will earn a C.  If you complete
+  one problem correctly or mostly correctly, you will earn a D.
+  If you complete fewer than one problem correctly or mostly
+  correctly, you will earn an F.  If you do not attempt the examination,
+  you will earn a 0.  Partially correct solutions may or may not earn
+  you a partial grade, depending on the discretion of the grader.
+</para>
+
+<para>
+  <emphasis>Read the entire examination before you begin.</emphasis>
+</para>
+
+<para>
+  I expect that someone who has mastered the material and works at a
+  moderate rate should have little trouble completing the exam in a
+  reasonable amount of time. In particular, this exam is likely to take
+  you about eight hours, depending on how well you've learned the topics
+  and how fast you work.
+</para>
+
+</section> <!-- format -->
+
+<section name="honesty"><title>Academic Honesty</title>
+
+<para>
+  This examination is open book, open notes, open mind, open computer,
+  and open Web. However, it is closed person. That means you should
+  not talk to other people about the exam. Other than as restricted by
+  that limitation, you should feel free to use all reasonable resources
+  available to you.
+</para>
+
+<para>
+  As always, you are expected to turn in your own work. If you find ideas
+  in a book or on the Web, be sure to cite them appropriately. If you use
+  code that you wrote for a previous lab or homework, cite that lab or
+  homework and the other members of your group. If you use code that you
+  found on the course Web site, be sure to cite that code. You need not
+  cite the code provided in the body of the examination.
+</para>
+
+<para>
+  Although you may use the Web for this exam, you may not post your
+  answers to this examination on the Web.  (You certainly should not post
+  them to GitHub.)  And, in case it's not clear, you may not ask others
+  (in person, via email, via IM, via IRC, by posting a <quote>please
+  help</quote> message or question on StackOverflow or on any other site,
+  or in any other way) to put answers on the Web.
+</para>
+
+<para>
+  Because different students may be taking the exam at different times,
+  and because some students will choose to take a makeup examination that
+  involves redoing the problems, you are not permitted to discuss the exam
+  with anyone until after I have indicated that it is acceptable to do so.
+  If you must say something about the exam, you are allowed to say
+  <quote>This is among the hardest exams I have ever taken. If you don't
+  start it early, you will have no chance of finishing the exam.</quote>
+  You may also summarize these policies. You may not tell other students
+  which problems you've finished. You may not tell other students how
+  long you've spent on the exam.
+</para>
+
+<para>
+  You must include both of the following statements on the cover sheet
+  of the examination.
+</para>
+
+<orderedlist>
+  <listitem>
+    I have neither received nor given inappropriate assistance on 
+    this examination.
+  </listitem>
+  <listitem>
+     I am not aware of any other students who have given or received 
+     inappropriate assistance on this examination. 
+  </listitem>
+</orderedlist>
+
+<para>
+  Please sign and date each statement separately. Note that the statements
+  must be true; if you are unable to sign either statement, please talk to
+  me at your earliest convenience. You need not reveal the particulars of
+  the dishonesty, simply that it happened. Note also that inappropriate
+  assistance is assistance from (or to) anyone other than Professor
+  Rebelsky (that's me).
+</para>
+
+</section> <!-- honesty -->
+
+<section name="presentation"><title>Presenting Your Work</title>
+
+<para>
+  You must present your exam to me in two forms, physically and
+  electronically. That is, you must write all of your answers using the
+  computer, print them out, number the pages, put your name on the top of
+  every page, and hand me the printed copy. You must also submit an
+  electronic copy of your exam.  
+</para>
+
+<para>
+  I care that you are careful in your presentation on the printed copy.
+  If you fail to name and number the printed pages, you may suffer a
+  penalty.  If you fail to turn in both versions, you may suffer a much
+  worse penalty.  If you fail to turn in a legible version of the exam,
+  you are also likely to suffer some sort of penalty.  Note that lines
+  that wrap detract from legibility.
+</para>
+
+<para>
+  You should create the electronic version by making a tarball of any
+  relevant code and emailing me the tarball.  (If you don't know how
+  to make a tarball, let me know.)  If you really don't want to make a
+  tarball, you can make a zip file.  In either case, please make sure
+  that the unpacked folder has four subfolders, one for
+  each problem.  Unless specified otherwise in the problem, the
+  <filename>.java</filename> files for each problem should be in a
+  <filename>src</filename> subfolder of the problem folder, and should
+  not have a <code>package</code> declaration.  You can also include
+  <filename>.txt</filename> or <filename>.md</filename> files in each
+  folder that have notes you would like me to read, answers to non-coding
+  questions, and sample output from any experiments you conduct.  You may
+  include a <filename>.txt</filename> or <filename>.md</filename> file
+  in the top-level directory with general notes.
+</para>
+
+<para>
+  In many problems, I ask you to write code. Unless I specify otherwise
+  in a problem, you should write working code and include examples that
+  show that you've tested the code.   You should do your best to format that
+  code to the Sun/Oracle Java coding standards.
+</para>
+
+<para>
+  You should document classes, interfaces, fields, and methods using
+  Javadoc-style comments.  You should specify preconditions and
+  postconditions for each method.
+</para>
+
+<para>
+  Just as you should be careful and precise when you write code and
+  documentation, so should you be careful and precise when you write
+  prose. Please check your spelling and grammar. Since I should be equally
+  careful, the whole class will receive one point of extra credit for each
+  error in spelling or grammar you identify on this exam. I will limit
+  that form of extra credit to five points.
+</para>
+
+<para>
+  I may give partial credit for partially correct answers. I am best
+  able to give such partial credit if you include a clear set of work
+  that shows how you derived your answer. You ensure the best possible
+  grade for yourself by clearly indicating what part of your answer is
+  work and what part is your final answer.
+</para>
+
+</section> <!-- presentation -->
+
+<section name="getting-help"><title>Getting Help</title>
+
+<para>
+  I may not be available at the time you take the exam. If you feel that
+  a question is badly worded or impossible to answer, note the issue
+  you have observed and attempt to reword the question in such a way that
+  it is answerable.  You should also feel free to send me electronic mail
+  at any time of day.
+</para>
+
+<para>
+  I will also reserve time at the start of each class before the exam is
+  due to discuss any general questions you have on the exam.
+</para>
+
+</section> <!-- getting-help -->
+
+</section> <!-- prelim -->
+
+<section name="preparation-02"><title>Preparation</title>
+
+<para>
+  Clone the repo using the following command, which will help ensure
+  that you have the correct directory structure.  Note that I've
+  tried to set things up so that you can treat each problem as a
+  separate Eclipse project.
+</para>
+
+<screen>
+$ git clone https://github.com/Grinnell-CSC207/exam2-2013F *username*
+</screen>
+
+<para>
+  You will see that each projects includes a file called 
+  <filename>SamTest.java</filename>.  I will put unit tests in those
+  file before 5 p.m. Friday.  (And I may continue to extend the unit
+  tests in those files after I've put them in.)  You can use
+  <code>git pull</code> to grab those when they are available.
+  If you write your own tests, please put them in a separate file so
+  that we don't have merge conflicts.
+</para>
+
+</section> <!-- preparation-02 -->
+
+<section name="problems-02"><title>Problems</title>
+
+<section id="iterating-linked-lists"><title>Problem 1: Iterating Linked Lists</title>
+
+<para>
+  <emphasis>Topics:</emphasis> Linked structures, Anonymous inner classes,
+  Iterators
+</para>
+
+<para>
+  In the code that accompanies this lab, you will find a simple
+  implementation of circularly linked lists with a separate iterator
+  class.  In that separate class, we spend a lot of effort keeping track
+  of things from the base class.
+</para>
+
+<para>
+  a. Annie and Mustafa believe that the code would be
+  much cleaner if we just used an anonymous inner class.  So rewrite the
+  code to do so.  Make sure that you refer appropriately to the fields
+  of the enclosing class, rather than storing copies of those fields.
+</para>
+
+<para>
+  b. Remy and Delbert are disappointed that we never
+  include <methodname>remove</methodname> (or is it 
+  <methodname>delete</methodname>?) in our iterators.  Make them happy
+  by implementing it.
+</para>
+
+</section> <!-- iterating-linked-lists -->
+
+<section id="functions"><title>Problem 2: Modeling Functions</title>
+
+<para>
+  <emphasis>Topics:</emphasis> Functions, Object-oriented design,
+  Generics (parameterized types), Anonymous inner classes, Polymorphism.
+</para>
+
+<para>
+  Your classmates, Polly and Morpheus, really enjoyed the predicate
+  problem from exam 1.  (And no, I don't know why someone would name
+  their child after a god of dreams.  Perhaps they are fans of 
+  <emphasis>The Matrix</emphasis> or of Neil Gaiman.)  And so they've
+  decided we should go further and model general functions.
+</para>
+
+<para>
+  They're starting simple, just unary and binary functions.  They want
+  to take advantage of Java's static type checking, so they've used
+  parameterized polymorphism (generics) in their design of such functions.
+</para>
+
+<programlisting>
+<xi:include href="../git/exam2-2013F/problem2/src/UnaryFunction.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="../git/exam2-2013F/problem2/src/BinaryFunction.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<para>
+  They've even written a few sample function objects, and even a
+  function that builds function objects.
+</para>
+
+<programlisting>
+<xi:include href="../git/exam2-2013F/problem2/src/IntegerFunctions.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<para>
+  Now they're wondering what to do next.  Inspired by Hoppy, a pet that
+  their classmates have somehow smuggled in to the dorms, they decide that
+  they should include a few of the standard higher-order procedures -
+  compose, left-section, right-section, and map.  They've even sketched
+  the code.
+</para>
+
+<programlisting>
+<xi:include href="../git/exam2-2013F/problem2/src/FunctionUtils.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<para>
+  They use a lot of ellipses, don't they?  That's because, as much as they
+  like this idea, they're not quite sure how to achieve their goal.
+  My first inclination was to have you do it for them.  But Carl and Carla
+  Clueless accidentally posted <ulink url='../examples/FunctionUtils.java'>a
+  solution</ulink>, so that's difficult to ask you do to.
+</para>
+
+<para>
+  a. Spend approximately thirty minutes attempting to solve the problem.
+</para>
+
+<para>
+  b. Correct your solution after comparing it to <ulink
+  url='../examples/FunctionUtils.java'>their solution</ulink>, perhaps
+  using better typenames than they do.
+</para>
+
+<para>
+  c. You'll note that I've written some experiments to demonstrate the use
+  of these various objects.  <emphasis>Write four more interesting examples
+  of the use of functions as objects.</emphasis>  Put those in the file
+  <filename>Examples.java</filename>.
+</para>
+
+</section> <!-- functions -->
+
+<section id="bst-delete"><title>Problem 3: Deletion in Binary Search Trees</title>
+
+<para>
+  <emphasis>Topics:</emphasis> Linked structures, Trees
+</para>
+
+<para>
+  We've started to explore the design of binary search trees.  For
+  convenience, we decided to make binary search trees <quote>add only</quote>
+  structures.  Right now, you can't remove a value from a BST.
+</para>
+
+<para>
+  As you might expect, that decision has frustrated your colleagues
+  Remy and Delbert.  They think that it's reasonable to want to get
+  rid of items.
+</para>
+
+<para>
+  Their sensible colleagues suggest that there's a simple technique
+  for doing deletion - you can simply put a <code>null</code>
+  in for the value, and, when the value is <code>null</code>,
+  <methodname>insert</methodname> throws an exception.  Unfortunately,
+  Remy and Delbert are extremists, and say <quote>Simulated deletion
+  is not deletion.  Your approach clogs the tree with pointless nodes.
+  And if the tree is clogged with pointless nodes, we can't guarantee
+  O(logn) insertion and deletion.</quote> Of course, they ignore the fact
+  that we've yet to figure out how to keep the trees balanced, and that we
+  probably won't learn how to do so until we take an upper-division course
+  in algorithms and data structures (or until we search on Wikipedia).
+  But, hey, they're annoying enough that we're going to listen to them.
+</para>
+
+<para>
+  Fortunately, they suggest a reasonably straightforward approach
+  for removing values.
+</para>
+
+<literallayout>To delete the node containing key
+If the node has no left subtree, 
+  Replace the node by its right subtree.
+Otherwise, if the node has no right subtree,
+  Replace the node by its left subtree.
+Otherwise, the node has two subtrees
+  Shuffle the tree so that the node with the largest key in the
+    left subtree replaces the node.  
+</literallayout>
+
+<para>
+  Why does this work?  We know that the largest key in the left
+  subtree is larger than every other key in the left subtree.  And,
+  since it's in the left subtree, we know that it's smaller than
+  every key in the right subtree.  Hence, it can be at the root after
+  we delete the old root.
+</para>
+
+<para>
+  Implement their algorithm.
+</para>
+
+<para>
+  Asa, Sam, Cam, Ida, and Ina worry a bit about that <quote>Shuffle</quote>
+  instruction.  And they also want to design some interesting unit tests.
+  They draw a bunch of trees to help themselves understand what should happen
+  in each situation.  In drawing these trees, they use lowercase letters to
+  represent nodes, and uppercase letters to represent tree-shaped groups
+  of nodes.  And their pictures all illustrate deletion at the root.
+</para>
+
+<table>
+<tr>
+  <th>
+    Original
+  </th>
+  <th>
+    After delete/shuffle
+  </th>
+</tr>
+
+<tr> <td colspan='2'> 01 - no right subtree </td> </tr>
+<tr>
+<td><programlisting>
+   m   
+  / \
+ /
+G
+</programlisting></td>
+<td><programlisting>
+   G   
+</programlisting></td>
+</tr>
+
+<tr> <td colspan='2'> 02 - no left subtree </td> </tr>
+<tr>
+<td><programlisting>
+   m
+  / \
+     \
+      N
+</programlisting></td>
+<td><programlisting>
+   N   
+</programlisting></td>
+</tr>
+
+<tr> <td colspan='2'> 03 - both subtrees, left subtree has no right subtree </td> </tr>
+<tr>
+<td><programlisting>
+      m
+     / \
+    /   \
+   g     N
+  / \
+ /
+D
+</programlisting></td>
+<td><programlisting>
+      g
+     / \
+    /   \
+   D     N
+</programlisting></td>
+</tr>
+
+<tr> <td colspan='2'> 04 - both subtrees, left subtree has right subtree with no right subtree </td> </tr>
+<tr>
+<td><programlisting>
+      m
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     j
+     / \
+    /
+   I
+</programlisting></td>
+<td><programlisting>
+      j
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     I
+</programlisting></td>
+</tr>
+
+<tr> <td colspan='2'> 05 - both subtrees, left subtree has right subtree with right subtree (<code>l</code> is the rightmost key in the left subtree, and has no left subtree) </td> </tr>
+<tr>
+<td><programlisting>
+      m
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     J
+     / \
+    /   \
+   I     l
+        / \
+</programlisting></td>
+<td><programlisting>
+      l
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     J
+     / \
+    /  
+   I  
+</programlisting></td>
+</tr>
+
+<tr> <td colspan='2'> 06 - both subtrees, left subtree has right subtree with right subtree (<code>l</code> is the rightmost key in the left subtree, but has a left subtree) </td> </tr>
+<tr>
+<td><programlisting>
+      m
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     J
+     / \
+    /   \
+   I     l
+        / \
+       /
+      K
+</programlisting></td>
+<td><programlisting>
+      l
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     J
+     / \
+    /   \
+   I     K
+</programlisting></td>
+</tr>
+</table>
+
+<para>
+  They note that they aren't sure that there's a real implementation
+  difference between the last four cases, but they thought it was
+  easiest to think about them separately.  
+</para>
+
+<para>
+  When they show their examples to Remy and Delbert, Remy and Delbert 
+  note that they would find it useful to find the <emphasis>parent</emphasis>
+  of the rightmost node.  But they don't say why.
+</para>
+
+</section> <!-- bst-delete -->
+
+<section id="dutch-quicksort"><title>Problem 4: Dutch Quicksort</title>
+
+<para>
+  <emphasis>Topics:</emphasis> Sorting, Quicksort, the Dutch National
+  Flag Algorithm.
+</para>
+
+<para>
+  Quinn and Sol are a bit frustrated by our current implementation
+  of Quicksort.  They say <quote>Quicksort seems to do a lot of extra
+  work when the pivot appears multiple times in the array.  Why can't
+  we just group all of the elements equal to the pivot together, and
+  only recurse on the values that are strictly smaller and strictly
+  larger?</quote>
+</para>
+
+<para>
+  Duff, Nat, and Fran say <quote>That seems to be a task for the
+  Dutch National Flag algorithm, which can partition an array into
+  three sections: red, white, and blue, or smaller, equal, and larger.</quote>
+</para>
+
+<para>
+  Write a version of Quicksort that uses this approach.  That is,
+  it should partition the array into three parts and only recurse on
+  the left and right subparts.
+</para>
+
+<para>
+  <emphasis>Note:</emphasis> You may find it difficult to make the
+  partition process a separate method, since, in addition to rearranging
+  the items in the subarray, it now has to return two values: the lower
+  bound and upper bound of the middle part of the subarray.  here are
+  three options for dealing with that issue:  (1) You can move the
+  partitioning process into the middle of Quicksort.  (2) You can write
+  a helper procedure that, given the start of the middle subarray, finds
+  the end.  (3) You can write a helper class that holds two integers
+  and return an object in that class.
+</para>
+
+</section> <!-- dutch-quicksort -->
+
+</section> <!-- problems-02 -->
+
+<section id="extra-02"><title>Extra Credit</title>
+
+<para>
+  You can earn a small amount of extra credit if you report on three
+  interesting techniques or ideas you discover from reading my unit tests.
+</para>
+
+<para> 
+  Include a file at the top level of your directory structure with your 
+  comments on those techniques or ideas.
+</para>
+
+</section> <!-- extra-02 -->
+
+<section name="q-and-a-02"><title>Questions and Answers</title>
+
+<section id="qa-problem1"><title>Problem 1</title>
+
+<para>
+  <emphasis>How long did this problem take you?</emphasis>
+</para>
+
+<blockquote>
+  Ten minutes.  About five to reorganize the code.  About five to implement
+  the <methodname>remove</methodname> method.  But I also understood my
+  design pretty well, and had tried to design the iterator to make it
+  easier to remove things.  (Because I knew the design, I was also able
+  to fix the errors revealed by unit testing really quickly.)
+</blockquote>
+
+<para>
+  <emphasis>Can we just have one iterator, or must we support multiple
+  iterators?</emphasis>
+</para>
+
+<blockquote>
+  You must support multiple iterators.  But if you create your anonymous
+  inner class correctly, that will happen more-or-less automatically.
+</blockquote>
+
+<blockquote>
+  It's certainly fine if the other iterators that are in midstream
+  stop working correctly after an element is removed using one of the
+  iterators.  But the iterator with the associated remove needs to keep
+  working.
+</blockquote>
+
+<para>
+  <emphasis>I note that you are doing something a bit strange for the
+  iterator.  Rather than staying one node back, as we've discussed in
+  the past, you seem to be staying two nodes back.  Am I write in 
+  assuming that you want to make sure that you have access to the
+  previous node so that you can more easily delete?</emphasis>
+</para>
+
+<blockquote>
+  You are correct that I keep a bit back so that removal is easier.
+  You don't need to use this strategy.  But I found that it works well.
+</blockquote>
+
+<para>
+  <emphasis>I'm finding it difficult with conceptualizing <quote>two back</quote>.  Can you give us an alrenate implementation?</emphasis>
+</para>
+
+<blockquote>
+  Sure.
+</blockquote>
+
+<blockquote>
+<programlisting>
+/**
+ * Alternate iterators for linked lists.
+ */
+class AltIteratorLL&lt;T&gt; implements Iterator&lt;T&gt; {
+    // +--------+----------------------------------------------------------
+    // | Fields |
+    // +--------+
+
+    /**
+     * We may need to access some of the internals of the linked list class.
+     */
+    LinkedList&lt;T&gt; list;
+
+    /**
+     * The iterator remains one element back from the node so that we can
+     * easily remove it.
+     */
+    NodeLL&lt;T&gt; here;
+    
+    /**
+     * When we start up, we're immediately before a node that we have not
+     * yet iterated.  We use the boolean to keep track of such situations.
+     */
+    boolean visitedNext;
+    
+    // +--------------+----------------------------------------------------
+    // | Constructors |
+    // +--------------+
+
+    public AltIteratorLL(LinkedList&lt;T&gt; list) {
+        this.here = list.front;
+        this.list = list;
+        // We have not yet looked at the next node.
+        this.visitedNext = false;
+    } // AltIteratorLL
+
+    // +---------+---------------------------------------------------------
+    // | Methods |
+    // +---------+
+
+    public T next() {
+        if (!this.hasNext()) {
+            throw new NoSuchElementException();
+        } // if we've reached the end
+        // Advance if appropriate
+        if (this.visitedNext) {
+            this.here = this.here.next;
+        } // If we've already visited the next node
+        // Note that we've visited the next node (b/c we're about
+        // to return its value. 
+        this.visitedNext = true;
+        // And we're done    
+        return this.here.next.value;
+    } // next
+
+    public boolean hasNext() {
+        if (this.here.next == this.list.front) {
+            return false;
+        } else if (this.visitedNext &amp;&amp; (this.here.next.next == this.list.front)) {
+            return false;
+        } else {
+            return true;
+        } // if/else
+    } // hasNext
+
+    public void remove() throws UnsupportedOperationException {
+        throw new UnsupportedOperationException();
+    } // remove
+
+} // AltIteratorLL&lt;T&gt;
+</programlisting>
+</blockquote>
+
+</section> <!-- qa-problem1 -->
+
+<section id="qa-problem2"><title>Problem 2</title>
+
+<para>
+  <emphasis>How long did this problem take you?</emphasis>
+</para>
+
+<blockquote>
+  20 minutes for the types and bodies.  A lot of time for experiments,
+  which I've now added to the repo.  You may want to add your own.
+</blockquote>
+
+</section> <!-- qa-problem2 -->
+
+<section id="qa-problem3"><title>Problem 3</title>
+
+<para>
+  <emphasis>How long did this problem take you?</emphasis>
+</para>
+
+<blockquote>
+  Ten minutes.  But I'd spent a lot of time thinking about it, which
+  is why you have the pretty ASCII trees in the exam.
+</blockquote>
+
+<para>
+  <emphasis>Why do we care about the parent of the largest element in
+  the left subtree?</emphasis>
+</para>
+
+<blockquote>
+  Because in order to move (<quote>shuffle</quote>) that element, we need
+  to change the link from parent to child.
+</blockquote>
+
+<para>
+  <emphasis>If you care about the parent so much, why don't you have a
+  parent link?</emphasis>
+</para>
+
+<blockquote>
+  Too much work.   In addition, since we traverse the tree top to 
+  bottom, we should always pass by the parent before seeing a node.
+  So, if you find you need the parent of a node, either (a) stop a 
+  level before reaching the node or (b) pass the parent along as a
+  parameter.    (I'd prefer that you use the first technique.)
+</blockquote>
+
+</section> <!-- qa-problem3 -->
+
+<section id="qa-problem4"><title>Problem 4</title>
+
+<para>
+  <emphasis>How long did this problem take you?</emphasis>
+</para>
+
+<blockquote>
+  Fifteen to twenty minutes.  About five to write the invariant.  About
+  ten to write the loop and recursive calls.  A minute or two to fix the
+  one bug (I was getting the comparison backwards.)  Having recently written
+  DNF (early in the semester) and Quicksort helped a lot.
+</blockquote>
+
+<para>
+  <emphasis>Should I write an invariant for the partition aspect of
+  <methodname>qsort</methodname>?</emphasis>
+</para>
+
+<blockquote>
+  I found that writing a visual invariant made it much easier to solve.
+  So, I'd <emphasis>recommend</emphasis> that you write such an invariant.
+  But i won't require it.
+</blockquote>
+
+<para>
+  <emphasis>Did you write a separate <methodname>partition</methodname> 
+  method?</emphasis>
+</para>
+
+<blockquote>
+  No.  I found it faster and easier to put the partition code in the
+  middle of the <methodname>qsort</methodname> method.
+</blockquote>
+
+<para>
+  <emphasis>How did you identify the pivot?</emphasis>
+</para>
+
+<blockquote>
+  I used the technique that Lea said they used in 301 - I used the
+  value in the middle of the subarray as the pivot.
+</blockquote>
+
+<blockquote>
+<programlisting>
+// Put the pivot at the front. Use CLRS "middle element" idea to
+// identify the pivot.
+swap(values, lb, lb + (ub-lb)/2);
+T pivot = values[lb];
+</programlisting>
+</blockquote>
+
+</section> <!-- qa-problem4 -->
+
+<section id="misc"><title>Miscellaneous</title>
+
+<para>
+  <emphasis>Some of the typos in your exam are very strange.  It's like
+  parts of the things you wrote disappeared.</emphasis>
+</para>
+
+<blockquote>
+  I blame gremlins.
+</blockquote>
+
+</section> <!-- misc -->
+
+</section> <!-- q-and-a-02 -->
+
+<section name="errata-02"><title>Errata</title>
+
+<para>
+  Here you will find errors of spelling, grammar, and design that students 
+  have noted. Remember, each error found corresponds to a point of
+  extra credit for everyone. I usually limit such extra credit to five
+  points. However, if I make an astoundingly large number of errors,
+  then I will provide more extra credit.
+</para>
+
+<para>
+  I will not accept corrections for credit until after I have taken the
+  examination out of draft mode.
+</para>
+
+<para>
+  I will not credit corrections for text in the Q&amp;A and errata sections,
+  since those are often written quickly to get information out to students.
+  I may not credit corrections to grammatical mistakes in code.
+</para>
+
+<itemizedlist>
+  <listitem>
+    Incomplete sentence: <quote>And they really like to delete items, so
+    they won't ...</quote>.  That sentence is now deleted.  [EM, JB, AK, 1 point]
+  </listitem>
+
+  <listitem>
+    Incorrect verb form <quote><methodname>insert</methodname> 
+    thrown an exception</quote>, should be <quote>throws</quote>.  [JB, 1 point]
+  </listitem>
+
+  <listitem>
+    Missing <quote>If you fail</quote> in <quote>If you fail to name and
+    number the pages</quote>.  [AK, 1 point]
+  </listitem>
+
+  <listitem>
+    Extra d in <quote>credit</quote>.  [MH, 1 point]
+  </listitem>
+
+  <listitem>
+    Missing question mark in parenthetical question.  [FB, 1 point]
+  </listitem>
+
+  <listitem>
+    Improper computation of midpoint.  [EW, 2 points]
+  </listitem>
+</itemizedlist>
+
+</section> <!-- errata-02 -->
+
+</section> <!-- exam02 -->
