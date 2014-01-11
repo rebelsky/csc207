@@ -1,6 +1,40 @@
 <section id="index-assignments"><title>Weekly Assignments</title>
 
 <itemizedlist>
+  <listitem>
+     <ulink url="final.html">Final Examination</ulink>
+     <itemizedlist>
+       <listitem>Prologue due: 5:00 p.m., &mon1f;</listitem>
+       <listitem>Electronic copy due: noon, &thu1f;</listitem>
+       <listitem>Signed academic honesty statement due: noon, &thu1f;</listitem>
+     </itemizedlist>
+  </listitem>
+  <listitem> Assignment 11: Parsing JSON (due 10:30 p.m., &tue14;) </listitem>
+  <listitem>
+     <ulink url="exam.02.html">Exam 2: More Object-Oriented Design, ADTs, and Algorithms</ulink>
+     <itemizedlist>
+       <listitem>Prologue due: 5:00 p.m., &fri11;</listitem>
+       <listitem>Electronic copy due: 10:30 p.m. &tue12;</listitem>
+       <listitem>Printed copy due: 10:00 a.m. &wed12;</listitem>
+     </itemizedlist>
+  </listitem>
+  <listitem> &assignment10; CANCELLED </listitem>
+  <listitem> &assignment09; (due &assignment09-due;) </listitem>
+  <listitem> &assignment08; (due &assignment08-due;) </listitem>
+  <listitem> &assignment07; (due &assignment07-due;) </listitem>
+  <listitem>
+     <ulink url="exam.01.html">Exam 1: Object-Oriented Design, ADTs, and Algorithms</ulink>
+     <itemizedlist>
+       <listitem>Electronic copy due: 10:30 p.m. &tue07;</listitem>
+       <listitem>Printed copy due: 10:00 a.m. &wed07;</listitem>
+       <listitem>Redo: Electronic copy due: 10:30 p.m., &thu08;</listitem>
+       <listitem>Redo: Electronic copy due: 10:00 a.m., &fri08;</listitem>
+     </itemizedlist>
+  </listitem>
+  <listitem> &assignment06; (due &assignment06-due;) </listitem>
+  <listitem> &assignment05; (due &assignment05-due;) </listitem>
+  <listitem> &assignment04; (due &assignment04-due;) </listitem>
+  <listitem> &assignment03; (due &assignment03-due;) </listitem>
   <listitem> &assignment02; (due &assignment02-due;) </listitem>
   <listitem> &assignment01; (due &assignment01-due;) </listitem>
 </itemizedlist>
