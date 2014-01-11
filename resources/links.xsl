@@ -57,14 +57,10 @@
   [<a href="https://github.com/rebelsky/csc207/issues">Issue Tracker (Course)</a>]
   [<a href="https://github.com/Grinnell-CSC207/textbook/issues">Issue Tracker (Textbook)</a>]
 </p>
-<div class="search" align="right">
-<form action="http://www.google.com/search" method="get">
-Search
-<input id="google" type="text" name="q"/>
-<input id="google" type="hidden" name="q" value="site:www.cs.grinnell.edu/~rebelsky/Courses/CSC207/2013F/"/>
+<form class="search" method="get" action="../home/search.cgi">
+  Search:
+  <input type="text" name="keyword"/>
 </form>
-</div> <!-- search -->
-
 </div><!--noprint-->
 </xsl:template>
 </xsl:stylesheet>

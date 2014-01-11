@@ -17,22 +17,10 @@
 *.class
 
 # Ignore the files that we link
-assignments/common.xsl
-eboards/common.xsl
-handouts/common.xsl
-home/common.xsl
-labs/common.xsl
-misc/common.xsl
-outlines/common.xsl
-readings/common.xsl
-assignments/stylesheet.xsl
-eboards/stylesheet.xsl
-handouts/stylesheet.xsl
-home/stylesheet.xsl
-labs/stylesheet.xsl
-misc/stylesheet.xsl
-outlines/stylesheet.xsl
-readings/stylesheet.xsl
+common.xsl
+stylesheet.xsl
+!resources/common.xsl
+!resources/stylesheet.xsl
 
 # Ignore some automatically generated files
 resources/subjects.ent
@@ -43,13 +31,18 @@ sandbox/*
 # We often have files called current.* which are just soft links.
 current.*
 
+# Almost everything in the admin directory should be ignored
+admin/*
+!admin/report
+!admin/sendgrades
+!admin/sendreport
+
 # +------------------------+------------------------------------------
 # | Rules for Generic Site |
 # +------------------------+
 
 # Ignore the forks that I keep handy
 forks/*
-
 
 # +---------------------+---------------------------------------------
 # | Fork-Specific Rules |
