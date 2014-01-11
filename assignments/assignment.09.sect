@@ -1,0 +1,144 @@
+<section id="assignment09"><title>Assignment 9: Miscellaneous</title>
+
+<para>
+  <emphasis type="strong">This assignment is currently in draft form.
+  </emphasis>
+</para>
+
+<para>
+  <emphasis>Due:</emphasis> &assignment09-due;
+</para>
+
+<para>
+  <emphasis>Summary:</emphasis>
+  In this assignment, you will explore the implementation of sorting
+  algorithms.
+</para>
+
+<para>
+  <emphasis>Purposes:</emphasis>  
+  To help you in your future analysis of algorithms.  To help you think
+  more about the use of stacks.
+</para>
+
+<para>
+  <emphasis>Collaboration:</emphasis> I encourage you to work in groups
+  of size two or three, although you may also work alone.  You may discuss
+  this assignment with anyone, provided you credit such discussions when
+  you submit the assignment.
+</para>
+
+<para>
+  <emphasis>Wrapper (Prologue):</emphasis> Individually read through
+  this assignment and make sure that you understand what is required.
+  Then use the form available at <ulink url="http://bit.ly/207hw9pro"/>
+  to indicate (a) how long you think this assignment will take and (b)
+  what you think will be the most challenging aspect of this assignment.
+</para>
+
+<para>
+  <emphasis>Wrapper (Epilogue):</emphasis> When you are done
+  with the assignment, fill out the form available at <ulink
+  url="http://bit.ly/207hw9epi"/> to indicate (a) how long the
+  assignment took, (b) what the most challenging part of the assignment
+  was, and (c) something important you learned from doing the assignment.
+  If you find that the assignment took much less or much more time than
+  you expected, also include (d) a note as to what might have led to
+  that difference.
+</para>
+
+<para>
+  <emphasis>Submitting:</emphasis> 
+  Please put all of your work in a GitHub repository named
+  <code>csc207-hw9</code>.  Email me the address of that repository.
+  Please title your email <quote>CSC207 2013F Assignment 9
+  (<emphasis>Your Names</emphasis>)</quote>.
+</para>
+
+<para>
+  <emphasis>Warning:</emphasis> 
+  So that this assignment is a learning experience for everyone, we may
+  spend class time publicly critiquing your work.
+</para>
+
+<section id="assignment-09-problems"><title>Problems</title>
+
+<para>
+  1. In class, we've looked at a few recurrence relations that model
+  the running time of algorithms and informally found their 
+  <quote>closed form</quote> (non-recursive) solution.  Using similar
+  techniques, find the closed form of the following recurrence relations.
+</para>
+
+<itemizedlist>
+  <listitem>
+    f0(1) = 1.  f0(n) = n + f0(n/2).
+  </listitem>
+
+  <listitem>
+    f1(1) = 1.  f1(n) = n + f1(n-1).
+  </listitem>
+
+  <listitem>
+    f2(1) = 1.  f2(n) = c + f2(n-1), for some constant c.
+  </listitem>
+
+  <listitem>
+    f3(1) = 1.  f3(n) = c + f3(n/2), for some constant c.
+  </listitem>
+
+  <listitem>
+    f4(1) = 1.  f4(n) = n + 2*f4(n/2).
+  </listitem>
+
+  <listitem>
+    f5(1) = 1.  f5(n) = c + 2*f5(n/2), for some constant c.
+  </listitem>
+
+  <listitem>
+    f6(1) = 1.  f6(n) = c + 2*f6(n-1), for some constant c.
+  </listitem>
+
+  <listitem>
+    f7(1) = 1.  f7(n) = n + 2*f7(n-1).  (This one is optional.)
+  </listitem>
+
+</itemizedlist>
+
+<para>
+  2. Implement a RPN calculator.  You should support input of real numbers
+  and the following operations:
+</para>
+
+<itemizedlist>
+  <listitem>
+    +, -, *, / - the standard arithmetic operators;
+  </listitem>
+
+  <listitem>
+    p - print the top value on the stack;
+  </listitem>
+
+  <listitem>
+    s - print the whole stack;
+  </listitem>
+
+  <listitem>
+    c - clear the stack; and
+  </listitem>
+
+  <listitem>
+    one other interesting operation of your choice.
+  </listitem>
+</itemizedlist>
+
+<para>
+  Although it doesn't have exactly the same interface, you can experiment
+  with the command-line RPN calculator <code>dc</code> to help understand
+  these operations.  (I don't think <code>dc</code> provides
+  <code>s</code>.)
+</para>
+
+</section> <!-- id="assignment09-problems" -->
+
+</section> <!-- id="assignment09" -->

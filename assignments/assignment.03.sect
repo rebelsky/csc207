@@ -274,10 +274,10 @@ Fee fy mo Mincoln, Lincoln!</literallayout>
 </para>
 
 <programlisting>
-assertEquals(new BigInteger(0), Calculator.eval0("0"));
-assertEquals(new BigInteger(2), Calculator.eval0("1 + 1"));
-assertEquals(new BigInteger(4), Calculator.eval0("1 + 2 + 1"));
-assertEquals(new BigInteger(9), Calculator.eval0("1 + 2 * 3"));
+assertEquals(BigInteger.valueOf(0), Calculator.eval0("0"));
+assertEquals(BigInteger.valueOf(2), Calculator.eval0("1 + 1"));
+assertEquals(BigInteger.valueOf(4), Calculator.eval0("1 + 2 + 1"));
+assertEquals(BigInteger.valueOf(9), Calculator.eval0("1 + 2 * 3"));
 </programlisting>
 
 <para>

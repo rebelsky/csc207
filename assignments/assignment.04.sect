@@ -1,4 +1,4 @@
-<section id="assignment04"><title>Assignment 4: Exploring APIs</title>
+<section id="assignment04"><title>Assignment 4: More Fun with Fractions</title>
 
 <para>
   <emphasis type="strong">This assignment is currently in draft form.
@@ -11,27 +11,23 @@
 
 <para>
   <emphasis>Summary:</emphasis>
-  In this assignment, you will build a variety of small programs that
-  let you think about data representation, APIs, and output, using the
-  Ushahidi crowd mapping framework as your data source.
-  You will explore a variety of issues related to Java programming.
+  In this assignment, you will continue your exploration of a simple
+  <code>Fraction</code> class, extending the class to provide a 
+  more maximalist interface.  You will also use that class to build
+  an interactive calculator.
 </para>
 
 <para>
   <emphasis>Purposes:</emphasis>  
-  To give you experience using APIs, including incompletely documented
-  APIs.  To give you more experience with arrays and loops in Java.
-  To expand your consideration of objects.  To start your consideration
-  of polymorphism (which is not addressed explicitly in this assignment,
-  but which is nonethless part of the assignment).
+  To give you experience designing and implementing classes.  To give
+  you some opportunity to build interactive applications.
 </para>
 
 <para>
   <emphasis>Collaboration:</emphasis>  
-  I encourage you to work in groups of size three. You may, however,
-  work alone or work in a group of size two or size four. You may discuss
-  this assignment with anyone, provided you credit such discussions when
-  you submit the assignment.
+  You must work in a group.  Your group can be of size two, three, or
+  four.  Your group must include at least one person you did not work with
+  on a prior assignment.
 </para>
 
 <para>
@@ -67,100 +63,7 @@
   spend class time publicly critiquing your work.
 </para>
 
-<section id="assignment04-intro"><title>Introduction</title>
-
-<para>
-  In this assignment, we will be working with the Ushahidi
-  crowdsourcing platform, <code><ulink url="http://www.ushahidi.com/"/></code>.
-  In particular, we will be grabbing data from simulated and real
-  Ushahidi installations.
-</para>
-
-<para>
-  To interact with Ushahidi, we will be using a simple API designed and
-  implemented by Grinnell students and faculty.
-</para>
-
-<para>
-  This assignment asks you to learn more about Ushahidi and that API.
-  As you learn more (and write programs that express your learning),
-  you will be developing a variety of skills in developing software
-  and thinking from an object-oriented perspective.
-</para>
-
-</section> <!-- assignment04-intro -->
-
-<section id="assignment-04-prelim"><title>Preliminaries</title>
-
-<para>
-  <emphasis>Although you will not submit your work on this
-  section of the assignment, you should take it as 
-  seriously as you would the graded parts of the assignment.
-  The gain is not from the grading, it's from considering the
-  issues carefully.</emphasis>
-</para>
-
-<para>
-  a. Spend about ten to fifteen minutes reading about Ushahidi and
-  identifying at least one interesting Ushahidi installation.
-</para>
-
-<para>
-  b. Make a list of fields you would expect to see in an object
-  that represents one incident in a simple Ushahidi installation.
-  That is, what data would you want stored for an incident and what
-  type would each part of the data have?
-</para>
-
-<para>
-  c. Make a list of methods you would want as a Java programmer who
-  needs to interact with an Ushahidi site.
-</para>
-
-<para>
-  d. Look at the Java documentation for the simple Ushahidi API, available
-  at LINK-FORTHCOMING.  Focus on 
-</para>
-
-<itemizedlist>
-  <listitem>
-    the constants and methods in <code>UshahidiIncident</code>, which
-    represents incidents;
-  </listitem>
-
-  <listitem>
-    the constants and methods in <code>UshahidiLocation</code>, which
-    represents locations;
-  </listitem>
-
-  <listitem>
-    the methods in <code>UshahidiClient</code> and
-    <code>UshahidiAdmin</code>, which provide client and administrative
-    access to an Ushahidi installation; and
-  </listitem>
-
-  <listitem>
-    the constants and methods in <code>UshahidiUtils</code>, which
-    provides some utility methods for incidents.
-  </listitem>
-</itemizedlist>
-
-<para>
-  You will note that we did not tell you to look at the fields.  As
-  a client of these classes, you should not care what the fields are.
-</para>
-
-<para>
-  After examining the documentation, You may find it helpful to note
-  what methods you expected to find but did not find, and what methods
-  you found that you did not expect to find.  (If there are methods that
-  you think would be helpful, you might want to let me know.  I may
-  add them or I may explain why they aren't there.)
-</para>
-
-</section> <!-- assignment-04-prelim -->
-
-<section id="assignment-04-prep"><title>Preparation</title>
+<section id="assignment-05-prep"><title>Preparation</title>
 
 <para>
   a. Create a new Eclipse project for this assignment.  You can name
@@ -168,98 +71,75 @@
 </para>
 
 <para>
-  b. Make a copy <code>SimpleUshahidiAPI.jar</code>, the 
-  JAR file for the simple Ushahidi API, available at LINK FORTHCOMING.
-  A JAR is a Java Archive, a standard way to group compiled Java code
-  for use in other projects.
-</para>
-
-<para>
-  c. Import that JAR into your project using the instructions
-  available at
-  <code><ulink url="http://www.wikihow.com/Add-JARs-to-Project-Build-Paths-in-Eclipse-(Java)"/></code>.  (If you find and follow other instructions, that's fine.)
+  b. If you'd like, you may copy the Fraction class that we wrote
+  in class.  If you do so, make sure to include an "@author CSC 207 2013F"
+  at the top.
 </para>
 
 </section> <!-- assignment-04-preparation -->
 
 <section id="assignment-04-assignment"><title>Assignment</title>
 
-<section id="assignment-04-A"><title>Part A: Printing Incidents</title>
+<section id="assignment-04-A"><title>Part A: A Fraction Class</title>
 
 <para>
-  1. Create a new utility class, <code>UshahidiExtensions.java</code>,
-  that has one static method, <methodname>printIncident</methodname>,
-  that takes as input a <code>PrintWriter</code> and an
-  <code>UshahidiIncident</code> and prints the incident out using a
-  format something like the following (things in all caps should be
-  replaced by the corresponding value).
+  Finish implementing the Fraction class that you started to design
+  in assignment 2 and that we worked on in class.  Make sure to write
+  a few tests for each method you implement.
 </para>
-
-<programlisting>
-Incident #: TITLE
-  DESCRIPTION
-  Location: LOCATION
-  Status: (MODE, ACTIVE, VERIFIED)
-</programlisting>
-
-<para>
-  2. Create a new main class, <code>PrintIncidentExperiment.java</code>, 
-  with the following method:
-</para>
-
-<programlisting>
-    public static void main(String[] args) {
-        UshahidiExtensions.printIncident(UshahidiUtils.SAMPLE_INCIDENT);
-        UshahidiExtensions.printIncident(UshahidiUtils.randomIncident());
-        UshahidiExtensions.printIncident(UshahidiUtils.randomIncident());
-        UshahidiIncident myIncident = new UshahidiIncident(...);
-        UshahidiExtensions.printIncident(myIncident);
-        // And one that requires connecting to the server
-    } // main(String[])
-</programlisting>
 
 </section> <!-- assignment-04-A -->
 
-<section id="assignment-04-B"><title>Part B: Extreme Incidents</title>
+<section id="assignment-04-B"><title>Part B: A Calculator Class</title>
 
 <para>
-  Given an UshahidiClient, print out the incident with the lowest and
-  highest id.  
-  You can use only <code>nextIncident</code> and
-  <code>hasMoreIncidents</code>.
+  Implement a class, <code>Calculator</code>, that supports simple
+  calculations using fractions and integers.  Your calculator should 
+  support at least eight storage elements, labeled <code>r0</code> ...
+  <code>r8</code>.
 </para>
+
+<para>
+  Your calculator class should support <code>evaluate(String
+  expression)</code>, where <code>experession</code> is
+  either an expression over fractions and storage elements or an
+  <quote>assignment</quote> of the form <code>r<emphasis>i</emphasis>
+  = <emphasis>expression</emphasis></code>.
+</para>
+
+<para>
+  Note that <code>evaluate</code> should throw an appropriate exception
+  if the expression is malformed.  (Ideally, you should find a way
+  to indicate the location of the error in the expression.)
+</para>
+
+<para>
+  Your calculator class should also support
+  <code>evaluate(String[] expressions)</code>, the evaluation of a
+  sequence of expressions.  For this, you should return an array
+  of the values created for each expression.
+</para> 
 
 </section> <!-- assignment-04-B -->
 
-<section id="assignment-04-C"><title>Part C: Identifying Incidents</title>
+<section id="assignment-04-C"><title>Part C: A User Interface</title>
 
 <para>
-  Given a start date and an end date, print all incidents that happen
-  between the two dates (in any order).
-  You can use only <code>nextIncident</code> and
-  <code>hasMoreIncidents</code>.
+  Create a user interface for the calculator.  Your interface will
+  primarily use the read-eval-print loop (aka REPL): read an expression,
+  evaluate that expression, print the result, and do it all over again.
+  You should find a nice way to report the errors.
 </para>
-
+  
 </section> <!-- assignment-04-C -->
 
-<section id="assignment-04-D"><title>Part D: Selecting Incidents</title>
-
-<para>
-  Given a start date and an end date, return an array of all the 
-  incidents that fall between those two dates.  (In solving this problem,
-  you may find it useful to grab the array of all incidents.)
-</para>
-
-</section> <!-- assignment-04-C -->
-
-</section> <!-- id="assignment04-assignment" -->
+</section> <!-- assignment-04-assignment -->
 
 <section id="assignment04-citations"><title>Citations</title>
 
 <para>
-  The Simple Ushahidi API was originally written by Daniel Torres.
-  The overall design of the current API is due to Samuel A. Rebelsky,
-  but much of the underlying code draws upon Mr. Torres' work.
+  This assignment grew from exercises in class and some discussions
+  with students.
 </para>
 
 </section> <!-- citations -->

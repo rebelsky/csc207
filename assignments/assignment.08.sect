@@ -1,0 +1,147 @@
+<section id="assignment08"><title>Assignment 8: Sorting</title>
+
+<para>
+  <emphasis type="strong">This assignment is currently in draft form.
+  </emphasis>
+</para>
+
+<para>
+  <emphasis>Due:</emphasis> &assignment08-due;
+</para>
+
+<para>
+  <emphasis>Summary:</emphasis>
+  In this assignment, you will explore the implementation of sorting
+  algorithms.
+</para>
+
+<para>
+  <emphasis>Purposes:</emphasis>  
+  To help you better understand the core sorting algorithms.  To improve
+  your facility with Java lists and list iterators.
+</para>
+
+<para>
+  <emphasis>Collaboration:</emphasis> I encourage you to work in groups
+  of size two or three, although you may also work alone.  You may discuss
+  this assignment with anyone, provided you credit such discussions when
+  you submit the assignment.
+</para>
+
+<para>
+  <emphasis>Wrapper (Prologue):</emphasis> Individually read through
+  this assignment and make sure that you understand what is required.
+  Then use the form available at <ulink url="http://bit.ly/207hw8pro"/>
+  to indicate (a) how long you think this assignment will take and (b)
+  what you think will be the most challenging aspect of this assignment.
+</para>
+
+<para>
+  <emphasis>Wrapper (Epilogue):</emphasis> When you are done
+  with the assignment, fill out the form available at <ulink
+  url="http://bit.ly/207hw8epi"/> to indicate (a) how long the
+  assignment took, (b) what the most challenging part of the assignment
+  was, and (c) something important you learned from doing the assignment.
+  If you find that the assignment took much less or much more time than
+  you expected, also include (d) a note as to what might have led to
+  that difference.
+</para>
+
+<para>
+  <emphasis>Submitting:</emphasis> 
+  Please put all of your work in a GitHub repository named
+  <code>csc207-hw8</code>.  Email me the address of that repository.
+  Please title your email <quote>CSC207 2013F Assignment 8
+  (<emphasis>Your Names</emphasis>)</quote>.
+</para>
+
+<para>
+  <emphasis>Warning:</emphasis> 
+  So that this assignment is a learning experience for everyone, we may
+  spend class time publicly critiquing your work.
+</para>
+
+<section id="assignment-08-prep"><title>Preparation</title>
+
+<para>
+  a. Fork the repository at <ulink url="https://github.com/Grinnell-CSC207/sorting"/>.
+</para>
+
+<para>
+  b. Clone the repository to your local disk.
+</para>
+
+</section> <!-- assignment-08-preparation -->
+
+<section id="assignment-08-required"><title>Required Problems</title>
+
+<para>
+  1. Write loop invariants for the primary loops in: 
+  <code>SelectionSorter.indexOfSmallest</code>, 
+  <code>SelectionSorter.sorti</code>, 
+  <code>Utils.merge</code>,
+  <code>IterativeMergeSorter.sort</code>, and
+  <code>Quicksorter.partition</code>.  You should express your invariants
+  in text/math.  If you'd like, you may also add ASCII art to help 
+  explain the invariants.
+</para>
+
+<para>
+  Note that these loops may not yet exist (depending on where you 
+  stand in the various labs).  That's okay.  You should write 
+  invariants before writing loops anyway.
+</para>
+
+<para>
+  2. Finish the implementations of insertion sort, selection sort,
+  recursive merge sort, iterative merge sort, and Quicksort over arrays.
+</para>
+
+<para>
+  3. Augment your code to count the number of swaps that the procedures
+  do.  (This won't help with analyzing merge sort, but should help with
+  the rest.)  You will likely want to add a counter to <code>Utils</code>,
+  augment <code>Utils.swap</code> to increment the counter, and perhaps
+  add methods to get and set that counter.  
+</para>
+
+<para>
+  4. The Quicksort algorithm is supposed to do O(nlogn) swaps.  Using
+  the work from the previous problem, verify that claim experimentally.
+</para>
+
+</section> <!-- id="assignment08-required" -->
+
+<section id="assignment08-optional"><title>Optional Problems</title>
+
+<para>
+  5. We don't just want to sort arrays.  We also want to sort lists.
+  Add a method declaration for an optional sorting method over 
+  <code>java.util.AbstractList</code> objects to our
+  <code>Sorter</code> interface.  Allow implementers to throw
+  an appropriate exception if they have not implemented this method.
+</para>
+
+<para>
+  6. It is, of course, possible to turn any array sorting method into
+  a list sorting method: Convert the list into an array, sort the array,
+  and turn it back into a list.  Add this approach to
+  <code>SorterBridge</code>>
+</para>
+
+<para>
+  7. Converting to arrays is inefficient.  Hence, we often want to 
+  reimplement our sorting algorithms over other types.  Implement
+  recursive merge sort over lists.  If you'd like, you may assume
+  that both the <code>get</code> and <code>set</code> methods are
+  implements.
+</para>
+
+<para>
+  8. Implement an in-place Quicksort over Java lists, using only 
+  <code>ListIterator</code> objects to access and change values.
+</para>
+
+</section> <!-- id="assignment08-optional" -->
+
+</section> <!-- id="assignment08" -->
