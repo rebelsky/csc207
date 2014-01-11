@@ -1,8 +1,8 @@
 <!ENTITY courseid "CSC 207">
 <!ENTITY section "01">
-<!ENTITY semester "2013F">
+<!ENTITY semester "2014S">
 <!ENTITY coursename "Algorithms and OOD">
 <!ENTITY school "Grinnell College">
-<!ENTITY url "http://www.cs.grinnell.edu/~rebelsky/Courses/CSC207/2013F/">
+<!ENTITY url "http://www.cs.grinnell.edu/~rebelsky/Courses/CSC207/2014S/">
 <!ENTITY courseurl "&url;">
 <!ENTITY grader "rebelsky@grinnell.edu">
