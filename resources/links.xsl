@@ -23,11 +23,12 @@
   [<a href="../handouts/teaching.html">Teaching &amp; Learning</a>]
 </p>
 <p class="links"><b>Current:</b>
-  [<a href="../outlines/current.html">Outline</a>] 
-  [<a href="../eboards/current.html">EBoard</a>]
-  [<a href="../readings/current.html">Reading</a>]
-  [<a href="../labs/current.html">Lab</a>]
   [<a href="../assignments/current.html">Assignment</a>]
+  [<a href="../eboards/current.md">EBoard</a>]
+  [<a href="../labs/current.html">Lab</a>]
+  [<a href="../outlines/current.html">Outline</a>] 
+  [<a href="../partners/current.txt">Partners</a>]
+  [<a href="../readings/current.html">Reading</a>]
 </p>
 <p class="links"> <b>Sections:</b> 
   [<a href="../assignments/">Assignments</a>] 
@@ -36,6 +37,7 @@
   [<a href="../handouts/">Handouts</a>] 
   [<a href="../labs/">Labs</a>] 
   [<a href="../outlines/">Outlines</a>] 
+  [<a href="../partners/">Partners</a>]
   [<a href="../readings/">Readings</a>]
 </p>
 <p class="links"> <b>Reference:</b> 
@@ -55,6 +57,13 @@
   [<a href="https://github.com/rebelsky/csc207/issues">Issue Tracker (Course)</a>]
   [<a href="https://github.com/Grinnell-CSC207/textbook/issues">Issue Tracker (Textbook)</a>]
 </p>
+<div class="search" align="right">
+<form action="http://www.google.com/search" method="get">
+Search
+<input id="google" type="text" name="q"/>
+<input id="google" type="hidden" name="q" value="site:www.cs.grinnell.edu/~rebelsky/Courses/CSC207/2013F/"/>
+</form>
+</div> <!-- search -->
 
 </div><!--noprint-->
 </xsl:template>
