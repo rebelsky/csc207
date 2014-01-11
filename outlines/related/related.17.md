@@ -1,5 +1,0 @@
-* Reading: [Adding Actions To Your Android App](../readings/android-actions.html)
-* Lab: [Making a Cat go Meow](../labs/android-cat.html)
-* [EBoard](../eboards/17.md) 
-  ([HTML](../eboards/17.html))
-  ([PDF](../eboards/17.pdf))

@@ -1,6 +1,0 @@
-* [Final](../assignments/final.html)
-* [Code for Final](https://github.com/Grinnell-CSC207/final-2013F/)
-* [EBoard](../eboards/56.md) 
-  ([Source](../eboards/56.html))
-  ([HTML](../eboards/56.html))
-  ([PDF](../eboards/56.pdf))

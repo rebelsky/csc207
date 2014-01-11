@@ -1,5 +1,0 @@
-* Reading: [Adding Activities To Your Android App](../readings/android-activities.html)
-* Lab: [Adding Activities to Your Android App](../labs/android-activities.html)
-* [EBoard](../eboards/18.md) 
-  ([HTML](../eboards/18.html))
-  ([PDF](../eboards/18.pdf))

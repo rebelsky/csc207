@@ -1,7 +1,0 @@
-* [Reading: Classes](../readings/classes.html)
-* [Reading: Standard Object Methods](../readings/standard-methods.html)
-* [Lab: Classes](../labs/classes.html) (won't be used)
-* [Homework: Fractions](../labs/assignment.04.html)
-* [EBoard](../eboards/11.html) 
-  ([Source](../eboards/11.md))
-  ([PDF](../eboards/11.pdf))

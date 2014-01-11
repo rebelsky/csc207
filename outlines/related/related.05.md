@@ -1,5 +1,0 @@
-* [Reading: Unit Testing and JUnit](../readings/unit-testing.html)
-* [Lab: Unit Testing](../labs/unit-testing.html)
-* [EBoard](../eboards/05.html) 
-  ([Source](../eboards/05.md))
-  ([PDF](../eboards/05.pdf))

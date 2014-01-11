@@ -1,5 +1,0 @@
-* [Reading: Inheritance](../readings/inheritance.html)
-* [Lab: Inheritance](../labs/inheritance.html)
-* [EBoard](../eboards/13.html) 
-  ([Source](../eboards/13.md))
-  ([PDF](../eboards/13.pdf))
