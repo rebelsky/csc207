@@ -8,7 +8,7 @@
 
 # A list of the primary sections (subdirectories that should be processed)
 SECTIONS = assignments \
-        eboards \
+	eboards \
 	handouts \
 	home \
 	labs \
@@ -39,6 +39,25 @@ clean:
 .PHONY: pdf
 pdf:
 	for dir in $(SECTIONS); do cd $$dir; make pdf; cd ..; done
+
+# Touch files to prevent rebuilding (usually done after we update
+# resources/subjects.var).
+touch:
+	for dir in $(SECTIONS); do \
+	  cd $$dir; \
+	  touch *.html; \
+	  touch *.pdf; \
+	  cd ..; \
+	done
+	sleep 1
+	touch outlines/outline.*.md
+	sleep 1
+	touch handouts/schedule.sect
+	touch */index.sect
+	touch outlines/outline.*.html
+	touch outlines/outline.*.pdf
+	touch eboards/[0-9][0-9].html
+	touch eboards/[0-9][0-9].pdf
 
 # +--------------+----------------------------------------------------
 # | Fun with git |
