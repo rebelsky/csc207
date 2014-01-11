@@ -70,3 +70,6 @@ tao
 *.jar
 *.war
 *.ear
+
+# Don't do the outlines
+outlines/outline.*.md
