@@ -1,0 +1,22 @@
+<section id="poly-interfaces"><title>Interfaces and Polymorphism</title>
+
+<para>
+  There are two readings for today.
+</para>
+
+<itemizedlist>
+  <listitem>
+    <ulink url="../readings/interfaces.html">Separating What from How: Interfaces in Java</ulink> and
+  </listitem>
+  <listitem>
+    <ulink url="../readings/polymorphism.html">Reusing and Generalizing
+    Code, Strategy One: Polymorphism in Java</ulink>
+  </listitem>
+</itemizedlist>
+
+<para>
+  Read both.
+</para>
+
+</section> <!-- poly-interfaces -->
+
