@@ -2,35 +2,40 @@
 <!ENTITY survey-due "10:30 p.m., Sunday, 1 September 2013">
 <!ENTITY assignment01-due "&survey-due;">
 
-<!ENTITY assignment02 "HW 2">
-<!ENTITY assignment01-due "10:30 p.m., &mon02;">
+<!ENTITY assignment02 "<ulink url='../assignments/assignment.02.html'>HW 2: Getting Started with Java and Testing</ulink>">
+<!ENTITY assignment02-due "10:30 p.m., &mon02;">
 
-<!ENTITY assignment03 "HW 3">
+<!ENTITY assignment03 "<ulink url='../assignments/assignment.03.html'>HW 3: Basic Types in Java</ulink>">
 <!ENTITY assignment03-due "10:30 p.m., &mon03;">
 
-<!ENTITY assignment04 "HW 4">
-<!ENTITY assignment04-due "10:30 p.m., &mon04;">
+<!ENTITY assignment04 "<ulink url='../assignments/assignment.04.html'>HW 4: More Fun with Fractions</ulink>">
+<!ENTITY assignment04-due "10:30 p.m., &tue04;">
 
-<!ENTITY assignment05 "HW 5">
-<!ENTITY assignment05-due "10:30 p.m., &mon05;">
+<!ENTITY assignment05 "<ulink url='../assignments/assignment.05.html'>HW 5: Exploring an Ushahidi API</ulink>">
+<!ENTITY assignment05-due "10:30 p.m., &tue05;">
 
-<!ENTITY assignment06 "HW 6">
-<!ENTITY assignment06-due "10:30 p.m., &mon06;">
+<!ENTITY assignment06 "<ulink url='../assignments/assignment.06.html'>HW 6: A Simple Ushahidi App</ulink>">
+<!ENTITY assignment06-due "10:30 p.m., &tue06;">
 
-<!ENTITY assignment07 "HW 7">
-<!ENTITY assignment07-due "10:30 p.m., &mon09;">
+<!ENTITY assignment07 "<ulink url='../assignments/assignment.07.html'>HW 7: Fun with Doubly Linked Lists</ulink>">
+<!ENTITY assignment07-due "10:30 p.m., &wed08;">
 
-<!ENTITY assignment08 "HW 8">
-<!ENTITY assignment08-due "10:30 p.m., &mon10;">
+<!ENTITY assignment08 "<ulink url='../assignments/assignment.08.html'>HW 8: Sorting</ulink>">
+<!ENTITY assignment08-due "10:30 p.m., &tue09;">
 
-<!ENTITY assignment09 "HW 9">
-<!ENTITY assignment09-due "10:30 p.m., &mon11;">
+<!ENTITY assignment09 "<ulink url='../assignments/assignment.09.html'>HW 9: Miscellaneous</ulink>">
+<!ENTITY assignment09-due "10:30 p.m., &tue10;">
 
-<!ENTITY due01 "">
+<!ENTITY assignment10 "HW 10">
+<!ENTITY assignment10-due "10:30 p.m., &tue11;">
+
+<!ENTITY assignment11 "HW 11">
+<!ENTITY assignment11-due "10:30 p.m., &wed14;">
+
 <!ENTITY due01 "">
 <!ENTITY due02 "&assignment01; (due 10:30 p.m. Sunday)">
 <!ENTITY due03 "">
-<!ENTITY due04 "">
+<!ENTITY due04 "<ulink url='http://bit.ly/risc-pretest'>RISC Pretest</ulink>">
 <!ENTITY due05 "">
 <!ENTITY due06 "&assignment02; (due 10:30 p.m.)">
 <!ENTITY due07 "">
@@ -40,46 +45,46 @@
 <!ENTITY due11 "">
 <!ENTITY due12 "">
 <!ENTITY due13 "">
-<!ENTITY due14 "&assignment04; (due 10:30 p.m.)">
-<!ENTITY due15 "">
+<!ENTITY due14 "">
+<!ENTITY due15 "&assignment04; (due 10:30 p.m.)">
 <!ENTITY due16 "">
 <!ENTITY due17 "">
-<!ENTITY due18 "&assignment05; (due 10:30 p.m.)">
-<!ENTITY due19 "">
+<!ENTITY due18 "">
+<!ENTITY due19 "&assignment05; (due 10:30 p.m.)">
 <!ENTITY due20 "">
 <!ENTITY due21 "">
-<!ENTITY due22 "&assignment06; (due 10:30 p.m.)">
-<!ENTITY due23 "">
+<!ENTITY due22 "">
+<!ENTITY due23 "&assignment06; (due 10:30 p.m.)">
 <!ENTITY due24 "">
 <!ENTITY due25 "">
-<!ENTITY due26 "<ulink url='../Exams/exam.01.html'>Exam 1</ulink>">
-<!ENTITY due27 "">
+<!ENTITY due26 "">
+<!ENTITY due27 "<ulink url='../assignments/exam.01.html'>Exam 1</ulink>">
 <!ENTITY due28 "">
 <!ENTITY due29 "">
 <!ENTITY due30 "">
 <!ENTITY due31 "">
-<!ENTITY due32 "">
+<!ENTITY due32 "&assignment07; (due 10:30 p.m.)">
 <!ENTITY due33 "">
-<!ENTITY due34 "&assignment07; (due 10:30 p.m.)">
-<!ENTITY due35 "">
+<!ENTITY due34 "">
+<!ENTITY due35 "&assignment08; (due 10:30 p.m.)">
 <!ENTITY due36 "">
 <!ENTITY due37 "">
-<!ENTITY due38 "&assignment08; (due 10:30 p.m.)">
-<!ENTITY due39 "">
+<!ENTITY due38 "">
+<!ENTITY due39 "&assignment09; (due 10:30 p.m.)">
 <!ENTITY due40 "">
 <!ENTITY due41 "">
-<!ENTITY due42 "Project proposal (due 10:30 p.m.)">
-<!ENTITY due43 "">
+<!ENTITY due42 "">
+<!ENTITY due43 "&assignment10; (due 10:30 p.m.)">
 <!ENTITY due44 "">
 <!ENTITY due45 "">
-<!ENTITY due46 "Project (due 10:30 p.m.)">
-<!ENTITY due47 "">
+<!ENTITY due46 "">
+<!ENTITY due47 "<ulink url='../assignments/exam.02.html'>Exam 2</ulink> (due 10:30 p.m.)">
 <!ENTITY due48 "">
 <!ENTITY due49 "">
 <!ENTITY due50 "">
-<!ENTITY due51 "Exam 2 (due 10:30 p.m.)">
+<!ENTITY due51 "">
 <!ENTITY due52 "">
-<!ENTITY due53 "&assignment08; (due 10:30 p.m.)">
-<!ENTITY due54 "">
+<!ENTITY due53 "">
+<!ENTITY due54 "&assignment11; (due 10:30 p.m.)">
 <!ENTITY due55 "">
 <!ENTITY due56 "">
