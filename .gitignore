@@ -48,9 +48,6 @@ forks/*
 # | Fork-Specific Rules |
 # +---------------------+
 
-# Don't upload admin files to a public repo
-admin
-
 # Ignore the soft links to 151 and 152
 151
 152
