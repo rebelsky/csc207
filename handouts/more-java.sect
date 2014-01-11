@@ -1,0 +1,28 @@
+<section id="more-java">Some Things I Didn't Teach You About Java</section>
+
+<para>
+  Java is a huge language.  I certainly didn't teach you all of the
+  standard libraries (there are just too many), but I also didn't
+  go into depth on a lot of language-level issues.  Here are a few that
+  you might want to explore a bit more on your own.
+</para>
+
+<section id="boxing"><title>Automatic Boxing and Unboxing</title>
+
+</section> <!-- boxing -->
+
+<section id="protection"><title>Details of Protection</title>
+
+<para>
+  You should be able to describe the difference between private, protected,
+  <quote>package</quote> (no modifier), and public.
+</para>
+
+<para>
+  You should know access info for inner classes (both anonymous and
+  non-anonymous).
+</para>
+
+</section> <!-- protection -->
+
+</section> <!-- more-java -->
