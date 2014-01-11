@@ -23,7 +23,7 @@
 </p>
 <div class="head">
 <xsl:call-template name="navlinks"/>
-<p><a name="body"></a></p>
+<p class="invisible"><a name="body"></a></p>
 </div>
 </xsl:template>
 
