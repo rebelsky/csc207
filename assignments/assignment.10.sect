@@ -1,0 +1,306 @@
+<section id="assignment10"><title>Assignment 10: An Ushahidi UI</title>
+
+<para>
+  <emphasis type="strong">This assignment is currently in draft form.
+  </emphasis>
+</para>
+
+<para>
+  <emphasis>Due:</emphasis> &assignment10-due;
+</para>
+
+<para>
+  <emphasis>Summary:</emphasis>
+  In this assignment, you will explore comparators, predicates, and
+  structures like priority queues.  You will also continue to consider
+  textual user interfaces.
+</para>
+
+<para>
+  <emphasis>Purposes:</emphasis>  
+  To give you the opportunity to play more with comparators and
+  predicates.  To encourage you to think more about architectures
+  for interactive applications.
+</para>
+
+<para>
+  <emphasis>Collaboration:</emphasis> I encourage you to work in groups
+  of size two or three, although you may also work alone or in a group
+  of size four.  If you work in a group, you should pick a different
+  set of partners than you have used in the past two assignments.
+  You may discuss this assignment with anyone, provided you credit such
+  discussions when you submit the assignment.
+</para>
+
+<para>
+  <emphasis>Wrapper (Prologue):</emphasis> Individually read through
+  this assignment and make sure that you understand what is required.
+  Then use the form available at <ulink url="http://bit.ly/207hw10pro"/>
+  to indicate (a) how long you think this assignment will take and (b)
+  what you think will be the most challenging aspect of this assignment.
+</para>
+
+<para>
+  <emphasis>Wrapper (Epilogue):</emphasis> When you are done
+  with the assignment, fill out the form available at <ulink
+  url="http://bit.ly/207hw10epi"/> to indicate (a) how long the
+  assignment took, (b) what the most challenging part of the assignment
+  was, and (c) something important you learned from doing the assignment.
+  If you find that the assignment took much less or much more time than
+  you expected, also include (d) a note as to what might have led to
+  that difference.
+</para>
+
+<para>
+  <emphasis>Submitting:</emphasis> 
+  Please put all of your work in a GitHub repository named
+  <code>csc207-hw10</code>.  Email me the address of that repository.
+  Please title your email <quote>CSC207 2013F Assignment 10
+  (<emphasis>Your Names</emphasis>)</quote>.  
+</para>
+
+<para>
+  When submitting your assignment, please include text files that
+  give sample interactions with your novice and expert user interfaces.
+</para>
+
+<para>
+  <emphasis>Warning:</emphasis> 
+  So that this assignment is a learning experience for everyone, we may
+  spend class time publicly critiquing your work.
+</para>
+
+<section id="assignment-10-context"><title>Context</title>
+
+<para>
+  In this assignment, we are continuing to explore concepts in
+  algorithm design, data structure design, and object-oriented
+  programming using Ushahidi installations as our primary data
+  source.
+</para>
+
+<para>
+  For this assignment, your goal is to build a few textual user
+  interfaces for navigating the incidents in an installation.
+  One interface is intended for novice users and the other is
+  intended for more expert users.
+</para>
+
+</section> <!-- assignment-10-context -->
+
+<section id="assignment-10-preparation"><title>Preparation</title>
+
+</section> <!-- assignment-10-preparation -->
+
+<section id="assignment-10-problems"><title>Problems</title>
+
+<para>
+  Your program will handle a collection of Ushahidi incidents.
+  You should maintain two versions of this collection, a <emphasis>full
+  version</emphasis>, which contains all of the incidents in any order,
+  and a <emphasis>working version</emphasis>, which contains only
+  incidents that the user has selected, in an order the user has chosen.
+</para>
+
+<para>
+  Your program should allow the user to enter information for an
+  Ushahidi server and load the incidents from that server.  That
+  gives the full version.
+</para>
+
+<para>
+  The simplest program have a few basic operations.
+</para>
+
+<itemizedlist>
+  <listitem>
+    Choose the order in which elements are reported.  Doing so will
+    require using a comparator.
+  </listitem>
+
+  <listitem>
+    Present the N highest-priority incidents.
+  </listitem>
+
+  <listitem>
+    Remove the N highest- priority incidents.
+  </listitem>
+
+  <listitem>
+    Reset the working set to contain everything in the full set.
+  </listitem>
+</itemizedlist>
+
+<para>
+  Implementing those two capabilities will suffice for this assignment.
+  However, you will find it useful to add additional capabilities.
+</para>
+
+<itemizedlist>
+  <listitem>
+    Remove elements from the working set that meet a single criterion,
+    such as older than a certain date or that include a certain word.
+  </listitem>
+
+  <listitem>
+    Remove elements that meet a compound criterion, such as
+    both newer than a certain date and including a particular
+    word.
+  </listitem>
+
+  <listitem>
+    Select elements that meet certain criteria. 
+  </listitem>
+
+  <listitem>
+    Given a simple crition, report how many elements meet that
+    criterion.
+  </listitem>
+
+  <listitem>
+    Given a compound criterion, report how many elements meet that
+    criterion.
+  </listitem>
+</itemizedlist>
+
+<para>
+  You should do your best to implement these procedures in such a way
+  that we can add a variety of user interfaces.
+</para>
+
+<section id="user-interfaces"><title>User Interfaces</title>
+
+<para>
+  Your goal is to provide two user interfaces for the manager.
+</para>
+
+<itemizedlist>
+  <listitem>
+    One interface should be designed for <emphasis>novice
+    users</emphasis>.  It should provide lots of information and make
+    it easier for the users to figure out what to do.
+  </listitem>
+
+  <listitem>
+    One interface should be designed for <emphasis>expert
+    users</emphasis>.  It should permit nice, simple, concise
+    commands.  It need not have a lot of detailed feedback; just
+    the requested information.
+  </listitem>
+</itemizedlist>
+
+<section id="sample-novice-session"><title>A Sample session with novice UI</title>
+
+<screen>
+Welcome to UshahidiManager v 0.0
+What site do you want to use: https://csc207.crowdmap.com
+https;//csc207.crowdmap.com has 107 incidents
+
+Here are the available commands:
+   (r)eset the working incident list
+   (d)elete elements meeting particular criteria
+   (s)elect elements meeting particular criteria
+   (c)ount elements meeting particular criteria
+   (p)rioritize incidents
+   (v)iew the ten highest-priority incidents
+   (q)uit
+
+What would you like to do?
+<prompt>&gt;</prompt> <userinput>d</userinput>
+
+How many criteria do you want to use in deleting elements?
+<prompt>&gt;</prompt> <userinput>three</userinput>
+Sorry.  That's not something I understand.  Please enter numbers
+using digits.
+<prompt>&gt;</prompt> <userinput>-2</userinput>
+Sorry. You need to enter a positive number.
+<prompt>&gt;</prompt> <userinput> 2</userinput>
+Okay, I'm going to ask you for two criteria.  Do you want (b)oth
+of them to hold or (e)ither of them to hold?
+<prompt>&gt;</prompt> <userinput>both</userinput>
+Great!
+
+Tell me about criterion 1.  Do you want to filter by (d)ate, 
+(n)umber, l(ocation), ...?
+<prompt>&gt;</prompt> <userinput>d</userinput>
+What date?
+<prompt>&gt;</prompt> <userinput>November 11, 2013</userinput>
+Do you want things (n)ewer than that date, equal to that date,
+or (o)lder than that date?
+<prompt>&gt;</prompt> <userinput>cold</userinput>
+I'm sorry.  I didn't understand "cold".  
+Do you want things (n)ewer than that date, equal to that date,
+or (o)lder than that date?
+<prompt>&gt;</prompt> <userinput>old</userinput>
+Criterion 1: Incidents older than November 11, 2013.
+
+Tell me about criterion 2.  Do you want to filter by (d)ate,
+(n)umber, l(ocation), ...?
+<prompt>&gt;</prompt> <userinput>r</userinput>
+You are filtering by report text.  Do you want reports that exclude
+or include a particular piece of text?
+<prompt>&gt;</prompt> <userinput>include</userinput>
+What text should each report include?
+<prompt>&gt;</prompt> <userinput>South Campus</userinput>
+Criterion 2: Incidents that include "South Campus"
+
+Deleting all elements that are older than November 11 and that
+include "South Campus" ... Done.
+72 incidents remain.
+
+What would you like to do?
+<prompt>&gt;</prompt> <userinput>?</userinput>
+You've forgotten the commands already?  Okay, here we go
+   (r)eset the working incident list
+   (d)elete elements meeting particular criteria
+   (s)elect elements meeting particular criteria
+   (c)ount elements meeting particular criteria
+   (p)rioritize incidents
+   (v)iew the ten highest-priority incidents
+   (q)uit
+
+What would you like to do?
+<prompt>&gt;</prompt> <userinput>p</userinput>
+
+Do you want to order by (d)date, (n)umber, lon(g)itude, la(t)itude, ...?
+<prompt>&gt;</prompt> <userinput>g</userinput>
+Do you want them ordered by (i)ncreasing or (d)ecreasing longitude?
+<prompt>&gt;</prompt> <userinput>i</userinput>
+Criterion 1 for ordering is longitude in increasing order.
+
+Do you care about the ordering if two incidents have the same
+longitude?
+<prompt>&gt;</prompt> <userinput>yes</userinput>
+
+Okay, what do you want as the secondary ordering?  
+Do you want to order by (d)date, (n)umber, lon(g)itude, la(t)itude, ...?
+<prompt>&gt;</prompt> <userinput>t</userinput>
+Do you want them ordered by (i)ncreasing or (d)ecreasing latitude?
+<prompt>&gt;</prompt> <userinput>i</userinput>
+Criterion 2 for ordering is latitude in increasing order.
+
+Do you care about the ordering if the two incidents have the same
+longtitude and the same latitude?
+<prompt>&gt;</prompt> <userinput>no</userinput>
+
+Reordering elements.  Done.
+</screen>
+
+</section>  <!-- novice ui -->
+
+<section id="expert-ui"><title>A Sample Session with an Expert UI</title>
+
+<screen>
+<prompt>&gt;</prompt> <userinput>delete date before 11/11/2013</userinput>
+<prompt>&gt;</prompt> <userinput>order by longitude increasing, latitude decreasing</userinput>
+<prompt>&gt;</prompt> <userinput>view 5</userinput>
+...
+</screen>
+
+</section> <!-- expert-ui -->
+
+</section> <!-- user-interfaces -->
+
+</section> <!-- id="assignment10-problems" -->
+
+</section> <!-- id="assignment10" -->
