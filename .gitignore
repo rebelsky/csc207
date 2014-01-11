@@ -73,3 +73,4 @@ tao
 
 # Don't do the outlines
 outlines/outline.*.md
+outlines/outlines.mk
