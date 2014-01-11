@@ -1,0 +1,215 @@
+
+<section name="deleted-02"><title>A Deleted Problem: Encapsulation</title>
+
+<para>
+  <emphasis>This problem was deleted from the examination because,
+  while I thought the learning outcomes were useful, I did not want
+  you to spend the time doing this work or me to spend the time
+  grading your work.  I've left it here in case you want to
+  explore the ideas on your own.</emphasis>
+</para>
+
+<para>
+  <emphasis>Topics:</emphasis> Encapsulation, Protection, Inner classes,
+  Inheritance
+</para>
+
+<para>
+  As you may recall, one of the key elements of object-oriented design
+  is <emphasis>encapsulation</emphasis>.  We noted that there are two
+  aspects of encapsulation - encapsulation groups things together and also
+  protects some of the group things from the outside world.
+</para>
+
+<para>
+  Your colleagues, Exene Cessive and O. Vernon Kyll, have noted that
+  Java provides a variety of mechanisms to protect parts of a class
+  from prying code.  They note that there are not only four protection
+  levels - <code>public</code>, <code>protected</code>, <quote>package</quote>
+  (no modifier), and <code>private</code> - but also mechanisms for
+  declaring classes within or near other classes.  
+</para>
+
+<para>
+  They also note that, given a class, <code>A</code>, there are a 
+  variety of relations another class can have to <code>A</code>.
+</para>
+
+<itemizedlist>
+  <listitem>
+    The other class can be in the same package as <code>A</code> or a different
+    package than <code>A</code>.
+  </listitem>
+  <listitem>
+    The other class can be a subclass of <code>A</code>, 
+    a superclass as <code>A</code>, or neither.
+  </listitem>
+  <listitem>
+    The other class can be declared in the same file as <code>A</code> or in a 
+    different file.
+  </listitem>
+  <listitem>
+    If the other class is declared in the same file as <code>A</code>,
+    it can follow <code>A</code>, appear as a named inner class
+    of <code>A</code>, or appear as an anonymous inner class of
+    <code>A</code>.
+  </listitem>
+</itemizedlist>
+
+<para>
+  These relationships are not quite orthogonal.  For example, while the
+  other class can be a subclass or not and in the same package or not
+  (four choices), if it's in the same file, it's effectively in the
+  same package.
+</para>
+
+<para>
+  Of course, <code>A</code> itself can be public, protected, package,
+  or private.
+</para>
+
+<para>
+  In attempting to live up to their nicknames, they have decided that
+  we should do a comprehensive study of protection levels.  You don't
+  have to cover every case, but you should consider some.  (We'll make a
+  shortcut assumption that if a class can access fields of <code>A</code>,
+  it can access methods and constructors of <code>A</code> with the
+  same protection.)
+</para>
+
+<para>
+  a. Suppose <code>A</code> is public.  
+</para>
+
+<para>
+  i. In what cases can other classes access the public fields of
+  <code>A</code>?
+</para>
+
+<para>
+  ii. In what cases can other classes access the protected fields of
+  <code>A</code>?
+</para>
+
+<para>
+  iii. In what cases can other classes access the package fields of
+  <code>A</code> (those without an explicit protection level)?
+</para>
+
+<para>
+  iv. In what cases can other classes access the private fields of
+  <code>A</code>?
+</para>
+
+<para>
+  v. In what cases can other classes access the protected fields of a
+  protected inner class of <code>A</code>?
+</para>
+
+<para>
+  a. Suppose <code>A</code> is protected.  
+</para>
+
+<para>
+  i. In what cases can other classes access the public fields of
+  <code>A</code>?
+</para>
+
+<para>
+  ii. In what cases can other classes access the protected fields of
+  <code>A</code>?
+</para>
+
+<para>
+  iii. In what cases can other classes access the package fields of
+  <code>A</code> (those without an explicit protection level)?
+</para>
+
+<para>
+  iv. In what cases can other classes access the private fields of
+  <code>A</code>?
+</para>
+
+<para>
+  v. In what cases can other classes access the protected fields of a
+  protected inner class of <code>A</code>?
+</para>
+
+<para>
+  c. Suppose <code>A</code> has no explicit protection level (so we say
+  that it has <quote>package protection</quote>?
+</para>
+
+<para>
+  i. In what cases can other classes access the public fields of
+  <code>A</code>?
+</para>
+
+<para>
+  ii. In what cases can other classes access the protected fields of
+  <code>A</code>?
+</para>
+
+<para>
+  iii. In what cases can other classes access the package fields of
+  <code>A</code> (those without an explicit protection level)?
+</para>
+
+<para>
+  iv. In what cases can other classes access the private fields of
+  <code>A</code>?
+</para>
+
+<para>
+  v. In what cases can other classes access the protected fields of a
+  protected inner class of <code>A</code>?
+</para>
+
+<para>
+  d. Suppose <code>A</code> is private.  
+</para>
+
+<para>
+  i. In what cases can other classes access the public fields of
+  <code>A</code>?
+</para>
+
+<para>
+  ii. In what cases can other classes access the protected fields of
+  <code>A</code>?
+</para>
+
+<para>
+  iii. In what cases can other classes access the package fields of
+  <code>A</code> (those without an explicit protection level)?
+</para>
+
+<para>
+  iv. In what cases can other classes access the private fields of
+  <code>A</code>?
+</para>
+
+<para>
+  v. In what cases can other classes access the protected fields of a
+  protected inner class of <code>A</code>?
+</para>
+
+<para>
+  e. In your answers above, does it make a difference whether or not
+  the fields are static?  How do you know?
+</para>
+
+<para>
+  f. If another class can access the public fields of <code>A</code>,
+  can it subclass <code>A</code>?  How do you know?
+</para>
+
+<para>
+  g. Suppose another class can access fields of <code>A</code> with
+  a certain protection level.  (E.g., suppose that it can access the
+  protected fields.)  Can it also subclass inner classes with the same
+  protection level?
+</para>
+
+</section> <!-- encapsulation -->
+
