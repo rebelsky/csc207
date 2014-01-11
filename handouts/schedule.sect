@@ -1,8 +1,10 @@
 <section id="schedule"><title>Schedule</title>
 
 <para>
-  <emphasis>This is an <emphasis type="strong">approximate</emphasis> schedule.  Expect dates and topics to change.  (I will try to keep due dates the same.)</emphasis>
-</para>
+  <emphasis>This is an <emphasis type="strong">approximate</emphasis>
+  schedule.  Expect dates and topics to change.  (I will try to keep
+  due dates the same.)</emphasis>
+ </para>
 
 <table class="schedule">
   <thead>
@@ -477,6 +479,11 @@
         <td>&lab48;</td>
         <td>&due48;</td>
       </tr>
+    <tr class="break">
+      <th colspan="6">
+        Thanksgiving Break
+      </th>
+    </tr>
 
     <tr class="week">
       <th colspan="6">
