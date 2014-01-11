@@ -1,0 +1,6 @@
+* Reading: (None)
+* Lab: (None)
+* [EBoard](../eboards/23.md) 
+  ([Source](../eboards/23.md))
+  ([HTML](../eboards/23.html))
+  ([PDF](../eboards/23.pdf))

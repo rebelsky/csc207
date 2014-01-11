@@ -1,0 +1,5 @@
+* Reading: [An Introduction to Android Development](../readings/intro-android.html)
+* Lab: [Your First Android Project](../labs/first-android.html)
+* [EBoard](../eboards/16.md) 
+  ([HTML](../eboards/16.html))
+  ([PDF](../eboards/16.pdf))
