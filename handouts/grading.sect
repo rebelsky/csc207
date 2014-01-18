@@ -10,67 +10,6 @@
   more detail on how I will be grading this particular class.
 </para>
 
-<section id="code-conventions"><title>Code Conventions</title>
-
-<para>
-  English writers follow conventions of the English language.  (Okay,
-  not all of them, but most of them.)  These conventions dictate not only
-  word meaning and order, but also punctuation.  Similarly, programmers
-  also have conventions to follow.  Some come from the language (e.g., the
-  meanings of braces), but many come from the local programming community.
-  Conventions dictate indentation, the way loops are formatted, the way
-  and place variables are declared, and so on and so forth.
-</para>
-
-<para>
-  I think it's difficult to read badly formatted code.  I know it's
-  difficult to read code that's formatted using multiple styles.
-  I've observed that almost every FOSS community has coding conventions
-  for their projects - how loops are formatted, how variables are
-  declared, and so on and so forth.  And I hear from our alums that
-  most of the companies they work for require that their programmers
-  follow local coding conventions when working on a project.  Hence,
-  <emphasis>I require that students in this course follow coding
-  conventions</emphasis>.
-</para>
-
-<para>
-  I'm tempted to design my own set
-  of code conventions, based on the <ulink
-  url="http://www.gnu.org/prep/standards/standards.html#Formatting">GNU C
-  Source Code Formatting Standards</ulink>, which I use in all of my C
-  coding projects (not least because I work on GIMP source code, which
-  follows those conventions).  However,
-  there are a widely accepted set of Java coding conventions, <ulink
-  url="http://www.oracle.com/technetwork/java/codeconv-138413.html">Code
-  Conventions for the Java Programming Language</ulink>, published by
-  the now-defunct Sun Microsystems, the original designers of the Java
-  programming language.  I find these conventions misguided, at best.
-  Nonetheless, they are a widely used standard, and hence I require
-  you to use these conventions.  You can find a link to them at the
-  top of very page.
-</para>
-
-<para>
-  How serious am I that I expect you to use these conventions.  Serious
-  enough that <emphasis>I will return ungraded any work I receive that has
-  five or more violations of the Code Conventions</emphasis>.  Students
-  may then correct those violations and return the work to me, although
-  I will then impose a penalty (approximately 10% of the grade on the
-  assignment) after regrading.  I will not apply this policy to code
-  written during class time (e.g., during an in-class examination).
-</para>
-
-<para>
-  I encourage, but do not require, you to comment your end braces.
-  In my too many years of programming and helping students debug
-  programs, I've found that knowing what a brace is supposed to end
-  is incredibly helpful (particularly since we often forget or add
-  extra end braces).
-</para>
-
-</section> <!-- code-conventions -->
-
 <section id="late"><title>Late Assignments</title>
 
 <para>
@@ -104,6 +43,8 @@
 
 <section id="participation"><title>Class Participation</title>
 
+<section id="participation"><title>Class Participation and Attendance</title>
+
 <para>
   As I suggest in <ulink url="teaching.html">my statement on teaching
   and learning</ulink>, I don't think you learn the material as well if you
@@ -111,16 +52,28 @@
   here, you can't participate.  Hence, a portion of your grade is based on
   participation and attendance.  Students who miss no more than two classes
   and who regularly answer questions or make comments in class receive 90
-  for participation.  Missing 3-5 classes results in a 10 point penalty.
-  Missing 6-8 classes results in a 25 point penalty.  Missing 9 or more
-  classes results in a 50 point penalty.  Particularly good answers,
+  for participation.  Missing 3-5 classes results in a 20 point penalty.
+  Missing 6-8 classes results in a 40 point penalty.  Missing 9 or more
+  classes results in a 60 point penalty.  Particularly good answers,
   comments, and questions result in bonus points for participation.
 </para>
 
 <para>
-  <emphasis>Because I do not want you to come to class when you are ill (and
-  likely to infect others), I am likely to moderate this grading scheme
-  for illness.</emphasis>
+  <emphasis>Because I do not want you to come to class when you are ill
+  (and likely to infect others), I do not count absences due to illness
+  as absences.</emphasis> I also realize that there are other exceptional
+  circumstances, such as academic and athletic responsibilities that call
+  you away from Grinnell.  With appropriate notification, such absences
+  are not included in the computation above.
+</para>
+
+<para>
+  If you miss class for any reason, you are responsible for notifying me
+  about the reason for that absence.  I would prefer that you notify me
+  before you miss class.  If that is not possible, you should notify me
+  by 5 p.m. on the day that you missed class.  With very few exceptions,
+  With very few exceptions, I will not excuse an absence if you do not
+  notify me of the reason for your absence within this time frame.
 </para>
 
 </section>  <!-- participation -->
