@@ -3,7 +3,7 @@
 <section id="introduction"><title>Introduction</title>
 
 <para>
-  Welcome to one of the Fall 2013 sessions of Grinnell College's CSC 207,
+  Welcome to the Spring 2014 session of Grinnell College's CSC 207,
   <emphasis>Algorithms and Object-Oriented Problem Solving</emphasis>,
   which is described relatively briefly in the official <ulink
   url="../handouts/blurb.html">blurb</ulink>.  My own take on this course
@@ -22,13 +22,17 @@
   You have the fortune (or misfortune) to be in an experimental new
   version of CSC 207.  This semester, we will be exploring some aspects
   of Computing for Social Good (CSG), using techniques from the Free
-  and Open Source (FOSS) community, as well as the open-source 
-  application Ushahidi.  We will also be mixing in some Android 
-  development.  My research assistants and I have done our best to
-  limit the extra time these approaches require.  In the end, I think
-  working with the FOSS tools, Ushahidi, and Android will build many
-  skills you will find valuable, particularly if you continue in a
-  career in software development, but also in other domains.
+  and Open Source (FOSS) community, as well as the open-source application
+  Ushahidi.  We will also be mixing in some Android development.  In the
+  end, I think working with the FOSS tools, Ushahidi, and Android will
+  build many skills you will find valuable, particularly if you continue
+  in a career in software development, but also in other domains.
+</para>
+
+<para>
+  Note: We had some flaws with the materials the first semester we used them.
+  I'm hoping to see some improvement this semester.  (The students from
+  the first semester encouraged us to keep trying this approach.)
 </para>
 
 <para>
@@ -70,7 +74,8 @@
 <section id="basics"><title>Basics</title>
 
 <para>
-  <emphasis role="strong">Meets</emphasis>: MTWF 10:00-10:50, Science 3813
+  <emphasis role="strong">Meets</emphasis>: MTWF 10:00-10:50, Science 3813.
+  Optional review sessions with SamR, Thursdays, 10:00-10:50, Science 3813.
 </para>
 
 <para>
@@ -78,8 +83,7 @@
   <ulink url="http://www.cs.grinnell.edu/~rebelsky/">Samuel A. Rebelsky</ulink>,
   <email>rebelsky@grinnell.edu</email>,
   Science 3824.  269-4410 (office).  236-7445 (home).  
-  Office hours:  M 2:15-4:05, Tu 2:15-2:45, W 2:15-2:45, F 3:15-4:05.  I
-  may add additional Tuesday hours.
+  Office hours:  MTWTF, 11:00-11:45.
   I also tend to follow an open door policy: Feel
   free to stop by when my door is open or to make an appointment for
   another time.
@@ -113,34 +117,38 @@
   Like many courses in our department, computer science 207 is
   taught in a <emphasis>collaborative workshop style</emphasis>.
   Each day, you'll work on laboratory problems with other students in
-  the class.  We may also start or end each class session with a short
+  the class.  On most days, you will need to submit a short laboratory
+  writeup.  We may also start or end each class session with a short
   lecture/discussion or a clicker activity.  
 </para>
 
 <para>
   <emphasis role="strong">Extra Credit</emphasis>:
-  I will often offer 1/2 point of extra credit for attending a particular
-  talk (e.g., a computer science talk or College convocation) or for
-  supporting your classmates in their public endeavors (e.g., attending
-  a concert or a dance recital).  Each category is capped at 1.5 points.
-  For any activity you wish to credit this way, you must send me a 
-  short (one paragraph) note about the activity within two days of the
-  activity.
+  I will often offer one unit of extra credit for attending a specified
+  academic event (e.g., a computer science talk or College convocation)
+  or for supporting your classmates in their public endeavors (e.g.,
+  attending a concert, dance recital, or sporting event).  Each category
+  is capped at four units of extra credit, which count as one point
+  toward your final grade.  So, if you attend four academic events and
+  four peer support events, you will receive an additional two points
+  toward your final grade.  For any activity you wish to credit this way,
+  you must send me a short (one paragraph) note about the activity within
+  two days of the activity.
 </para>
 
 <para>
   <emphasis role="strong">Tutoring</emphasis>:
   Evening tutors are not required to know 207 materials.  Some will be
-  able to help you.  Some will not.  I recommend that you use the
-  grinnell-cs IRC channel to get help (and to help each other).
+  able to help you.  Many will not.  I recommend that you rely on your
+  me, on your class mentor, and on each other.
 </para>
 
 <para>
   <emphasis role="strong">Class Software</emphasis>:
   For this course, we will be using a wide variety of plain
   off-the-shelf software (POTS) as well as some locally developed
-  software.  Tools you will use include <code>git</code> (and <ulink
-  url="http://github.com">github</ulink>), Eclipse, JUnit, Ushahidi,
+  software.  Tools you will use include <code>Git</code> (and <ulink
+  url="http://github.com">GitHub</ulink>), Eclipse, JUnit, Ushahidi,
   and the Android SDK.  Locally developed software includes a simplified
   API for Ushahidi and a few frameworks for Android applications.
 </para>
@@ -226,8 +234,8 @@
 </blockquote>
 
 <para>
-  Rebelsky, Samuel (2013).
-  <ulink url="index.html">The CS207.01 2013F Course Web</ulink>.
+  Rebelsky, Samuel (2014).
+  <ulink url="index.html">The CS207.01 2014S Course Web</ulink>.
 </para>
 
 <blockquote>
@@ -245,8 +253,8 @@
 
 <blockquote>
   Some people learn better from textbooks than from my less polished
-  readings.  This is a nice textbook, one that has been successfully
-  used in other versions of the course.
+  readings.  This is a nice textbook.  I will add information on 
+  readings from Weiss to the syllabus soon.
 </blockquote>
 
 </section> <!-- books -->
