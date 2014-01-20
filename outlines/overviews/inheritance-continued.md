@@ -1,2 +1,2 @@
-* Q&A.
+* Q and A.
 * Lab.
