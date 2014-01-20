@@ -1,3 +1,6 @@
+* Java from the command line.
+* Loop invariants.
+* Analyzing algorithms.
 * Designing a List Interface [Probably a discussion class, maybe a short lab exercise.]
 * Generics [Reading and Lab]
 * The Collections API [Reading and Lab]
