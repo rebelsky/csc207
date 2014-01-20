@@ -42,6 +42,8 @@ About the Course
   problem solving - group work, thinking on your feet, communication,
   and more.
 
+### Thinking Broadly
+
 * From my perspective, CSC 207 is the real gateway to the major, the course
   in which you start to become a real computer scientist and/or a real
   programmer.
@@ -52,6 +54,8 @@ About the Course
   our programs won't be as large as they get in 323, 325, or 362, but
   we do ramp things up a bit in this course.
 * _And no, we do not intend this course as a weed-out course_
+
+### Thinking About Problem Solving
 
 * A few underlying approaches:
     * _Separate interface and implementation_.  (You can also think
@@ -87,6 +91,11 @@ The Course Themes: Computing for Social Good and Android App Development
       our algorithms and data structures.
     * Toward the end of the semester, you will build an Ushahidi
       installation for a community member.
+* We had some successes and some (massive) failures trying this approach
+  last semester.  But the students in the course said we should try it
+  again (and not just because they want you to suffer as much as they did).
+  It's a busy semester for me, but I'm going to do my best to get things
+  working well.
 * Stay tuned for ruther details.
 
 ADTs and Data Structures
@@ -105,6 +114,8 @@ ADTs and Data Structures
 
 === Steps in Design
 
+==== Abstract Data Types
+
 * Decide upon the overall _philosophy_ of the ADT.
   That is, what is its primary purpose?  
 > For example, we might say that a vactor is a collection of values 
@@ -121,6 +132,9 @@ ADTs and Data Structures
     * Set the value at a particular index
     * Get the value at a particular index
     * Delete a vector you've created
+
+=== Data Structures: Implementing ADTs
+
 * Figure out a way to _lay out the ADT_ in memory  
     * We might use a sequential chunk of memory with pointers to the
       individual elements
