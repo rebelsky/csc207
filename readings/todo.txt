@@ -1,0 +1,17 @@
+* Designing a List Interface [Probably a discussion class, maybe a short lab exercise.]
+* Generics [Reading and Lab]
+* The Collections API [Reading and Lab]
+* Implementing Lists with Arrays [Reading and Lab]
+* Linked Lists in Java [Reading and Lab]
+* Doubly-Linked Lists [Reading and Lab]
+* An Introduction to Sorting [Probably a discussion class, maybe a short lab exercise.]
+* Quadratic Sorts [Reading and Lab; Maybe an opportunity to use a sorting algorithm.]
+* Dictiionary API [Probably a discussion class.]
+* Linked Dictionaries [Reading and lab; lab on Eboard]
+* Binary Search Trees [Reading.  Lab seems to be ok]
+* Trees, Generalized [Reading, Lab?]
+* Tree Traversal [Reading.  Lab not available.]
+* Hash Tables [Reading, perhaps a few more labs.]
+* Heaps [Reading, maybe lab, maybe discussion]
+* Heap Sort
+* Dynamic Programming
