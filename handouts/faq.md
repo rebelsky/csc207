@@ -1,30 +1,10 @@
 Frequently (and not-so-frequently) Asked Questions
 ==================================================
 
-About the Site
---------------
+These are my attempts to answer some questions that students have asked
+(in the first assignment, in office hours, via email, etc.)
 
-_The daily eboards look much nicer than what you type in class.  How
-do I see what you type in class?_
-
-> Replace the `.html` at the end with `.md`.
-
-_What technology do you use to build the course web?_
-
-> I use two markup languages.  For many of the pages (e.g., readings,
-labs) I use a form of XML called Docbook.  But Docbook is wordy, so
-for other pages (e.g., the daily outlines and eboards), I use
-Markdown.  I also have a bunch of scripts to help with all of this.
-You can find the scripts and source code on github.
-
-_I was curious about if and how we should report errors we see in the
-course web site and in any assignments or exams we’re given, and if
-you want to be informed of small grammatical errors or missing letters,
-or only errors that may directly affect the ability to interpret or
-complete course material._
-
-> I'd like to be informed about anything you notice.  I prefer email, but
-I'll take comments in class, too.
+Note that there may be some repetition on this page.
 
 About the Course
 ----------------
@@ -38,10 +18,17 @@ Oracle JDK at some point.
 About the Professor
 -------------------
 
+_It looks like you're teaching five or six courses in spring 2014.  Is that
+really true?
+
+> In addition to three four-credit courses, I'm teaching two one-credit
+courses and supervising an independent study.  I have over 100 students
+this semester, and each of my four-credit courses has daily homework.
+It's going to be a busy semester.
+
 _Where did you find the tigger suit you wore last semester?_
 
 > At the Disney store, about a decade ago.  We were buying my eldest son a "Winnie the Pooh" costume (so maybe more than a decade) and saw that they had a Tigger suit in my size.
-
 
 _I looked at your CV, and saw that you attended U Chicago. I’m curious as to how you found out about Grinnell, why you chose to come here, and what you like most about the college._
 
@@ -84,7 +71,7 @@ in problem solving.
 _What is your favorite computer science course at Grinnell?_
 
 > My favorite courses to teach: CSC 151, because I like introducing students
-to the field.  This course, because I think it's where you really start
+to the field.  CSC 207, because I think it's where you really start
 to develop the tools of computer scientist and software designer.
 My one-credit "C & Unix" seminar, because I can make sure you learn
 things that are essential.  (Whoops, that's three.)
@@ -96,7 +83,8 @@ _What are you currently working on in terms of computer science research or proj
 > My main research project is an investigation into scripting media
 applications, particularly using a functional approach.  (You see some
 aspects of that project in the intro course.)  I think the next step
-will be finding a way to script the Gimp with Scratch.
+will be finding a way to script the Gimp with Scratch.  But this summer,
+I'm trying a different project, one that looks at math over images.
 
 _Are you a Monty Python fan? And if so, what is your favorite sketch?_
 
@@ -117,6 +105,31 @@ _What's your favorite language to program in, and why?_
 > But when I need a quick text manipulation program, I hack it out in Perl.
 
 > Hmmm ... can we consider Make a programming language?  I love Make.
+
+About the Site
+--------------
+
+_The daily eboards look much nicer than what you type in class.  How
+do I see what you type in class?_
+
+> Replace the `.html` at the end with `.md`.
+
+_What technology do you use to build the course web?_
+
+> I use two markup languages.  For many of the pages (e.g., readings,
+labs) I use a form of XML called Docbook.  But Docbook is wordy, so
+for other pages (e.g., the daily outlines and eboards), I use
+Markdown.  I also have a bunch of scripts to help with all of this.
+You can find the scripts and source code on github.
+
+_I was curious about if and how we should report errors we see in the
+course web site and in any assignments or exams we’re given, and if
+you want to be informed of small grammatical errors or missing letters,
+or only errors that may directly affect the ability to interpret or
+complete course material._
+
+> I'd like to be informed about anything you notice.  I prefer email, but
+I'll take comments in class, too.
 
 About Other Things 
 ------------------

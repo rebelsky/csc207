@@ -5,4 +5,5 @@
 <!ENTITY school "Grinnell College">
 <!ENTITY url "http://www.cs.grinnell.edu/~rebelsky/Courses/CSC207/2014S/">
 <!ENTITY courseurl "&url;">
-<!ENTITY grader "rebelsky@grinnell.edu">
+<!ENTITY grader "grader-207@cs.grinnell.edu">
+<!ENTITY gcal "http://bit.ly/207gcal">

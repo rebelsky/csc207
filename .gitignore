@@ -37,6 +37,21 @@ admin/*
 !admin/sendgrades
 !admin/sendreport
 
+# The schedule overview directory is automatically generated (more or less)
+handouts/overviews
+
+# The sched.sect file is automatically generated in the process of 
+# creating the PDF of the schedule.
+handouts/sched.sect
+
+* THe schedule.sect file is now automatically generated.
+handouts/schedule.sect
+
+# The daily outlines are automatically generated, as is the corresponding
+# makefile.
+outlines/outline.*.md
+outlines/outlines.mk
+
 # +------------------------+------------------------------------------
 # | Rules for Generic Site |
 # +------------------------+
