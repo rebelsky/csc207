@@ -79,3 +79,9 @@ tao
 # Don't do the outlines
 outlines/outline.*.md
 outlines/outlines.mk
+
+# Ignore the link to the previous version of the course
+2013F
+
+# Ignore the link to the generic course.
+generic
