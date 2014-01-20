@@ -120,7 +120,7 @@ _What technology do you use to build the course web?_
 labs) I use a form of XML called Docbook.  But Docbook is wordy, so
 for other pages (e.g., the daily outlines and eboards), I use
 Markdown.  I also have a bunch of scripts to help with all of this.
-You can find the scripts and source code on github.
+You can find the scripts and source code on GitHub.
 
 _I was curious about if and how we should report errors we see in the
 course web site and in any assignments or exams we’re given, and if
@@ -130,6 +130,11 @@ complete course material._
 
 > I'd like to be informed about anything you notice.  I prefer email, but
 I'll take comments in class, too.
+
+_Do you really this course (and all your courses) on GitHub?
+
+> Yes.  I'm less good about commits with courses than I am with my
+regular code, though.  I'm trying to get better.
 
 About Other Things 
 ------------------
