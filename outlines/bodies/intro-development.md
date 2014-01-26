@@ -37,5 +37,5 @@ Lab on Eclipse
 Lab on Git and Eclipse
 ----------------------
 
-* Do (the lab on Git and Eclipse)[../labs/git.html].  Ask questions!
+* Do (the lab on Git from the command line)[../labs/git-command-line.html].  Ask questions!
 

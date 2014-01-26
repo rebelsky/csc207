@@ -31,14 +31,14 @@ About the Course
       (typically in terms of the algorithm it serves)
     * And, of course, implement a variety of ADTs and data structures
 * In exploring program design, we will begin your path on understanding
-  object-oriented design.  We will focus on the three tiers of OOD -
+  object-oriented design.  We will focus on the three foundations of OOD -
     * _Encapsulation_ - techniques for grouping related parts together 
       and shielding them from the resting of the program.
     * _Inheritance_ - techniques for defining new things from old.
     * _Polymorphism_ - techniques for designing and writing things
-      that work in multiple, relatedacontexts.
+      that work in multiple, related, contexts.
 * And yes, you'll learn how to program in Java.
-* We will also work on a variety of general skills in addition to
+* We will also help you develop a variety of general skills in addition to
   problem solving - group work, thinking on your feet, communication,
   and more.
 
@@ -72,7 +72,7 @@ About the Course
 The Course Themes: Computing for Social Good and Android App Development
 ------------------------------------------------------------------------
 
-* This semester, we are trying an experiment of adding themes to the
+* This semester, we are continuing an experiment of adding themes to the
   course, just as we have themes in 151 and 161.
 * Drawing upon surveys of prospective and past CSC 207 students, and
   with some of my input, my research students decided upon two general
@@ -119,7 +119,7 @@ ADTs and Data Structures
 * Decide upon the overall _philosophy_ of the ADT.
   That is, what is its primary purpose?  
 > For example, we might say that a vactor is a collection of values 
-> indexed by sequential integers.
+indexed by sequential integers.
 * Identify some _applications_ of the ADT.  Waht problems will the
   ADT help us solve?
 > Vectors might be useful if we assign identification numbers to people
@@ -133,7 +133,7 @@ ADTs and Data Structures
     * Get the value at a particular index
     * Delete a vector you've created
 
-=== Data Structures: Implementing ADTs
+==== Data Structures: Implementing ADTs
 
 * Figure out a way to _lay out the ADT_ in memory  
     * We might use a sequential chunk of memory with pointers to the

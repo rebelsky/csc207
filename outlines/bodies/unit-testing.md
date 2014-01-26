@@ -1,15 +1,3 @@
-A Few More Notes on Git
------------------------
-
-You may find it more convenient to use the following commit command,
-which doesn't open the editor.
-
-    git commit -m "*message*"
-
-I'll admit that I prefer to open the editor and see a quick list of
-the changes I'm committing.  (I also often write multi-line commit
-messages.)
-
 A Brief Introduction to Unit Testing
 ------------------------------------
 

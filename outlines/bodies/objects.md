@@ -18,8 +18,8 @@ Side Notes
 ----------
 
 * You can cast objects.  
-    * You'll get a <code>ClassCastException</code> if Java can't convert them.  
-* The <code>instanceof</code> operation lets you determine whether an
+    * You'll get a `ClassCastException` if Java can't convert them.  
+* The `instanceof` operation lets you determine whether an
   object can be cast.
   
 Standard Object Methods
@@ -33,12 +33,12 @@ Standard Object Methods
     * `clone()` - make a copy
     * `compareTo()` - compare to another object of the same type
 
-Exercise: Fractions
--------------------
+Exercise: Counters
+------------------
 
-* Let's continue our fraction exercise from HW2.
+* We'll try to build counter objects.
 
-Another Exercise: Counters
---------------------------
+Exercise: Scheme Lists
+----------------------
 
-* We'll also try to build counter objects.
+* We'll try to model Scheme lists (mutable and immutable).
