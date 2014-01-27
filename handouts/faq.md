@@ -15,14 +15,74 @@ _What environment/compiler will we be using?_
 OpenJDK 1.7, which is the default, but we may need to switch to the 
 Oracle JDK at some point.
 
+_How much work do you think we'll have outside of class?_
+
+> There is a daily reading.  That should take you about thirty minutes.
+There is a daily lab writeup.  That should take you about thirty minutes
+to an hour.  There is a weekly assignment, which should take you between
+six and eight hours.  So about twelve hours per week.
+
+> I understand that my homework assignments were long last semester.  I
+am working on making them less long.
+
+_Is see that we're working with pointers a lot in this class.  Do you have
+suggestions for understanding linked structures better?_
+
+> I find that drawing pictures helps a lot.
+
+_What is the role of the final project? Is it meant to be incorporate
+what we have learned throughout the semester, or is it just a
+creative application expressing our knowledge of Java and Android
+development? Obviously, you will explain this when the time comes,
+but I am a little bit curious about it._
+
+> It's a chance to apply some of what you've learned over the semester,
+but in a more practical situation.  It's also an opportunity for you to
+think about this material in a very different context.
+
+_Is our final exam take-home or in-class? Under "Basics" on the front door
+page, it says we have a take-home final, but in the "Examinations" section
+on the grading page it says all our exams except the final are take home
+exams. When is our final (or when is it due if it is a take-home)?_
+
+> Sorry for the confusion.  Our final examination is take-home.  The grading
+page is fairly generic.  It's due whenever the registrar says our final
+is supposed to be, although I'm happy to negotiate a bit if that's
+inconvenient.
+
+_Will the virtual machines you give to your 151 students work for this course?_
+
+> Sure, but you shouldn't need them.  All the software we use in the course
+works on all three platforms.  That is, you can get Eclipse, Git, and
+even the Android development environment on Linux, Mac OS X, and Microsoft
+Windows.
+
+_When we send you homework, do you expect us to attach the file, and also include the text in the body of the text?_
+
+> Labs: In the body of the text.
+
+> Weekly assignments: Email me a link to the GitHub page that contains your work.
+
+> Exams: Email me a tarball of your work.
+
+_What went wrong with using Android last semester and how is this semester going to be different?_
+
+We had a variety of problems.  We probably didn't spend quite enough time on some Android features, so students weren't comfortable moving in new directions.  (Android is non-trivial, which is also a problem.)  Ushahidi also upgraded, which broke our client software.  And I was working on getting readings/labs ready, so I didn't have time to adapt.
+
+More of the labs and readings are ready, which means I'll have a little more time for adapting when things go wrong.  (Unfortunately, five classes means that I won't have a lot of time to adapt.)  And I have some more intermediate assignments to add along the way.
+
+_I’m sure it’ll be discussed but why Java as the code for this class?_
+
+> It probably won't be discussed.  It has many features we like, including a strong type system, a variety of advanced approaches (generics, exceptions), and a large library.  It's used widely, so it may be helpful on your resume.
+
 About the Professor
 -------------------
 
 _It looks like you're teaching five or six courses in spring 2014.  Is that
-really true?
+really true?_
 
 > In addition to three four-credit courses, I'm teaching two one-credit
-courses and supervising an independent study.  I have over 100 students
+courses and supervising an independent study.  I have about 120 students
 this semester, and each of my four-credit courses has daily homework.
 It's going to be a busy semester.
 
@@ -56,7 +116,7 @@ CS course on a lark, and discovered that it had all of the things that
 I loved about math - particularly problem solving.  And, more importantly,
 the solutions were "things", not just proofs.  I haven't looked back since.
 
-_What made you want to be a professor?
+_What made you want to be a professor?_
 
 > My mother was a psychology professor at Boston University.  And it was
 clear that she made a big difference in her students' lives.  (She received
@@ -106,6 +166,19 @@ _What's your favorite language to program in, and why?_
 
 > Hmmm ... can we consider Make a programming language?  I love Make.
 
+_Do you like living in Grinnell?_
+
+> I love living in Grinnell.  I like that it's small enough that I know
+lots of people.  (Yeah, there's something to be said for anonymity,
+but as a parent, I see benefits to my kids being less anonymous.)
+I love my job, which probably has a big effect.
+
+_Do you do any sports?_
+
+> I do not do any competitive sports.  I do try to do water aerobics for
+my health, but don't always succeed.
+
+
 About the Site
 --------------
 
@@ -131,7 +204,7 @@ complete course material._
 > I'd like to be informed about anything you notice.  I prefer email, but
 I'll take comments in class, too.
 
-_Do you really this course (and all your courses) on GitHub?
+_Do you really put this course (and all your courses) on GitHub?_
 
 > Yes.  I'm less good about commits with courses than I am with my
 regular code, though.  I'm trying to get better.
