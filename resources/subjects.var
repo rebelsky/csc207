@@ -14,6 +14,8 @@
 <!ENTITY week13 "Additional Java and OOD Concepts">
 <!ENTITY week14 "Wrapup">
 
++writeup
+
 +day
 <!ENTITY title{$day} "An Introduction to the Course">
 <!ENTITY abbrev{$day} "course-intro">
@@ -26,21 +28,63 @@
 <!ENTITY abbrev{$day} "intro-development">
 <!ENTITY reading{$day} "<ulink url='../readings/git.html'>An Introduction to Version Control with Git</ulink> and <ulink url='../readings/eclipse.html'>The Eclipse IDE</ulink>">
 <!ENTITY lab{$day} "<ulink url='../labs/eclipse.html'>Getting Started with Eclipse</ulink> and <ulink url='../labs/git-command-line.html'>Getting Started with Command-Line Git</ulink>">
-<!ENTITY writeup{$day} "">
+<!ENTITY writeup{$day} "Writeup: Email me the conficted code from exercise 14 of the git lab.">
++writeup
 
 +day
 <!ENTITY title{$day} "An Overview of Java">
 <!ENTITY abbrev{$day} "java-overview">
-<!ENTITY reading{$day} "<ulink url='../readings/oops-basics.html'>Basics of Object-Oriented Problem Solving</ulink>, <ulink url='../readings/intro-java.html'>An Introduction to Java</ulink>, and <ulink url='../readings/simple-java-c.html'>Simple Java for C Programmers</ulink>">
+<!ENTITY reading{$day} "<ulink url='../readings/oops-basics.html'>Basics of Object-Oriented Problem Solving</ulink>, <ulink url='../readings/intro-java.html'>An Introduction to Java</ulink>, <ulink url='../readings/simple-java-c.html'>Simple Java for C Programmers</ulink>, and Weiss 1">
 <!ENTITY lab{$day} "<ulink url='../labs/reading-java.html'>Reading Java</ulink>"> 
-<!ENTITY writeup{$day} "">
+<!ENTITY writeup{$day} "Writeup: Extra 1">
++writeup
 
 +day
 <!ENTITY title{$day} "Unit Testing">
 <!ENTITY abbrev{$day} "unit-testing">
 <!ENTITY reading{$day} "<ulink url='../readings/unit-testing.html'>Unit Testing</ulink>">
 <!ENTITY lab{$day} "<ulink url='../labs/unit-testing.html'>Unit Testing</ulink>">
+<!ENTITY writeup{$day} "Writeup: Exercises 3f and 4c">
++writeup
+
++day
+<!ENTITY title{$day} "Classes and Objects">
+<!ENTITY abbrev{$day} "objects">
+<!ENTITY reading{$day} "<ulink url='../readings/classes.html'>Writing Your Own Classes</ulink>, <ulink url='../readings/standard-methods.html'>Standard Object Methods</ulink>, Weiss 2.2, and Weiss 3">
+<!ENTITY lab{$day} "">
+<!ENTITY deletedlab{$day} "<ulink url='../labs/classes.html'>Writing Your Own Classes</ulink>">
 <!ENTITY writeup{$day} "">
+
++day
+<!ENTITY title{$day} "Arrays in Java">
+<!ENTITY abbrev{$day} "arrays">
+<!ENTITY reading{$day} "<ulink url='../readings/arrays.html'>Arrays</ulink> and Weiss 2.4">
+<!ENTITY lab{$day} "<ulink url='../labs/arrays.html'>Arrays</ulink>">
+<!ENTITY writeup{$day} "Writeup: Exercises 1b and 6">
++writeup
+
++day
+<!ENTITY title{$day} "Some Basic Types: Numbers and Strings in Java">
+<!ENTITY abbrev{$day} "types">
+<!ENTITY reading{$day} "<ulink url='../readings/numbers.html'>Numeric Values in Java</ulink>, <ulink url='../readings/strings.html'>Strings in Java</ulink>, and Weiss 2.3">
+<!ENTITY lab{$day} "<ulink url='../labs/basic-types.html'>Basic Types</ulink>">
+<!ENTITY writeup{$day} "Writeup: Exercise 9">
++writeup
+
++day
+<!ENTITY title{$day} "Input and Output">
+<!ENTITY abbrev{$day} "io">
+<!ENTITY reading{$day} "<ulink url='../readings/io.html'>Input and Output in Java</ulink> and Weiss 2.6">
+<!ENTITY lab{$day} "<ulink url='../labs/io.html'>Input and Output</ulink>">
+<!ENTITY writeup{$day} "Writeup: Exercise 6">
++writeup
+
++day
+<!ENTITY title{$day} "Classes and Objects, Revisited">
+<!ENTITY abbrev{$day} "classes">
+<!ENTITY reading{$day} "<ulink url='../readings/classes.html'>Writing Your Own Classes</ulink>, <ulink url='../readings/standard-methods.html'>Standard Object Methods</ulink>, Weiss 2.2, and Weiss 3">
+<!ENTITY lab{$day} "<ulink url='../labs/classes.html'>Writing Your Own Classes</ulink>">
+<!ENTITY writeup{$day} "Writeup: Exercises 2 and 4">
 
 +day
 <!ENTITY title{$day} "Debugging">
@@ -50,87 +94,52 @@
 <!ENTITY writeup{$day} "">
 
 +day
-<!ENTITY title{$day} "Arrays in Java">
-<!ENTITY abbrev{$day} "arrays">
-<!ENTITY reading{$day} "<ulink url='../readings/arrays.html'>Arrays</ulink>">
-<!ENTITY lab{$day} "<ulink url='../labs/arrays.html'>Arrays</ulink>">
-<!ENTITY writeup{$day} "">
-
-+day
-<!ENTITY title{$day} "Some Basic Types: Numbers and Strings in Java">
-<!ENTITY abbrev{$day} "types">
-<!ENTITY reading{$day} "<ulink url='../readings/numbers.html'>Numeric Values in Java</ulink> and <ulink url='../readings/strings.html'>Strings in Java</ulink>">
-<!ENTITY lab{$day} "<ulink url='../labs/basic-types.html'>Basic Types</ulink>">
-<!ENTITY writeup{$day} "">
-
-+day
-<!ENTITY title{$day} "Input and Output">
-<!ENTITY abbrev{$day} "io">
-<!ENTITY reading{$day} "<ulink url='../readings/io.html'>Input and Output in Java</ulink>">
-<!ENTITY lab{$day} "<ulink url='../labs/io.html'>Input and Output</ulink>">
+<!ENTITY title{$day} "Pause for Breath">
+<!ENTITY abbrev{$day} "pause-03">
+<!ENTITY reading{$day} "">
+<!ENTITY lab{$day} "">
 <!ENTITY writeup{$day} "">
 
 +day
 <!ENTITY title{$day} "Exceptional Programming">
 <!ENTITY abbrev{$day} "exceptions">
-<!ENTITY reading{$day} "<ulink url='../readings/exceptions.html'>Exceptions</ulink>">
+<!ENTITY reading{$day} "<ulink url='../readings/exceptions.html'>Exceptions</ulink> and Weiss 2.5">
 <!ENTITY lab{$day} "<ulink url='../labs/exceptions.html'>Exceptions</ulink>">
-<!ENTITY writeup{$day} "">
+<!ENTITY writeup{$day} "Exercise 11">
 
 +day
-<!ENTITY title{$day} "Classes and Objects">
-<!ENTITY abbrev{$day} "objects">
-<!ENTITY reading{$day} "<ulink url='../readings/classes.html'>Writing Your Own Classes</ulink> <ulink url='../readings/standard-methods.html'>Standard Object Methods</ulink>">
-<!ENTITY lab{$day} "<ulink url='../labs/classes.html'>Writing Your Own Classes</ulink>">
-<!ENTITY writeup{$day} "">
-
-+day
-<!ENTITY title{$day} "References">
+<!ENTITY title{$day} "Some Subtleties: References and Boxing/Unboxing">
 <!ENTITY abbrev{$day} "references">
-<!ENTITY reading{$day} "References (not available)">
+<!ENTITY reading{$day} "References (not available), Weiss 2.1, Boxing and Unboxing (not available), and Weiss 4.6.3">
 <!ENTITY lab{$day} "References (not available)">
 <!ENTITY writeup{$day} "">
 
 +day
 <!ENTITY title{$day} "Interfaces and Polymorphism">
 <!ENTITY abbrev{$day} "polymorphism">
-<!ENTITY reading{$day} "<ulink url='../readings/interfaces.html'>Interfaces</ulink> and <ulink url='../readings/polymorphism.html'>Polymorphism</ulink>">
+<!ENTITY reading{$day} "<ulink url='../readings/interfaces.html'>Interfaces</ulink> and <ulink url='../readings/polymorphism.html'>Polymorphism</ulink>, and Weiss 4">
 <!ENTITY lab{$day} "<ulink url='../labs/polymorphism.html'>Polymorphism</ulink>">
-<!ENTITY writeup{$day} "">
-
-+day
-<!ENTITY title{$day} "Pause for Breath">
-<!ENTITY abbrev{$day} "pause-04">
-<!ENTITY reading{$day} "">
-<!ENTITY lab{$day} "">
 <!ENTITY writeup{$day} "">
 
 +day
 <!ENTITY title{$day} "Inheritance">
 <!ENTITY abbrev{$day} "inheritance">
-<!ENTITY reading{$day} "<ulink url='../readings/inheritance.html'>Inheritance</ulink>">
+<!ENTITY reading{$day} "<ulink url='../readings/inheritance.html'>Inheritance</ulink> and Weiss 4">
 <!ENTITY lab{$day} "<ulink url='../labs/inheritance.html'>Inheritance</ulink>">
 <!ENTITY writeup{$day} "">
 
 +day
 <!ENTITY title{$day} "Inheritance, Continued">
 <!ENTITY abbrev{$day} "inheritance-continued">
-<!ENTITY reading{$day} "<ulink url='../readings/inheritance.html'>Inheritance</ulink>">
+<!ENTITY reading{$day} "<ulink url='../readings/inheritance.html'>Inheritance</ulink>, Weiss 4, and <ulink url='../readings/javadoc.html'>Documentation and Javadoc</ulink>">
 <!ENTITY lab{$day} "<ulink url='../labs/inheritance.html'>Inheritance</ulink>">
-<!ENTITY writeup{$day} "">
-
-+day
-<!ENTITY title{$day} "Documentation and Javadoc">
-<!ENTITY abbrev{$day} "documentation">
-<!ENTITY reading{$day} "<ulink url='../readings/javadoc.html'>Documentation and Javadoc</ulink>">
-<!ENTITY lab{$day} "<ulink url='../labs/javadoc.html'>Javadoc</ulink>">
 <!ENTITY writeup{$day} "">
 
 +day
 <!ENTITY title{$day} "Using Java from the Command Line">
 <!ENTITY abbrev{$day} "command-line-java">
-<!ENTITY reading{$day} "Java on the Command Line (not available)">
-<!ENTITY lab{$day} "<ulink url='../labs/command-line.html'>Java on the Command Line</ulink>">
+<!ENTITY reading{$day} "Java on the Command Line (not available) and <ulink url='../readings/javadoc.html'>Documentation and Javadoc</ulink>">
+<!ENTITY lab{$day} "<ulink url='../labs/command-line.html'>Java on the Command Line</ulink> and <ulink url='../labs/javadoc.html'>Javadoc</ulink>">
 <!ENTITY writeup{$day} "">
 
 +day
@@ -406,37 +415,3 @@
 <!ENTITY lab{$day} "">
 <!ENTITY writeup{$day} "">
 
-+day
-<!ENTITY title{$day} "Design Patterns, Revisited">
-<!ENTITY abbrev{$day} "design-patterns">
-<!ENTITY reading{$day} "Design Patterns (not available)">
-<!ENTITY lab{$day} "(no lab)">
-<!ENTITY writeup{$day} "">
-
-+day
-<!ENTITY title{$day} "To Be Determined">
-<!ENTITY abbrev{$day} "tbd">
-<!ENTITY reading{$day} "">
-<!ENTITY lab{$day} "">
-<!ENTITY writeup{$day} "">
-
-+day
-<!ENTITY title{$day} "To Be Determined">
-<!ENTITY abbrev{$day} "tbd">
-<!ENTITY reading{$day} "">
-<!ENTITY lab{$day} "">
-<!ENTITY writeup{$day} "">
-
-+day
-<!ENTITY title{$day} "To Be Determined">
-<!ENTITY abbrev{$day} "tbd">
-<!ENTITY reading{$day} "">
-<!ENTITY lab{$day} "">
-<!ENTITY writeup{$day} "">
-
-+day
-<!ENTITY title{$day} "To Be Determined">
-<!ENTITY abbrev{$day} "tbd">
-<!ENTITY reading{$day} "">
-<!ENTITY lab{$day} "">
-<!ENTITY writeup{$day} "">
