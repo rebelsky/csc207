@@ -74,7 +74,8 @@
   you use code that you wrote for a previous lab or homework, cite that
   lab or homework and the other members of your group. If you use code
   that you found on the course Web site, be sure to cite that code. You
-  need not cite the code provided in the body of the examination.
+  need not cite the code provided in the body of the examination or on
+  the GitHub site for the examination.
 </para>
 
 <para>
@@ -147,7 +148,7 @@
   <emphasis>Electronic copy:</emphasis>
   You must also submit an electronic copy of your exam.  You should
   create the electronic version by making a tarball of any relevant code
-  and emailing me the tarball.  Here are the steps for making a tarball.
+  and emailing me the tarball.  Here are the normal steps for making a tarball.
 </para>
 
 <orderedlist>
@@ -183,43 +184,51 @@
 <screen>
 &gt; <userinput>tar tvf rebelsky.tgz</userinput>
 rebelsky/
+rebelsky/Makefile
+rebelsky/README.md
 rebelsky/.git/
+rebelsky/.git/CONFIG_EDITMSG
+rebelsky/.git/config
+...
 rebelsky/.gitignore
 rebelsky/Problem1/
-rebelsky/Problem2/
-rebelsky/Problem3/
-rebelsky/Problem4/
-rebelsky/README.md
-rebelsky/Problem1/.classpath
-rebelsky/Problem1/.project
-rebelsky/Problem1/src/
-rebelsky/Problem1/src/Quicksorter.java
-rebelsky/Problem1/src/SamTest.java
-rebelsky/Problem2/.classpath
-rebelsky/Problem2/.project
-rebelsky/Problem2/src/
-reblesky/Problem2/src/Example1.java
-reblesky/Problem2/src/Example2.java
-reblesky/Problem2/src/Example3.java
+rebelsky/Problem1/Makefile
+rebelsky/Problem1/merge-invariants.md
+rebelsky/Problem1/merge-invariants.pdf
+rebelsky/Problems23/
+rebelsky/Problems23/.classpath
+rebelsky/Problems23/.project
+rebelsky/Problems23/src/
+rebelsky/Problems23/src/BST.java
+rebelsky/Problems23/src/BSTExpt.java
+rebelsky/Problems23/src/BSTTrace.java
 ...
 </screen>
   </listitem>
 </orderedlist>
 
 <para>
+  I've added a Makefile to the repository.  If you edit that Makefile
+  properly and type <code>make</code>, it should automatically build
+  the tarball.  You should still issue the <code>tar tvf</code> command
+  to make sure it contains the right data.
+</para>
+
+<para>
   <emphasis>Code:</emphasis> In many problems, I ask you to write
   code. Unless I specify otherwise in a problem, you should write
-  working code and include examples that show that you've tested
-  the code.  You should do your best to format that code to the class
-  formatting standards.  <emphasis>I am likely to subtract at least half
-  the value of any problem in which your code does not adhere closely
-  to the standards.</emphasis>
+  working code and include examples that show that you've tested the code.
+  You should do your best to format that code to the class formatting
+  standards.  <emphasis>I am likely to subtract at least half the value of
+  any problem in which your code does not adhere closely to the standards.
+  I will assign a zero to any work in which you appear not to have used
+  the class formatter.</emphasis>
 </para>
 
 <para>
   <emphasis>Documentation:</emphasis> You should document classes,
-  interfaces, fields, and methods using Javadoc-style comments.
-  You should specify preconditions and postconditions for each method.
+  interfaces, fields, and methods using Javadoc-style comments.  You might
+  also specify preconditions and postconditions for each method.
 </para>
 
 <para>
@@ -330,7 +339,7 @@ $ git clone https://github.com/Grinnell-CSC207/exam3-2014S *username*
   and <code>m</code>.  The realize that those indices implicitly
   break each array into multiple sections.  They know that when the
   loop terminates, the invariant plus the state of the system needs
-  to be enough to gurantee both postconditions (that is, that the
+  to be enough to guarantee both postconditions (that is, that the
   array is sorted and that it is a permutation of the concatenation
   of the given arrays).  They know that they typical merge copies
   one element at a time, so they need the invariant to show that 
@@ -339,7 +348,7 @@ $ git clone https://github.com/Grinnell-CSC207/exam3-2014S *username*
 
 <para>
   a. Sketch the lop invariants for the <methodname>merge</methodname>
-  procedure.  ASCII art would be great, since it's wht we normally use,
+  procedure.  ASCII art would be great, since it's what we normally use,
   but if you want to use a drawing program or even scan a hand-drawn
   sketch, that's fine.
 </para>
@@ -355,8 +364,8 @@ $ git clone https://github.com/Grinnell-CSC207/exam3-2014S *username*
 </para>
 
 <para>
-  d. Explain, in English, what should happen in each iteration of
-  the main loop.
+  d. Explain, in English or in Java code, what should happen in each 
+  iteration of the main loop.
 </para>
 
 <para>
@@ -456,6 +465,16 @@ Otherwise, the node has two subtrees
   <th>
     After delete/shuffle
   </th>
+</tr>
+
+<tr> <td colspan='2'> 00 - leaf </td> </tr>
+<tr>
+<td><programlisting>
+   m
+  / \
+</programlisting></td>
+<td><programlisting>
+</programlisting></td>
 </tr>
 
 <tr> <td colspan='2'> 01 - no right subtree </td> </tr>
@@ -592,7 +611,8 @@ D     J
 <para>
   They note that they aren't sure that there's a real implementation
   difference between the last four cases, but they thought it was
-  easiest to think about them separately.  
+  easiest to think about them separately.   Similarly, they note that
+  case 00 is covered by each of the next two cases.
 </para>
 
 <para>
@@ -631,13 +651,13 @@ D     J
 
 <programlisting>
     pen.println("adding aardvark");
-    dict.set('a', "aardvark);
+    dict.set("a", "aardvark);
     dict.dump(pen);
     pen.println("adding bear");
-    dict.set('b', "bear);
+    dict.set("b", "bear);
     dict.dump(pen);
     pen.println("removing a");
-    dict.remove('a');
+    dict.remove("a");
     dict.dump(pen);
 </programlisting>
 
@@ -662,7 +682,7 @@ D     J
 
 <para>
   Implement the <methodname>remove</methodname> method for the
-  <code>BST</code> class.
+  <code>BST</code> class using the strategy given above.
 </para>
 
 <para>
@@ -675,7 +695,16 @@ D     J
   <emphasis>Hint:</emphasis> Just as we found it convenient to implement
   the <methodname>insert</methodname> recursively, you will find it equally
   convenient to implement the <methodname>remove</methodname> method
-  recursively.
+  recursively.  You'll find that <code>BST.java</code> already includes
+  a bit of skeleton code to support that approach.
+</para>
+
+<para>
+  <emphasis>Hint:</emphasis> You will probably find it necessary to 
+  change the left and right references for a variety of nodes.  However,
+  you should generally avoid changing the value stored in a node.  You
+  may find it useful to create new nodes, although you should be able
+  to write this without creating any new nodes.
 </para>
 
 </section> <!-- bst-remove -->
@@ -684,7 +713,7 @@ D     J
 
 <para>
   <emphasis>Topics:</emphasis>
-  Hash tables, Iterators, Dictionaries, Association lists
+  Hash tables, Iterators, Dictionaries, Association lists, Generics
 </para>
 
 <para>
@@ -703,8 +732,8 @@ D     J
 
 <para>
   We've seen two mechanisms for implementing hash tables: We can
-  use chained (aka bucketed) hash tables, in which each cell in the hash
-  table contains an association list, or we can use probed (aka open)
+  use chained (a.k.a. bucketed) hash tables, in which each cell in the hash
+  table contains an association list, or we can use probed (a.k.a. open)
   hash tables, in which we look elsewhere when the location in the table
   contains a key other than the expected key.
 </para>
@@ -712,10 +741,14 @@ D     J
 <para>
   The code accompanying this examination provides both implementations
   of hash tables.  Unfortunately, both implementations lack iterators.
-  Implement those iterators (a keys iterator and a values iterator for
-  each class).  You are fortunate that Prof. DeWitt has realized that
-  Remy and Delbert skirted work on the previous problems, and has decided
-  that you need not implement the <methodname>remove</methodname> method.
+  Implement a keys iterator and a values iterator for 
+  <code>OpenHashTable.java</code>.
+</para>
+
+<para>
+  You are fortunate that Prof. DeWitt has realized that Remy and
+  Delbert skirted work on the previous problems, and has decided that
+  you need not implement the <methodname>remove</methodname> method.
   Hence, you should only implement the <methodname>next</methodname>
   and <methodname>hasNext</methodname> methods.
 </para>
@@ -733,17 +766,25 @@ D     J
 <section id="extra-03"><title>Extra Credit</title>
 
 <para>
-  You may earn a small amount of extra credit if you show good Git
+  a. You may earn a small amount of extra credit if you show good Git
   behavior (other than pushing your work to a public repository).  In
   particular, I'd like to see regular commits (presumably a few
   commits per problem) that have good commit messages.
 </para>
 
 <para>
-  Unit tests for problem 2 that identify errors in my code will earn
+  b. Unit tests for problem 2 that identify errors in my code will earn
   extra credit.  Since that situation is unlikely to happen, unit tests
   for problem 2 that identify errors in the code for a large number of
   your classmates will also earn extra credit.
+</para>
+
+<para>
+  c. I had originally planned to have you implement iterators for
+  both open hash tables and bucketed hash tables, but am not
+  only requiring iterators for open hash tables.  You may earn a
+  small amount of extra credit for implementing the iterators for
+  <code>ChainedHashTable.java</code>.
 </para>
 
 </section> <!-- extra-03 -->
@@ -757,7 +798,17 @@ D     J
 </question>
 
 <answer>
-  I have not yet solved this problem.
+  About fifteen minutes.
+</answer>
+
+<question>
+  You seem to have broken each array into five sections.  Should we
+  have five sections in our invariants, too?
+</question>
+
+<answer>
+  Five was just a convenient number for setting up a template.  You
+  may find that you need fewer or more sections.
 </answer>
 
 </section> <!-- qa-problem1 -->
@@ -769,7 +820,35 @@ D     J
 </question>
 
 <answer>
-  I have not yet solved this problem.
+  Writing the systematic tests for 2a took me under ten
+  minutes because I planned for common methodname and because
+  <methodname>buildTree</methodname> and <methodname>check</methodname>
+  are really useful.  I covered approximately 49 cases: 7 different
+  patterns (from the exam), which I put (a) at the root of the
+  tree, (b) at the root of the left subtree, (c) at the root of the
+  right subtree, (d) at the root of the left subtree of the left
+  subtree, (e) at the root of the right subtree of the left subtree,
+  (f) at the root of the left subtree of the right subtree, and
+  (g) at the root of the right subtree of the right subtree.
+</answer>
+
+<answer>
+  Writing the <quote>generate code</quote> for 2b took me under five
+  minutes.  (Amazingly, there's a lot of infrastructure in the tests
+  already.)  And, when a random test identified a bug, I could copy
+  and paste the code into <code>BSTTrace.java</code>.
+</answer>
+
+<question>
+  Can you explain how you did one of those systematic tests?
+</question>
+
+<answer>
+  For example, for test 05/f, I used <methodname>buildTree</methodname>
+  to build a tree from the string <code>"azmgndjil"</code>,
+  removed the m, sure that the tree no longer contained m, and used
+  <methodname>check</methodname> to make sure that the tree still
+  contained all of <code>azgndjil</code>.
 </answer>
 
 </section> <!-- qa-problem2 -->
@@ -781,7 +860,14 @@ D     J
 </question>
 
 <answer>
-  I have not yet solved this problem.
+  I started to solve this problem before starting problem 2.  (Whoops!)
+  My untested code for removing from the tree took me ten minutes to
+  write.  I hadn't thought about the problem in five months, so I mostly
+  used the diagram.  Once I found a bug in my code with the randomized
+  tests, I was able to paste the code into <code>BSTTrace.java</code>,
+  run the program, and see which of the cases my code failed on.
+  Running the test, copying-and-pasting code, and fixing the bug
+  took under five minutes.
 </answer>
 
 </section> <!-- qa-problem3 -->
@@ -793,12 +879,59 @@ D     J
 </question>
 
 <answer>
-  I have not yet solved this problem.
+  Implementing the iterator for open hash tables took me fifteen minutes,
+  most of which was spent cleaning up code and identifying a subtle bug
+  in the open hash table implementation.  (There's a reason I try to do
+  the exam before I distribute it to you.)
+</answer>
+
+<answer>
+  Implementing the iterator for chained hash tables took me thirty minutes.
+  Because of that time, I updated the exam to make this iterator
+  extra credit.  (As I said, there's a reason I try to do the exam before
+  I distribute it to you.)
 </answer>
 
 </section> <!-- qa-problem4 -->
 
 <section id="misc"><title>Miscellaneous</title>
+
+<question>
+  I see a <code>.git</code> directory in the sample tarball table of
+  contents.  Do you really want us to include our <code>.git</code>
+  directory in the tarball?
+</question>
+
+<answer>
+  Yes.  That way I can look at your Git habits and maybe even give you
+  some extra credit for good Git habits.
+</answer>
+
+<question>
+  Suppose I get all of the problems right as well as all three extra-credit
+  questions.  Suppose also that we accumulate five points of extra-credit
+  for Sam's errors.  What grade will I get?
+</question>
+
+<answer>
+  You'll get an A+, which translates to 100/100.  I don't go higher than
+  that in computing averages.
+</answer>
+
+<question>
+  What do you consider the hardest problem on the exam?
+</question>
+
+<answer>
+  Past evidence suggests that implementing the
+  <methodname>remove</methodname> method for binary search trees is
+  the most challenging.  But some of you have had difficulty writing
+  sufficiently detailed loop invariants and sufficiently comprehensive
+  unit tests, so those problems may also be challenging.  Writing the
+  iterators for <code>ChainedHashTable.java</code> took me about
+  twice as long as any other problem, which is why I made those iterators
+  optional.
+</answer>
 
 </section> <!-- misc -->
 
