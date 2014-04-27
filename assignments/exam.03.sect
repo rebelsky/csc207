@@ -1,0 +1,878 @@
+<section name="exam-03"><title>Exam 3: ADTs, Algorithms, and Data Structures</title>
+
+<para>
+  <emphasis>This examination is in draft form and will remain in
+  draft form until class time on &wed13;.</emphasis>
+</para>
+
+<para>
+  Assigned: &mon13;
+</para>
+
+<para>
+  Electronic version due: 10:30 p.m., &wed14;. 
+</para>
+
+<para>
+  Printed version due: 10:00 a.m., &thu14;.
+</para>
+
+<section name="prelim"><title>Preliminaries</title>
+
+<section name="format"><title>Exam Format</title>
+
+<para>
+  This is a take-home examination. You may use any time or times you deem
+  appropriate to complete the exam, provided you return it to me by the
+  due date.
+</para>
+
+<para>
+  There are four problems on this examination. You must do your best
+  to answer all of them.  The problems are not necessarily
+  of equal difficulty. Problems may include subproblems. If you
+  complete four problems correctly or mostly correctly, you will 
+  earn an A.  If you complete three problems correctly or mostly
+  correctly, you will earn a B.  If you complete two problems
+  correctly or mostly correctly, you will earn a C.  If you complete
+  one problem correctly or mostly correctly, you will earn a D.
+  If you complete fewer than one problem correctly or mostly
+  correctly, you will earn an F.  If you do not attempt the examination,
+  you will earn a 0.  Partially correct solutions may or may not earn
+  you a partial grade, depending on the discretion of the grader.
+</para>
+
+<para>
+  <emphasis>Read the entire examination before you begin.</emphasis>
+</para>
+
+<para>
+  I expect that someone who has mastered the material and works at a
+  moderate rate should have little trouble completing the exam in a
+  reasonable amount of time. In particular, this exam is likely to take
+  you about six hours, depending on how well you've learned the topics
+  and how fast you work.  (When I do the problems, I will report how
+  long each one took me.)
+</para>
+
+</section> <!-- format -->
+
+<section name="honesty"><title>Academic Honesty</title>
+
+<para>
+  This examination is open book, open notes, open mind, open computer,
+  and open Web. However, it is closed person. That means you should
+  not talk to other people about the exam. Other than as restricted by
+  that limitation, you should feel free to use all reasonable resources
+  available to you.
+</para>
+
+<para>
+  As always, you are expected to turn in your own work. <emphasis>If
+  you find ideas in a book or on the Web, be sure to cite them
+  appropriately</emphasis>, even if you do not directly copy code. If
+  you use code that you wrote for a previous lab or homework, cite that
+  lab or homework and the other members of your group. If you use code
+  that you found on the course Web site, be sure to cite that code. You
+  need not cite the code provided in the body of the examination.
+</para>
+
+<para>
+  Although you may use the Web for this exam, you may not post your
+  answers to this examination on the Web.  (You certainly should not
+  post them to a public GitHub repository.)  And, in case it's not
+  clear, you may not ask others (in person, via email, via IM, via IRC,
+  by posting a <quote>please help</quote> message, or in any other way)
+  to put answers on the Web.
+</para>
+
+<para>
+  Because different students may be taking the exam at different times,
+  you are not permitted to discuss the exam with anyone until after I have
+  returned it. If you must say something about the exam, you are allowed
+  to say <quote>This is among the hardest exams I have ever taken. If
+  you don't start it early, you will have no chance of finishing the
+  exam.</quote> You may also summarize these policies. You may not tell
+  other students which problems you've finished. You may not tell other
+  students how long you've spent on the exam.
+</para>
+
+<para>
+  You must include both of the following statements on the cover sheet
+  of the examination.
+</para>
+
+<orderedlist>
+  <listitem>
+    I have neither received nor given inappropriate assistance on 
+    this examination.
+  </listitem>
+  <listitem>
+     I am not aware of any other students who have given or received 
+     inappropriate assistance on this examination. 
+  </listitem>
+</orderedlist>
+
+<para>
+  Please sign and date each statement separately. Note that the statements
+  must be true; if you are unable to sign either statement, please talk to
+  me at your earliest convenience. You need not reveal the particulars of
+  the dishonesty, simply that it happened. Note also that inappropriate
+  assistance is assistance from (or to) anyone other than Professor
+  Rebelsky (that's me).
+</para>
+
+</section> <!-- honesty -->
+
+<section name="presentation"><title>Presenting Your Work</title>
+
+<para>
+  You must present your exam to me in two forms, physically and
+  electronically.  If you fail to turn in both versions, you are unlikely
+  to receive credit for the examination.
+</para>
+
+<para>
+  <emphasis>Physical copy:</emphasis> 
+  You must write all of your answers using the computer, print them out,
+  number the pages; put your name on the top of every page, write, sign,
+  and date each of the academic honesty statements (provided you are able
+  to do so); and hand me the printed copy or put it under my office door.
+  If you fail to name and number the printed pages, you may suffer
+  a penalty.  If you fail to turn in a legible version of the exam,
+  you are also likely to suffer some sort of penalty.
+</para>
+
+<para>
+  <emphasis>Electronic copy:</emphasis>
+  You must also submit an electronic copy of your exam.  You should
+  create the electronic version by making a tarball of any relevant code
+  and emailing me the tarball.  Here are the steps for making a tarball.
+</para>
+
+<orderedlist>
+  <listitem>
+    Remove any cruft (needless files) from your directory structure.
+    I don't want to see <code>.class</code> files, editor backups,
+    or anything similar.  If you see a <code>bin</code> directory,
+    please remove that directory, too.  Please leave your 
+    <code>.git</code> directory.
+  </listitem>
+
+  <listitem>
+    Switch to the <emphasis>parent</emphasis> directory of your
+    exam directory.
+  </listitem>
+
+  <listitem>
+    Issue the command <code>tar cvzf <emphasis>username</emphasis>.tgz 
+    <emphasis>directory</emphasis></code>.
+  </listitem>
+
+  <listitem>
+    If you have done things correctly, you should see the file
+    <code><emphasis>username</emphasis>.tgz</code>.
+  </listitem>
+
+  <listitem>
+    Make sure that the tar file contains the appropriate contents using
+    the command <code>tar tvf <emphasis>username</emphasis>.tgz</code>.
+    For example, if I were to check my tarball, I might see something like
+    the following.
+
+<screen>
+&gt; <userinput>tar tvf rebelsky.tgz</userinput>
+rebelsky/
+rebelsky/.git/
+rebelsky/.gitignore
+rebelsky/Problem1/
+rebelsky/Problem2/
+rebelsky/Problem3/
+rebelsky/Problem4/
+rebelsky/README.md
+rebelsky/Problem1/.classpath
+rebelsky/Problem1/.project
+rebelsky/Problem1/src/
+rebelsky/Problem1/src/Quicksorter.java
+rebelsky/Problem1/src/SamTest.java
+rebelsky/Problem2/.classpath
+rebelsky/Problem2/.project
+rebelsky/Problem2/src/
+reblesky/Problem2/src/Example1.java
+reblesky/Problem2/src/Example2.java
+reblesky/Problem2/src/Example3.java
+...
+</screen>
+  </listitem>
+</orderedlist>
+
+<para>
+  <emphasis>Code:</emphasis> In many problems, I ask you to write
+  code. Unless I specify otherwise in a problem, you should write
+  working code and include examples that show that you've tested
+  the code.  You should do your best to format that code to the class
+  formatting standards.  <emphasis>I am likely to subtract at least half
+  the value of any problem in which your code does not adhere closely
+  to the standards.</emphasis>
+</para>
+
+<para>
+  <emphasis>Documentation:</emphasis> You should document classes,
+  interfaces, fields, and methods using Javadoc-style comments.
+  You should specify preconditions and postconditions for each method.
+</para>
+
+<para>
+  <emphasis>Care:</emphasis>
+  Just as you should be careful and precise when you write code and
+  documentation, so should you be careful and precise when you write
+  prose. Please check your spelling and grammar. Since I should be equally
+  careful, the whole class will receive one point of extra credit for each
+  error in spelling or grammar you identify on this exam. I will limit
+  that form of extra credit to five points.
+</para>
+
+<para>
+  <emphasis>Partial Credit:</emphasis>
+  I may give partial credit for partially correct answers. I am best
+  able to give such partial credit if you include a clear set of work
+  that shows how you derived your answer. You ensure the best possible
+  grade for yourself by clearly indicating what part of your answer is
+  work and what part is your final answer.
+</para>
+
+</section> <!-- presentation -->
+
+<section name="getting-help"><title>Getting Help</title>
+
+<para>
+  I may not be available at the time you take the exam. If you feel that
+  a question is badly worded or impossible to answer, note the issue
+  you have observed and attempt to reword the question in such a way that
+  it is answerable.  You should also feel free to send me electronic mail
+  at any time of day.
+</para>
+
+<para>
+  I will also reserve time at the start of each class before the exam is
+  due to discuss any general questions you have on the exam.
+</para>
+
+</section> <!-- getting-help -->
+
+</section> <!-- prelim -->
+
+<section name="preparation"><title>Preparation</title>
+
+<para>
+  Clone the repository using the following command, which will help
+  ensure that you have the correct directory structure.  Note that
+  I've set things up so that you can treat each problem as a separate
+  Eclipse project.  <emphasis>Please do not make one project for the
+  whole exam.</emphasis>.  Note also that the command will clone the
+  repository into a directory that corresponds to your user name.
+</para>
+
+<screen>
+$ git clone https://github.com/Grinnell-CSC207/exam3-2014S *username*
+</screen>
+
+</section> <!-- preparation -->
+
+<section name="problems-03"><title>Problems</title>
+
+<section id="merge-invariant"><title>Problem 1: Invariants for <methodname>merge</methodname></title>
+
+<para>
+  <emphasis>Topics:</emphasis> Sorting, Loop Invariants, Arrays
+</para>
+
+<para>
+  Marge and E. Gram have been exploring merge sort, and, while their
+  <code>merge</code> routine works correctly most of the time, it
+  sometimes fails.  They think they should start again.  Like all
+  good programmers, the first thing they do is write the documentation
+  and procedure signature.
+</para>
+
+<programlisting>
+  /**
+   * Merge the values in subarrays of a1 and a2 into a new array.
+   * The subarray of a1 takes on indices lb1 (inclusive) to ub1 (exclusive).
+   * The subarray of a2 takes on indices lb2 (inclusive) to ub2 (exclusive).
+   *
+   * @return
+   *    m, an array
+   *
+   * @pre
+   *    0 &lt;= lb1 &lt;= ub1 &lt;= a1.length.
+   * @pre
+   *    0 &lt;= lb2 &lt;= ub2 &lt;= a2.length.
+   * @pre
+   *    For all i, lb1 &lt; i &lt; ub1, order.compare(a1[i-1],a1[i]) &lt;= 0
+   * @pre
+   *    For all i, lb2 &lt; i &lt; ub2, order.compare(a2[i-1],a2[i]) &lt;= 0
+   * @post
+   *    For all i, 0 &lt; i &lt; m.length, order.compare(m[i-1],m[i]) &lt;= 0
+   * @post
+   *    m is a permutation of the concatenation of the given subarrays of 
+   *    a1 and a2.
+   */
+  public static &lt;T&gt; T[] merge(Comparator&lt;T&gt; order, 
+                              T[] a1, int lb1, int ub1,
+                              T[] a2, int lb2, int ub2)
+</programlisting>
+
+<para>
+  Lupe reminds them that that the next thing to do is to write the 
+  loop invariants.  But they are having trouble doing so.  They know
+  that they need to have indices into <code>a1</code>, <code>a2</code>,
+  and <code>m</code>.  The realize that those indices implicitly
+  break each array into multiple sections.  They know that when the
+  loop terminates, the invariant plus the state of the system needs
+  to be enough to gurantee both postconditions (that is, that the
+  array is sorted and that it is a permutation of the concatenation
+  of the given arrays).  They know that they typical merge copies
+  one element at a time, so they need the invariant to show that 
+  it's correct to copy into the expected location.
+</para>
+
+<para>
+  a. Sketch the lop invariants for the <methodname>merge</methodname>
+  procedure.  ASCII art would be great, since it's wht we normally use,
+  but if you want to use a drawing program or even scan a hand-drawn
+  sketch, that's fine.
+</para>
+
+<para>
+  b. Express your invariant using a similar level of formality to
+  that we use in the preconditions and postconditions above.
+</para>
+
+<para>
+  c. Explain how we can ensure that the loop invariant holds at
+  the beginning of <methodname>merge</methodname>.
+</para>
+
+<para>
+  d. Explain, in English, what should happen in each iteration of
+  the main loop.
+</para>
+
+<para>
+  e. Give a loop termination condition.
+</para>
+
+<para>
+  f. Do you need to do any work after the loop terminates?  If so,
+  describe that work.  You may find it useful to explain it in terms
+  of the loop invariants.
+</para>
+
+<para>
+  g. Explain why the postconditions are met.  Your explanation should
+  involve the loop invariants, the postconditions, and any additional
+  work you describe.
+</para>
+
+<para>
+  I would prefer that you format your answer nicely before turning it
+  in.  If you use Markdown, the accompanying Makefile should do the
+  work for you.
+</para>
+
+</section> <!-- merge-invariant -->
+
+<section id="bst-remove-utest"><title>Problem 2: Deletion in Binary Search Trees, Mark 1</title>
+
+<para>
+  <emphasis>Topics:</emphasis> Linked structures, Trees
+</para>
+
+<para>
+  We've started to explore the design of binary search trees.  For
+  convenience, we decided to make binary search trees <quote>add only</quote>
+  structures.  Right now, you can't remove a value from a BST.
+</para>
+
+<para>
+  As you might expect, that decision has frustrated your colleagues
+  Remy and Delbert.  They think that it's reasonable to want to get
+  rid of items.
+</para>
+
+<para>
+  Their sensible colleagues suggest that there's a simple technique
+  for doing deletion - you can simply put a <code>null</code>
+  in for the value, and, when the value is <code>null</code>,
+  <methodname>insert</methodname> throws an exception.  Unfortunately,
+  Remy and Delbert are extremists, and say <quote>Simulated deletion
+  is not deletion.  Your approach clogs the tree with pointless nodes.
+  And if the tree is clogged with pointless nodes, we can't guarantee
+  O(logn) insertion and deletion.</quote> Of course, they ignore the fact
+  that we've yet to figure out how to keep the trees balanced, and that we
+  probably won't learn how to do so until we take an upper-division course
+  in algorithms and data structures (or until we search on Wikipedia).
+  But, hey, they're annoying enough that we're going to listen to them.
+</para>
+
+<para>
+  Fortunately, they suggest a reasonably straightforward approach
+  for removing values.
+</para>
+
+<literallayout>To delete the node containing key
+If the node has no left subtree, 
+  Replace the node by its right subtree.
+Otherwise, if the node has no right subtree,
+  Replace the node by its left subtree.
+Otherwise, the node has two subtrees
+  Shuffle the tree so that the node with the largest key in the
+    left subtree replaces the node.  
+</literallayout>
+
+<para>
+  Why does this work?  We know that the largest key in the left
+  subtree is larger than every other key in the left subtree.  And,
+  since it's in the left subtree, we know that it's smaller than
+  every key in the right subtree.  Hence, it can be at the root after
+  we delete the old root.
+</para>
+
+<para>
+  Asa, Sam, Cam, Ida, and Ina worry a bit about that <quote>Shuffle</quote>
+  instruction.  And they also want to design some interesting unit tests.
+  They draw a bunch of trees to help themselves understand what should happen
+  in each situation.  In drawing these trees, they use lowercase letters to
+  represent nodes, and uppercase letters to represent tree-shaped groups
+  of nodes.  And their pictures all illustrate deletion at the root.
+</para>
+
+<table>
+<tr>
+  <th>
+    Original
+  </th>
+  <th>
+    After delete/shuffle
+  </th>
+</tr>
+
+<tr> <td colspan='2'> 01 - no right subtree </td> </tr>
+<tr>
+<td><programlisting>
+   m   
+  / \
+ /
+G
+</programlisting></td>
+<td><programlisting>
+   G   
+</programlisting></td>
+</tr>
+
+<tr> <td colspan='2'> 02 - no left subtree </td> </tr>
+<tr>
+<td><programlisting>
+   m
+  / \
+     \
+      N
+</programlisting></td>
+<td><programlisting>
+   N   
+</programlisting></td>
+</tr>
+
+<tr> <td colspan='2'> 03 - both subtrees, left subtree has no right subtree </td> </tr>
+<tr>
+<td><programlisting>
+      m
+     / \
+    /   \
+   g     N
+  / \
+ /
+D
+</programlisting></td>
+<td><programlisting>
+      g
+     / \
+    /   \
+   D     N
+</programlisting></td>
+</tr>
+
+<tr> <td colspan='2'> 04 - both subtrees, left subtree has right subtree with no right subtree </td> </tr>
+<tr>
+<td><programlisting>
+      m
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     j
+     / \
+    /
+   I
+</programlisting></td>
+<td><programlisting>
+      j
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     I
+</programlisting></td>
+</tr>
+
+<tr> <td colspan='2'> 05 - both subtrees, left subtree has right subtree with right subtree (<code>l</code> is the rightmost key in the left subtree, and has no left subtree) </td> </tr>
+<tr>
+<td><programlisting>
+      m
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     J
+     / \
+    /   \
+   I     l
+        / \
+</programlisting></td>
+<td><programlisting>
+      l
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     J
+     / \
+    /  
+   I  
+</programlisting></td>
+</tr>
+
+<tr> <td colspan='2'> 06 - both subtrees, left subtree has right subtree with right subtree (<code>l</code> is the rightmost key in the left subtree, but has a left subtree) </td> </tr>
+<tr>
+<td><programlisting>
+      m
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     J
+     / \
+    /   \
+   I     l
+        / \
+       /
+      K
+</programlisting></td>
+<td><programlisting>
+      l
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     J
+     / \
+    /   \
+   I     K
+</programlisting></td>
+</tr>
+</table>
+
+<para>
+  They note that they aren't sure that there's a real implementation
+  difference between the last four cases, but they thought it was
+  easiest to think about them separately.  
+</para>
+
+<para>
+  When they show their examples to Remy and Delbert, Remy and Delbert 
+  note that they would find it useful to find the <emphasis>parent</emphasis>
+  of the rightmost node.  But they don't say why.
+</para>
+
+<para>
+  Your classmates, Una and Tessa, suggest that before we start to write
+  the code, we should write the unit tests.  (Yes, this is a large class,
+  you have lots of classmates.)  Fortunately, Randy has written some
+  random tests, which you can find in the exam repository.  But we should
+  also have some more systematic tests, including white box testing.
+</para>
+
+<para>
+  a. Write systematic tests, including a few tests for each of the six 
+  cases above.  Note that the illustrations show the item being removed 
+  at the top of the tree.  However, you should also delete items from
+  the middle of the tree (using each of the orientations of the deleted
+  item).
+</para>
+
+<para>
+  b. Randy's systematic testing is only partially useful.  In particular,
+  when testing fails, we'd like to be able to see what series of operations
+  created the failure.  Better yet, we'd like to generate code for an
+  experiment that we can run to better understand what went wrong.  
+  For example, if the randomized test found that adding 
+  <quote>aardvark</quote> and <quote>bear</quote>, and then
+  removing the entry with key <quote>a</quote> caused an error, 
+  it might generate the following code, which we could paste into
+  the body of <code>BSTTrace.java</code>..
+</para>
+
+<programlisting>
+    pen.println("adding aardvark");
+    dict.set('a', "aardvark);
+    dict.dump(pen);
+    pen.println("adding bear");
+    dict.set('b', "bear);
+    dict.dump(pen);
+    pen.println("removing a");
+    dict.remove('a');
+    dict.dump(pen);
+</programlisting>
+
+<para>
+  Rewrite <code>RandomBSTTests.java</code> so that when one of the
+  tests fails, it prints out code similar to that above.  Of course,
+  the output code should match the failed test.
+</para>
+
+</section> <!-- bst-remove-utest -->
+
+<section id="bst-remove"><title>Problem 3: Removing from Binary Search Trees</title>
+
+<para>
+  Remy and Delbert are reasonably depressed that all we've done is
+  design and testing.  They say <quote>Where's the working code?</quote>
+  They note that we still need to implement the tests.  Your professor,
+  Hugh DeWitt, not realizing that Remy and Delbert delegated the R&amp;D
+  on the previous problem to their classmates, suggests that you finish
+  the work.
+</para>
+
+<para>
+  Implement the <methodname>remove</methodname> method for the
+  <code>BST</code> class.
+</para>
+
+<para>
+  Note that, in addition to your tests and the provided randomized tests, 
+  I am likely to run my own set of tests on your code and may also run
+  your classmates tests.
+</para>
+
+<para>
+  <emphasis>Hint:</emphasis> Just as we found it convenient to implement
+  the <methodname>insert</methodname> recursively, you will find it equally
+  convenient to implement the <methodname>remove</methodname> method
+  recursively.
+</para>
+
+</section> <!-- bst-remove -->
+
+<section id="iterate-hash-tables"><title>Problem 4: Iterating Hash Tables</title>
+
+<para>
+  <emphasis>Topics:</emphasis>
+  Hash tables, Iterators, Dictionaries, Association lists
+</para>
+
+<para>
+  Your classmates, Ida, Ray, and Tor, note that good Java practice
+  requires that any collection should also implement iterators.
+  Val suggests that since the iterators for lists and arrays return
+  the values in those lists and arrays, the basic 
+  <methodname>iterator</methodname> method should return the values
+  in the dictionary, and not the keys.  However, Kay pipes up to
+  suggest that we should also be able to iterate the keys in the
+  dictionary.  Fortunately, when we designed our <code>Dictionary</code>
+  interface, Dick, Tina, and Ari included such iterators.  
+  Guess what?  Good old Hugh DeWitt thinks you should implement them
+  for hash tables.
+</para>
+
+<para>
+  We've seen two mechanisms for implementing hash tables: We can
+  use chained (aka bucketed) hash tables, in which each cell in the hash
+  table contains an association list, or we can use probed (aka open)
+  hash tables, in which we look elsewhere when the location in the table
+  contains a key other than the expected key.
+</para>
+
+<para>
+  The code accompanying this examination provides both implementations
+  of hash tables.  Unfortunately, both implementations lack iterators.
+  Implement those iterators (a keys iterator and a values iterator for
+  each class).  You are fortunate that Prof. DeWitt has realized that
+  Remy and Delbert skirted work on the previous problems, and has decided
+  that you need not implement the <methodname>remove</methodname> method.
+  Hence, you should only implement the <methodname>next</methodname>
+  and <methodname>hasNext</methodname> methods.
+</para>
+
+<para>
+  You may iterate the elements in any order, so long as you iterate
+  all of the elements.  That is, the values iterator must visit all
+  of the values and the keys iterator must iterate all of the keys.
+</para>
+
+</section> <!-- iterate-hash-tables -->
+
+</section> <!-- problems-03 -->
+
+<section id="extra-03"><title>Extra Credit</title>
+
+<para>
+  You may earn a small amount of extra credit if you show good Git
+  behavior (other than pushing your work to a public repository).  In
+  particular, I'd like to see regular commits (presumably a few
+  commits per problem) that have good commit messages.
+</para>
+
+<para>
+  Unit tests for problem 2 that identify errors in my code will earn
+  extra credit.  Since that situation is unlikely to happen, unit tests
+  for problem 2 that identify errors in the code for a large number of
+  your classmates will also earn extra credit.
+</para>
+
+</section> <!-- extra-03 -->
+
+<section name="q-and-a-03"><title>Questions and Answers</title>
+
+<section id="qa-problem1"><title>Problem 1</title>
+
+<question>
+  How long did this problem take you?
+</question>
+
+<answer>
+  I have not yet solved this problem.
+</answer>
+
+</section> <!-- qa-problem1 -->
+
+<section id="qa-problem2"><title>Problem 2</title>
+
+<question>
+  How long did this problem take you?
+</question>
+
+<answer>
+  I have not yet solved this problem.
+</answer>
+
+</section> <!-- qa-problem2 -->
+
+<section id="qa-problem3"><title>Problem 3</title>
+
+<question>
+  How long did this problem take you?
+</question>
+
+<answer>
+  I have not yet solved this problem.
+</answer>
+
+</section> <!-- qa-problem3 -->
+
+<section id="qa-problem4"><title>Problem 4</title>
+
+<question>
+  How long did this problem take you?
+</question>
+
+<answer>
+  I have not yet solved this problem.
+</answer>
+
+</section> <!-- qa-problem4 -->
+
+<section id="misc"><title>Miscellaneous</title>
+
+</section> <!-- misc -->
+
+</section> <!-- q-and-a-03 -->
+
+<section name="errata-03"><title>Errata</title>
+
+<para>
+  Here you will find errors of spelling, grammar, and design that students 
+  have noted. Remember, each error found corresponds to a point of
+  extra credit for everyone. I usually limit such extra credit to five
+  points. However, if I make an astoundingly large number of errors,
+  then I will provide more extra credit.
+</para>
+
+<para>
+  I will not accept corrections for credit until after I have taken the
+  examination out of draft mode.
+</para>
+
+<para>
+  I will not credit corrections for text in the Q&amp;A and errata sections,
+  since those are often written quickly to get information out to students.
+  I may not credit corrections to grammatical mistakes in code.
+</para>
+
+<itemizedlist>
+</itemizedlist>
+
+</section> <!-- errata-03 -->
+
+<section name="citations-03"><title>Citations</title>
+
+<para>
+  The problems on deletion in binary search trees are closely based
+  on a problem I wrote in a previous semester.  Most of the text is
+  identical, but for this exam I broke the problem into two parts -
+  one for the unit testing and one for the implementation.  The code
+  for that problem also comes from that semester.
+</para>
+
+<para>
+  The documentation for <methodname>merge</methodname>
+  comes from the code for merge sort in the <emphasis>Tao
+  of Java</emphasis> laboratory on sorting, available at <ulink
+  url="https://github.com/Grinnell-CSC207/sorting"/>.
+</para>
+
+<para>
+  Some of the code for the hash tables problem comes
+  from the code for hash tables in the <emphasis>Tao of
+  Java</emphasis> laboratory on hash tables, available at <ulink
+  url="https://github.com/Grinnell-CSC207/hashtables"/>.
+</para>
+
+<para>
+  Some of the code for the tests in the hash tables problem comes from
+  the BST code form a previous semester.
+</para>
+
+<para>
+  The <methodname>toArray</methodname> method comes from unit tests
+  I wrote for exam 2 this semester, although it has been modified
+  for this exam.
+</para>
+
+<para>
+  The file <code>AssociationList.java</code> is closely based on
+  <code>LinkedDictionary.java</code> from the <emphasis>Tao of Java</emphasis>
+  lab on association lists, available at
+  <ulink url="https://github.com/Grinnell-CSC207/association-lists"/>.
+</para>
+
+
+</section> <!-- citations-03 -->
+
+</section> <!-- exam03 -->
