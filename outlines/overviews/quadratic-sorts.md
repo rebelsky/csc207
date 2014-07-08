@@ -2,4 +2,3 @@
 * Testing sorts.
 * Insertion sort.
 * Selection sort.
-* Lab.

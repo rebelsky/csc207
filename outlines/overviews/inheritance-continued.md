@@ -1,2 +1,2 @@
 * Q and A.
-* Lab.
+* Reflection - What are benefits and issues of inheritance and polymorphism?

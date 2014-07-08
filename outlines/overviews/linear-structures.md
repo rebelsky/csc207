@@ -1,3 +1,3 @@
 * Linear structures.
 * Stacks.
-* Lab.
+* An application of stacks: Matching parens.

@@ -1,2 +1,3 @@
-* Detour: An invariant for `merge`.
-* Anonymous inner classes.
+* Anonymous inner classes - the concept.
+* Anonymous inner classes - the implementation.
+* Some subtleties.

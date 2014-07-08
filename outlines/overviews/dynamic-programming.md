@@ -1,4 +1,4 @@
 * Fibonacci.
-* Generalizing the Idea.
-* The Stamps Problem.
-* Edit Distance in Strings.
+* Generalizing the idea.
+* The stamps problem.
+* Edit distance in strings.

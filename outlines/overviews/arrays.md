@@ -1,4 +1,3 @@
-* About HW 2
-* ADT Design
-* Arrays
-* Strings (maybe)
+* ADT Design.
+* Minimalist vs. maximalist design.
+* Arrays.
