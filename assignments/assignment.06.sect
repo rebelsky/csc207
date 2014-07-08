@@ -1,4 +1,4 @@
-<section id="assignment06"><title>Assignment 6: A Simple Ushahidi Android App</title>
+<section id="assignment06"><title>Assignment 6: Linear Structures</title>
 
 <para>
   <emphasis type="strong">This assignment is currently in draft form.
@@ -11,48 +11,28 @@
 
 <para>
   <emphasis>Summary:</emphasis>
-  In this assignment, you will build an Android Application that presents
-  data from an Ushaidi server.  (You will also do a simple exercise in
-  writing loop invariants.)
+  In this assignment, you will experiment with recent data structures
+  and algorithms that we have been exploring.
 </para>
 
 <para>
-  <emphasis>Purposes:</emphasis>  
-  To give you more experience using the Ushahidi API.  To give you more
-  experience building Android Apps.  To allow you to play a bit.
-  (To give you some more experience with loop invariants.)
+  <emphasis>Purposes:</emphasis>  To give you more experience thinking
+  about the implementation and use of linear structures.  To give you 
+  experience writing interactive programs.
 </para>
 
 <para>
   <emphasis>Collaboration:</emphasis> I encourage you to work in groups
-  of size two or four.  You may discuss this assignment with anyone,
-  provided you credit such discussions when you submit the assignment.
-</para>
-
-<para>
-  <emphasis>Wrapper (Prologue):</emphasis> Individually read through
-  this assignment and make sure that you understand what is required.
-  Then use the form available at <ulink url="http://bit.ly/207hw6pro"/>
-  to indicate (a) how long you think this assignment will take and (b)
-  what you think will be the most challenging aspect of this assignment.
-</para>
-
-<para>
-  <emphasis>Wrapper (Epilogue):</emphasis> When you are done
-  with the assignment, fill out the form available at <ulink
-  url="http://bit.ly/207hw6epi"/> to indicate (a) how long the
-  assignment took, (b) what the most challenging part of the assignment
-  was, and (c) something important you learned from doing the assignment.
-  If you find that the assignment took much less or much more time than
-  you expected, also include (d) a note as to what might have led to
-  that difference.
+  of size two to four, although you may work alone.  You may discuss this
+  assignment with anyone, provided you credit such discussions when you
+  submit the assignment.
 </para>
 
 <para>
   <emphasis>Submitting:</emphasis> 
   Please put all of your work in a GitHub repository named
-  <code>csc207-hw6</code>.  Email me the address of that repository.
-  Please title your email <quote>CSC207 2013F Assignment 6
+  <code>csc207-hw6</code>.  Email your grader the address of that repository.
+  Please title your email <quote>CSC207 2014S Assignment 6
   (<emphasis>Your Names</emphasis>)</quote>.
 </para>
 
@@ -62,111 +42,212 @@
   spend class time publicly critiquing your work.
 </para>
 
-<section id="assignment-06-invariants"><title>Loop Invariants</title>
-
-<para>
-  Do the Dutch National Flag problem from
-  <code><ulink url="http://www.cs.grinnell.edu/~walker/courses/207.sp13/labs/lab-loop-inv-pic.shtml"/></code>.  (You'll probably need to get through Friday's class first.)
-</para>
-
-</section> <!-- assignment-06-invariants -->
-
-<section id="assignment-06-prep"><title>Preparation</title>
-
-<para>
-  a. Create a new Android project for this assignment.  You can name
-  the project whatever you like, provided it's not in bad taste.
-</para>
-
-<para>
-  b. Make a copy <code>simple-ushahidi-api.jar</code>, the 
-  JAR file for the simple Ushahidi API, available at 
-  <code><ulink url="http://www.cs.grinnell.edu/~rebelsky/Glimmer/Ushahidi/code/simple-ushahidi-api.jar"/></code>.  
-  A JAR is a Java Archive, a standard way to group compiled Java code
-  for use in other projects.
-</para>
-
-<para>
-  c. The Ushahidi API relies on JSON.  (You can look it up.)  Make a
-  copy of the JAR file for JSON, available at
-  <code><ulink url="http://www.cs.grinnell.edu/~rebelsky/Glimmer/Ushahidi/code/json.jar"/></code>.  
-</para>
-
-<para>
-  d. Import those JARs into your project.
-</para>
-
-</section> <!-- assignment-06-preparation -->
-
 <section id="assignment-06-assignment"><title>Assignment</title>
 
+<section id="wrapped-array-based-queues"><title>Problem 1: Improving Array-Based Queues</title>
+
 <para>
-  Write an Android app that allows the user to see information
-  about the incidents on an Ushahidi installation.  (You do not
-  need to graph them; your goal is simply to present the data
-  about the incidents.)
+  The standard array-based implementation of queues uses two pointers: 
+  one to keep track of where to put the next value (we'll call that
+  <code>back</code>) and one to keep track of where to get the least
+  recently added value (we'll call that <code>front</code>).  For example,
+  after adding the strings <code>"alpha"</code>, <code>"beta"</code>,
+  and <code>"gamma"</code> to an array-based queue, we might end up with the
+  following.
+</para>
+
+<programlisting>
+front            back
+  |               |
+  |       +-------+
+  |       |
+  v       v
++---+---+---+---+---+
+| * | * | * | / | / |
++-|-+-|-+-|-+---+---+
+  |   |   +---------------------------+
+  |   |                               |
+  |   +--------------+                |
+  |                  |                |
+  v                  v                v
+  a l p h a \0 . . . b e t a \0 . . . g a m m a \0 . . .
+</programlisting>
+
+<para>
+  That's a bit cumbersome to draw, so we'll use the usual shorthand
+   of putting the values <quote>in</quote> the array.
+</para>
+
+<programlisting>
+front            back
+  |               |
+  |               |  
+  |               |
+  v               v
++-------+-------+-------+-------+-------+
+| alpha | beta  | gamma |       |       |
++-------+-------+-------+-------+-------+
+</programlisting>
+
+<para>
+  After we add and remove a few elements (say we add another gamma and
+  an alpha, and then remove the initial alpha and beta), we'll have 
+  <quote>empty space</quote> at the beginning of the array
+</para>
+
+<programlisting>
+front            back
+  |               +---------------+
+  |                               |  
+  +---------------+               |
+                  v               v
++-------+-------+-------+-------+-------+
+|       |       | gamma | gamma | alpha |
++-------+-------+-------+-------+-------+
+</programlisting>
+
+<para>
+  What happens if we add another element, say "delta"?  In the naive 
+  implementation of array-based queues, we've run out of space.  But
+  we should be able to <emphasis>wrap around</emphasis> to the front
+  of the array.
+</para>
+
+<programlisting>
+front            back 
+  |  +------------+
+  |  |            
+  +--|------------+ 
+  v--+            v 
++-------+-------+-------+-------+-------+
+| delta |       | gamma | gamma | alpha |
++-------+-------+-------+-------+-------+
+</programlisting>
+
+<para>
+  Implement and test array-based queues with wrapping.  You may find
+  it useful to start with the <ulink url="https://github.com/Grinnell-CSC207/linear/blob/master/src/taojava/util/ArrayBasedQueue.java"><code>ArrayBasedQueue</code></ulink> class from the Tao of Java's
+  <ulink url="https://github.com/Grinnell-CSC207/linear/">linear structures</ulink>
+  repository.
+</para>
+
+</section> <!-- wrapped-array-based-queues -->
+
+<section id="matching-parens"><title>Problem 2. Matching Parentheses and Other Symbols</title>
+
+<para>
+  Write a procedure that takes a string as input and prints out a
+  picture that shows the nesting.  For each pair of matched symbols, you
+  should draw a line underneath, as in the following picture.
+</para>
+
+<programlisting>
+{oh [boy] (I am having) (&lt;so&gt; much) fun matching `symbols'}
+    [---]
+          (-----------)
+                         &lt;--&gt;
+                        (---------)
+                                                 `-------'
+{---------------------------------------------------------}
+</programlisting>
+
+<para>
+  You should support parentheses, square brackets, curley braces,
+  angle brackets, and matched single quotation marks.  You may also
+  choose to support double-quotation marks, although they can be a
+  bit troublesome.
 </para>
 
 <para>
-  To start, make your app read in the URL of an Ushahidi installation
-  (or let the user select from a few options) and print out, say, the
-  first five incidents.
+  If the symbols do not match, you can do whatever you think is
+  appropriate to indicate the failure to match.  For examlpe
 </para>
 
+<programlisting>
+(Hello (world)
+       (-----)
+( &lt; - UNMATCHED
+</programlisting>
+
+<programlisting>
+(Hello (world))}  ]
+       (-----)
+(-------------)
+               } &lt;- UNMATCHED
+                  ] &lt;- UNMATCHED
+</programlisting>
+
 <para>
-  Then add features.  You might, for example,
+  To solve this problem, you will need to store the indices of the
+  matching symbols on the stack.  That is, you will need to push both
+  symbol and index.  How can you store two kinds of values in stack?
+  One option is to make it a stack of general Objects, and alternately
+  push Character and Integer objects.  Another option is to create a
+  simple class that groups a character and an integer.
+</para>
+
+</section>
+
+<section id="rpn"><title>Problem 3. A Reverse Polish Notation Calculator</title>
+
+<para>
+  Implement a calculator that uses Reverse Polish Notation (RPN).  You 
+  should support input of real numbers and the following operations:
 </para>
 
 <itemizedlist>
   <listitem>
-    Provide some basic statistics about the installation (e.g., total number
-    of incidents, incidents within the past week, average number of
-    incidents per week (perhaps as a bar chart)).
+    +, -, *, / - the standard arithmetic operators;
   </listitem>
 
   <listitem>
-    Allow the user to search for all incidents meeting some criterion,
-    such as text that appears with the description or title.
+    p - print the top value on the stack;
   </listitem>
 
   <listitem>
-    Provide a multi-level display of the information, such as a
-    short list of the incident numbers and titles with the option to
-    click on an incident to get the more detailed information.
+    s - print the whole stack;
   </listitem>
 
   <listitem>
-    Make a <quote>word cloud</quote> for the terms that appear in the
-    definitions.
+    c - clear the stack; and
+  </listitem>
+
+  <listitem>
+    one other interesting operation of your choice.
   </listitem>
 </itemizedlist>
 
 <para>
-  Do not feel constrained by this list.  You can do anything that you
-  think would be useful for someone interested in quickly scanning
-  Ushahidi data.
+  Although it doesn't have exactly the same interface, you can experiment
+  with the command-line RPN calculator <code>dc</code> to help understand
+  these operations.  (I don't think <code>dc</code> provides
+  <code>s</code>.)
 </para>
 
 <para>
-  Do not feel you have to go overboard with features.  This assignment
-  is primarily a chance for you to play with Android and to think about
-  features that might be useful to someone using Android.  If all you
-  want to do is show five incidents, that's fine and will certainly
-  earn you a check (provided your code is reasonable).
+  In implementing your calculator, do your best to use the 
+  model-view-controller (MVC) pattern.  You may need to Google that
+  pattern.
 </para>
+
+</section> 
 
 </section> <!-- id="assignment06-assignment" -->
 
 <section id="assignment06-citations"><title>Citations</title>
 
 <para>
-  The Simple Ushahidi API was originally written by Daniel Torres.
-  The overall design of the current API is due to Samuel A. Rebelsky,
-  but much of the underlying code draws upon Mr. Torres' work.
+  I've assigned problem one before, but I don't recall when.
 </para>
 
 <para>
-  Anything I know about Android I learned from Lea.
+  Problem two is adapted from the extra problems in the lab on stacks.  
+  I've modified the text slightly in combining the problems.
+</para>
+
+<para>
+  Problem three comes from an assignment from a previous semester.
+  I've taken the text mostly verbatim.
 </para>
 
 </section> <!-- citations -->

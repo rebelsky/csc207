@@ -19,7 +19,8 @@
 
 <para>
   <emphasis role="strong">Expected Time:</emphasis> One to two hours for 
-  parts one, two, and three.
+  parts one, two, and three.  Additional time for the readings in part
+  four: About one hour.
 </para>
 
 <para>
@@ -48,12 +49,15 @@
 </para>
 
 <para>
+  You do not need to submit anything for parts two, three, and four.
+  You do, however, need to meet with me as part of your work for part two.
+</para>
+
+<para>
   <emphasis role="strong">Warning:</emphasis> So that this assignment
   is a learning experience for everyone, I may spend class time publicly
   critiquing your work.
 </para>
-
-<section id="assignment"><title>Assignment</title>
 
 <section id="the-course"><title>Part One: The Course</title>
 
@@ -298,15 +302,11 @@
 <para>
   Do <ulink url="../readings/tools.html"> the readings for the
   next class</ulink>, which can be found at
-  <code><ulink url="&url;readings/git.html"/></code>
-  (or <code><ulink url="&url;readings/git.pdf"/></code>) and
-  <code><ulink url="&url;readings/eclipse.html"/></code>
-  (or <code><ulink url="&url;readings/eclipse.pdf"/></code>).  
+  <code><ulink url="&url;readings/git.html">&url;readings/git.{html,pdf}</ulink></code>
+  <code><ulink url="&url;readings/eclipse.html">&url;readings/eclipse.{html,pdf}</ulink></code>.  (That funny stuff in braces means taht you can use either suffix.)
 </para>
 
 </section>  <!-- the-reading -->
-
-</section>  <!-- assignment -->
 
 <section id="evaluation"><title>Important Evaluation Criteria</title>
 
@@ -318,26 +318,5 @@
 </para>
 
 </section>  <!-- evaluation -->
-
-<anchor id="anchor-submitting"/>
-<section id="submitting"><title>Submitting Your Homework</title>
-
-<para>
-  Please submit this work via two separate email messages to
-  <email>rebelsky@grinnell.edu</email>.  The first should have
-  a title of <quote>CSC 207 Course Details (<emphasis>Your
-  Name</emphasis>)</quote> and should contain your answers to the first
-  part of this assignment.  The second should have a title of <quote>CSC
-  207 Survey Answers (<emphasis>Your Name</emphasis>)</quote> and
-  should contain your answers to the second part of this assignment.
-</para>
-
-<para>
-  Please send your work as the body of an email message.  I don't like
-  attachments and prefer not to receive them when they can be
-  avoided.
-</para>
-
-</section>  <!-- submitting -->
 
 </section>  <!-- assignment.01 --> 

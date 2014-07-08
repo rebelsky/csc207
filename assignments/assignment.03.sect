@@ -13,17 +13,16 @@
 
 <para>
   <emphasis>Purposes:</emphasis>  
-  To help you think about types in Java.
-  To give you experience reading the Java API.  To continue
-  exploring the relationships between C and Java.
+  To help you think about types in Java.  To give you experience reading
+  the Java API.  To continue exploring the relationships between C
+  and Java.
 </para>
 
 <para>
   <emphasis>Collaboration:</emphasis>  
-  I encourage you to work in groups of size three. You may, however,
-  work alone or work in a group of size two or size four. You may discuss
-  this assignment with anyone, provided you credit such discussions when
-  you submit the assignment.
+  Do this assignment individually.  You may discuss this assignment
+  with anyone, provided you credit such discussions when you submit
+  the assignment.
 </para>
 
 <para>
@@ -48,9 +47,9 @@
 <para>
   <emphasis>Submitting:</emphasis> 
   Please put all of your work in a GitHub repository named
-  <code>csc207-hw3</code>.  Email me the address of that repository.
-  Please title your email <quote>CSC207 2013F Assignment 3
-  (<emphasis>Your Names</emphasis>)</quote>.
+  <code>csc207-hw3</code>.  Email the address of that repository to
+  grader-207@cs.grinnell.edu.  Please use a subject of <quote>CSC207
+  &semester; Assignment 3 (<emphasis>Your Name</emphasis>)</quote>.
 </para>
 
 <para>
@@ -78,13 +77,13 @@
 </para>
 
 <para>
-  b. Create a new package in the project.  You may choose the name.
-  (Again, provided it's in good taste).  I would suggest 
+  b. Create a new package in the project.  You may choose the name
+  (again, provided it's in good taste).  I would suggest 
   <code>edu.grinnell.csc207.<emphasis>username</emphasis>.utils</code>.
 </para>
 
 <para>
-  c. Create utility classes, <code>StringUtils.java</code> and
+  c. Create two utility classes, <code>StringUtils.java</code> and
   <code>Calculator.java</code>.
 </para>
 
@@ -112,27 +111,27 @@ movietitle:rating:rater:date
 </para>
 
 <programlisting>
-assertArrayEquals(new String[] { "a", "b", "c" },
-                  StringUtils.splitAt("a:b:c", ':'));
-assertArrayEquals(new String[] { "a", "b", "c" },
-                  StringUtils.splitAt("a b c", ' '));
-assertArrayEquals(new String[] { "a:b:c" },
-                  StringUtils.splitAt("a:b:c", ' '));
-assertArrayEquals("one field", new String[] { "a" },
-                  StringUtils.splitAt("a", ':'));
-assertArrayEquals("empty inner field", new String[] { "a", "", "c" },
-                  StringUtils.splitAt("a::c", ':'));
-assertArrayEquals("leading empty field", new String[] { "", "a" },
-                  StringUtils.splitAt(":a", ':'));
-assertArrayEquals("trailing empty field", new String[] { "a", "" },
-                  StringUtils.splitAt("a:", ':'));
+assertArrayEquals (new String[] { "a", "b", "c" },
+                   StringUtils.splitAt ("a:b:c", ':'));
+assertArrayEquals (new String[] { "a", "b", "c" },
+                   StringUtils.splitAt ("a b c", ' '));
+assertArrayEquals (new String[] { "a:b:c" },
+                   StringUtils.splitAt ("a:b:c", ' '));
+assertArrayEquals ("one field", new String[] { "a" },
+                   StringUtils.splitAt ("a", ':'));
+assertArrayEquals ("empty inner field", new String[] { "a", "", "c" },
+                   StringUtils.splitAt ("a::c", ':'));
+assertArrayEquals ("leading empty field", new String[] { "", "a" },
+                   StringUtils.splitAt (":a", ':'));
+assertArrayEquals ("trailing empty field", new String[] { "a", "" },
+                   StringUtils.splitAt ("a:", ':'));
 </programlisting>
 
 <para>
   In implementing <code>splitAt</code> you may not use use the
   <code>split</code> method of <code>java.util.String</code>.
   (Yes, that's right, you have to implement a simpler version of
-  that method by hand.)
+  that method by hand.  Don't worry, it's good experience.)
 </para>
 
 </section> <!-- assignment-03-A -->
@@ -162,13 +161,24 @@ assertArrayEquals("trailing empty field", new String[] { "a", "" },
 </para>
 
 <programlisting>
-assertArrayEquals(new String[] { "a", "b", "c" },
-                  StringUtils.splitCSV("a,b,c"));
-assertArrayEquals(new String[] { "a,b", "c" },
-                  StringUtils.splitCSV("\"a,b\",c"));
-assertArrayEquals(new String[] { "a", "b,b\"", "c" },
-                  StringUtils.splitCSV("a,\"b,b\"\"\",c"));
+assertArrayEquals (new String[] { "a", "b", "c" },
+                   StringUtils.splitCSV("a,b,c"));
+assertArrayEquals (new String[] { "a,b", "c" },
+                   StringUtils.splitCSV("\"a,b\",c"));
+assertArrayEquals (new String[] { "a", "b,b\"", "c" },
+                   StringUtils.splitCSV("a,\"b,b\"\"\",c"));
 </programlisting>
+
+<para>
+  (Yeah, aren't backslash quotation marks a wonder in C-like languages?)
+</para>
+
+<para>
+  You may assume that the input is in correct CSV format.  (So you don't need
+  to deal with strings that have an odd number of quotation marks.)   Of course,
+  those who want to do an exceptional job probably deal with erroneous input in
+  a sensible way, reporting where the error occurred.
+</para>
 
 </section> <!-- assignment-03-B -->
 
@@ -194,10 +204,15 @@ assertArrayEquals(new String[] { "a", "b,b\"", "c" },
 </para>
 
 <programlisting>
-assertEquals("e", StringUtils.deLeet("3"));
-assertEquals("leet", StringUtils.deLeet("133+"));
-assertEquals("eat banana", StringUtils.deLeet("3@+ |3@|\\|@|\\|@"));
+assertEquals ("e", StringUtils.deLeet ("3"));
+assertEquals ("leet", StringUtils.deLeet ("133+"));
+assertEquals ("eat banana", StringUtils.deLeet ("3@+ |3@|\\|@|\\|@"));
 </programlisting>
+
+<para>
+  Note that we see a few extra backslashes because C and Java strings use
+  <code>\\</code> to represent a single backslash.
+</para>
 
 </section> <!-- assignment-03-C -->
 
@@ -274,69 +289,20 @@ Fee fy mo Mincoln, Lincoln!</literallayout>
 </para>
 
 <programlisting>
-assertEquals(BigInteger.valueOf(0), Calculator.eval0("0"));
-assertEquals(BigInteger.valueOf(2), Calculator.eval0("1 + 1"));
-assertEquals(BigInteger.valueOf(4), Calculator.eval0("1 + 2 + 1"));
-assertEquals(BigInteger.valueOf(9), Calculator.eval0("1 + 2 * 3"));
+assertEquals (BigInteger.valueOf (0), Calculator.eval0 ("0"));
+assertEquals (BigInteger.valueOf (2), Calculator.eval0 ("1 + 1"));
+assertEquals (BigInteger.valueOf (4), Calculator.eval0 ("1 + 2 + 1"));
+assertEquals (BigInteger.valueOf (9), Calculator.eval0 ("1 + 2 * 3"));
 </programlisting>
 
 <para>
   Your calculator must support arbitrarily large integers.  For
   example, you should get the correct answer for
-  <code>Calculator.eval0("2 ^ 64")</code>.  You can achieve this result
+  <code>Calculator.eval0 ("2 ^ 64")</code>.  You can achieve this result
   by using <code>java.lang.BigInteger</code> for your data values.
 </para>
 
 </section> <!-- assignment-03-E -->
-
-<section id="assignment-03-F"><title>Part F: Computing Change</title>
-
-<para>
-  In the completely fictitious nation of Yksleber, the government
-  has decided that using multiples of five for coin values is, well,
-  kind of simplistic.  Instead, they have chosen the <quote>wot</quote>,
-  which has a value of two, the <quote>eater</quote>, which has a value
-  of seven, the <quote>stickpair</quote>, which has a value
-  of eleven, and the <quote>deck</quote>, which has a value of 54.
-</para>
-
-<para>
-  When making change, we like to use the fewest number of coins possible.
-  Unfortunately, these denominations cause problems when used in
-  conjunction with the traditional change-making algorithm of <quote>use
-  as many of the largest coin as possible</quote> no longer works.
-  For example, consider trying to make a value of 28.  If you start with
-  a stickpair (value 11), you are left with 17.  If you then take another
-  stickpair (value 11) you are left with 6.  And then you take three wots.
-  So that's five coins.  But you can make 28 with four eaters.
-</para>
-
-<para>
-  The merchants of Yksleber have gotten very good at making change,
-  but most of the populace find themselves challenged by this approach.
-  And when citizens are challenged to compute, they look for smart phone
-  apps.
-</para>
-
-<para>
-  Let's assume that you've been hired to implement the
-  core of the Yksleber change app.  Write a static method,
-  <methodname>fewestCoins</methodname>, that takes as input a positive
-  integer and returns an array that gives a smallest combination of
-  coins that make up that value.  (Rather than using the silly names,
-  you should return an array of integers that represent the denominations
-  of those coins.  For example, <code>fewestCoins(20)</code> would return
-  some permutation of the array <code>{ 2, 7, 11 }</code>.)
-</para>
-
-<para>
-  <emphasis>
-  You need not do exhaustive testing of this method.  Pick a few interesting
-  cases (like 20 and 28) and make sure that it works correctly for those.
-  </emphasis>
-</para>
-
-</section> <!-- assignment-03-F -->
 
 </section> <!-- id="assignment03-assignment" -->
 
@@ -344,12 +310,14 @@ assertEquals(BigInteger.valueOf(9), Calculator.eval0("1 + 2 * 3"));
 
 <para>
   Problems A, B, C, and D stem from a laboratory on strings that
-  I wrote in the distant past.
+  I wrote in the distant past.  
 </para>
 
 <para>
-  Ms. Ellis's text is taken from a copy of her LP, <emphasis>The Name
-  Game</emphasis>.
+  Ms. Ellis's text is taken from the jacket of a copy of her LP,
+  <emphasis>The Name Game</emphasis>.  For those of you who don't know
+  what an LP is, LP is short for Long-Playing record and it's a circular
+  slab of vinyl about 12" in diameter.
 </para>
 
 </section> <!-- citations -->

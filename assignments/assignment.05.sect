@@ -1,4 +1,4 @@
-<section id="assignment05"><title>Assignment 5: Exploring APIs</title>
+<section id="assignment05"><title>Assignment 5: Algorithm Design and Analysis</title>
 
 <para>
   <emphasis type="strong">This assignment is currently in draft form.
@@ -11,54 +11,29 @@
 
 <para>
   <emphasis>Summary:</emphasis>
-  In this assignment, you will build a variety of small programs that
-  let you think about data representation, APIs, and output, using the
-  Ushahidi crowd mapping framework as your data source.  You will explore
-  a variety of issues related to Java programming.
+  In this assignment, you will develop and analyze a variety of small
+  programs.  
 </para>
 
 <para>
   <emphasis>Purposes:</emphasis>  
-  To give you experience using APIs, including incompletely documented
-  APIs.  To give you more experience with arrays and loops in Java.
-  To expand your consideration of objects.  To start your consideration
-  of polymorphism (which is not addressed explicitly in this assignment,
-  but which is nonethless part of the assignment).
+  The focus of this assignment is on building your skills
+  in designing, constructing, and testing algorithms along with loop
+  invariants.
 </para>
 
 <para>
   <emphasis>Collaboration:</emphasis>  
-  I encourage you to work in groups of size three. You may, however,
-  work alone or work in a group of size two or size four. You may discuss
-  this assignment with anyone, provided you credit such discussions when
-  you submit the assignment.
-</para>
-
-<para>
-  <emphasis>Wrapper (Prologue):</emphasis> Individually read through
-  this assignment and make sure that you understand what is required.
-  Then use the form available at <ulink url="http://bit.ly/207hw5pro"/>
-  to indicate (a) how long you think this assignment will take and (b)
-  what you think will be the most challenging aspect of this assignment.
-</para>
-
-<para>
-  <emphasis>Wrapper (Epilogue):</emphasis> When you are done
-  with the assignment, fill out the form available at <ulink
-  url="http://bit.ly/207hw5epi"/> to indicate (a) how long the
-  assignment took, (b) what the most challenging part of the assignment
-  was, and (c) something important you learned from doing the assignment.
-  If you find that the assignment took much less or much more time than
-  you expected, also include (d) a note as to what might have led to
-  that difference.
+  You may work alone or in a group of size two, three, or four.
 </para>
 
 <para>
   <emphasis>Submitting:</emphasis> 
   Please put all of your work in a GitHub repository named
-  <code>csc207-hw5</code>.  Email me the address of that repository.
-  Please title your email <quote>CSC207 2013F Assignment 5
-  (<emphasis>Your Names</emphasis>)</quote>.
+  <code>csc207-hw5</code>.  Email the address of that repository
+  to grader-207@cs.grinnell.edu.
+  Please use a subject of <quote>CSC207 &semester; Assignment 5
+  (<emphasis>Optional: Your Name</emphasis>)</quote>.
 </para>
 
 <para>
@@ -67,234 +42,405 @@
   spend class time publicly critiquing your work.
 </para>
 
-<section id="assignment05-intro"><title>Introduction</title>
-
-<para>
-  In this assignment, we will be working with the Ushahidi
-  crowdsourcing platform, <code><ulink url="http://www.ushahidi.com/"/></code>.
-  In particular, we will be grabbing data from simulated and real
-  Ushahidi installations.
-</para>
-
-<para>
-  To interact with Ushahidi, we will be using a simple API designed and
-  implemented by Grinnell students and faculty.
-</para>
-
-<para>
-  This assignment asks you to learn more about Ushahidi and that API.
-  As you learn more (and write programs that express your learning),
-  you will be developing a variety of skills in developing software
-  and thinking from an object-oriented perspective.
-</para>
-
-</section> <!-- assignment05-intro -->
-
-<section id="assignment-05-prelim"><title>Preliminaries</title>
-
-<para>
-  <emphasis>Although you will not submit your work on this section
-  of the assignment, you should take it as seriously as you would the
-  graded parts of the assignment.  The gain is not from the grading,
-  it's from considering the issues carefully.</emphasis>
-</para>
-
-<para>
-  a. Spend about ten to fifteen minutes reading about Ushahidi and
-  identifying at least one interesting Ushahidi installation.
-</para>
-
-<para>
-  b. Make a list of fields you would expect to see in an object
-  that represents one incident in a simple Ushahidi installation.
-  That is, what data would you want stored for an incident and what
-  type would each part of the data have?
-</para>
-
-<para>
-  c. Make a list of methods you would want as a Java programmer who
-  needs to interact with an Ushahidi site.
-</para>
-
-<para>
-  d. Look at the Java documentation for the simple Ushahidi API, available
-  at <code><ulink url="http://www.cs.grinnell.edu/~rebelsky/Glimmer/Ushahidi/docs/"/></code>.  Focus on 
-</para>
-
-<itemizedlist>
-  <listitem>
-    the constants and methods in <code>UshahidiIncident</code>, which
-    represents incidents;
-  </listitem>
-
-  <listitem>
-    the constants and methods in <code>UshahidiLocation</code>, which
-    represents locations;
-  </listitem>
-
-  <listitem>
-    the methods in <code>UshahidiClient</code> and
-    <code>UshahidiAdmin</code>, which provide client and administrative
-    access to an Ushahidi installation; and
-  </listitem>
-
-  <listitem>
-    the constants and methods in <code>UshahidiUtils</code>, which
-    provides some utility methods for incidents.
-  </listitem>
-</itemizedlist>
-
-<para>
-  You will note that we did not tell you to look at the fields.  As
-  a client of these classes, you should not care what the fields are.
-</para>
-
-<para>
-  After examining the documentation, You may find it helpful to note
-  what methods you expected to find but did not find, and what methods
-  you found that you did not expect to find.  (If there are methods that
-  you think would be helpful, you might want to let me know.  I may
-  add them or I may explain why they aren't there.)
-</para>
-
-</section> <!-- assignment-05-prelim -->
-
 <section id="assignment-05-prep"><title>Preparation</title>
 
 <para>
-  a. Create a new Eclipse project for this assignment.  You can name
+  Create a new Eclipse project for this assignment.  You can name
   the project whatever you like, provided it's not in bad taste.
 </para>
 
-<para>
-  b. Make a copy <code>simple-ushahidi-api.jar</code>, the 
-  JAR file for the simple Ushahidi API, available at 
-  <code><ulink url="http://www.cs.grinnell.edu/~rebelsky/Glimmer/Ushahidi/code/simple-ushahidi-api.jar"/></code>.  
-  A JAR is a Java Archive, a standard way to group compiled Java code
-  for use in other projects.
-</para>
-
-<para>
-  c. The Ushahidi API relies on JSON.  (You can look it up.)  Make a
-  copy of the JAR file for JSON, available at
-  <code><ulink url="http://www.cs.grinnell.edu/~rebelsky/Glimmer/Ushahidi/code/json.jar"/></code>.  
-</para>
-
-<para>
-  d. Import those JARs into your project using the instructions
-  available at
-  <code><ulink url="http://www.wikihow.com/Add-JARs-to-Project-Build-Paths-in-Eclipse-(Java)"/></code>.  (If you find and follow other instructions, that's fine.)
-</para>
 
 </section> <!-- assignment-05-preparation -->
 
 <section id="assignment-05-assignment"><title>Assignment</title>
 
-<section id="assignment-05-A"><title>Part A: Printing Incidents</title>
+<section id="assignment-05-recurrence"><title>Part A: Recurrence Relations</title>
 
 <para>
-  1. Create a new utility class, <code>UshahidiExtensions.java</code>,
-  that has one static method, <methodname>printIncident</methodname>,
-  that takes as input a <code>PrintWriter</code> and an
-  <code>UshahidiIncident</code> and prints the incident out using a
-  format something like the following (things in all caps should be
-  replaced by the corresponding value).
+  In class, we've looked at a few recurrence relations that model
+  the running time of algorithms and informally found their 
+  <quote>closed form</quote> (non-recursive) solution.  Using similar
+  techniques, find the closed form of the following recurrence relations.
+</para>
+
+<itemizedlist>
+  <listitem>
+    f0(1) = 1.  f0(n) = n + f0(n/2).
+  </listitem>
+
+  <listitem>
+    f1(1) = 1.  f1(n) = n + f1(n-1).
+  </listitem>
+
+  <listitem>
+    f2(1) = 1.  f2(n) = c + f2(n-1), for some constant c.
+  </listitem>
+
+  <listitem>
+    f3(1) = 1.  f3(n) = c + f3(n/2), for some constant c.
+  </listitem>
+
+  <listitem>
+    f4(1) = 1.  f4(n) = n + 2*f4(n/2).
+  </listitem>
+
+  <listitem>
+    f5(1) = 1.  f5(n) = c + 2*f5(n/2), for some constant c.
+  </listitem>
+
+  <listitem>
+    f6(1) = 1.  f6(n) = c + 2*f6(n-1), for some constant c.
+  </listitem>
+</itemizedlist>
+
+</section> <!-- assignment-05-relations -->
+
+<section id="assignment-05-dnf"><title>Part B: The Dutch National Flag</title>
+
+<para>
+  The Dutch National Flag problem is a statement of an approach to dividing
+  a collection of values into three categories.  Given an array of values,
+  <code>vals</code>, and a mechanism for classifying the values as
+  <quote>red</quote> (small, belonging on the left), <quote>white</quote>
+  (medium, belonging in the middle), or <quote>large</quote>
+  (large, belonging on the right), rearrange the values so that the 
+  red values come first, then the white values, and then the blue values.
+</para>
+
+<para>
+  Of course, in order to classify values, we need a classifier.
+  Here's a useful interface.
 </para>
 
 <programlisting>
-Incident #: TITLE
-  DESCRIPTION
-  Location: LOCATION
-  Status: (MODE, ACTIVE, VERIFIED)
+/**
+ * Objects that classify other objects.  Useful for DNF.
+ */
+public interface Classifier&lt;T&gt;
+{
+  /**
+   * Classify val into one of three categories, which we call
+   * "red", "white", and "blue" for convenience.  If val is red,
+   * returns a negative number.  If val is white, returns zero.
+   * If val is blue, returns a positive number.
+   */
+  public int classify(T val);
+} // interface Classifier
 </programlisting>
 
 <para>
-  2. Create a new main class, <code>PrintIncidentExperiment.java</code>, 
-  with the following method:
+  Since dealing with generics can be difficult, we'll focus on the
+  subproblem of rearranging arrays of strings.  Ideally, we can think
+  of the classifier like this.
 </para>
 
 <programlisting>
-    public static void main(String[] args) {
-        // Create the output device
-        PrintWriter pen = new PrintWriter(System.out, true);
-
-        // A few basic incidents
-        UshahidiExtensions.printIncident(pen, UshahidiUtils.SAMPLE_INCIDENT);
-        UshahidiExtensions.printIncident(pen, UshahidiUtils.randomIncident());
-        UshahidiExtensions.printIncident(pen, UshahidiUtils.randomIncident());
-
-        // A newly created incident
-        UshahidiIncident myIncident = new UshahidiIncident(...);
-        UshahidiExtensions.printIncident(pen, myIncident);
-
-        // One from a list
-        UshahidiClient client = UshahidiUtils.SAMPLE_CLIENT;
-        UshahidiExtensions.printIncident(pen, client.nextIncident());
-
-        // One that requires connecting to the server
-        UshahidiClient webclient = new UshahidiWebClient(URL);
-        UshahidiExtensions.printIncident(pen, webclient.nextIncident());
-    } // main(String[])
+/**
+ * Objects that classify strings.  Useful for DNF.
+ */
+public interface StringClassifier
+  implements Classifier&lt;String&gt;
+{
+} // interface StringClassifier
 </programlisting>
 
-</section> <!-- assignment-05-A -->
-
-<section id="assignment-05-B"><title>Part B: Incident Lists</title>
-
 <para>
-  While we will generally be working with incidents taken from a server,
-  it can be helpful for testing to build our own incident list.
-  Write a method that creates an <code>UshahidiIncidentList</code> of
-  about a dozen incidents that you can use for experiments.  You should
-  try different dates, different locations, and so on and so forth.
+  But that's probably a little too sophisticated.  So you can use the
+  following definition of the interface.
 </para>
 
-</section> <!-- assignment-05-B -->
-
-<section id="assignment-05-C"><title>Part C: Extreme Incidents</title>
+<programlisting>
+/**
+ * Objects that classify strings.  Useful for DNF.
+ */
+public interface StringClassifier
+{
+  /**
+   * Classify val into one of three categories, which we call
+   * "red", "white", and "blue" for convenience.  If val is red,
+   * returns a negative number.  If val is white, returns zero.
+   * If val is blue, returns a positive number.
+   */
+  public int classify(String val);
+} // interface StringClassifier
+</programlisting>
 
 <para>
-  Write a method that, given an <code>UshahidiClient</code>, prints
-  out the incident with the lowest and highest id.  You can use only
-  <code>nextIncident</code> and <code>hasMoreIncidents</code>.
+  Implement the following method.
+</para>
+
+<programlisting>
+/**
+ * Rearrange vals so that red values precede white values and white values
+ * precede blue values.
+ *
+ * @post
+ *   Exist P and Q, 0 &lt;= P &lt;= Q &lt;= vals.length, s.t.
+ *     For all i, 0 &lt;= i &lt; P, classifier.classify(vals[i]) &lt; 0
+ *     For all i, P &lt;= w &lt; Q, classifier.classify(vals[i]) == 0
+ *     For all i, Q &lt;= i &lt; vals.length, classifier.classify(vals[i]) &gt; 0
+ *   Values have neither been added to nor removed from vals; the new
+ *     vals is a permutation of the original.
+ */
+public void dnf(String[] vals, StringClassifier classifier)
+{
+  // STUB
+} // dnf(String[], StringClassifier) 
+</programlisting>
+
+<para>
+  You may recall that we've identified a useful invariant for this problem.
+  You should use this invariant, or a similar one.
+</para>
+
+<programlisting>
++---------+---------+---------+---------+
+|   red   |  white  | unknown |   blue  |
++---------+---------+---------+---------+
+|         |         |         |         |
+0         r         i         b         length
+</programlisting>
+
+<para>
+  Here's a simple classifier.
+</para>
+
+<programlisting>
+/**
+ * Classify strings as red (fewer than 5 characters), white (5
+ * characters), or blue (more than 5 characters).
+ */
+public class SimpleStringSizeClassifier
+  implements StringClassifier
+{
+  public int classify(String val)
+  {
+    return val.length() - 5;
+  } // classify
+} // class SimpleStringClassifier
+</programlisting>
+
+<para>
+  Here's another classifier.  This one identifies strings based on
+  their first character.
+</para>
+
+<programlisting>
+/**
+ * Classify strings as red (starts with a lowercase letter), white
+ * (starts with an uppercase letter), or blue (starts with anything
+ * else, or is empty).
+ */
+public class ClassifyStringsByFirstCharacter
+  implements StringClassifier
+{
+  public int classify(String val)
+  {
+    // Empty strings don't start with uppercase or lowercase letters,
+    // and are therefore blue.
+    if (val.length() == 0)
+      return 1;
+    // Strings that start with a lowercase letter are red.
+    else if (Character.isLowerCase(val.charAt(0)))
+      return -1;
+    // Strings that start with an uppercase letter are white.
+    else if (Character.isUpperCase(val.charAt(0)))
+      return 0;
+    // Everything else is blue
+    else
+      return 1;
+    } // classify(String)
+} // ClassifyStringsByFirstCharacter
+</programlisting>
+
+</section> <!-- assignment-05-dnf -->
+
+<section id="assignment-05-skiplists"><title>Part C: Skip Lists</title>
+
+<para>
+  Skip Lists are a data structure that is useful for cases in which you have
+  a collection of values, want to be able to expand and shrink the collection,
+  and want to be able to find values in the collection.  You can learn more
+  about skip lists from the handout.
 </para>
 
 <para>
-  Try your method with our custom incident list.  Then try it using
-  an Ushahidi installation.
+  Implement the following class.
 </para>
 
-</section> <!-- assignment-05-C -->
-
-<section id="assignment-05-D"><title>Part D: Identifying Incidents</title>
+<programlisting>
+/**
+ * Skip lists of strings, stored alphabetically.
+ */
+public class SkipListOfStrings
+  implements SetOfStrings
+{
+  . . .
+} // class SkipListOfStrings
+</programlisting>
 
 <para>
-  Write a method that, given a start date and an end date, prints all 
-  incidents that happen between the two dates (in any order).  You can
-  use only <code>nextIncident</code> and <code>hasMoreIncidents</code>.
+  As the declaration suggests, your class should implement a simple
+  set interface.  Here is that interface.
 </para>
 
-</section> <!-- assignment-05-D -->
+<programlisting>
+/**
+ * Simple sets of strings.
+ */
+public interface SetOfStrings
+{
+  /**
+   * Determine if the set contains a particular string.
+   */
+  public boolean contains(String str);
 
-<section id="assignment-05-E"><title>Part E: Selecting Incidents</title>
+  /**
+   * Add an element to the set.
+   *
+   * @post contains(str)
+   */
+  public void add(String str);
+
+  /**
+   * Remove an element from the set.
+   *
+   * @post !contains(str)
+   */
+  public void remove(String str);
+} // interface SetOfStrings
+</programlisting>
 
 <para>
-  Write a method that, given a start date and an end date, builds and
-  returns an array of all the incidents that fall between those two dates.
-  (In solving this problem, you may find it useful to grab the array of
-  all incidents.)
+  You may find it useful to write loop invariants for the three methods, 
+  but you are not required to do so.
 </para>
 
-</section> <!-- assignment-05-E -->
+</section> <!-- assignment-05-skiplist -->
 
-</section> <!-- id="assignment05-assignment" -->
+<section id="assignment-05-exponent"><title>Part D: Exponentiation</title>
+
+<para>
+  As you may recall, we can write an efficient (well,
+  O(log<subscript>2</subscript><emphasis>n</emphasis>)) exponentiation
+  algorithm by relying on the following rules.
+</para>
+
+<itemizedlist>
+  <listitem>
+    <emphasis>x<superscript>0</superscript></emphasis> = 1.
+  </listitem>
+
+  <listitem>
+    <emphasis>x<superscript>2k</superscript></emphasis> =
+      <emphasis>x<superscript>k</superscript></emphasis> * 
+      <emphasis>x<superscript>k</superscript></emphasis>, for 
+      <emphasis>k</emphasis> &gt; 0.
+  </listitem>
+
+  <listitem>
+    <emphasis>x<superscript>k+1</superscript></emphasis> =
+      <emphasis>x</emphasis> *
+      <emphasis>x<superscript>k</superscript></emphasis>, for
+      even <emphasis>k</emphasis> &gt;= 0.
+  </listitem>
+</itemizedlist>
+
+<para>
+  Using invariants to help you design the algorithm, write an 
+  <emphasis>iterative</emphasis> 
+  O(log<subscript>2</subscript><emphasis>n</emphasis>)) exponentiation
+  algorithm by using those rules.  
+</para>
+
+<programlisting>
+  /**
+   * Compute x^n.
+   *
+   * @pre n &gt;= 1.
+   */
+  public double expt(double x, int n)
+  {
+  } // expt(double, int)
+</programlisting>
+
+<para>
+  Hint: You may find it useful to keep track of two
+  intermediate values, one of which only takes on values of
+  x<superscript>2<superscript>k</superscript></superscript> and one of
+  which holds the product of any other x's you need in the result.
+</para>
+
+</section> <!-- assignment-05-exponentiation -->
+
+<section id="assignment-05-binsearch"><title>Part E: Binary Search</title>
+
+<para>
+  a. Implement the following procedure, using a divide-and-conquer strategy.
+</para>
+
+<programlisting>
+/**
+ * Search for val in values, return the index of an instance of val.
+ *
+ * @param val
+ *   An integer we're searching for
+ * @param values
+ *   A sorted array of integers
+ * @result
+ *   index, an integer
+ * @throws Exception
+ *   If there is no i s.t. values[i] == val
+ * @pre
+ *   values is sorted in increasing order.  That is, values[i] &lt;
+ *   values[i+1] for all reasonable i.
+ * @post
+ *   values[index] == val
+ */
+public static int binarySearch (int i, int[] vals) 
+  throws Exception 
+{
+  return 0;   // STUB
+} // binarySearch
+</programlisting>
+
+<para>
+  b. Evidence suggests that (i) many programmers have difficulty implementing
+  binary search correctly and (ii) many programmers do only casual testing
+  of their binary search algorithm.  But it's really easy to write a
+  relatively comprehensive test suit for binary search.  (The test suite
+  is based on one by Jon Bentley.)
+</para>
+
+<literallayout>For each s from 1 to 32
+    Create an array of size s, containing the values 0, 2, 4, ... 2*(s-1)
+    For all i from 0 to s-1, inclusive
+        // Make sure that value 2*i is in position i
+        assert(binarySearch(2*i, array) == i)
+        // Make sure that odd values are not in the array
+        assertException(binarySearch(2*i+1, array))
+    assertException(-1, array)
+</literallayout>
+
+<para>
+  Implement this test.  Then repair any bugs you find in your implementation
+  of binary search.
+</para>
+
+</section> <!-- assignment-05-binsearch -->
+
+</section> <!-- assignment-05-assignment -->
 
 <section id="assignment05-citations"><title>Citations</title>
 
 <para>
-  The Simple Ushahidi API was originally written by Daniel Torres.
-  The overall design of the current API is due to Samuel A. Rebelsky,
-  but much of the underlying code draws upon Mr. Torres' work.
+  This assignment grew from exercises in class and some discussions
+  with students.
+</para>
+
+<para>
+  The test for binary search is based on one from a Programming Pearl
+  by John Bentley.
 </para>
 
 </section> <!-- citations -->

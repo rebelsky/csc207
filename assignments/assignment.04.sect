@@ -27,7 +27,8 @@
   <emphasis>Collaboration:</emphasis>  
   You must work in a group.  Your group can be of size two, three, or
   four.  Your group must include at least one person you did not work with
-  on a prior assignment.
+  on a prior assignment.  (It's okay to work with someone who you did
+  labs with.)
 </para>
 
 <para>
@@ -52,9 +53,10 @@
 <para>
   <emphasis>Submitting:</emphasis> 
   Please put all of your work in a GitHub repository named
-  <code>csc207-hw4</code>.  Email me the address of that repository.
-  Please title your email <quote>CSC207 2013F Assignment 4
-  (<emphasis>Your Names</emphasis>)</quote>.
+  <code>csc207-hw4</code>.  Email the address of that repository
+  to grader-207@cs.grinnell.edu.
+  Please use a subject of <quote>CSC207 &semester; Assignment 4
+  (<emphasis>Your Name</emphasis>)</quote>.
 </para>
 
 <para>
@@ -71,9 +73,9 @@
 </para>
 
 <para>
-  b. If you'd like, you may copy the Fraction class that we wrote
-  in class.  If you do so, make sure to include an "@author CSC 207 2013F"
-  at the top.
+  b. You will need a Fraction class for this assignment.  If you'd like, 
+  you may copy the Fraction class that we used in a recent lab as a
+  starting point, but make sure to put an appropriate citation at the top.
 </para>
 
 </section> <!-- assignment-04-preparation -->
@@ -83,9 +85,10 @@
 <section id="assignment-04-A"><title>Part A: A Fraction Class</title>
 
 <para>
-  Finish implementing the Fraction class that you started to design
-  in assignment 2 and that we worked on in class.  Make sure to write
-  a few tests for each method you implement.
+  Finish implementing the Fraction class that you started to design in
+  assignment 2 and that you may have worked on separately.  Make sure
+  to write a few tests for each method you implement.  (Yes, you should
+  turn in the tests, too.)
 </para>
 
 </section> <!-- assignment-04-A -->
@@ -96,7 +99,7 @@
   Implement a class, <code>Calculator</code>, that supports simple
   calculations using fractions and integers.  Your calculator should 
   support at least eight storage elements, labeled <code>r0</code> ...
-  <code>r8</code>.
+  <code>r7</code>.
 </para>
 
 <para>
@@ -130,7 +133,14 @@
   evaluate that expression, print the result, and do it all over again.
   You should find a nice way to report the errors.
 </para>
-  
+
+<para>
+  Good designers separate program logic from the underlying
+  computation.
+  Please try to design your program so that it's easy to <quote>swap
+  out</quote> one interface and to <quote>swap in</quote> another one.
+</para>
+
 </section> <!-- assignment-04-C -->
 
 </section> <!-- assignment-04-assignment -->

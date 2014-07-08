@@ -18,10 +18,10 @@
 
 <para>
   <emphasis>Collaboration:</emphasis>  
-  I encourage you to work in groups of size three. You may, however,
-  work alone or work in a group of size two or size four. You may not work with people you worked with on the previous assignment. You may discuss
-  this assignment with anyone, provided you credit such discussions when
-  you submit the assignment.
+  You are required to work in a group.  I encourage you to work in
+  groups of size three. You may, however, work in a group of size two
+  or size four.  You may discuss this assignment with anyone, provided
+  you credit such discussions when you submit the assignment.
 </para>
 
 <para>
@@ -46,8 +46,9 @@
 <para>
   <emphasis>Submitting:</emphasis> 
   Please put all of your work in a GitHub repository named
-  <code>csc207-hw2</code>.  Email me the address of that repository.
-  Please title your email <quote>CSC207 2013F Assignment 2
+  <code>csc207-hw2</code>.  Email the address of that repository 
+  to grader-207@cs.grinnell.edu.
+  Please use a subject of <quote>CSC207 &semester; Assignment 2
   (<emphasis>Your Name</emphasis>)</quote>.
 </para>
 
@@ -98,7 +99,8 @@
     <code>i</code>, of type <code>int</code> returns <code>true</code>
     if <code>i</code> is odd and <code>false</code> if <code>i</code>
     is not odd.  In solving this problem, <emphasis>you may not
-    use</emphasis> multiplication, modulus, or division.
+    use</emphasis> multiplication, modulus, or division.  You also
+    may not use <methodname>isMultiple</methodname>.
   </listitem>
 
   <listitem>
@@ -124,7 +126,7 @@
   <listitem>
     <methodname>reverseInts</methodname>, which takes as input
     an array of <code>int</code> values and reverses their order
-    in the same array.
+    <emphasis>in the same array</emphasis>.
   </listitem>
 </itemizedlist>
 
@@ -166,13 +168,15 @@
 
 <programlisting>
 public class TwoB {
-    /**
-     * Compute the average of two integers.  Rounds toward zero if the
-     * average is not a whole number.
-     */
-    public static int average(int left, int right) {
-        return (left + right) / 2;
-    } // average(int,int)
+  /**
+   * Compute the average of two integers.  Rounds toward zero if the
+   * average is not a whole number.
+   */
+  public static int 
+    average (int left, int right) 
+  {
+    return (left + right) / 2;
+  } // average(int,int)
 } // class TwoB
 </programlisting>
 
@@ -219,13 +223,14 @@ public class TwoB {
   be useful for working with rational numbers.  For each method, indicate
   you would want such a class to support.  For each method, indicate
   name, inputs, output, general purpose, and type of method (observer,
-  mutator, constructor).
+  mutator, constructor).  
 </para>
 
 <para>
-  Use a stub for the bodies of methods.  That is, just return some
-  default value.  If you need to return an object, return the special
-  value <code>null</code>.
+  You sketch should be code that compiles, but need do anything.
+  You should use a <emphasis>stub</emphasis> for the bodies of methods.
+  That is, just return some default value.  If you need to return an
+  object, return the special value <code>null</code>.
 </para>
 
 <para>
@@ -235,38 +240,24 @@ public class TwoB {
 </para>
 
 <programlisting>
-     /**
-      * Get the numerator of this rational number.  (Observer)
-      */
-     public int numerator() {
-       return 0;        // STUB
-     } // numerator
+  /**
+   * Get the numerator of this rational number.  (Observer)
+   */
+  public int numerator () 
+  {
+    return 0;        // STUB
+  } // numerator
 
-     /**
-      * Multiply this rational number by an integer.  (Observer/Constructor)
-      */
-     public Rational multiply(int multiplicand) {
-       return null;     // STUB
-     } // multiply(int)
+  /**
+   * Multiply this rational number by an integer.  (Observer/Constructor)
+   */
+  public Rational multiply (int multiplicand) 
+  {
+    return null;     // STUB
+  } // multiply (int)
 </programlisting>
 
-<para>
-  <emphasis>It's okay if this code doesn't compile.  Just do your 
-  best.</emphasis>
-</para>
-
 </section> <!-- assignment02-C -->
-
-<section id="assignment02-D"><title>Part D: Rational Tests</title>
-
-<para>
-  Write a set of tests for the methods you've created.  (Yes, most of
-  these tests will currently fail.)  As in the cases above, you should
-  use <code>assertEquals</code> in your test.  (You may also have to
-  create a few rational numbers along the way.)
-</para>
-
-</section> <!-- assignment02-D -->
 
 </section> <!-- id="assignment02-assignment" -->
 
