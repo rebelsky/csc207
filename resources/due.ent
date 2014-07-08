@@ -3,7 +3,7 @@
 <!ENTITY assignment01-due "&survey-due;">
 
 <!ENTITY assignment02 "<ulink url='../assignments/assignment.02.html'>HW 2: Getting Started with Java and Testing</ulink>">
-<!ENTITY assignment02-due "10:30 p.m., wed02;">
+<!ENTITY assignment02-due "10:30 p.m., &wed02;">
 
 <!ENTITY assignment03 "<ulink url='../assignments/assignment.03.html'>HW 3: Basic Types in Java</ulink>">
 <!ENTITY assignment03-due "10:30 p.m., &wed03;">
@@ -11,21 +11,16 @@
 <!ENTITY assignment04 "<ulink url='../assignments/assignment.04.html'>HW 4: More Fun with Fractions</ulink>">
 <!ENTITY assignment04-due "10:30 p.m., &wed04;">
 
-<!ENTITY assignment05 "<ulink url='../assignments/assignment.05.html'>HW 5: Exploring an Ushahidi API</ulink>">
-<!ENTITY assignment05-due "10:30 p.m., &wed06;">
+<!ENTITY assignment05 "<ulink url='../assignments/assignment.05.html'>HW 5: Algorithm Design and Analysis</ulink>">
+<!ENTITY assignment05-due "10:30 p.m., &wed07;">
 
-<!ENTITY assignment06 "<ulink url='../assignments/assignment.06.html'>HW 6: A Simple Ushahidi App</ulink>">
-<!ENTITY assignment06-due "10:30 p.m., &wed07;">
+<!ENTITY assignment06 "<ulink url='../assignments/assignment.06.html'>HW 6: Linear Structures</ulink>">
+<!ENTITY assignment06-due "10:30 p.m., &wed10;">
 
-<!ENTITY assignment07 "<ulink url='../assignments/assignment.07.html'>HW 7: Fun with Doubly Linked Lists</ulink>">
-<!ENTITY assignment07-due "10:30 p.m., &wed08;">
+<!ENTITY assignment07 "<ulink url='../assignments/assignment.07.html'>HW 7: TO BE DETERMINED</ulink>">
+<!ENTITY assignment07-due "10:30 p.m., &wed11;">
 
-<!ENTITY assignment08 "<ulink url='../assignments/assignment.08.html'>HW 8: Sorting</ulink>">
-<!ENTITY assignment08-due "10:30 p.m., &wed10;">
-
-<!ENTITY assignment09 "<ulink url='../assignments/assignment.09.html'>HW 9: Miscellaneous</ulink>">
-<!ENTITY assignment09-due "10:30 p.m., &wed13;">
-
+<!ENTITY due01 "">
 <!ENTITY due01 "">
 <!ENTITY due02 "&assignment01;">
 <!ENTITY due03 "">
@@ -48,23 +43,23 @@
 <!ENTITY due20 "">
 <!ENTITY due21 "">
 <!ENTITY due22 "">
-<!ENTITY due23 "&assignment05; (due 10:30 p.m.)">
+<!ENTITY due23 "">
 <!ENTITY due24 "">
 <!ENTITY due25 "">
 <!ENTITY due26 "">
-<!ENTITY due27 "&assignment06; (due 10:30 p.m.)">
+<!ENTITY due27 "&assignment05; (due 10:30 p.m.)">
 <!ENTITY due28 "">
 <!ENTITY due29 "">
 <!ENTITY due30 "">
-<!ENTITY due31 "&assignment07; (due 10:30 p.m.)">
+<!ENTITY due31 "">
 <!ENTITY due32 "">
 <!ENTITY due33 "">
 <!ENTITY due34 "">
-<!ENTITY due35 "<ulink url='../assignments/exam.02.html'>Exam 2</ulink>">
-<!ENTITY due36 "">
+<!ENTITY due35 "">
+<!ENTITY due36 "<ulink url='../assignments/exam.02.html'>Exam 2</ulink>">
 <!ENTITY due37 "">
 <!ENTITY due38 "">
-<!ENTITY due39 "&assignment08; (due 10:30 p.m.)">
+<!ENTITY due39 "&assignment06; (due 10:30 p.m.)">
 <!ENTITY due40 "">
 <!ENTITY due41 "">
 <!ENTITY due42 "">
@@ -76,7 +71,7 @@
 <!ENTITY due48 "">
 <!ENTITY due49 "">
 <!ENTITY due50 "">
-<!ENTITY due51 "&assignment09; (due 10:30 p.m.)">
+<!ENTITY due51 "&assignment07; (due 10:30 p.m.)">
 <!ENTITY due52 "">
 <!ENTITY due53 "">
 <!ENTITY due54 "<ulink url='../assignments/exam.03.html'>Exam 3</ulink>">
