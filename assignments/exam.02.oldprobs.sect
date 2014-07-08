@@ -1,0 +1,333 @@
+<section id="old-exam2-problems"><title>Problems from the old Exam 2</title>
+
+<section id="iterating-linked-lists"><title>Problem 2: Iterating Linked Lists</title>
+
+<para>
+  <emphasis>Topics:</emphasis> Linked structures. Anonymous inner classes.
+  Iterators.
+</para>
+
+<para>
+  In the code that accompanies this exam, you will find a simple
+  implementation of circularly linked lists with a separate iterator
+  class.  In that separate class, we spend a lot of effort keeping track
+  of things from the base class.
+</para>
+
+<para>
+  a. Annie and Mustafa believe that the code would be
+  much cleaner if we just used an anonymous inner class.  Rewrite the
+  code to do so.  Make sure that you refer appropriately to the fields
+  of the enclosing class, rather than storing copies of those fields.
+</para>
+
+<para>
+  b. Remy and Delbert are disappointed that we never include
+  <methodname>remove</methodname> (which I'm always tempted to call
+  <methodname>delete</methodname>?) in our iterators.  Make them happy
+  by implementing it.
+</para>
+
+</section> <!-- iterating-linked-lists -->
+
+</section> <!-- problem-02 -->
+
+<section id="functions"><title>Problem 2: Modeling Functions</title>
+
+<para>
+  <emphasis>Topics:</emphasis> Functions, Object-oriented design,
+  Generics (parameterized types), Anonymous inner classes, Polymorphism.
+</para>
+
+<para>
+  Your classmates, Polly and Morpheus, really enjoyed the predicate
+  problem from exam 1.  (And no, I don't know why someone would name
+  their child after a god of dreams.  Perhaps they are fans of 
+  <emphasis>The Matrix</emphasis> or of Neil Gaiman.)  And so they've
+  decided we should go further and model general functions.
+</para>
+
+<para>
+  They're starting simple, just unary and binary functions.  They want
+  to take advantage of Java's static type checking, so they've used
+  parameterized polymorphism (generics) in their design of such functions.
+</para>
+
+<programlisting>
+<xi:include href="../git/exam2-2013F/problem2/src/UnaryFunction.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="../git/exam2-2013F/problem2/src/BinaryFunction.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<para>
+  They've even written a few sample function objects, and even a
+  function that builds function objects.
+</para>
+
+<programlisting>
+<xi:include href="../git/exam2-2013F/problem2/src/IntegerFunctions.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<para>
+  Now they're wondering what to do next.  Inspired by Hoppy, a pet that
+  their classmates have somehow smuggled in to the dorms, they decide that
+  they should include a few of the standard higher-order procedures -
+  compose, left-section, right-section, and map.  They've even sketched
+  the code.
+</para>
+
+<programlisting>
+<xi:include href="../git/exam2-2013F/problem2/src/FunctionUtils.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<para>
+  They use a lot of ellipses, don't they?  That's because, as much as they
+  like this idea, they're not quite sure how to achieve their goal.
+  My first inclination was to have you do it for them.  But Carl and Carla
+  Clueless accidentally posted <ulink url='../examples/FunctionUtils.java'>a
+  solution</ulink>, so that's difficult to ask you do to.
+</para>
+
+<para>
+  a. Spend approximately thirty minutes attempting to solve the problem.
+</para>
+
+<para>
+  b. Correct your solution after comparing it to <ulink
+  url='../examples/FunctionUtils.java'>their solution</ulink>, perhaps
+  using better typenames than they do.
+</para>
+
+<para>
+  c. You'll note that I've written some experiments to demonstrate the use
+  of these various objects.  <emphasis>Write four more interesting examples
+  of the use of functions as objects.</emphasis>  Put those in the file
+  <filename>Examples.java</filename>.
+</para>
+
+</section> <!-- functions -->
+
+<section id="bst-delete"><title>Problem 3: Deletion in Binary Search Trees</title>
+
+<para>
+  <emphasis>Topics:</emphasis> Linked structures, Trees
+</para>
+
+<para>
+  We've started to explore the design of binary search trees.  For
+  convenience, we decided to make binary search trees <quote>add only</quote>
+  structures.  Right now, you can't remove a value from a BST.
+</para>
+
+<para>
+  As you might expect, that decision has frustrated your colleagues
+  Remy and Delbert.  They think that it's reasonable to want to get
+  rid of items.
+</para>
+
+<para>
+  Their sensible colleagues suggest that there's a simple technique
+  for doing deletion - you can simply put a <code>null</code>
+  in for the value, and, when the value is <code>null</code>,
+  <methodname>insert</methodname> throws an exception.  Unfortunately,
+  Remy and Delbert are extremists, and say <quote>Simulated deletion
+  is not deletion.  Your approach clogs the tree with pointless nodes.
+  And if the tree is clogged with pointless nodes, we can't guarantee
+  O(logn) insertion and deletion.</quote> Of course, they ignore the fact
+  that we've yet to figure out how to keep the trees balanced, and that we
+  probably won't learn how to do so until we take an upper-division course
+  in algorithms and data structures (or until we search on Wikipedia).
+  But, hey, they're annoying enough that we're going to listen to them.
+</para>
+
+<para>
+  Fortunately, they suggest a reasonably straightforward approach
+  for removing values.
+</para>
+
+<literallayout>To delete the node containing key
+If the node has no left subtree, 
+  Replace the node by its right subtree.
+Otherwise, if the node has no right subtree,
+  Replace the node by its left subtree.
+Otherwise, the node has two subtrees
+  Shuffle the tree so that the node with the largest key in the
+    left subtree replaces the node.  
+</literallayout>
+
+<para>
+  Why does this work?  We know that the largest key in the left
+  subtree is larger than every other key in the left subtree.  And,
+  since it's in the left subtree, we know that it's smaller than
+  every key in the right subtree.  Hence, it can be at the root after
+  we delete the old root.
+</para>
+
+<para>
+  Implement their algorithm.
+</para>
+
+<para>
+  Asa, Sam, Cam, Ida, and Ina worry a bit about that <quote>Shuffle</quote>
+  instruction.  And they also want to design some interesting unit tests.
+  They draw a bunch of trees to help themselves understand what should happen
+  in each situation.  In drawing these trees, they use lowercase letters to
+  represent nodes, and uppercase letters to represent tree-shaped groups
+  of nodes.  And their pictures all illustrate deletion at the root.
+</para>
+
+<table>
+<tr>
+  <th>
+    Original
+  </th>
+  <th>
+    After delete/shuffle
+  </th>
+</tr>
+
+<tr> <td colspan='2'> 01 - no right subtree </td> </tr>
+<tr>
+<td><programlisting>
+   m   
+  / \
+ /
+G
+</programlisting></td>
+<td><programlisting>
+   G   
+</programlisting></td>
+</tr>
+
+<tr> <td colspan='2'> 02 - no left subtree </td> </tr>
+<tr>
+<td><programlisting>
+   m
+  / \
+     \
+      N
+</programlisting></td>
+<td><programlisting>
+   N   
+</programlisting></td>
+</tr>
+
+<tr> <td colspan='2'> 03 - both subtrees, left subtree has no right subtree </td> </tr>
+<tr>
+<td><programlisting>
+      m
+     / \
+    /   \
+   g     N
+  / \
+ /
+D
+</programlisting></td>
+<td><programlisting>
+      g
+     / \
+    /   \
+   D     N
+</programlisting></td>
+</tr>
+
+<tr> <td colspan='2'> 04 - both subtrees, left subtree has right subtree with no right subtree </td> </tr>
+<tr>
+<td><programlisting>
+      m
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     j
+     / \
+    /
+   I
+</programlisting></td>
+<td><programlisting>
+      j
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     I
+</programlisting></td>
+</tr>
+
+<tr> <td colspan='2'> 05 - both subtrees, left subtree has right subtree with right subtree (<code>l</code> is the rightmost key in the left subtree, and has no left subtree) </td> </tr>
+<tr>
+<td><programlisting>
+      m
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     J
+     / \
+    /   \
+   I     l
+        / \
+</programlisting></td>
+<td><programlisting>
+      l
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     J
+     / \
+    /  
+   I  
+</programlisting></td>
+</tr>
+
+<tr> <td colspan='2'> 06 - both subtrees, left subtree has right subtree with right subtree (<code>l</code> is the rightmost key in the left subtree, but has a left subtree) </td> </tr>
+<tr>
+<td><programlisting>
+      m
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     J
+     / \
+    /   \
+   I     l
+        / \
+       /
+      K
+</programlisting></td>
+<td><programlisting>
+      l
+     / \
+    /   \
+   g     N
+  / \
+ /   \
+D     J
+     / \
+    /   \
+   I     K
+</programlisting></td>
+</tr>
+</table>
+
+<para>
+  They note that they aren't sure that there's a real implementation
+  difference between the last four cases, but they thought it was
+  easiest to think about them separately.  
+</para>
+
+<para>
+  When they show their examples to Remy and Delbert, Remy and Delbert 
+  note that they would find it useful to find the <emphasis>parent</emphasis>
+  of the rightmost node.  But they don't say why.
+</para>
+
+</section> <!-- bst-delete -->
+
+</section>

@@ -1,11 +1,11 @@
 <section name="exam-01"><title>Exam 1: Object-Oriented Design, ADTs, and Algorithms</title>
 
 <para>
-  Assigned: &tue06;
+  Assigned: &wed04;
 </para>
 
 <para>
-  Due: 10:30 p.m., &tue07; (electronic); 10:00 a.m., &wed07; (paper)
+  Due: 10:30 p.m., &wed05; (electronic); 10:00 a.m., &fri05; (paper)
 </para>
 
 <section name="prelim"><title>Preliminaries</title>
@@ -19,15 +19,15 @@
 </para>
 
 <para>
-  There are five problems on this examination. You must do your best
+  There are four problems on this examination. You must do your best
   to answer all of them.  The problems are not necessarily
   of equal difficulty. Problems may include subproblems. If you
-  complete five problems correctly or mostly correctly, you will 
-  earn an A.  If you complete four problems correctly or mostly
-  correctly, you will earn a B.  If you complete three problems
+  complete four problems correctly or mostly correctly, you will 
+  earn an A.  If you complete three problems correctly or mostly
+  correctly, you will earn a B.  If you complete two problems
   correctly or mostly correctly, you will earn a C.  If you complete
-  two problems correctly or mostly correctly, you will earn a D.
-  If you complete fewer than two problems correctly or mostly
+  one problem correctly or mostly correctly, you will earn a D.
+  If you complete fewer than one problem correctly or mostly
   correctly, you will earn an F.  If you do not attempt the examination,
   you will earn a 0.  Partially correct solutions may or may not earn
   you a partial grade, depending on the discretion of the grader.
@@ -41,8 +41,9 @@
   I expect that someone who has mastered the material and works at a
   moderate rate should have little trouble completing the exam in a
   reasonable amount of time. In particular, this exam is likely to take
-  you about five hours, depending on how well you've learned the topics
-  and how fast you work.
+  you about six hours, depending on how well you've learned the topics
+  and how fast you work.  (When I do the problems, I will report how
+  long each one took me.)
 </para>
 
 </section> <!-- format -->
@@ -116,32 +117,62 @@
 
 <para>
   You must present your exam to me in two forms, physically and
-  electronically. That is, you must write all of your answers using the
-  computer, print them out, number the pages, put your name on the top of
-  every page, and hand me the printed copy. You must also submit an
-  electronic copy of your exam.  You should create the electronic version
-  by making a tarball of any relevant code and emailing me the tarball.
-  (If you don't know how to make a tarball, let me know.)  If you fail
-  to name and number the printed pages, you may suffer a penalty.  If you
-  fail to turn in both versions, you may suffer a much worse penalty.
-  If you fail to turn in a legible version of the exam, you are also
-  likely to suffer some sort of penalty.
+  electronically.  If you fail to turn in both versions, you are unlikely
+  to receive credit for the examination.
 </para>
 
 <para>
-  In many problems, I ask you to write code. Unless I specify otherwise
-  in a problem, you should write working code and include examples that
-  show that you've tested the code.   You should do your best to format that
-  code to the Sun/Oracle Java coding standards.
+  <emphasis>Physical copy:</emphasis> 
+  You must write all of your answers using the computer, print them out,
+  number the pages; put your name on the top of every page, write, sign,
+  and date each of the academic honesty statements (provided you are able
+  to do so); and hand me the printed copy or put it under my office door.
+  If you fail to name and number the printed pages, you may suffer
+  a penalty.  If you fail to turn in a legible version of the exam,
+  you are also likely to suffer some sort of penalty.
 </para>
 
 <para>
-  You should document classes, interfaces, fields, and methods using
-  Javadoc-style comments.  You should specify preconditions and
-  postconditions for each method.
+  <emphasis>Electronic copy:</emphasis>
+  You must also submit an electronic copy of your exam.  You should
+  create the electronic version by making a tarball of any relevant code
+  and emailing me the tarball.  Here are the steps for making a tarball.
+</para>
+
+<orderedlist>
+  <listitem>
+    Remove any cruft (needless files) from your directory structure.
+    I don't want to see <code>.class</code> files, editor backups,
+    or anything similar.
+  </listitem>
+
+  <listitem>
+    Switch to the <emphasis>parent</emphasis> directory of your
+    exam directory.
+  </listitem>
+
+  <listitem>
+    Issue the command <code>tar cvzf <emphasis>username</emphasis>.tgz 
+    <emphasis>directory</emphasis></code>.
+  </listitem>
+</orderedlist>
+
+<para>
+  <emphasis>Code:</emphasis> In many problems, I ask you to write
+  code. Unless I specify otherwise in a problem, you should write working
+  code and include examples that show that you've tested the code.
+  You should do your best to format that code to the class 
+  formatting standards.
 </para>
 
 <para>
+  <emphasis>Documentation:</emphasis> You should document classes,
+  interfaces, fields, and methods using Javadoc-style comments.
+  You should specify preconditions and postconditions for each method.
+</para>
+
+<para>
+  <emphasis>Care:</emphasis>
   Just as you should be careful and precise when you write code and
   documentation, so should you be careful and precise when you write
   prose. Please check your spelling and grammar. Since I should be equally
@@ -151,6 +182,7 @@
 </para>
 
 <para>
+  <emphasis>Partial Credit:</emphasis>
   I may give partial credit for partially correct answers. I am best
   able to give such partial credit if you include a clear set of work
   that shows how you derived your answer. You ensure the best possible
@@ -179,334 +211,348 @@
 
 </section> <!-- prelim -->
 
+<section name="preparation"><title>Preparation</title>
+
+<para>
+  Clone the repository using the following command, which will help
+  ensure that you have the correct directory structure.  Note that
+  I've set things up so that you can treat each problem as a separate
+  Eclipse project.  <emphasis>Please do not make one project for the
+  whole exam.</emphasis>
+</para>
+
+<screen>
+$ git clone https://github.com/Grinnell-CSC207/exam1-2014S *username*
+</screen>
+
+</section> <!-- preparation -->
+
 <section name="problems"><title>Problems</title>
 
-<section id="predicates"><title>Problem 1: Predicates</title>
+<section id="average-testing"><title>Problem 1: Testing Averages</title>
 
 <para>
-  <emphasis>Topics:</emphasis> Polymorphic Data Types, Generics, 
-  Predicates, Strings.
+  <emphasis>This problem took SR 35 minutes, mostly because he wrote
+  a strange and incorrect test.</emphasis>
 </para>
 
 <para>
-  Gentle Eric and Poly Em Orphic have been thinking about the reading
-  on searching arrays and want to set up a set of classes to help with
-  writing predicates.
-</para>
-
-<para>
-  They've started by writing an interface.
+  Your classmate, Ava Ridge, was intrigued by the recent discussion of
+  problem 2 from homework one and has decided to write the following
+  function so that it works for all long inputs.
 </para>
 
 <programlisting>
-<xi:include href="../admin/exam1/src/Predicate.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
-/></programlisting>
-
-<para>
-  They've even written a few simple predicates for integers.
-</para>
-
-<programlisting>
-<xi:include href="../admin/exam1/src/IsEven.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
-/></programlisting>
-
-<programlisting>
-<xi:include href="../admin/exam1/src/GreaterThan.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
-/></programlisting>
-
-<para>
-  And they've even come up with a quick experiment to demonstrate
-  to others how one might use these predicates.
-</para>
-
-<programlisting>
-<xi:include href="../admin/exam1/src/IPExpt.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
-/></programlisting>
-
-<para>
-  a. Gen. Eric would like to be able to write some predicates that
-  involve strings.  Create a class, <code>Lowercase</code>, that
-  implements the predicate interface for strings and provides a
-  <methodname>test</methodname> method that takes a string as
-  input and determines whether or not the string consists only
-  of lowercase letters.
-</para>
-
-<para>
-  b. Create a class, <code>StringContains</code>, that allows you to 
-  construct predicates that determine whether or not a string
-  contains a certain string.  For example, one might build the
-  following predicate if they want to look for strings that
-  contain the word <code>sub</code>.
-</para>
-
-<programlisting>
-Predicate&lt;String&gt; peri = new StringContains("sub");
+/**
+ * Ava's amazing math utilities.
+ */
+public class MathUtils
+{
+  /**
+   * Compute the average of all the values in vals. Rounds toward
+   * zero if the average is not a whole number.
+   *
+   * @throws Exception
+   *   if the array is empty, because there is no average value
+   *   in an empty set.
+   */
+  public static long average(long[] vals)
+    throws Exception
+  {
+    ...;
+  } // average(long[])
+} // class MathUtils
 </programlisting>
 
 <para>
-  c. Ms. Morphic would like to be able to combine the various
-  predicates in the normal ways.  Design and implement three classes,
-  <code>Both</code>, <code>Either</code>, and
-  <code>Negate</code>, that allow you to build new predicates 
-  from old.  For example, we might use these, along with their
-  prior predicates, to write a predicate that can test whether
-  a number is greater than 0 and less than or equal to 100.
+  Your class mentors, Tessa Ter and Jun It, think we should help Ava
+  make sure that her code is correct.  They have therefore asked you
+  to write an appropriate test suite for <methodname>average</methodname>.
+</para>
+
+<para>
+  <emphasis>Write that test suite.</emphasis>  Your test suite should
+  certainly include tests of <quote>corner cases</quote> - those outliers
+  that many folks will miss.  In addition, portions of your test suite
+  should be systematically constructed.  That is, you should use loops
+  to build an appropriate variety of arrays of different sizes.
+</para>
+
+<para>
+  If at all possible, make sure that your test suite indicates the input
+  for which <methodname>average</methodname> fails (assuming that it
+  finds an input for which <methodname>average</methodname> fails).
+</para>
+
+<para>
+  I am likely to run your test suite against a variety of implementations
+  of <methodname>average</methodname>, some of which are correct and
+  some of which are incorrect.  You will get no credit for this problem
+  if you identify a correct <methodname>average</methodname> method as 
+  incorrect.  You will get partial credit if you miss errors in 
+  erroneous implementations.  You will get extra credit if you find
+  an error in an implementation that I believe is correct.
+</para>
+
+</section> <!-- average-testing -->
+
+<section id="averaging"><title>Problem 2: Averaging Arrays</title>
+
+<para>
+  <emphasis>This problem took Sam fifteen minutes, including writing
+  <code>AverageExpt.java</code>, which is now in the repo.</emphasis>
+</para>
+
+<para>
+  Unfortunately, the combined class unit tests have shown that Ava's
+  implementation of <methodname>average</methodname> is far from correct.
+  (Actually, it's probably fortunate that the tests have shown her
+  method incorrect.  She would likely hit unexpected errors in the future
+  if she were relying on incorrect code.)
+</para>
+
+<para>
+  Ava can't figure out how to write <methodname>average</methodname>.
+  Your professor, Hugh DeWitt, has therefore decided to make everyone
+  in the class attempt their own implementation.
+</para>
+
+<para>
+  <emphasis>Implement <methodname>average</methodname>.</emphasis>
+  Your method should take an array of <code>long</code> values as input
+  and return a <code>long</code> that represents the average of those
+  values.  You may not convert the values to <code>BigInteger</code>
+  or <code>BigDecimal</code> values.  
+</para>
+
+</section> <!-- implement-average -->
+
+<section id="c-strings"><title>Problem 3: Making C and Java Strings</title>
+
+<para>
+  <emphasis>This problem took SR 15 minutes, including adding a few
+  more examples.</emphasis>
+</para>
+
+<para>
+  Your classmates, Slash and Becka, were a bit puzzled by the whole
+  CSV thing.  In particular, they are not sure about all of those
+  <code>\</code> characters.  In response, you say
+</para>
+
+<blockquote>
+  It's simple.  Certain special characters with meaning, such as the
+  double quotation mark, need to be prefixed by the escape character,
+  which is <code>\</code>.  So, the string that contains just one
+  double quotation mark is <code>"\""</code>.  The escape character 
+  is also one of those special characters.  Hence, the string that
+  contains just the backslash character is <code>"\\"</code>.
+  Of course, backslash is also used for some <quote>invisible</quote>
+  characters, such as tabs (<code>\t</code>) and newlines
+  (<code>\n</code>).  How do I know so much, I looked it up in
+  <ulink url="http://docs.oracle.com/javase/tutorial/java/data/characters.html">The Java Tutorial</ulink>.
+</blockquote>
+
+<para>
+  Otto Mayt, a more experienced student, wanders by and says <quote>Of
+  course, any decent programmer has already written a script that does
+  the conversion by hand.</quote>
+</para>
+
+<para>
+  You guessed it.  Your professor, Hugh DeWitt, overheard and has
+  decided that you get to write that script.
+</para>
+
+<para>
+  Write a method,
+  <code><methodname>stringify</methodname>(<parameter>infile</parameter>,
+  <parameter>outfile</parameter>)</code> that reads the contents of
+  <parameter>infile</parameter> and writes the corresponding
+  C/Java string to <parameter>outfile</parameter>.  Since you will
+  probably read the input a line at a time, you may include a
+  <code>\n</code> at the end of the string.
+</para>
+
+<para>
+  For example,
+</para>
+
+<table>
+  <thead>
+    <tr>
+      <th>Input</th>
+      <th>Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><programlisting>Hello</programlisting></td>
+      <td><programlisting>"Hello\n"</programlisting></td>
+    </tr>
+    <tr>
+      <td><programlisting>Hello
+World</programlisting></td>
+      <td><programlisting>"Hello\nWorld\n"</programlisting></td>
+    </tr>
+    <tr>
+      <td><programlisting>Hello   World</programlisting></td>
+      <td><programlisting>"Hello\tWorld\n"</programlisting></td>
+    </tr>
+    <tr>
+      <td><programlisting>a,"a,b","\"</programlisting></td>
+      <td><programlisting>"a,\"a,b\",\"\\\"\n"</programlisting></td>
+    </tr>
+  </tbody>
+</table>
+
+<para>
+  The only special characters you need to support are newline, tab,
+  double-quotation mark, and backslash.
+</para>
+
+<para>
+  I've set up a simple test framework that you can feel free to extend.
+</para>
+
+</section> <!-- c-strings -->
+
+<section id="mutable-strings"><title>Problem 4: Mutable Strings</title>
+
+<para>
+  <emphasis>SR took seven minutes for an inelegant solution and fifteen
+  for a more elegant solution.</emphasis>
+</para>
+
+<para>
+  Your colleagues, Cher and Ray, feel that Java's <code>StringBuffer</code>
+  class hides too many of the details.  <quote>After all,</quote> they say,
+  <quote>we don't <emphasis>really</emphasis> know how efficient any of
+  the operations are.</quote>  They suggest we design and implement our
+  own mutable string class, which they call <code>MutableString</code>.
+  They suggest the following methods, which they've put in a stub 
+  class.
 </para>
 
 <programlisting>
-Predicate&lt;Integer&gt; scope = new Both(new GreaterThan(0),
-          new Negate(new GreaterThan(100)));
-</programlisting>
-
-</section> <!-- predicates -->
-
-<section id="dutch"><title>Problem 2: The Dutch National Flag, Revisited</title>
-
-<para>
-  <emphasis>Topics:</emphasis> Loop invariants, Unit testing, Functional
-  design
-</para>
-
-<para>
-  As you may recall, the Dutch national flag problem is a famous problem
-  in arranging data.  You have an array of three different kinds of values
-  and your goal is to rearrange the values in the array so that you have
-  all the values of one kind at the front, all the values of the second
-  kind in the middle, and all the copies of the third kind at the end.
-</para>
-
-<para>
-  When done right, a solution to the Dutch national flag problem only
-  requires iterating through the array once.
-</para>
-
-<para>
-  Let's model that problem using an array of strings and some test
-  procedures.
-</para>
-
-<programlisting>
-<xi:include href="../admin/exam1/originals/DNF.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+<xi:include href="../git/exam1-2014S/Problem4/src/MutableString.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
 /></programlisting>
 
 <para>
-  Tessa Ter and June It know that I implemented
-  <methodname>dnf</methodname> so that I could better help you with a
-  recent assignment.  But they have little faith in my ability to write
-  <methodname>dnf</methodname> correctly.  Write a set of unit tests that
-  will identify one or more cases in which my <methodname>dnf</methodname>
-  fails.  (No, you don't get my code.  Your goal is to write tests that
-  are comprehensive enough that they'll catch my error.  But I also won't
-  look at your tests before writing my code.  I expect that I'll write
-  five or so not-quite correct procedures; your goal is to catch at
-  least four of them.)
-</para>
-
-</section> <!-- dutch -->
-
-<section id="coffee"><title>Problem 3: The Coffee Bean Problem</title>
-
-<para>
-  <emphasis>Topics:</emphasis> Loop invariants, problem solving.
+  <emphasis>Finish implementing this class.</emphasis>
 </para>
 
 <para>
-  Bea and Joe are running a coffee roasting company.  One of the special
-  things about their coffee is that they use two colors of beans,
-  light (smooth and mild) and dark (really caffeinated).  Consultants
-  have suggested that the adopt a legendary method of assessing the
-  quality of their beans, a method people call <quote>greasing</quote>.
-  It goes something like this.
+  You may not use <code>StringBuffer</code> or <code>StringBuilder</code>
+  in implementing <code>MutableString</code>.  You must store the contents
+  of the string as an array of characters.
 </para>
 
-<literallayout>Grab a sample of the beans and throw them in a can
-While the can contains two or more beans
-    Grab two beans
-    If both are the same color, 
-        Throw them away
-        Add a new dark bean to the can
-    If both are different colors, 
-        Throw away the dark bean 
-        Return the light bean to the can
-</literallayout>
-
-<para>
-  They suspect that this advice, like most consultants' advice, takes
-  a simple decision and makes it much too complicated.  They've hired
-  you to do a bit more analysis.
-</para>
-
-<para>
-  a. Write a short argument that this loop terminates.
-</para>
-
-<para>
-  b. Write a good loop invariant for this loop.  You may find it useful
-  to express the loop invariant in terms of the original numbers of light
-  and dark beans.
-</para>
-
-<para>
-  c. Using the loop invariant and the termination condition, determine
-  what color the final bean will be as a function of the numbers of
-  light and dark beans in the original sample.
-</para>
-
-<section id="coffee-cite"><title>Citations</title>
-
-<para>
-  This problem is based on Jon Bentley's statement of David Gries's
-  <quote>Coffee Can Problem</quote>.
-</para>
-
-<para>
-  Jon Bentley. 1983. Programming pearls: Writing correct programs.
-  <emphasis>Commun. ACM</emphasis> 26, 12 (December 1983), 1040-1045.
-  DOI=10.1145/358476.358484 http://doi.acm.org/10.1145/358476.358484
-</para>
-
-<para>
-  David Gries.  1981.  <emphasis>The Science of Programming</emphasis>.
-  Springer-Verlag.
-</para>
-
-</section> <!-- coffee-cite -->
-
-</section> <!-- coffee -->
-
-<section id="expandable-arrays"><title>Problem 4: Expandable Arrays</title>
-
-<para>
-  <emphasis>Topics:</emphasis> Arrays, ADT Implementation, Vectors
-</para>
-
-<para>
-  Tara and Vic are a bit troubled by Java's structures that provide
-  indexed access to values.  They like that they know what the underlying
-  implementation of arrays.  However, they don't like that arrays are not
-  expandable.  On the other hand, while they like that vectors are
-  expandable, they don't like that the underlying implementation is
-  hidden from them.
-</para>
-
-<para>
-  And so, they've started to implement their own versions of expandable
-  arrays, which they name using their initials.
-</para>
-
-<programlisting>
-<xi:include href="../admin/exam1/originals/VT.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
-/></programlisting>
-
-<para>
-  Finish implementing this class.
-</para>
-
-<para>
-  <emphasis>Note:</emphasis> I hope to set up a repository into which you
-  can place unit tests, so that the tests one student writes can easily
-  be used by other students.
-</para>
-
-</section> <!-- expandable-arrays -->
-
-<section id="sorted-arrays"><title>Problem 5: Sorted Arrays of Strings</title>
-
-<para>
-  <emphasis>Topics:</emphasis> Invariants, Comparators, Strings 
-</para>
-
-<para>
-  Theodore has recently been knighted and, as is the custom, has added a
-  suffix to his name in honor of one of the most respected monarchs of the
-  United Kingdom of Great Britain and Ireland.  To further commemorate his
-  knighthood, he has decided to design a data structure which he humbly
-  names after himself.  Because he has been studying loop invariants,
-  he's decided to create an ADT invariant.  He begins his code as follows.
-</para>
-
-<programlisting>
-<xi:include href="../admin/exam1/originals/SirTedVictoria.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
-/></programlisting>
-
-<para>
-  Finish implementing this class.
-</para>
-
-</section> <!-- sorted-arrays -->
+</section> <!-- mutable-strings -->
 
 </section> <!-- problems -->
 
 <section name="q-and-a"><title>Questions and Answers</title>
 
+<section id="questions-1"><title>Problem 1</title>
+
 <para>
-  Do you have any recommendations for getting started with problem 1?
+  What do you mean by a <quote>test suite</quote>?
 </para>
 
 <blockquote>
-  I would suggest rereading the section on polymorphism and looking at
-  the code for blocks.  You might also find it easier to start with a
-  slightly simpler problem, predicates over strings, and then generalize.
-  For 1a, you should be able to model your code after the even predicate,
-  since this predicate does not need to store information.
-  For 1b, you should be able to model your code after the greater than
-  predicate, since this predicate does need to store information.
-  For 1c, you'll need to store information (other predicates), so
-  thinking about the polymorphic data structures of blocks will be helpful.
+  A collection of unit tests that will assure you that the
+  method or methods under test are correct.
 </blockquote>
 
 <para>
-  Could you please give me sample code that uses predicates?
+  Why did you provide a file called <quote><code>AverageTest.java</code></quote>?
 </para>
 
 <blockquote>
-  Done.
+  To give you a place to put your tests. 
 </blockquote>
 
 <para>
-  What will the class header for <code>Both</code> look like?
+  What should we do if there's a fractional part to the average?
 </para>
 
 <blockquote>
-  <code>public class Both&lt;T&gt; implements Predicate&lt;T&gt;</code>
+  You should round toward zero.
+</blockquote>
+
+</section> <!-- questions-1 -->
+
+<section id="questions-2"><title>Problem 2</title>
+
+<para>
+  Why does my <methodname>average</methodname> method not work?
+</para>
+
+<blockquote>
+  I would recommend that you step through it with the debugger.
+  Here's a simple input that seems to have broken the first few
+  <methodname>average</methodname> methods that I was asked to assess:
+  <code>{ 1, 2, 3, 4, 5 }</code>.
 </blockquote>
 
 <para>
-  The original code for problem 5 wouldn't compile.
+  Are we assured that all of the values in the array are
+  less than or equal to <code>Long.MAX_VALUE</code> and greater than
+  or equal to <code>Long.MIN_VALUE</code>?
 </para>
 
 <blockquote>
-  Yeah.  Sun screwed up the design of generics so that it's impossible to
-  create a new array using a generic type.  I've simplified the problem
-  so that you only have to deal with sorted arrays of strings.  (And
-  just so you know, I caught this issue before any of you raised it.)
+  Yes.  Because they have type <code>long</code>, they have to fall
+  within that range.  
+</blockquote>
+
+</section> <!-- questions-2 -->
+
+<section id="questions-3"><title>Problem 3</title>
+
+<para>
+  Do we have to support all of the special characters, or just the
+  ones you mention?
+</para>
+
+<blockquote>
+  The only special characters you need to support are newline, tab,
+  double-quotation mark, and backslash.
 </blockquote>
 
 <para>
-  The naming conventions in this document are very strange.
+  Can we treat a sequence of spaces as equivalent to the tab character?
 </para>
 
 <blockquote>
-  Deal with it.
+  No.  You need to identify the tab character.  (There's one in 
+  <code>examples/in03.txt</code> and a bunch in
+  <code>examples/in05.txt</code>.)
+</blockquote>
+
+</section> <!-- questions-3 -->
+
+<section id="questions-4"><title>Problem 4</title>
+
+<para>
+  Can I use <code>StringBuilder</code>?
+</para>
+
+<blockquote>
+  No.
 </blockquote>
 
 <para>
-  How can we guarantee the postconditions for <code>VT.get</code> if the
-  client or subclass can mutate <code>values</code>.
+  Do we have to implement <code>MutableString</code> objects with an
+  array of characters?
 </para>
 
 <blockquote>
-  Good question.  I added another precondition to deal with it.
+  Yes.  I've updated the problem to clarify that issue.
 </blockquote>
 
-<para>
-  Can we ever match the hex colors, given that we've converted to lowercase?
-</para>
-
-<blockquote>
-  No.  Fixed.
-</blockquote>
+</section> <!-- questions-4 -->
 
 </section> <!-- q-and-a -->
 
@@ -531,21 +577,37 @@ While the can contains two or more beans
 </para>
 
 <itemizedlist>
-  <listitem>Missing period after <quote>(really caffeinated)</quote> [MD &amp; FB, 1 point]</listitem>
-  <listitem>Misspelled <quote>revisited</quote> [MD, 1 point]</listitem>
-  <listitem><quote>the know</quote> instead of <quote>they know</quote> [MD &amp; FB, 1 point]</listitem>
-  <listitem><quote>But they don't like that arrays are not expandable</quote> appears to be grammatically incorrect [AA, 1 point]</listitem>
-</itemizedlist>
+  <listitem>
+    <quote>The string that contains just one backslash should be
+    <code>"\\"</code></quote> had a quotation mark instead of the 
+    second backslash. [KN, 1 point]
+  </listitem>
 
-<para>
-  The next few problems were errors in the code that seem significant
-  enough that they should not count toward the 5 point limit.
-</para>
+  <listitem>
+    The rounding policy of <methodname>average</methodname> is unclear.
+    [CT, 1 point]
+  </listitem>
 
-<itemizedlist>
-  <listitem>Missing postcondition in <code>SirTedVector.get</code> [TN, 1 point]</listitem>
-  <listitem>In problem 4, needed precondition for <code>get</code> that ensured the state of <code>values</code> [BW, 1 point]</listitem>
-  <listitem>It's impossible to match the hex colors, given that they use capital letters and we convert to lowercase [TN &amp; JGS, 1 point]</listitem>
+  <listitem>
+    The ugly string example with lots of quotations and backslashes
+    is missing the newline at the end. [SZ, 1 point]
+  </listitem>
+
+  <listitem>
+    The documentation for <code>MutableString.prepend</code> is muddled.
+    [SR, 1 point]
+  </listitem>
+
+  <listitem>
+    The declaration for <code>MutableString.prepend</code> does not 
+    match the documentation. [SR, 1 point]
+  </listitem>
+
+  <listitem>
+    There are some typos in the newly updated <code>MutableString</code>.
+    (Not yet fixed.)
+    [VB, 0 points]
+  </listitem>
 </itemizedlist>
 
 </section> <!-- errata -->

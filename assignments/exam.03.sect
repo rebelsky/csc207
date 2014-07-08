@@ -14,7 +14,7 @@
 </para>
 
 <para>
-  Printed version due: 10:00 a.m., &thu14;.
+  Printed version due: 10:00 a.m., &fri14;.
 </para>
 
 <section name="prelim"><title>Preliminaries</title>
@@ -333,21 +333,21 @@ $ git clone https://github.com/Grinnell-CSC207/exam3-2014S *username*
 </programlisting>
 
 <para>
-  Lupe reminds them that that the next thing to do is to write the 
+  Lupe reminds them that the next thing to do is to write the 
   loop invariants.  But they are having trouble doing so.  They know
-  that they need to have indices into <code>a1</code>, <code>a2</code>,
-  and <code>m</code>.  The realize that those indices implicitly
+  that they need to have indices for <code>a1</code>, <code>a2</code>,
+  and <code>m</code>.  They realize that those indices implicitly
   break each array into multiple sections.  They know that when the
   loop terminates, the invariant plus the state of the system needs
   to be enough to guarantee both postconditions (that is, that the
   array is sorted and that it is a permutation of the concatenation
-  of the given arrays).  They know that they typical merge copies
+  of the given arrays).  They know that the typical merge copies
   one element at a time, so they need the invariant to show that 
   it's correct to copy into the expected location.
 </para>
 
 <para>
-  a. Sketch the lop invariants for the <methodname>merge</methodname>
+  a. Sketch the loop invariants for the <methodname>merge</methodname>
   procedure.  ASCII art would be great, since it's what we normally use,
   but if you want to use a drawing program or even scan a hand-drawn
   sketch, that's fine.
@@ -630,7 +630,7 @@ D     J
 </para>
 
 <para>
-  a. Write systematic tests, including a few tests for each of the six 
+  a. Write systematic tests, including a few tests for each of the seven
   cases above.  Note that the illustrations show the item being removed 
   at the top of the tree.  However, you should also delete items from
   the middle of the tree (using each of the orientations of the deleted
@@ -638,7 +638,7 @@ D     J
 </para>
 
 <para>
-  b. Randy's systematic testing is only partially useful.  In particular,
+  b. Randy's randomized testing is only partially useful.  In particular,
   when testing fails, we'd like to be able to see what series of operations
   created the failure.  Better yet, we'd like to generate code for an
   experiment that we can run to better understand what went wrong.  
@@ -651,10 +651,10 @@ D     J
 
 <programlisting>
     pen.println("adding aardvark");
-    dict.set("a", "aardvark);
+    dict.set("a", "aardvark");
     dict.dump(pen);
     pen.println("adding bear");
-    dict.set("b", "bear);
+    dict.set("b", "bear");
     dict.dump(pen);
     pen.println("removing a");
     dict.remove("a");
@@ -688,7 +688,7 @@ D     J
 <para>
   Note that, in addition to your tests and the provided randomized tests, 
   I am likely to run my own set of tests on your code and may also run
-  your classmates tests.
+  your classmates' tests.
 </para>
 
 <para>
@@ -757,6 +757,11 @@ D     J
   You may iterate the elements in any order, so long as you iterate
   all of the elements.  That is, the values iterator must visit all
   of the values and the keys iterator must iterate all of the keys.
+</para>
+
+<para>
+  Your iterator should make sensible use of memory.  In particular,
+  it should not use more than a constant amount of space.
 </para>
 
 </section> <!-- iterate-hash-tables -->
@@ -958,7 +963,50 @@ D     J
   I may not credit corrections to grammatical mistakes in code.
 </para>
 
+<para>
+  The first five.
+</para>
+
 <itemizedlist>
+  <listitem>
+    Sam says like <quote>Lupe reminds them that that</quote>.  Only
+    one <quote>that</quote> is necessary.  [SZ, 1 point]
+  </listitem>
+  <listitem>
+    I'm not sure what a <quote>lop invariant</quote> is.  Probably
+    code for <quote>loop invariant</quote>.  [MH, 1 point]
+  </listitem>
+  <listitem>
+    <quote>The realize that</quote> should be <quote>They realize
+    that</quote>. [SZ and KN, 1 point]
+  </listitem>
+  <listitem>
+    <quote>They know that they typical merge</quote> should be
+    <quote>They know that the typical merge</quote>. [SZ, 1 point]
+  </listitem>
+  <listitem>
+    Missing end quotation marks in sample calls to <code>dict.set</code>.
+    [SZ, 1 point]
+  </listitem>
+</itemizedlist>
+
+<para>
+  The next few.
+</para>
+
+<itemizedlist>
+  <listitem>
+    "may also run your classmates tests" should be
+    "may also run your classmates' tests".  [GB]
+  </listitem>
+  <listitem>
+    In <code>ChainedHashTableTest</code> the name of the factory should 
+    be <code>chtFactory</code> instead of <code>ohtFactory</code>. [VB]
+  </listitem>
+  <listitem>
+    The opening documentation in <code>ChainedHashTable.java</code> seems
+    to be from <code>OpenHashTable.java</code>. [SZ]
+  </listitem>
 </itemizedlist>
 
 </section> <!-- errata-03 -->

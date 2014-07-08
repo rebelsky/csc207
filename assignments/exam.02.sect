@@ -1,18 +1,11 @@
-<section name="exam-02"><title>Exam 2: More Object-Oriented Design, ADTs, and Algorithms</title>
+<section name="exam-02"><title>Exam 2: ADTs, Algorithms, and Data Structures</title>
 
 <para>
-  <emphasis>This exam is now released.  The repository should be available.
-  The unit tests are are also now available.</emphasis>
+  Assigned: &wed08;
 </para>
 
 <para>
-  Assigned: &tue11;
-</para>
-
-<para>
-  Prologue due: 5:00 p.m., &fri11;. 
-  Electronic version due: 10:30 p.m., &tue12;. 
-  Printed version due: 10:00 a.m., &wed12;.
+  Electronic and printed versions due: 10:00 a.m., &fri09;. 
 </para>
 
 <section name="prelim"><title>Preliminaries</title>
@@ -23,13 +16,6 @@
   This is a take-home examination. You may use any time or times you deem
   appropriate to complete the exam, provided you return it to me by the
   due date.
-</para>
-
-<para>
-  This examination has a required <ulink
-  url="http://bit.ly/207exam2pro">prologue</ulink> that must be completed
-  by Friday afternoon.  The prologue is intended to help you think about
-  the examination.
 </para>
 
 <para>
@@ -55,8 +41,9 @@
   I expect that someone who has mastered the material and works at a
   moderate rate should have little trouble completing the exam in a
   reasonable amount of time. In particular, this exam is likely to take
-  you about eight hours, depending on how well you've learned the topics
-  and how fast you work.
+  you about six hours, depending on how well you've learned the topics
+  and how fast you work.  (When I do the problems, I will report how
+  long each one took me.)
 </para>
 
 </section> <!-- format -->
@@ -85,21 +72,18 @@
   answers to this examination on the Web.  (You certainly should not post
   them to GitHub.)  And, in case it's not clear, you may not ask others
   (in person, via email, via IM, via IRC, by posting a <quote>please
-  help</quote> message or question on StackOverflow or on any other site,
-  or in any other way) to put answers on the Web.
+  help</quote> message, or in any other way) to put answers on the Web.
 </para>
 
 <para>
   Because different students may be taking the exam at different times,
-  and because some students will choose to take a makeup examination that
-  involves redoing the problems, you are not permitted to discuss the exam
-  with anyone until after I have indicated that it is acceptable to do so.
-  If you must say something about the exam, you are allowed to say
-  <quote>This is among the hardest exams I have ever taken. If you don't
-  start it early, you will have no chance of finishing the exam.</quote>
-  You may also summarize these policies. You may not tell other students
-  which problems you've finished. You may not tell other students how
-  long you've spent on the exam.
+  you are not permitted to discuss the exam with anyone until after I have
+  returned it. If you must say something about the exam, you are allowed
+  to say <quote>This is among the hardest exams I have ever taken. If
+  you don't start it early, you will have no chance of finishing the
+  exam.</quote> You may also summarize these policies. You may not tell
+  other students which problems you've finished. You may not tell other
+  students how long you've spent on the exam.
 </para>
 
 <para>
@@ -133,52 +117,100 @@
 
 <para>
   You must present your exam to me in two forms, physically and
-  electronically. That is, you must write all of your answers using the
-  computer, print them out, number the pages, put your name on the top of
-  every page, and hand me the printed copy. You must also submit an
-  electronic copy of your exam.  
+  electronically.  If you fail to turn in both versions, you are unlikely
+  to receive credit for the examination.
 </para>
 
 <para>
-  I care that you are careful in your presentation on the printed copy.
-  If you fail to name and number the printed pages, you may suffer a
-  penalty.  If you fail to turn in both versions, you may suffer a much
-  worse penalty.  If you fail to turn in a legible version of the exam,
-  you are also likely to suffer some sort of penalty.  Note that lines
-  that wrap detract from legibility.
+  <emphasis>Physical copy:</emphasis> 
+  You must write all of your answers using the computer, print them out,
+  number the pages; put your name on the top of every page, write, sign,
+  and date each of the academic honesty statements (provided you are able
+  to do so); and hand me the printed copy or put it under my office door.
+  If you fail to name and number the printed pages, you may suffer
+  a penalty.  If you fail to turn in a legible version of the exam,
+  you are also likely to suffer some sort of penalty.
 </para>
 
 <para>
-  You should create the electronic version by making a tarball of any
-  relevant code and emailing me the tarball.  (If you don't know how
-  to make a tarball, let me know.)  If you really don't want to make a
-  tarball, you can make a zip file.  In either case, please make sure
-  that the unpacked folder has four subfolders, one for
-  each problem.  Unless specified otherwise in the problem, the
-  <filename>.java</filename> files for each problem should be in a
-  <filename>src</filename> subfolder of the problem folder, and should
-  not have a <code>package</code> declaration.  You can also include
-  <filename>.txt</filename> or <filename>.md</filename> files in each
-  folder that have notes you would like me to read, answers to non-coding
-  questions, and sample output from any experiments you conduct.  You may
-  include a <filename>.txt</filename> or <filename>.md</filename> file
-  in the top-level directory with general notes.
+  <emphasis>Electronic copy:</emphasis>
+  You must also submit an electronic copy of your exam.  You should
+  create the electronic version by making a tarball of any relevant code
+  and emailing me the tarball.  Here are the steps for making a tarball.
+</para>
+
+<orderedlist>
+  <listitem>
+    Remove any cruft (needless files) from your directory structure.
+    I don't want to see <code>.class</code> files, editor backups,
+    or anything similar.
+  </listitem>
+
+  <listitem>
+    Switch to the <emphasis>parent</emphasis> directory of your
+    exam directory.
+  </listitem>
+
+  <listitem>
+    Issue the command <code>tar cvzf <emphasis>username</emphasis>.tgz 
+    <emphasis>directory</emphasis></code>.
+  </listitem>
+
+  <listitem>
+    If you have done things correctly, you should see the file
+    <code><emphasis>username</emphasis>.tgz</code>.
+  </listitem>
+
+  <listitem>
+    Make sure that the tar file contains the appropriate contents using
+    the command <code>tar tvf <emphasis>username</emphasis>.tgz</code>.
+    For example, if I were to check my tarball, I might see something like
+    the following.
+
+<screen>
+&gt; <userinput>tar tvf rebelsky.tgz</userinput>
+rebelsky/
+rebelsky/.git/
+rebelsky/.gitignore
+rebelsky/Problem1/
+rebelsky/Problem2/
+rebelsky/Problem3/
+rebelsky/Problem4/
+rebelsky/README.md
+rebelsky/Problem1/.classpath
+rebelsky/Problem1/.project
+rebelsky/Problem1/src/
+rebelsky/Problem1/src/Quicksorter.java
+rebelsky/Problem1/src/SamTest.java
+rebelsky/Problem2/.classpath
+rebelsky/Problem2/.project
+rebelsky/Problem2/src/
+reblesky/Problem2/src/Example1.java
+reblesky/Problem2/src/Example2.java
+reblesky/Problem2/src/Example3.java
+...
+</screen>
+  </listitem>
+</orderedlist>
+
+<para>
+  <emphasis>Code:</emphasis> In many problems, I ask you to write
+  code. Unless I specify otherwise in a problem, you should write
+  working code and include examples that show that you've tested
+  the code.  You should do your best to format that code to the class
+  formatting standards.  <emphasis>I am likely to subtract at least half
+  the value of any problem in which your code does not adhere closely
+  to the standards.</emphasis>
 </para>
 
 <para>
-  In many problems, I ask you to write code. Unless I specify otherwise
-  in a problem, you should write working code and include examples that
-  show that you've tested the code.   You should do your best to format that
-  code to the Sun/Oracle Java coding standards.
+  <emphasis>Documentation:</emphasis> You should document classes,
+  interfaces, fields, and methods using Javadoc-style comments.
+  You should specify preconditions and postconditions for each method.
 </para>
 
 <para>
-  You should document classes, interfaces, fields, and methods using
-  Javadoc-style comments.  You should specify preconditions and
-  postconditions for each method.
-</para>
-
-<para>
+  <emphasis>Care:</emphasis>
   Just as you should be careful and precise when you write code and
   documentation, so should you be careful and precise when you write
   prose. Please check your spelling and grammar. Since I should be equally
@@ -188,6 +220,7 @@
 </para>
 
 <para>
+  <emphasis>Partial Credit:</emphasis>
   I may give partial credit for partially correct answers. I am best
   able to give such partial credit if you include a clear set of work
   that shows how you derived your answer. You ensure the best possible
@@ -216,365 +249,29 @@
 
 </section> <!-- prelim -->
 
-<section name="preparation-02"><title>Preparation</title>
+<section name="preparation"><title>Preparation</title>
 
 <para>
-  Clone the repo using the following command, which will help ensure
-  that you have the correct directory structure.  Note that I've
-  tried to set things up so that you can treat each problem as a
-  separate Eclipse project.
+  Clone the repository using the following command, which will help
+  ensure that you have the correct directory structure.  Note that
+  I've set things up so that you can treat each problem as a separate
+  Eclipse project.  <emphasis>Please do not make one project for the
+  whole exam.</emphasis>.  Note also that the command will clone the
+  repository into a directory that corresponds to your user name.
 </para>
 
 <screen>
-$ git clone https://github.com/Grinnell-CSC207/exam2-2013F *username*
+$ git clone https://github.com/Grinnell-CSC207/exam2-2014S *username*
 </screen>
 
-<para>
-  You will see that each projects includes a file called 
-  <filename>SamTest.java</filename>.  I will put unit tests in those
-  file before 5 p.m. Friday.  (And I may continue to extend the unit
-  tests in those files after I've put them in.)  You can use
-  <code>git pull</code> to grab those when they are available.
-  If you write your own tests, please put them in a separate file so
-  that we don't have merge conflicts.
-</para>
-
-</section> <!-- preparation-02 -->
+</section> <!-- preparation -->
 
 <section name="problems-02"><title>Problems</title>
 
-<section id="iterating-linked-lists"><title>Problem 1: Iterating Linked Lists</title>
+<section id="dutch-quicksort"><title>Problem 1: Dutch Quicksort</title>
 
 <para>
-  <emphasis>Topics:</emphasis> Linked structures, Anonymous inner classes,
-  Iterators
-</para>
-
-<para>
-  In the code that accompanies this lab, you will find a simple
-  implementation of circularly linked lists with a separate iterator
-  class.  In that separate class, we spend a lot of effort keeping track
-  of things from the base class.
-</para>
-
-<para>
-  a. Annie and Mustafa believe that the code would be
-  much cleaner if we just used an anonymous inner class.  So rewrite the
-  code to do so.  Make sure that you refer appropriately to the fields
-  of the enclosing class, rather than storing copies of those fields.
-</para>
-
-<para>
-  b. Remy and Delbert are disappointed that we never
-  include <methodname>remove</methodname> (or is it 
-  <methodname>delete</methodname>?) in our iterators.  Make them happy
-  by implementing it.
-</para>
-
-</section> <!-- iterating-linked-lists -->
-
-<section id="functions"><title>Problem 2: Modeling Functions</title>
-
-<para>
-  <emphasis>Topics:</emphasis> Functions, Object-oriented design,
-  Generics (parameterized types), Anonymous inner classes, Polymorphism.
-</para>
-
-<para>
-  Your classmates, Polly and Morpheus, really enjoyed the predicate
-  problem from exam 1.  (And no, I don't know why someone would name
-  their child after a god of dreams.  Perhaps they are fans of 
-  <emphasis>The Matrix</emphasis> or of Neil Gaiman.)  And so they've
-  decided we should go further and model general functions.
-</para>
-
-<para>
-  They're starting simple, just unary and binary functions.  They want
-  to take advantage of Java's static type checking, so they've used
-  parameterized polymorphism (generics) in their design of such functions.
-</para>
-
-<programlisting>
-<xi:include href="../git/exam2-2013F/problem2/src/UnaryFunction.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-<xi:include href="../git/exam2-2013F/problem2/src/BinaryFunction.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
-/></programlisting>
-
-<para>
-  They've even written a few sample function objects, and even a
-  function that builds function objects.
-</para>
-
-<programlisting>
-<xi:include href="../git/exam2-2013F/problem2/src/IntegerFunctions.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
-/></programlisting>
-
-<para>
-  Now they're wondering what to do next.  Inspired by Hoppy, a pet that
-  their classmates have somehow smuggled in to the dorms, they decide that
-  they should include a few of the standard higher-order procedures -
-  compose, left-section, right-section, and map.  They've even sketched
-  the code.
-</para>
-
-<programlisting>
-<xi:include href="../git/exam2-2013F/problem2/src/FunctionUtils.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
-/></programlisting>
-
-<para>
-  They use a lot of ellipses, don't they?  That's because, as much as they
-  like this idea, they're not quite sure how to achieve their goal.
-  My first inclination was to have you do it for them.  But Carl and Carla
-  Clueless accidentally posted <ulink url='../examples/FunctionUtils.java'>a
-  solution</ulink>, so that's difficult to ask you do to.
-</para>
-
-<para>
-  a. Spend approximately thirty minutes attempting to solve the problem.
-</para>
-
-<para>
-  b. Correct your solution after comparing it to <ulink
-  url='../examples/FunctionUtils.java'>their solution</ulink>, perhaps
-  using better typenames than they do.
-</para>
-
-<para>
-  c. You'll note that I've written some experiments to demonstrate the use
-  of these various objects.  <emphasis>Write four more interesting examples
-  of the use of functions as objects.</emphasis>  Put those in the file
-  <filename>Examples.java</filename>.
-</para>
-
-</section> <!-- functions -->
-
-<section id="bst-delete"><title>Problem 3: Deletion in Binary Search Trees</title>
-
-<para>
-  <emphasis>Topics:</emphasis> Linked structures, Trees
-</para>
-
-<para>
-  We've started to explore the design of binary search trees.  For
-  convenience, we decided to make binary search trees <quote>add only</quote>
-  structures.  Right now, you can't remove a value from a BST.
-</para>
-
-<para>
-  As you might expect, that decision has frustrated your colleagues
-  Remy and Delbert.  They think that it's reasonable to want to get
-  rid of items.
-</para>
-
-<para>
-  Their sensible colleagues suggest that there's a simple technique
-  for doing deletion - you can simply put a <code>null</code>
-  in for the value, and, when the value is <code>null</code>,
-  <methodname>insert</methodname> throws an exception.  Unfortunately,
-  Remy and Delbert are extremists, and say <quote>Simulated deletion
-  is not deletion.  Your approach clogs the tree with pointless nodes.
-  And if the tree is clogged with pointless nodes, we can't guarantee
-  O(logn) insertion and deletion.</quote> Of course, they ignore the fact
-  that we've yet to figure out how to keep the trees balanced, and that we
-  probably won't learn how to do so until we take an upper-division course
-  in algorithms and data structures (or until we search on Wikipedia).
-  But, hey, they're annoying enough that we're going to listen to them.
-</para>
-
-<para>
-  Fortunately, they suggest a reasonably straightforward approach
-  for removing values.
-</para>
-
-<literallayout>To delete the node containing key
-If the node has no left subtree, 
-  Replace the node by its right subtree.
-Otherwise, if the node has no right subtree,
-  Replace the node by its left subtree.
-Otherwise, the node has two subtrees
-  Shuffle the tree so that the node with the largest key in the
-    left subtree replaces the node.  
-</literallayout>
-
-<para>
-  Why does this work?  We know that the largest key in the left
-  subtree is larger than every other key in the left subtree.  And,
-  since it's in the left subtree, we know that it's smaller than
-  every key in the right subtree.  Hence, it can be at the root after
-  we delete the old root.
-</para>
-
-<para>
-  Implement their algorithm.
-</para>
-
-<para>
-  Asa, Sam, Cam, Ida, and Ina worry a bit about that <quote>Shuffle</quote>
-  instruction.  And they also want to design some interesting unit tests.
-  They draw a bunch of trees to help themselves understand what should happen
-  in each situation.  In drawing these trees, they use lowercase letters to
-  represent nodes, and uppercase letters to represent tree-shaped groups
-  of nodes.  And their pictures all illustrate deletion at the root.
-</para>
-
-<table>
-<tr>
-  <th>
-    Original
-  </th>
-  <th>
-    After delete/shuffle
-  </th>
-</tr>
-
-<tr> <td colspan='2'> 01 - no right subtree </td> </tr>
-<tr>
-<td><programlisting>
-   m   
-  / \
- /
-G
-</programlisting></td>
-<td><programlisting>
-   G   
-</programlisting></td>
-</tr>
-
-<tr> <td colspan='2'> 02 - no left subtree </td> </tr>
-<tr>
-<td><programlisting>
-   m
-  / \
-     \
-      N
-</programlisting></td>
-<td><programlisting>
-   N   
-</programlisting></td>
-</tr>
-
-<tr> <td colspan='2'> 03 - both subtrees, left subtree has no right subtree </td> </tr>
-<tr>
-<td><programlisting>
-      m
-     / \
-    /   \
-   g     N
-  / \
- /
-D
-</programlisting></td>
-<td><programlisting>
-      g
-     / \
-    /   \
-   D     N
-</programlisting></td>
-</tr>
-
-<tr> <td colspan='2'> 04 - both subtrees, left subtree has right subtree with no right subtree </td> </tr>
-<tr>
-<td><programlisting>
-      m
-     / \
-    /   \
-   g     N
-  / \
- /   \
-D     j
-     / \
-    /
-   I
-</programlisting></td>
-<td><programlisting>
-      j
-     / \
-    /   \
-   g     N
-  / \
- /   \
-D     I
-</programlisting></td>
-</tr>
-
-<tr> <td colspan='2'> 05 - both subtrees, left subtree has right subtree with right subtree (<code>l</code> is the rightmost key in the left subtree, and has no left subtree) </td> </tr>
-<tr>
-<td><programlisting>
-      m
-     / \
-    /   \
-   g     N
-  / \
- /   \
-D     J
-     / \
-    /   \
-   I     l
-        / \
-</programlisting></td>
-<td><programlisting>
-      l
-     / \
-    /   \
-   g     N
-  / \
- /   \
-D     J
-     / \
-    /  
-   I  
-</programlisting></td>
-</tr>
-
-<tr> <td colspan='2'> 06 - both subtrees, left subtree has right subtree with right subtree (<code>l</code> is the rightmost key in the left subtree, but has a left subtree) </td> </tr>
-<tr>
-<td><programlisting>
-      m
-     / \
-    /   \
-   g     N
-  / \
- /   \
-D     J
-     / \
-    /   \
-   I     l
-        / \
-       /
-      K
-</programlisting></td>
-<td><programlisting>
-      l
-     / \
-    /   \
-   g     N
-  / \
- /   \
-D     J
-     / \
-    /   \
-   I     K
-</programlisting></td>
-</tr>
-</table>
-
-<para>
-  They note that they aren't sure that there's a real implementation
-  difference between the last four cases, but they thought it was
-  easiest to think about them separately.  
-</para>
-
-<para>
-  When they show their examples to Remy and Delbert, Remy and Delbert 
-  note that they would find it useful to find the <emphasis>parent</emphasis>
-  of the rightmost node.  But they don't say why.
-</para>
-
-</section> <!-- bst-delete -->
-
-<section id="dutch-quicksort"><title>Problem 4: Dutch Quicksort</title>
-
-<para>
-  <emphasis>Topics:</emphasis> Sorting, Quicksort, the Dutch National
+  <emphasis>Topics:</emphasis> Sorting. Quicksort. the Dutch National
   Flag Algorithm.
 </para>
 
@@ -603,15 +300,236 @@ D     J
   <emphasis>Note:</emphasis> You may find it difficult to make the
   partition process a separate method, since, in addition to rearranging
   the items in the subarray, it now has to return two values: the lower
-  bound and upper bound of the middle part of the subarray.  here are
+  bound and upper bound of the middle part of the subarray.  Here are
   three options for dealing with that issue:  (1) You can move the
   partitioning process into the middle of Quicksort.  (2) You can write
   a helper procedure that, given the start of the middle subarray, finds
   the end.  (3) You can write a helper class that holds two integers
-  and return an object in that class.
+  and return an object in that class.  I tend to use the first approach.
 </para>
 
 </section> <!-- dutch-quicksort -->
+
+<section id="filtering"><title>Problem 2: Filtering</title>
+
+<para>
+  <emphasis>Topics:</emphasis> Iterators.  Predicates.  Iteration.
+  Anonymous inner classes.  Generics.  Object-oriented design.
+</para>
+
+<para>
+  Your classmates, Phil and Holden, have enjoyed many aspects of
+  object oriented design, but also like to think functionally.  They've
+  started to look at approaches to working with iterators and 
+  predicates.
+</para>
+
+<para>
+  They note that it's relatively simple to print out all of the
+  values for which a predicate holds.  For example,
+</para>
+
+<programlisting>
+<xi:include href="../git/exam2-2014S/Problem2/src/Example1.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<para>
+  But they'd like to play a bit more with the design.  Phil starts
+  by noting that it would be useful to combine an iterator with a
+  predicate to make what he calls a <quote>filtered iterator</quote>.
+  A filtered iterator works much like an iterator, except that it
+  only returns the values in the iteration for which the predicate holds.
+</para>
+
+<programlisting>
+<xi:include href="../git/exam2-2014S/Problem2/src/Example2.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<para>
+  Holden suggests that if we're going to make such use of predicates,
+  we really should have tools for making new predicates.  He suggests
+  ways to negate predicates and to combine predicates with and and or. 
+  He also suggests making simple numeric
+  predicates.  He even creates a handy-dandy code sketch.
+</para>
+
+<programlisting>
+<xi:include href="../git/exam2-2014S/Problem2/src/Pred.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<para>
+  Holden admits that this approach is a bit less object-oriented than
+  one might hope.  After all, shouldn't <methodname>and</methodname>
+  be a method of the <methodname>Predicate</methodname> interface, with
+  each predicate able to combine itself with a parameter predicate?
+  But they've decided that static methods can still provide a relatively
+  object-oriented approach, and making every predicate implement
+  <methodname>and</methodname> seems excessive.
+</para>
+
+<para>
+  They've also come up with a host of utility classes, example, experiments, 
+  and tests that you can find on Github.
+</para>
+
+<para>
+  Unfortunately, Phil and Holden are better at concept and experiments
+  than they are at details, so they've turned to you for the
+  implementation.
+</para>
+
+<para>
+  a. Implement the <methodname>FilteredIterator</methodname> class.
+</para>
+
+<para>
+  b. Implement the methods in <code>Pred.java</code>.
+</para>
+
+</section> <!-- filtering -->
+
+<section id="sorted-lists"><title>Problem 3: Sorted Lists</title>
+
+<para>
+  <emphasis>Topics:</emphasis> Linked structures. Skip lists.
+  Iterators.  ADT design.
+</para>
+
+<para>
+  Soren and Lisa claim to have enjoyed our exploration of lists.
+  However, they note 
+</para>
+
+<blockquote>
+  We thought that when we first started talking about lists, someone said
+  that <quote>lists are ordered collections</quote>.  If they're ordered,
+  shouldn't they use a comparator to specify the ordering?
+</blockquote>
+
+<para>
+  With some effort, you explain to them that the ordering is determined
+  by the client, rather than a separate iterator.  They reply,
+</para>
+
+<blockquote>
+  Fine.  If you refuse to follow a sensible design, we'll come up with
+  our own ADT.  A <emphasis>sorted list</emphasis> is a collection of
+  values that are iterated from smallest to largest.  We use sorted
+  lists when we need to prioritize things (e.g., we can process things
+  from most important to least important by iterating the list) and when
+  we need to quickly identify the <quote>best</quote> few values (e.g.,
+  the top five scoring students).  Sorted lists should provide an
+  <code><methodname>add</methodname>(T <parameter>value</parameter>)</code>
+  method and a method for getting an iterator.  Clients remove elements
+  with the iterator's <methodname>remove</methodname> method.  We'll leave 
+  the complexities of full list iterators to another day.
+</blockquote>
+
+<para>
+  As you might expect, your instructor, Hugh DeWitt, wants you to
+  implement their design.  Fortunately, you have a working version of skip
+  lists which Lisa and her friend Skippy developed previously.  Hence,
+  your primary goal is to create a subclass that adds an iterator to
+  skip lists.  You should not change the skip list code.  You will, however,
+  probably need to have your iterator reference the fields of the skip
+  list class.  (Let's hope that your classmates chose the right protection
+  levels.)
+</para>
+
+<para>
+  Note that the iterator's <methodname>hasNext</methodname> and
+  <methodname>next</methodname> methods should all be O(1).  (Yes, you
+  can pretend the height of a skip list is constant.)  The iterator's
+  <methodname>remove</methodname> method should be at least as efficient
+  as the skip list <methodname>remove</methodname> method.
+</para>
+
+</section> <!-- sorted-lists -->
+
+<section id="kth-smallest"><title>Problem 4: The Kth Smallest Value</title>
+
+<para>
+  <emphasis>Topics:</emphasis> Linked structures. Doubly-linked
+  lists.  Quicksort.  List iterators.
+</para>
+
+<para>
+  Your classmates, Kay and Smilla, were intrigued by the efficient
+  median algorithm we developed in class. In case you've forgotten,
+  the algorithm looks something like the following:
+</para>
+
+<literallayout>lb = 0
+ub = values.length
+while (true)
+  int p = partition(values, lb, ub, order)
+  if (p == k)
+    return values(k)
+  else if (p &lt; k)
+    lb = p + 1
+  else
+    ub = p</literallayout>
+
+<para>
+  However, Kay and Smilla are disappointed that the algorithm worked
+  only on arrays.  <quote>After all</quote>, they say, <quote>isn't
+  the whole reason we have iterators is that we want to be able to do
+  clever things with lists as well as arrays.</quote>  They suggest
+  that we rewrite our algorithm to work with structures that have a
+  <methodname>listIterator</methodname> method.
+</para>
+
+<para>
+  Amazingly, Hugh DeWitt is a little bit concerned about their
+  observation.  Hugh notes 
+</para>
+
+<blockquote>
+  That's a great idea.  Unfortunately, to do something like partition 
+  in lists, we need to be able to not only iterate forward and backward, 
+  but also keep track of where in the list the lower bound and upper 
+  bound are.  We could use integer indices, but that's potentially
+  inefficient.  If the folks at Sun/Oracle had been sensible, they
+  might have made <code>ListIterators</code> cloneable, but they
+  didn't.
+</blockquote>
+
+<para>
+  Kay and Smilla, not to be deterred, quickly whip up a
+  <methodname>CloneableListIterator</methodname> interface
+  and rewrite our <code>DoublyLinkedList</code> class so that
+  its iterators are cloneable.
+</para>
+
+<programlisting>
+<xi:include href="../git/exam2-2014S/Problem4/src/CloneableListIterator.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<programlisting>
+<xi:include href="../git/exam2-2014S/Problem4/src/SimpleList.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<programlisting>
+<xi:include href="../git/exam2-2014S/Problem4/src/SimpleListUtils.java" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"
+/></programlisting>
+
+<para>
+  They are about to start work on the <methodname>kthSmallest</methodname>
+  operation when Hugh DeWitt turns to you and say <quote>Kay and Smilla
+  already did enough of the work.  They shouldn't have to implement this
+  method.  Why don't you do it?</quote>
+</para>
+
+<para>
+  Implement the <methodname>kthSmallest</methodname> algorithm for lists
+  that support cloneable iterators.  Note that your implementation should
+  have an expected running time of O(n), so you may not sort the list.
+  However, you may rearrange the elements of the list.  You must also
+  do the work with only a constant amount of extra memory, so you may
+  not copy the list into an array.
+</para>
+
+</section> <!-- kth-smallest -->
 
 </section> <!-- problems-02 -->
 
@@ -627,6 +545,13 @@ D     J
   comments on those techniques or ideas.
 </para>
 
+<para>
+  You may also earn a small amount of extra credit if you show good
+  git behavior (other than pushing your work to a public repository).
+  Make sure to do relatively small commits and to include good commit
+  message.
+</para>
+
 </section> <!-- extra-02 -->
 
 <section name="q-and-a-02"><title>Questions and Answers</title>
@@ -638,124 +563,34 @@ D     J
 </para>
 
 <blockquote>
-  Ten minutes.  About five to reorganize the code.  About five to implement
-  the <methodname>remove</methodname> method.  But I also understood my
-  design pretty well, and had tried to design the iterator to make it
-  easier to remove things.  (Because I knew the design, I was also able
-  to fix the errors revealed by unit testing really quickly.)
+  When I first tried it (a few semesters ago), it took between fifteen 
+  and twenty minutes.  About five minutes to write the invariant.  (Yes, I do
+  write invariants when I'm solving things.)  About ten minutes to write the
+  loop and the recursive calls.  A few minutes to fix the one bug in my
+  code, which involved backwards comparisons.  Since I'd written DNF and
+  Quicksort examples that semester, I seemed pretty quick, even though I
+  did not refer explicitly to the examples.
+</blockquote>
+
+<blockquote>
+  When I redid the problem this semester, it took ten minutes.
+  Amazingly, my first solution was correct.
 </blockquote>
 
 <para>
-  <emphasis>Can we just have one iterator, or must we support multiple
-  iterators?</emphasis>
+  <emphasis>What are the most common student errors on this problem?</emphasis>
 </para>
 
 <blockquote>
-  You must support multiple iterators.  But if you create your anonymous
-  inner class correctly, that will happen more-or-less automatically.
+  Some students forget that the pivot will move when they rearrange the
+  array, and refer to it is <code>values[mid]</code> or something
+  similar.  The traditional partition method moves the value to the
+  beginning of the subarray so that we know where it is.  For DNF, you
+  might just store it in a value.
 </blockquote>
 
 <blockquote>
-  It's certainly fine if the other iterators that are in midstream
-  stop working correctly after an element is removed using one of the
-  iterators.  But the iterator with the associated remove needs to keep
-  working.
-</blockquote>
-
-<para>
-  <emphasis>I note that you are doing something a bit strange for the
-  iterator.  Rather than staying one node back, as we've discussed in
-  the past, you seem to be staying two nodes back.  Am I write in 
-  assuming that you want to make sure that you have access to the
-  previous node so that you can more easily delete?</emphasis>
-</para>
-
-<blockquote>
-  You are correct that I keep a bit back so that removal is easier.
-  You don't need to use this strategy.  But I found that it works well.
-</blockquote>
-
-<para>
-  <emphasis>I'm finding it difficult with conceptualizing <quote>two back</quote>.  Can you give us an alrenate implementation?</emphasis>
-</para>
-
-<blockquote>
-  Sure.
-</blockquote>
-
-<blockquote>
-<programlisting>
-/**
- * Alternate iterators for linked lists.
- */
-class AltIteratorLL&lt;T&gt; implements Iterator&lt;T&gt; {
-    // +--------+----------------------------------------------------------
-    // | Fields |
-    // +--------+
-
-    /**
-     * We may need to access some of the internals of the linked list class.
-     */
-    LinkedList&lt;T&gt; list;
-
-    /**
-     * The iterator remains one element back from the node so that we can
-     * easily remove it.
-     */
-    NodeLL&lt;T&gt; here;
-    
-    /**
-     * When we start up, we're immediately before a node that we have not
-     * yet iterated.  We use the boolean to keep track of such situations.
-     */
-    boolean visitedNext;
-    
-    // +--------------+----------------------------------------------------
-    // | Constructors |
-    // +--------------+
-
-    public AltIteratorLL(LinkedList&lt;T&gt; list) {
-        this.here = list.front;
-        this.list = list;
-        // We have not yet looked at the next node.
-        this.visitedNext = false;
-    } // AltIteratorLL
-
-    // +---------+---------------------------------------------------------
-    // | Methods |
-    // +---------+
-
-    public T next() {
-        if (!this.hasNext()) {
-            throw new NoSuchElementException();
-        } // if we've reached the end
-        // Advance if appropriate
-        if (this.visitedNext) {
-            this.here = this.here.next;
-        } // If we've already visited the next node
-        // Note that we've visited the next node (b/c we're about
-        // to return its value. 
-        this.visitedNext = true;
-        // And we're done    
-        return this.here.next.value;
-    } // next
-
-    public boolean hasNext() {
-        if (this.here.next == this.list.front) {
-            return false;
-        } else if (this.visitedNext &amp;&amp; (this.here.next.next == this.list.front)) {
-            return false;
-        } else {
-            return true;
-        } // if/else
-    } // hasNext
-
-    public void remove() throws UnsupportedOperationException {
-        throw new UnsupportedOperationException();
-    } // remove
-
-} // AltIteratorLL&lt;T&gt;
-</programlisting>
+  I sometimes see some off-by-one errors.
 </blockquote>
 
 </section> <!-- qa-problem1 -->
@@ -767,8 +602,43 @@ class AltIteratorLL&lt;T&gt; implements Iterator&lt;T&gt; {
 </para>
 
 <blockquote>
-  20 minutes for the types and bodies.  A lot of time for experiments,
-  which I've now added to the repo.  You may want to add your own.
+  I forgot to record the time.  I'll solve it again and let you know.
+  (Yes, enough time has passed that I'll be doing it <quote>from 
+  scratch</quote> as it were.)  Okay, the second time took fifteen
+  minutes, including a bit of playing with options.
+</blockquote>
+
+<para>
+  <emphasis>Can we assume that every call to <methodname>next</methodname>
+  is immediately preceded by a call to <methodname>hasNext</methodname>?</emphasis>
+</para>
+
+<blockquote>
+  No.  Someone who <quote>knows</quote> the expected number
+  of elements might just call <methodname>next</methodname> the
+  appropriate number of times.  Or someone might just keeping calling
+  <methodname>next</methodname> until they get an exception.
+</blockquote>
+
+<para>
+  <emphasis>Can we assume that <methodname>next</methodname>
+  is called at least once between any two calls to
+  <methodname>hasNext</methodname>?</emphasis>
+</para>
+
+<blockquote>
+  No.  A client might call <methodname>hasNext</methodname>, decide
+  not to do anything immediately, and then call <methodname>hasnext</methodname>
+  another time elsehwere in the code.
+</blockquote>
+
+<para>
+  <emphasis>Will you write some unit tests for the
+  <methodname>remove</methodname> method?</emphasis>
+</para>
+
+<blockquote>
+  I'll try.
 </blockquote>
 
 </section> <!-- qa-problem2 -->
@@ -780,31 +650,74 @@ class AltIteratorLL&lt;T&gt; implements Iterator&lt;T&gt; {
 </para>
 
 <blockquote>
-  Ten minutes.  But I'd spent a lot of time thinking about it, which
-  is why you have the pretty ASCII trees in the exam.
+  The basic implementation (using the underlying skip list 
+  <methodname>remove</methodname> method) took me under ten minutes.
+</blockquote>
+
+<blockquote>
+  Adding support for <quote>fail fast</quote> took less than five
+  additional minutes.  (<quote>fail fast</quote> is optional.  I just
+  wanted to see how hard it was to add.)
+</blockquote>
+
+<blockquote>
+  I have not yet tried implementing <methodname>remove</methodname>
+  directly.
 </blockquote>
 
 <para>
-  <emphasis>Why do we care about the parent of the largest element in
-  the left subtree?</emphasis>
+  <emphasis>Can we use our own implementation of skip lists?</emphasis>
 </para>
 
 <blockquote>
-  Because in order to move (<quote>shuffle</quote>) that element, we need
-  to change the link from parent to child.
+  Yes.  However, you do have to make it generic.
 </blockquote>
 
 <para>
-  <emphasis>If you care about the parent so much, why don't you have a
-  parent link?</emphasis>
+  <emphasis>For the iterator's <methodname>remove</methodname> method,
+  can we call the skip list <methodname>remove</methodname> method?</emphasis>
 </para>
 
 <blockquote>
-  Too much work.   In addition, since we traverse the tree top to 
-  bottom, we should always pass by the parent before seeing a node.
-  So, if you find you need the parent of a node, either (a) stop a 
-  level before reaching the node or (b) pass the parent along as a
-  parameter.    (I'd prefer that you use the first technique.)
+  Yes, provided that you still keep the iterator at the right position
+  in the list.
+</blockquote>
+
+<para>
+  <emphasis>Do we need to worry about invalidating iterators when the list
+  is mutated?</emphasis>
+</para>
+
+<blockquote>
+  You are not required to invalidate iterators.
+</blockquote>
+
+<para>
+  <emphasis>Soren and Lisa said <quote>We'll leave the complexities
+  of full list iterators to another day.</quote>.  But you write that
+  <quote>your primary goal is to create a subclass that adds an iterator
+  to skip lists</quote>.  I'm confused.  Don't the two statements
+  contradict each other?</emphasis>
+</para>
+
+<blockquote>
+  No.  The full list iterator (well, <code>ListIterator</code>) 
+  interface includes methods to move in both directions and to set
+  the current element.  You don't need to do those additional operations,
+  just the basic iterator (well, <code>Iterator</code>) methods:
+  <methodname>hasNext</methodname>, <methodname>next</methodname>, and
+  <methodname>remove</methodname>.
+</blockquote>
+
+<para>
+  <emphasis>Since we have to iterate elements in order, do we need to keep
+  track of the last value we returned and search for the next smallest
+  value, as we did for one implementation of priority queues?</emphasis>
+</para>
+
+<blockquote>
+  Such an implementation is unlikely to be O(1).  You should think more
+  about the underlying data structure that we're using.
 </blockquote>
 
 </section> <!-- qa-problem3 -->
@@ -816,63 +729,76 @@ class AltIteratorLL&lt;T&gt; implements Iterator&lt;T&gt; {
 </para>
 
 <blockquote>
-  Fifteen to twenty minutes.  About five to write the invariant.  About
-  ten to write the loop and recursive calls.  A minute or two to fix the
-  one bug (I was getting the comparison backwards.)  Having recently written
-  DNF (early in the semester) and Quicksort helped a lot.
+  It took me forty minutes.  I was overconfident, and did not draw the
+  pictoral loop invariants.  Since I didn't draw those invariants, I had
+  an <quote>off by one</quote> error that took some time for me to catch.
 </blockquote>
 
 <para>
-  <emphasis>Should I write an invariant for the partition aspect of
-  <methodname>qsort</methodname>?</emphasis>
+  <emphasis>Why did you give us both <code>SimpleList</code> and
+  <code>DoublyLinkedList</code>?</emphasis>  Do we have to implement
+  <methodname>kthSmallest</methodname> for both?
 </para>
 
 <blockquote>
-  I found that writing a visual invariant made it much easier to solve.
-  So, I'd <emphasis>recommend</emphasis> that you write such an invariant.
-  But i won't require it.
+  I want you to write code to an interface, rather than to an
+  implementation.  However, in order to experiment with your code,
+  you needean implementation.  Hence, I provide
+  <code>DoublyLinkedList</code> as an implementation of
+  <code>SimpleList</code> that you could use.  (I also thought you'd
+  want to see a full implementation of doubly-linked lists.)  So, you
+  only need to implement <methodname>kthSmallest</methodname> once,
+  for <code>SimpleList</code>.  The wonders of polymorphism
+  guarantee that it will also work for <code>DoublyLinkedList</code>.
 </blockquote>
 
 <para>
-  <emphasis>Did you write a separate <methodname>partition</methodname> 
-  method?</emphasis>
+  <emphasis>Is this zero-based or one-based?  That is, is the smallest element
+  what you get from <code>kthSmallest(0)</code> or
+  <code>kthSmallest(1)</code>.</emphasis>
 </para>
 
 <blockquote>
-  No.  I found it faster and easier to put the partition code in the
-  middle of the <methodname>qsort</methodname> method.
+  The postconditions say <quote>There are exactly k values smaller than
+  val in the list.</quote>.  That implies that it's zero-based.
 </blockquote>
 
 <para>
-  <emphasis>How did you identify the pivot?</emphasis>
+  <emphasis>You say that you should have drawn loop invariants.  Any hints on
+  drawing those invariants?</emphasis>
 </para>
 
 <blockquote>
-  I used the technique that Lea said they used in 301 - I used the
-  value in the middle of the subarray as the pivot.
+  The conceptual model of iterators suggests that they fall
+  <emphasis>between</emphasis> elements.  Hence, I'd make sure to
+  draw a picture in which the iterators that mark the lower bound
+  and upper bound are between elements.  Presumably, the lower bound
+  will be before the first element in the range of values left to 
+  process and the upper bound will be after the last element in that range.
 </blockquote>
 
 <blockquote>
+  Since the <methodname>set</methodname> method uses the last value
+  returned by the iterator, and list iterators are bidirectional, I'd
+  also find a way to mark those elements.  (Such marking may not be useful
+  for the invariant, but it will be useful for analyzing how the procedure
+  is supposed to work.)
+</blockquote> 
+
+<blockquote>
+  So, maybe something like the following.  The slash and backslash
+  indicate the element just returned.
 <programlisting>
-// Put the pivot at the front. Use CLRS "middle element" idea to
-// identify the pivot.
-swap(values, lb, lb + (ub-lb)/2);
-T pivot = values[lb];
+... val - val - val ... val - val - val ... val - val - val ... val - val ...
+        ^                  \^                   ^/                  ^
+        |                   |                   |                   |
+        lb                small               large                 ub
 </programlisting>
 </blockquote>
 
 </section> <!-- qa-problem4 -->
 
 <section id="misc"><title>Miscellaneous</title>
-
-<para>
-  <emphasis>Some of the typos in your exam are very strange.  It's like
-  parts of the things you wrote disappeared.</emphasis>
-</para>
-
-<blockquote>
-  I blame gremlins.
-</blockquote>
 
 </section> <!-- misc -->
 
@@ -901,30 +827,25 @@ T pivot = values[lb];
 
 <itemizedlist>
   <listitem>
-    Incomplete sentence: <quote>And they really like to delete items, so
-    they won't ...</quote>.  That sentence is now deleted.  [EM, JB, AK, 1 point]
+    Gremlins changed "1" to "-2" in the comparator for <code>Point</code>
+    objects.  [VB.  2 points]
   </listitem>
-
   <listitem>
-    Incorrect verb form <quote><methodname>insert</methodname> 
-    thrown an exception</quote>, should be <quote>throws</quote>.  [JB, 1 point]
+    <quote>Shouldn't use use</quote> should be 
+    <quote>Shouldn't they use</quote>. [SZ, 1 point]
   </listitem>
-
   <listitem>
-    Missing <quote>If you fail</quote> in <quote>If you fail to name and
-    number the pages</quote>.  [AK, 1 point]
+    Sam neglected to remove the disclaimer at the start of the exam.
+    [KN, 1 point].
   </listitem>
-
   <listitem>
-    Extra d in <quote>credit</quote>.  [MH, 1 point]
+    Sam used <quote>and</quote> and <quote>or</quote> as verbs, which
+    abuses the English language.  (As in <quote>to or two predicates</quote>.)
+    [GB, 1 point].
   </listitem>
-
   <listitem>
-    Missing question mark in parenthetical question.  [FB, 1 point]
-  </listitem>
-
-  <listitem>
-    Improper computation of midpoint.  [EW, 2 points]
+    Sam spelled <quote>list</quote> as <quote>ilst</quote>.
+    [EW, 0 point, spelling correction in code].
   </listitem>
 </itemizedlist>
 
