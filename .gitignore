@@ -85,3 +85,6 @@ outlines/outlines.mk
 
 # Ignore the link to the generic course.
 generic
+
+# Ignore partners, since I don't want those public
+partners
