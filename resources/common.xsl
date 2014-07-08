@@ -91,4 +91,14 @@
   <span class="overview"><xsl:apply-templates/></span>
 </xsl:template>
 
+<!-- Questions in a Q&A -->
+<xsl:template match="question">
+  <p class="question"><em><xsl:apply-templates/></em></p>
+</xsl:template>
+
+<!-- Answers in a Q&A -->
+<xsl:template match="answer">
+  <blockquote class="answer"><xsl:apply-templates/></blockquote>
+</xsl:template>
+
 </xsl:stylesheet>
