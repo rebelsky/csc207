@@ -1,5 +1,9 @@
 <section id="code-conventions"><title>Code Conventions</title>
 
+<para>
+  <emphasis>This handout is under development.</emphasis>
+</para>
+
 <section id="introduction"><title>Introudction</title>
 
 <para>
@@ -73,6 +77,101 @@
 </para>
 
 </section> <!-- introduction -->
+
+<section id="guiding-principles"><title>Guiding Principles</title>
+
+<para>
+  Three basic principles undergird these guidelines.
+</para>
+
+<para>
+  First, code should be easy to trace visually.  That is, it should be
+  easy for the reader to match braces, to understand nesting, to find
+  annotations, and so on and so forth.
+</para>
+
+<para>
+  Second, text should be easy to <quote>process</quote> with a text
+  editor or text tools.  For example, we often want to find procedure
+  names.  In the GNU C conventions, we know that function names start
+  in the leftmost column, so we can just look for 
+  <code>^<emphasis>name</emphasis></code>.  It's not quite so easy in
+  Java, since all functions are nested within classes, and so should
+  be indented.  But, if we follow similar guidelines, we should be able
+  able to search for <code>^  <emphasis>name</emphasis></code>.
+</para>
+
+<para>
+  Third, we follow GNU conventions as closely as possible because 
+  those conventions have been thoughtfully designed (and because 
+  I'm used to using them).
+</para>
+
+<para>
+  Ideally, those three principles would guide all of the design.
+  Unfortunately, it is not possible to completely achieve the GNU
+  conventions with any configuration of the Eclipse formatter.
+  (In particular, the designers of that formatter don't seem to believe
+  that function names should begin on their own line.)  Hence, I will
+  provide both ideal and alternate formatting for some conventions.
+</para>
+
+</section> <!-- guiding-principles -->
+
+<section id="conventions"><title>Conventions</title>
+
+<para>
+  <emphasis>Indentation.</emphasis>
+  Indent to indicate nesting, particularly when nesting within braces.
+  By default, indent by two spaces.  Do not use tabs, because different
+  environments may display tabs differently.  
+</para>
+
+<para>
+  <emphasis>Braces.</emphasis>
+  Align matching braces vertically so that the reader can quickly 
+  identify matches.  Comment all end braces to clarify what the brace
+  ends.
+</para>
+
+<para>
+  <emphasis>Spacing.</emphasis>
+  Put a space before the open parenthesis in a function declaration or
+  function call.  Put spaces after keywords like <code>if</code>,
+  <code>for</code>, and <code>while</code>.  In general, follow the
+  GNU conventions.
+</para>
+
+<para>
+  <emphasis>Line Width.</emphasis>
+  Lines should be no more than 79 characters wide.  Limiting lines to that
+  width makes it easier to print your code, to view it in a typical terminal
+  window, and to edit it in that terminal window.  (In each case, you are
+  likely to get unfortunate automatic wrapping if you use more than 79
+  characters.)
+</para>
+
+<para>
+  <emphasis>Alignment with Line Wrapping.</emphasis>
+  Manually wrap your lines so that they do not exceed the specified
+  line width.  In general, you should align the next line so that
+  it matches the corresponding value on the previous line.  However,
+  in cases in which there is no corresponding value, or when such wrapping
+  puts too much whitespace at the beginning of the line, you may indent
+  by four spaces.
+</para>
+
+<para>
+  <emphasis>Documentation.</emphasis>
+  Use Javadoc documentation for every class, method, and field 
+  declaration.
+</para>
+
+</section>  <!-- conventions -->
+
+<section id="example"><title>An Example</title>
+
+</section>  <!-- example -->
 
 </section> <!-- code-conventions -->
 
