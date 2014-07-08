@@ -1,1 +1,114 @@
-../tao/labs/javadoc.sect
+<section id="javadoc"> <title>Laboratory: Javadoc</title>
+
+<para>
+<emphasis>Summary</emphasis>: In this laboratory, you will have the chance to improve your skills regarding code documentation and testing.
+</para>
+
+<section id="javadoc-preparation"><title>Preparation</title>
+
+<para>
+  Open your project from the inheritance lab in Eclipse.
+</para>
+
+<para>
+  You need not add comments to those classes.  (At least not yet.)
+</para>
+
+</section> <!-- javadoc-preparation -->
+
+<section id="javadoc-exercises"> <title>Exercises</title>
+
+<section id="javadoc-01"><title>Exercise 1: Generate Documentation</title>
+
+<para>
+  a. Use Eclipse's Javadoc tool to generate Javadoc for these classes.
+</para>
+
+<para>
+  You can generate Javadoc by selecting <guimenuitem>Generate
+  Javadoc</guimenuitem> from the <guimenu>Project</guimenu> menu.
+</para>
+
+<para>
+  That tool will ask you where to put the documentation.  You can
+  put it within your project, but you may find it useful to put
+  it elsewhere, such as in your <code>public_html</code> directory
+  (presuming you have such a directory).
+</para>
+
+<para>
+  b. Preview the Javadoc documentation in Eclipse.
+</para>
+
+<para>
+  c. Preview the Javadoc documentation in your Web browser.  You will
+     use a URL like
+     <code>file:///home/username/path/to/project/doc/index.html</code>.
+</para>
+
+</section> <!-- javadoc-01 -->
+
+<section id="javadoc-02"><title>Exercise 2: Adding Real Comments</title>
+
+<para>
+  As you may recall, a Javadoc-style comment begins with a slash and
+  two stars and ends with a star and a slash.  Add some Javadoc-style
+  comments to various portions of your classes, rebuild the documentation,
+  and determine the effects.
+</para>
+
+</section> <!-- javadoc-02 -->
+
+<section id="javadoc-03"><title>Exercise 3: Protection Levels</title>
+
+<para>
+  You may have noted that the Javadoc documentation does not list 
+  package methods and fields.  Figure out how to get the Javadoc
+  documentation to reveal more or fewer components.
+</para>
+
+</section> <!-- javadoc-03 -->
+
+<section id="javadoc-04"><title>Exercise 4: Preconditions and Postconditions</title>
+
+<para>
+  Although the Javadoc designers did not acknowledge the need for
+  preconditions and postconditions, we know that they are quite
+  useful.
+</para>
+
+<para>
+  a. Add a precondition to the Javadoc documentation for a method
+    using the <code>@pre</code> tag.
+</para>
+
+<para>
+  b. Add a postcondition to the Javadoc documentation for a method
+  using the <code>@post</code> tag.
+</para>
+
+<para>
+  c. What do you expect to happen when you generate the documentation?
+</para>
+
+<para>
+  d. Check your answer experimentally.
+</para>
+
+<para>
+  e. As you probably discovered, Eclipse doesn't yet know about these
+  tags.  Configure the Javadoc tool to add the following flags.
+</para>
+
+<programlisting>
+-tag pre:cm:"Preconditions:"
+tag post:cm:"Postconditions:"
+</programlisting>
+
+</section> <!-- javadoc-04 -->
+
+</section> <!-- javadoc-exercises -->
+
+</section> <!-- javadoc-lab -->
+
+
