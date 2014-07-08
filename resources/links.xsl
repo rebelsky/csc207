@@ -31,7 +31,6 @@
   [<a href="../eboards/current.html">EBoard</a>]
   [<a href="../labs/current.html">Lab</a>]
   [<a href="../outlines/current.html">Outline</a>] 
-  [<a href="../partners/current.html">Partners</a>]
   [<a href="../readings/current.html">Reading</a>]
 </p>
 <p class="links"> <b>Sections:</b> 
@@ -51,7 +50,7 @@
 </p>
 <p class="links"><b>Related Courses:</b>
   [<a href="http://www.cs.grinnell.edu/~rebelsky/Courses/CS152/2006S/">CSC 152 2006S (Rebelsky)</a>]
-  [<a href="http://www.cs.grinnell.edu/~rebelsky/Courses/CSC207/2013F/">CSC 152 2013F (Rebelsky)</a>]
+  [<a href="http://www.cs.grinnell.edu/~rebelsky/Courses/CSC207/2013F/">CSC 207 2013F (Rebelsky)</a>]
   [<a href="http://www.cs.grinnell.edu/~walker/courses/207.sp13/">CSC 207 2013S (Walker)</a>]
   [<a href="http://www.cs.grinnell.edu/~weinman/courses/CSC207/2011S/">CSC 207 2011S (Weinman)</a>]
 </p>
