@@ -12,6 +12,7 @@ schedule.sect: $(MKSCHEDULE)
 # Hacks for generating a decent PDF of the schedule
 sched.sect: $(MKSCHEDULE)
 	$(MKSCHEDULE) mtwf-spring-alt > $@
+sched.html: overviews/*.xml
 sched-munge.html: sched.html
 	../tools/munge-schedule $< > $@
 schedule.ps: sched-munge.html schedule.h2p
