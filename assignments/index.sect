@@ -1,6 +1,49 @@
 <section id="index-assignments"><title>Weekly Assignments</title>
 
 <itemizedlist>
+  <listitem>
+    <ulink url="../assignments/final-takehome.html">Take-Home Final</ulink> (due 5:00 p.m., Thursday, 15 May 2014).
+  </listitem>
+  <listitem>
+    <ulink url="../assignments/final-inclass-sample.html">Sample In-Class Final</ulink>
+  </listitem>
+  <listitem>
+    <ulink url="../assignments/exam.03.html">Exam 3</ulink>
+    <itemizedlist>
+      <listitem>Due 10:30 p.m. &wed14; via email.</listitem>
+      <listitem>Due 10:00 a.m. &thu14; in printed form.</listitem>
+    </itemizedlist>
+  </listitem>
+  <listitem>
+    <ulink url="../assignments/json.html">Project: JSON</ulink>
+    <itemizedlist>
+      <listitem>Part 1 due 10:30 p.m. &wed11;.</listitem>
+      <listitem>Part 2 due 10:30 p.m. &wed12;.</listitem>
+      <listitem>Lightning presentations Monday, April 28.</listitem>
+      <listitem><ulink url="json-notes-1.html">Notes on part 1.</ulink></listitem>
+    </itemizedlist>
+  </listitem>
+  <listitem> <ulink url="../assignments/makeup.02.html">Makeup for Exam 2</ulink> (electronic due 10:30 p.m. Thursday, 10 April 2014; written due 10:00 a.m., Friday, 11 April 2014)</listitem>
+  <listitem> &assignment06; (due &assignment06-due;) </listitem>
+  <listitem> 
+    <ulink url="../assignments/exam.02.html">Exam 2: Object-Oriented Design, ADTs, and Algorithms</ulink>
+    <itemizedlist>
+      <listitem>Due 10:00 a.m. &fri09; via email and in printed form.</listitem>
+      <listitem><ulink url="notes-exam02.html">Notes on Exam 2</ulink></listitem>
+    </itemizedlist>
+  </listitem>
+  <listitem> <ulink url="../assignments/makeup.01.html">Makeup for Exam 1</ulink> (electronic due 10:30 p.m. Sunday, 2 March 2014; written due 10:00 a.m., Monday, 3 March 2014)</listitem>
+  <listitem> &assignment05; (due &assignment05-due;) </listitem>
+  <listitem> 
+    <ulink url="../assignments/exam.01.html">Exam 1: Object-Oriented Design, ADTs, and Algorithms</ulink>
+    <itemizedlist>
+      <listitem>Due 10:30 p.m. &wed05; via email.</listitem>
+      <listitem>Due 10:00 a.m. &fri05; in printed form.</listitem>
+    </itemizedlist>
+  </listitem>
+  <listitem> &assignment04; (due &assignment04-due;) </listitem>
+  <listitem> &assignment03; (due &assignment03-due;) </listitem>
+  <listitem> &assignment02; (due &assignment02-due;) </listitem>
   <listitem> &assignment01; (due &assignment01-due;) </listitem>
 </itemizedlist>
 
