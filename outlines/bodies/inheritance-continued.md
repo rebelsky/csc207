@@ -7,3 +7,8 @@ Lab
 ---
 
 Do [the lab](../labs/inheritance.html).
+
+Reflection
+----------
+
+We should have time to reflect at the end.

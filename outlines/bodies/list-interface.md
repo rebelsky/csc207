@@ -9,7 +9,7 @@ ADT Design, Reviewed
 * Then we think about the *methods* that will provide those facilities.
 * Reflecting upon possible *uses* of the ADT may help us think more about
   what methods to provide.
-* Eventually we implement the ADT as a data structure, choosing a physical
+* Eventually we *implement* the ADT as a data structure, choosing a physical
   way to represent the information, and implementations of the methods.
 * These then give us running times for the methods.
 

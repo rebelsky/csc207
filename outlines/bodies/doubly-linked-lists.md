@@ -2,8 +2,8 @@ Review of Singly-Linked Lists
 -----------------------------
 
 * Nodes have value and next.
-* Likely fields: Front of the list, back of the list.
-* May need special cases for empty list.
+* Likely fields: Front of the list
+* Optional fields: Back of the list, number of elements.
 
 Insertion and Deletion in Singly-Linked Lists
 ---------------------------------------------

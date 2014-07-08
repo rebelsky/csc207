@@ -9,3 +9,4 @@ About binary search trees
 * Note: While association lists only require that we be able to compare
   value for equality, binary search trees require that we have a way
   to order values.
+* Analysis?

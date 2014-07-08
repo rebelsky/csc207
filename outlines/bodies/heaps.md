@@ -39,7 +39,7 @@ Adding Elements
 Removing Elements
 -----------------
 
-* The largest element is at the top.
+* The largest (highest priority) element is at the top.
 * Once we remove it, what do we do?
 * Once again, two invariants to maintain: The shape of the tree and the
   heap property.
@@ -52,6 +52,7 @@ Using Arrays
 ------------
 
 * Here's the really clever part: We can store heaps in arrays.
+* Can you figure out the index of children and parents?
 
 Heap Sort
 ---------

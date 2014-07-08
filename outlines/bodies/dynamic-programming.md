@@ -17,6 +17,9 @@ Generalizing the Idea
 The Stamps Problem
 ------------------
 
+* Given some set of stamp values and a desired value, find the
+  fewest stamps to make that value.
+    * E.g., 1, 2, 7, 12, 25
 * Recursive formulation
 * Making it iterative
     * Use a table and fill it in left-to-right

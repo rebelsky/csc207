@@ -25,4 +25,4 @@ Looking ahead: Implementing dictionaries, Mark 2
       search?
     * Idea: Instead of having one link from each node, we have two:
       One for the smaller keys, one for the larger keys.
-* We'll return to this approach on Monday.
+* We'll return to this approach in the next class.

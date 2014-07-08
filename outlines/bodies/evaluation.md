@@ -9,8 +9,10 @@ CSC 207, like most classes, has multiple broad subject matters.
     * Classes
     * Interfaces
     * Objects
-    * Control structures: if, while, switch
-    * Standard data types: 
+    * Control structures: if, while, switch, ...
+    * Standard data types: Vector, ArrayList, HashMap, Iterator, ...
+    * Generics
+    * Anonymous 
     * ...
 * Object-Oriented Programming
     * The three cores: Encapsulation, Inheritance, Polymorphism
@@ -24,6 +26,7 @@ CSC 207, like most classes, has multiple broad subject matters.
         * ...
     * Techniques
         * Primarily: Divide and conquer
+        * Also: Dynamic programming
     * Analysis
         * Asymptotic
         * Invariants

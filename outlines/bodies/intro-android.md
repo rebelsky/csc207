@@ -42,9 +42,6 @@ Warnings
   won't always go as easily as they might.  (And Eclipse is involved,
   which always makes things more dangerous.)
 * We will do a few quick classes to give you the flavor of development.
-  After that, we are likely to provide you with apps that you modify.
-    * We really don't want Android to interfere.  It's an add-on, more
-      than anything.
 * I'm barely a novice Android programmer.  But I have years of experience
   dealing with the complications of programming.
 

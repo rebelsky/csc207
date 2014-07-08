@@ -71,7 +71,7 @@ An Exercise in Hashing
 
 * Let's try an exercise.  We'll come up with a hash value for
   everybody's first name.  We'll then put things in the hash table.
-* We'll use "sum the values of the letters in the name". 
+* We'll use "sum the values of the first three letters in the name". 
 * We'll use the following table:
 <pre>
 A: 1   F: 6   K: 11  P: 16  U: 21  Z: 26
@@ -80,14 +80,14 @@ C: 3   H: 8   M: 13  R: 18  W: 23
 D: 4   I: 9   N: 14  S: 19  X: 24
 E: 5   J: 10  O: 15  T: 20  Y: 25
 </pre>
-* There are about 19 of you in the class.  Typically, our hash tables are somewhat
+* There are about 22 of you in the class.  Typically, our hash tables are somewhat
   bigger than the size of the collection we're working with, so we'll use a 
-  hash table of size 30.  
-    * Once you've computed your result, mod it by 30 (compute the remainder 
-      after dividing by 30)
+  hash table of size 40.  
+    * Once you've computed your result, mod it by 40 (compute the remainder 
+      after dividing by 40)
 * For my first name (Samuel), 
-* The sum is 19 (S) + 1 (A) + 13 (M) + 21 (U) + 5 (E) + 12 (L) = **71**
-* The index is therefore **11**.
+* The sum is 19 (S) + 1 (A) + 13 (M) = **33**
+* The index is therefore **33**.
 * Is this a good hash function?  
     * Why?
     * Why not?
@@ -102,6 +102,7 @@ Hashing in Java
 * What methods are there other than `get` and `set`?
 * Where's the hash function?
     * Answer: Every class is expected to provide its own.
+* Why is there also a `java.util.HashMap`](http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html)
 
 Handling Conflicting Keys
 -------------------------

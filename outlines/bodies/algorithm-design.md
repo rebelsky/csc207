@@ -7,6 +7,16 @@ Algorithm Design
 * We'll take a few minutes for you to talk amongst yourselves, and then
   we'll see what you've come up with.
 
+ADT Design
+----------
+
+* What are Sam's three questions for ADT design?
+
+Data Structure Design
+---------------------
+
+* What are Sam's three questions for DS design?
+
 Object Design
 -------------
 
@@ -15,24 +25,16 @@ Object Design
 * That is, what are common patterns of design.
 * Here's one: The singleton.  It's a class in which we want only one
   object.
-* Our example is the integer comparator, at least as we first wrote it.
-<pre>
-public class StandardIntegerComparator implements Comparator<Integer> {
-
-} // class StandardIntegerComparator
-</pre>
 * Take a few minutes to talk to your friends about other common patterns
   of design.
 * A few that we've used
     * Adapter - Convert an object to meet a different interface
-    * Delegate - Ask another object to do most of the work
-    * Wrapper (not a formal one) - Extend methods in another class,
-      but meet the same interface
+    * Decorator - Extend methods in another class, but meet the same interface.
+    * Delegate - Ask another object to do most of the work.
+    * Factory - A way to pass around constructors.
     * Iterator - Provide access to the values in a structure without
       giving access to the internal design of the structure
     * Model-View-Controller
-* A few others that you may find useful
-    * Factory
 
 Program and Test Design
 -----------------------

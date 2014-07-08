@@ -17,4 +17,6 @@ Stacks
 Lab
 ---
 
-* Read, fix, use.
+* Read code.
+* Fix code.
+* Use code.

@@ -23,14 +23,13 @@ Some things you didn't learn
 * More practice with designing objects
 * More practice with inheritance
 * Key design patterns, including
-    * Factories
     * Listeners (is that a pattern)?
     * Flyweights
 
 ### Uncovered Java
 
 * Protection levels
-* Swing and such
+* Swing and other GUI toolkits (I foget what's in Java 8)
 * More of the standard utilities
 * More event-driven approaches
 
@@ -41,5 +40,16 @@ Some things you didn't learn
 * Test suites
 * Other build approaches for Java
 
-Final thoughts
---------------
+Preparing for the Final
+-----------------------
+
+* Likely to focus more on end-of-semester stuff.
+* Do the practice final.
+* Look at the take-home final (maybe even sketch answers).
+* Make sure that you learn the details of the big data structures.
+    * Hash tables.
+    * Heaps.
+    * Various kinds of lists, including skip lists.
+    * BSTs.
+* Think about questions I tend to ask (in class, on exams, etc.).
+* We can look at a few problems if you'd like.

@@ -46,4 +46,3 @@ Sam's favorite permutation algorithm
 ------------------------------------
 
 
-    

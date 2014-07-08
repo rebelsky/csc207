@@ -1,11 +1,3 @@
-Leftover Stuff on Basic Types
------------------------------
-
-* I'll do a quick review.
-* Do you have questions from the readings?
-* Make sure to browse the API so that you can see what functions are
-  available.
-
 Textual Input and Output
 ------------------------
 
@@ -36,8 +28,3 @@ Input
     * `java.io.InputStreamReader`
     * `java.io.BufferedReader`
     * `java.io.FileReader`
-
-Lab
----
-
-* There should be a bit of time to start [the lab](../labs/io.html).

@@ -1,6 +1,9 @@
 Detour: Model-View-Controller
 -----------------------------
 
+_Not discussed, but left over from a previous semester for
+historical reasons._
+
 * How hard would it be for you to rewrite your calculator to have a
   graphical user interface (assuming we know how to make graphical
   user interfaces)?
@@ -25,12 +28,16 @@ Review: ADT Design
 A New ADT: Dictionaries
 -----------------------
 
-* "Like arrays, but indexed by whatever type of object your want."
+* Simple model: "Like arrays, but indexed by strings."
+* General model: "Like arrays, but indexed by whatever type of object 
+  you want."
 * So, what methods would you include?
+     * Nope, you won't find them in the outline; we'll generate these in
+       class.
 * What about iterators?
 * Note that *Dictionary* is but one of a few names for this kind of
   data structures.
-     * Some call it a *Map*, because it maps keys to values.
+     * Some call it a *Map*, because it maps keys/indices to values.
      * Some call it a *Table*, because they think of it as a key/value
        table.
      * Some call it a *Hash*, because one of the most popular implementations
@@ -40,6 +47,10 @@ A New ADT: Dictionaries
      * Wikipedia says that some people call this a *Symbol Table*, but
        I'll admit that I think of symbol tables as a more restricted
        type.
+* Java terminology:
+    * In Java 1.0, they called this ADT a `Dictionary<K,V>`, and made it an
+      abstract class.
+    * In Java 1.2, they called added an equivalent `Map<K,V>`.
 
 Implementing Dictionaries: The Basics
 -------------------------------------

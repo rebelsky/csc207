@@ -1,33 +1,3 @@
-Minimalist vs. Maximalist ADT Design
-------------------------------------
-
-* What arguments do you have for "just as many procedures as you need, but
-  no more"?
-* What arguments do you have for "about as many procedures as you think that
-  someone will use"?
-* In coming up with your answers, you may want to consider the issue from
-  the perspective of the client programmer and the implementing programmer.
-
-Arrays, Revisited
------------------
-
-* Suppose you had a maximalist view of ADT design.  What other methods
-  would you want arrays to support?  (And yes, you can draw upon your
-  experience with other languages.)
-* We've talked a little bit about Java's basic array mechanism and 
-  you've even used them.  What questions do you have?
-* What different design decisions could we have made (other than simple
-  minimalist/maximalist choices)?  Some of mine include:
-    * Static or dynamic?
-    * Syntax: Special or standard?
-    * ...
-* We'll take a quick look at Java's Vector class, which follows the
-  same <quote>indexed collection of homogenous values</quote>
-  array except that 
-    * Vectors are dynamically sized
-    * Vectors are objects, so their methods use standard call syntax
-    * Vectors use more of a maximalist approach
-
 Strings
 -------
 
@@ -47,4 +17,13 @@ Numbers
 * Careful definitions of the implementation of primitive integers
   (including number of bits and representation)
     * Java was designed to be portable.
-* We'll quickly visit some of the number APIs
+
+Boxing and Unboxing
+-------------------
+
+* Java distinguishes between primitive types (e.g., `int`) and corresponding
+  objects (e.g., `java.lang.Integer`).
+* In early versions of Java, you had to explicitly convert from one form
+  to the other.
+* In current Java, many conversions happen automatically (although not
+  for arrays of types).

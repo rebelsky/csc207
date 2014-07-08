@@ -1,22 +1,36 @@
-Detour: Invariants for Merge
-----------------------------
-
 Anonymous Inner Classes
 -----------------------
 
 * Almost as cool as anonymous functions.
+* Basic idea: Create "one off" classes without naming them.
+* Some uses
+    * On-the-fly predicates
+    * On-the-fly comparators
+    * Iterators
+    * And more
 
-Basic structure
+Syntax
+------
 
-    new *Interface*() {
+With interfaces
+
+    new *Interface*() 
+      {
         *Body of Class*
-    } 
+      } 
 
-Uses'
-* On-the-fly predicates
-* On-the-fly comparators
-* Iterators
-* And more
+With classes
+
+    new *Class*()
+      {
+        *Body of Subclass*
+      }
+
+Subtleties
+----------
+
+* When compiling, you'll get extra `.class` files with names like
+  `MainClass$1.class`.
 
 Lab
 ---
