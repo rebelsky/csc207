@@ -1,1 +1,1 @@
-We ground our understanding of hash tables in lab exercises.
+We begin to ground our understanding of hash tables in lab exercises.

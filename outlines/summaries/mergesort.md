@@ -1,1 +1,1 @@
-We consider the merge sort algorithm, our first O(nlogn) sorting algorithm.
+We consider the merge sort algorithm, our first O(*n*log*n*) sorting algorithm.

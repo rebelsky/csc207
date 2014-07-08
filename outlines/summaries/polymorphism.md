@@ -1,2 +1,4 @@
-We consider polymorphism, one of the powerful code reuse (and
-generalization) tools that most object-oriented languages provide.
+We consider polymorphism, a powerful tool for code reuse (and
+generalization).  In essence, polymorphism says that we can use
+different kinds of objects for the same purpose, provided they
+have needed charactistics.
