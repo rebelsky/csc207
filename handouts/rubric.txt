@@ -1,4 +1,4 @@
-CSC 207 Grading Sheet, v 0.1.1
+CSC 207 Grading Sheet, v 0.1.2
 ==============================
 
 Assignment: 
@@ -23,10 +23,11 @@ what are its primary failings?
 Formatting
 ----------
 
-Is the submission correctly formatted?  For example, are all lines
-fewer than eighty characters, does the code follow the course
-variant of the GNU conventions relatively closely, are right
-braces commented, and are capitalization conventions followed?
+Is the submission correctly formatted?  For example, do the programmers
+limit each line to fewer than eight characters, follow the course 
+indentation guidelines relatively closely, comment right braces, and
+capitalize according to Java conventions (classes start with uppercase,
+fields and methods with lowercase, etc.)?
 
 [ ] Yes.  No modifications to base grade.
 [ ] Mostly (no more than four obvious violations).  No modifications
@@ -39,8 +40,9 @@ Style
 -----
 
 Do the programmers choose good variable and method names?  Do the
-programmers segment the program into appropriate files, classes, methods,
-and procedures?
+programmers segment the program into appropriate files, classes,
+methods, and procedures?  Do the programmers avoid repetitive code?
+Do the programmers avoid SamR's bugaboos?
 
 [ ] Yes.  No modifications to base grade.
 [ ] Usually (a few exceptions, but generally appropriate).  No 
@@ -52,9 +54,10 @@ If there are stylistic problems, please summarize them here.
 Documentation
 -------------
 
-Is each procedure documented with Javadoc documentation, including at
-least with a line or two describing the main purpose?  Is each field
-similarly documented?  Are complicated parts of the code commented?
+Do the programmers document each method with Javadoc documentation,
+including at least a line or two that describes the primary purpose
+of the procedure?  Do they document each field similarly?  Do they
+include comments to explain more complicated parts of the code?
 
 [ ] Yes.  No modifications to base grade.
 [ ] Usually (a few exceptions, but generally appropriate).  No 
@@ -69,17 +72,16 @@ did the students correctly do those forms of extra credit?
 
 [ ] Yes.  Increase by one grade.
 
-Does the submission have characteristics that set it apart positively
-from other assignments?  For example, are there particularly creative,
-efficient, or elegant solutions to some problems?
+Does the submission have characteristics that clearly go beyond the basic
+requirements of the assignment?  For example, are there particularly
+creative, efficient, or elegant solutions to some problems?
 
-[ ] There are many characteristics that set it apart positively from
-    other assignments.  Increase by two grades.
-[ ] There are a few characteristics that set it apart positively from
-    other assignments (e.g., on one problem out of three).  Increase
-    by one grade.
-[ ] There are essentially no characteristics that set it apart positively 
-    from other assignments.
+[ ] The assignment goes beyond the basic requirements in many ways.
+    Increase by two grades.
+[ ] The assignment goes beyond the basic requirements in a few ways (e.g.,
+    on one problem out of three).  Increase by one grade.
+[ ] While the assignment meets the basic requirements, it does not go beyond
+    those requirements.
 
 Please summarize any special characteristics of this assignment.  (Copying
 and pasting code is fine.)
