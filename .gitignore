@@ -80,11 +80,16 @@ tao
 outlines/outline.*.md
 outlines/outlines.mk
 
-# Ignore the link to the previous version of the course
+# Ignore the link to the previous versions of the course
+2013S
 2013F
+2014S
 
 # Ignore the link to the generic course.
 generic
 
 # Ignore partners, since I don't want those public
 partners
+
+# Ignore the git folder, since stuff there gets pulled in other ways
+git
