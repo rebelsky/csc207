@@ -1,0 +1,631 @@
+<section id="json"><title>Project: Designing a JSON Library</title>
+
+<para>
+  <emphasis>Phase 1 due:</emphasis> 10:30 p.m., &wed11;.  
+</para>
+
+<para>
+  <emphasis>Phase 2 due:</emphasis> 10:30 p.m., &wed12;.  
+</para>
+
+<para>
+  <emphasis>Summary:</emphasis>
+  In this project, you will implement a library that other programmers
+  could use to deal with the JSON Data Interchange format.
+</para>
+
+<para>
+  <emphasis>Purposes:</emphasis>  To give you experience working with
+  lists and hash tables.  
+  To encourage you to explore problems of parsing.
+  To help you think about writing public utility code (which is not the
+  same as public-utility code).  
+  To explore other issues of design.
+</para>
+
+<para>
+  <emphasis>Collaboration:</emphasis> I encourage you to work in groups
+  of size two to four, although you may work alone.  You may discuss this
+  project with anyone, provided you credit such discussions when you
+  submit the assignment.
+</para>
+
+<para>
+  <emphasis>Submitting your work:</emphasis> 
+  Create a GitHub for your project with an appropriate name.
+  Choose a name that might promote (or at least describe) your
+  project.  Email your grader the address of that repository.
+  Please title your email <quote>CSC207 2014S Phase 1 (<emphasis>Your
+  Names</emphasis>)</quote> and <quote>CSC207 2014S Phase 2
+  (<emphasis>Your Names</emphasis>)</quote>.  You will also submit a short
+  essay to Prof. Rebelsky (see below).  Finally, you will present your
+  API to the class (and anyone else I can get to attend the presentation)
+  on &mon13;.
+</para>
+
+<para>
+  <emphasis>Warning:</emphasis> 
+  So that this assignment is a learning experience for everyone, we may
+  spend class time publicly critiquing your work.
+</para>
+
+<section id="json-project-background"><title>Background</title>
+
+<para>
+  One problem that creators of Web services face is designing interfaces
+  through which clients can easily get complex data.  XML was designed
+  as one approach.  However, many RESTful Web services instead use
+  the JSON Data Interchange Format.  JSON is a simple way to describe
+  not only simple values and objects, but also arrays and compound
+  objects (objects that include other objects).
+</para>
+
+<para>
+  The full details of JSON are specified in ECMA Standard 404,
+  The JSON Data Interchange Format, available online at
+  <ulink url="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf"/>.  You can also find a more concise definition at
+  <ulink url="http://www.json.org/"/>.
+</para>
+
+<para>
+  JSON is pretty simple.  Section 5 of the standard specifies that
+  there are five kinds of values: objects, arrays, numbers, strings,
+  and symbolic constants.  There are three symbolic constants,
+  <code>true</code>, <code>false</code>, and <code>null</code>.
+</para>
+
+<para>
+  Section 9 of the standard gives a description of JSON strings that
+  you will find describes strings very much like those you have
+  worked with in C and Java: Strings are sequences of characters
+  surrounded by quotation marks.  Certain characters within the
+  string are represented by an escape sequence that starts with a
+  backslash.  For example, <code>"hello"</code> and
+  <code>"Sam says \"Hello\""</code> are both strings.
+</para>
+
+<para>
+  Section 8 of the standard gives a description of JSON numbers that
+  you will find look much like numbers in C or Java: an optional
+  negative sign, a bunch of digits, an optional period and sequence
+  of digits, and an optional exponent.  For example,
+  <code>23</code>, <code>-11.23</code>, <code>0.1</code>, 
+  <code>4e25</code>, and <code>1.4e25</code> are all numbers.
+</para>
+
+<para>
+  Section 7 of the standard gives a description of JSON arrays.  In
+  essence, an array is a sequence of values, surrounded by square braces
+  and separated by commas.  For example, <code>[1,2,"hello"]</code>
+  is an array of two integers and a string.
+</para>
+
+<para>
+  Section 6 of the standard gives a description of JSON objects.  JSON
+  objects are comma-separated sequences of key/value pairs, surrounded
+  by curley braces and separated by commas.  Keys are always strings.
+  Key/value pairs are separated by colons.
+  For example, an object to represent this class might look like
+  <code>{"Department":"CSC","Number":207,"Prof":{"LName":"Rebelsky","FName":"Sam"}}</code>
+</para>
+
+<para>
+  And that's about it.  As the last example suggests, the definition is
+  recursive.  Since objects are values, objects can contain other objects
+  and arrays can contain objects.  Similarly, since arrays are values,
+  arrays can contain other arrays and arrays can contain objects.
+</para>
+
+</section> <!-- json-project-background -->
+
+<section id="json-project-assignment"><title>Assignment</title>
+
+<para>
+  As you might expect, there are a few parsers for JSON written in
+  Java.  But evidence suggests that it's never a bad idea to have
+  more - a well designed API or a particularly efficient implementation
+  can convince people to switch.  Your goal in this assignment is to
+  create a simple but powerful library for handling JSON.
+</para>
+
+<para>
+  You will do this project in three phases.  In phase 1, you will build
+  the basic structure of the library: The design of the API, the unit
+  tests, the core procedures.  In phase 2, you will provide the additional
+  aspects that might turn your class project into something that other
+  people would use: additional procedures, documentation, even a license.
+  In phase 3, you will report on the project to me and to the class.
+</para>
+
+<section id="json-project-phase1"><title>Phase 1</title>
+
+<para>
+  Design and implement a basic API for JSON.  Your API should
+  include at least two basic methods, one to convert a string of
+  JSON code to a Java object that corresponds to the code and one
+  to convert such an object back to JSON.
+</para>
+
+<para>
+  You may choose what objects are best to represent the various JSON
+  values.  
+</para>
+
+<para>
+  One approach is to use standard Java objects.
+  That is, you could represent JSON numbers as Java
+  <code>Integer</code> objects or <code>Double</code> objects
+  (or <code>BigInteger</code> objects or <code>BigDecimal</code>
+  objects), JSON strings as Java <code>String</code> objects,
+  Java arrays as <code>Vector&lt;Object&gt;</code> objects (or
+  <code>ArrayList&lt;Object&gt;</code> objects or something similar), and JSON
+  objects as Java <code>Hashtable&lt;String,Object&gt;</code> objects.
+</para>
+
+<para>
+  Another approach is to define your own classes and perhaps a hierarchy.
+  You might define a <code>JSONValue</code> interface, and create
+  classes for each kind of value.  For example, a <code>JSONString</code>
+  would implement the <code>JSONValue</code> interface and would wrap
+  an underlying Java string.
+</para>
+
+<para>
+  There are, of course, many possible approaches.  These are just two.
+</para>
+
+<para>
+  In implementing your parser from string representing JSON to Java 
+  objects, you need only support simple JSON strings; no unicode is
+  necessary.
+</para>
+
+<para>
+  You should also build a reasonable set of unit tests for your interface.
+  In writing the unit tests, you may find it helpful to store some of
+  the JSON in a file.  (As you've seen in previous assignments, dealing
+  directly with strings that include backslashes may be cumbersome.)
+</para>
+
+</section> <!-- json-project-phase1 -->
+
+<section id="json-project-phase2"><title>Phase 2: Extend, Document, and License</title>
+
+<para>
+  At this point, you should have a useful and usable JSON library, one
+  that you might use in Web projects.  But let's suppose that you're a
+  bit more entrepreneurial - what if you want to get other people to use
+  your library?  (Writing a library that others use is not necessarily
+  an immediate road to fame and fortune, but it makes you feel good.)
+  What do you need?  At least three things:
+</para>
+
+<para>
+  First, you should identify some additional features you can add.
+  For example, you might support ways to manipulate the parsed JSON,
+  you might support additional input or output formats, you might provide
+  particularly good error reporting for incorrect input.
+</para>
+
+<para>
+  Second, you need to clearly document your code.  The Javadoc should give
+  detailed information on your procedures, but most users need a README
+  or equivalent that gives an overview and perhaps describes some use
+  cases.  Assume that you are writing a library for next semester's students
+  to use.  (You may be.)
+</para>
+
+<para>
+  Third, you need to decide how to license your code.  You can pick one
+  of the open source licenses or you can choose a commercial license.
+  (If you choose a commercial license, you must grant me royalty-free
+  permission to use the work in the class this semester.)
+</para>
+
+<para>
+  For phase 2, you must extend your project with additional features,
+  clear documentation, and a license.
+</para>
+
+<para>
+  In addition to putting these materials in the repository, you must
+  send me a short essay describing key aspects of the projects,
+  including the following:
+</para>
+
+<itemizedlist>
+  <listitem>
+    A short description of special features you decided to include and
+    why you decided on those features.
+  </listitem>
+
+  <listitem>
+    An explanation of what criteria you used in deciding upon your
+    license.
+  </listitem>
+
+  <listitem>
+    Comments on any other aspect of the project that you think I should
+    know about.
+  </listitem>
+</itemizedlist>
+
+</section> <!-- json-project-phase2 -->
+
+<section id="json-project-phase3"><title>Phase 3: Presentation</title>
+
+<para>
+  On &mon13;, each group will give a five-minute presentation to 
+  an audience of potential users.  At the end of the presentations,
+  I will ask each member of the audience to select the libraries they
+  would be most likely to adopt.  Those who are selected by more
+  audience members are likely to earn a bit of extra credit.
+</para>
+
+</section> <!-- json-project-phase3 -->
+
+</section> <!-- json-project-assignment -->
+
+<section id="json-project-faq"><title>FAQ</title>
+
+<question>
+  What methods should I provide?
+</question>
+
+<answer>
+  <para>
+    That depends a bit on which approach you are taking and what
+    additional features you plan to add.  Minimally, you need (1) a procedure
+    that takes JSON as input and produces an object that represents that
+    JSON and (2) a procedure that takes represented JSON as an input and
+    returns a string as output.
+  </para>
+
+  <para>
+    If you choose the <quote>use existing Java objects</quote> model,
+    I'd expect something like the following:
+  </para>
+
+<programlisting>
+  /**
+   * Parse a JSON string and return an object that corresponds to the
+   * value described in that string.  See README.md for further
+   * details.
+   */
+  public Object parse(String str)
+  {
+    ...;
+  } // parse(String)
+
+  /**
+   * Given an object created by parse, generate the JSON string
+   * that corresponds to the object.
+   *
+   * @exception Exception
+   *   If the object cannot be converted, e.g., if it does not 
+   *   correspond to something created by parse.
+   */
+  public String toJSONString(Object obj)
+  {
+    ...
+  } // toJSONString(Object)
+</programlisting>
+
+  <para>
+    Those methods might also be static.  And perhaps you want to
+    take a <code>BufferedReader</code> as input or produce  a
+    <code>BufferedReader</code> as output.  Part of the goal is that
+    you think about design.
+  </para>
+
+  <para>
+    If you choose to define a general <code>JSONObject</code> interface,
+    I'd expect something like the following.
+  </para>
+
+<programlisting>
+/**
+ * A representation of JSON objects.  See README.md for more details.
+ */
+public interface JSONObject
+{
+  /**
+   * Convert back to a JSON string.
+   */
+  public String toJSONString();
+} // interface JSONObject
+
+/**
+ * Various things related to JSON objects.
+ */
+public class JSON
+{
+  /**
+   * Parse a string.  See README.md for more details.
+   */
+  public static JSONObject parse(String)
+  {
+    ...;
+  } // parse(String)
+
+  ...
+} // class JSON
+</programlisting>
+
+  <para>
+    Again, there are many approaches that you can take.
+  </para>
+</answer>
+
+<question>
+  Do you have any hints on how we might implement the parser?
+</question>
+
+<answer>
+  You're probably going to need recursion to parse the parts
+  of an object or array of objects.  And when you recurse, you'll
+  be advancing through the string or <code>BufferedReader</code> or
+  whatever you are using for the JSON input.  So, you'll need a way
+  for the recursive procedure to communicate back not only the
+  result of parsing, but also how far it has advanced.  If you use
+  a string, that probably means you need to pass along some sort of
+  <quote>state</quote> object that the recursive call can modify.
+  If you use a <code>BufferedReader</code>, it probably has an
+  implicit state.
+</answer>
+
+<question>
+  If we parse a string and convert back to a string, should we get 
+  exactly the same string?
+</question>
+
+<answer>
+  Not necessarily.  For example, you might end up presenting the
+  fields of an object in a different order.  It's also okay if
+  numbers show up slightly differently (assuming that they still
+  are essentially the same number).
+</answer>
+
+<question>
+  Can you give some simple examples?
+</question>
+
+<answer>
+  <para>
+    Remember that a lot depends on the particular design you've chosen.
+    Here are some possibilities.
+  </para>
+  <itemizedlist>
+    <listitem>
+      <code>"Hello"</code> is a five-character string.  It might be
+      a <code>String</code> object, it might be a <code>JSONString</code>
+      object, it might be something else you decide is appropriate.  Note 
+      that for testing, you would probably write
+      <code>parse("\"Hello\"")</code>.
+    </listitem>
+    <listitem>
+      <code>24.2</code> is a decimal number.  It might be a 
+      <code>Number</code> or a <code>Double</code> or a
+      <code>BigDecimal</code> or a <code>JSONNumber</code> or a
+      <code>JSONReal</code> or something else you decide is
+      appropriate.
+    </listitem>
+    <listitem>
+      <code>{"uid":"rebelsky","id":32154}</code> is an object with
+      two fields, one named <code>uid</code> and one named
+      <code>id</code>.  The <code>uid</code> field refers to a
+      string.  The <code>id</code> field refers to some kind of number
+      (preferably some kind of integer because we want ids represented
+      exactly).  If you choose to use dictionaries (probably hash tables
+      or hash maps) to represent objects, the dictionary will contain
+      the two obvious key/value pairs.
+    </listitem>
+  </itemizedlist>
+</answer>
+
+<question>
+  I'm using <code>str.split(":")</code> to find key/value pairs.  What
+  do you think of that approach?
+</question>
+
+<answer>
+  I'd need to see more details of your code, but it strikes me as
+  dangerous.  JSON is much more than a sequence of key/value pairs.
+  I really do recommend that you iterate through the characters in 
+  the input.
+</answer>
+
+<question>
+  Can you walk me through an extended parse?
+</question>
+
+<answer>
+  <para>
+    Let's try a short one.  Consider the following string (including indices).
+  </para>
+<programlisting>
+Index:  012345678901234567890123
+String: [212,"a",{"id":32},null]
+</programlisting>
+  <itemizedlist>
+    <listitem>
+      Position 0: We see an open brace.  That means we need to prepare
+      to build an array.  We recurse starting at position 1.
+    </listitem>
+    <listitem>
+      Position 1:  We see a 2.  That represents a digit.  We
+      parse a number, starting at digit 2.  That parse returns
+      the number 212 and advances the parse state to position 4.
+    </listitem>
+    <listitem>
+      We add that returned object to our array
+    </listitem>
+    <listitem>
+      Position 4: We see a comma.  Conveniently, we are in a
+      structure that permits a comma at this point (an array or
+      object).  We skip over the comma and recurse starting at 
+      position 5.
+    </listitem>
+    <listitem>
+      Position 5: We see a double-quotation mark.  That signals a string.
+      We read to the end of the string and return the object that corresponds
+      to the one-character string.  We also advance the state to 
+      position 8.
+    </listitem>
+    <listitem>
+      We add that returned object to our array
+    </listitem>
+    <listitem>
+      Position 8: We see a comma.  Conveniently, we are in a
+      structure that permits a comma at this point (an array or
+      object).  We skip over the comma and recurse starting at 
+      position 9.
+    </listitem>
+    <listitem>
+      Position 9: We see an open brace.  That signals the start
+      of an object.  We skip over that brace and recurse 
+      starting at position 10. 
+      <itemizedlist>
+        <listitem>
+          Position 10: We see a double-quotation mark.  That signals
+          a string.  We read to the end of the string and return the
+          object that corresponds to the string.  We are now at position
+          14.
+        </listitem>
+        <listitem>
+          We got a string, which we expected, since objects are
+          sequences of key/value pairs.  We remember the key.
+        </listitem>
+        <listitem>
+          Position 14: We skip over the expected colon.
+        </listitem>
+        <listitem>
+          We recurse starting at position 15 to get the value.
+        </listitem>
+        <listitem>
+          Position 15: We see a digit.  We read the number
+          and advance to position 17.
+        </listitem>
+        <listitem>
+          We now have a key/value pair, so we store it in the
+          represented object.
+        </listitem>
+        <listitem>
+          Position 17: We see a right brace.  That ends the
+          object.  We advance to position 18 and return the
+          object.
+        </listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      We add the returned object to the array.
+    </listitem>
+    <listitem>
+      Position 18: Another comma.  See above for details.
+    </listitem>
+    <listitem>
+      We recurse starting at position 19.
+    </listitem>
+    <listitem>
+      Position 19: We see a bare character.  That should signal a 
+      special identifier.  We read the identifier, advance
+      to position 23, and return the identifer.
+    </listitem>
+    <listitem>
+      We add the returned object to the array.
+    </listitem>
+    <listitem>
+      Position 23: We see a right brace.  We end the array,
+      advance to position 24, and return the array.
+    </listitem>
+  </itemizedlist>
+</answer>
+
+<question>
+  Can there be extraneous spaces in the input?
+</question>
+
+<answer>
+  You can assume that there is no extraneous whitespace in the input.
+  (If you want to support whitespace, that could be a feature.)
+</answer>
+
+<question>
+  I don't understand how <methodname>parse</methodname> can return
+  an interface value, such as <code>JSONValue</code>.
+</question>
+
+<answer>
+  It's inheritance/polymorphism in action.  If we say that a method
+  returns an interface, it can return any object that meets that
+  interface.
+</answer>
+
+<question>
+  In some ways, this feels like our parenthesis matching assignment.
+  Should we take advantage of ideas from that assignment?
+</question>
+
+<answer>
+  The parenthesis matching ideas could be used in error checking.
+  However, in doing parenthesis matching, you were managing an
+  explicit stack.  If you use recursion, you get an implicit stack.
+  You can decide which is easier.
+</answer>
+
+<question>
+  Given that we can't predict the order in which we get key/value pairs
+  back from the hash table, how do we run tests?
+</question>
+
+<answer>
+  <para>
+    Good question.  Here are some options.
+  </para>
+  <itemizedlist>
+    <listitem>
+      Option 1: You test the parse method by actually querying the
+      underlying object, rather than converting it back into a string.
+    </listitem>
+
+    <listitem>
+      Option 2: Your <methodname>toString</methodname> method sorts the
+      key/value pairs.  (You can grab the keys, sort them, and then grab
+      the key/value pair for each key.)
+    </listitem>
+
+    <listitem>
+      Option 3: You compare the result of the
+      <methodname>toString</methodname> method to all possible
+      permutations of the fields.
+    </listitem>
+
+    <listitem>
+      Option 4: You build the same object by hand and compare th
+      results of <methodname>toString</methodname>.
+    </listitem>
+  </itemizedlist>
+
+  <para>
+    You can probably come up with others.
+  </para>
+</answer>
+
+</section> <!-- json-project-faq -->
+
+<section id="json-project-citations"><title>Citations</title>
+
+<para>
+  This assignment is roughly based on an assignment in dealing with
+  Ushahidi's JSON output that I gave in a previous semester.
+</para>
+
+<para>  
+  The requirements to decide upon a license and work on making a
+  public piece of software was inspired by conversations with members
+  of the POSSE (Professors' Open Source Summer Experience) community.
+</para>
+
+</section> <!-- citations -->
+
+</section> <!-- id="json" -->
