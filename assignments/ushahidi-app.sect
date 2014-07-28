@@ -1,0 +1,174 @@
+<section id="assignment06"><title>Assignment 6: A Simple Ushahidi Android App</title>
+
+<para>
+  <emphasis type="strong">This assignment is currently in draft form.
+  </emphasis>
+</para>
+
+<para>
+  <emphasis>Due:</emphasis> &assignment06-due;
+</para>
+
+<para>
+  <emphasis>Summary:</emphasis>
+  In this assignment, you will build an Android Application that presents
+  data from an Ushaidi server.  (You will also do a simple exercise in
+  writing loop invariants.)
+</para>
+
+<para>
+  <emphasis>Purposes:</emphasis>  
+  To give you more experience using the Ushahidi API.  To give you more
+  experience building Android Apps.  To allow you to play a bit.
+  (To give you some more experience with loop invariants.)
+</para>
+
+<para>
+  <emphasis>Collaboration:</emphasis> I encourage you to work in groups
+  of size two or four.  You may discuss this assignment with anyone,
+  provided you credit such discussions when you submit the assignment.
+</para>
+
+<para>
+  <emphasis>Wrapper (Prologue):</emphasis> Individually read through
+  this assignment and make sure that you understand what is required.
+  Then use the form available at <ulink url="http://bit.ly/207hw6pro"/>
+  to indicate (a) how long you think this assignment will take and (b)
+  what you think will be the most challenging aspect of this assignment.
+</para>
+
+<para>
+  <emphasis>Wrapper (Epilogue):</emphasis> When you are done
+  with the assignment, fill out the form available at <ulink
+  url="http://bit.ly/207hw6epi"/> to indicate (a) how long the
+  assignment took, (b) what the most challenging part of the assignment
+  was, and (c) something important you learned from doing the assignment.
+  If you find that the assignment took much less or much more time than
+  you expected, also include (d) a note as to what might have led to
+  that difference.
+</para>
+
+<para>
+  <emphasis>Submitting:</emphasis> 
+  Please put all of your work in a GitHub repository named
+  <code>csc207-hw6</code>.  Email me the address of that repository.
+  Please title your email <quote>CSC207 2013F Assignment 6
+  (<emphasis>Your Names</emphasis>)</quote>.
+</para>
+
+<para>
+  <emphasis>Warning:</emphasis> 
+  So that this assignment is a learning experience for everyone, we may
+  spend class time publicly critiquing your work.
+</para>
+
+<section id="assignment-06-invariants"><title>Loop Invariants</title>
+
+<para>
+  Do the Dutch National Flag problem from
+  <code><ulink url="http://www.cs.grinnell.edu/~walker/courses/207.sp13/labs/lab-loop-inv-pic.shtml"/></code>.  (You'll probably need to get through Friday's class first.)
+</para>
+
+</section> <!-- assignment-06-invariants -->
+
+<section id="assignment-06-prep"><title>Preparation</title>
+
+<para>
+  a. Create a new Android project for this assignment.  You can name
+  the project whatever you like, provided it's not in bad taste.
+</para>
+
+<para>
+  b. Make a copy <code>simple-ushahidi-api.jar</code>, the 
+  JAR file for the simple Ushahidi API, available at 
+  <code><ulink url="http://www.cs.grinnell.edu/~rebelsky/Glimmer/Ushahidi/code/simple-ushahidi-api.jar"/></code>.  
+  A JAR is a Java Archive, a standard way to group compiled Java code
+  for use in other projects.
+</para>
+
+<para>
+  c. The Ushahidi API relies on JSON.  (You can look it up.)  Make a
+  copy of the JAR file for JSON, available at
+  <code><ulink url="http://www.cs.grinnell.edu/~rebelsky/Glimmer/Ushahidi/code/json.jar"/></code>.  
+</para>
+
+<para>
+  d. Import those JARs into your project.
+</para>
+
+</section> <!-- assignment-06-preparation -->
+
+<section id="assignment-06-assignment"><title>Assignment</title>
+
+<para>
+  Write an Android app that allows the user to see information
+  about the incidents on an Ushahidi installation.  (You do not
+  need to graph them; your goal is simply to present the data
+  about the incidents.)
+</para>
+
+<para>
+  To start, make your app read in the URL of an Ushahidi installation
+  (or let the user select from a few options) and print out, say, the
+  first five incidents.
+</para>
+
+<para>
+  Then add features.  You might, for example,
+</para>
+
+<itemizedlist>
+  <listitem>
+    Provide some basic statistics about the installation (e.g., total number
+    of incidents, incidents within the past week, average number of
+    incidents per week (perhaps as a bar chart)).
+  </listitem>
+
+  <listitem>
+    Allow the user to search for all incidents meeting some criterion,
+    such as text that appears with the description or title.
+  </listitem>
+
+  <listitem>
+    Provide a multi-level display of the information, such as a
+    short list of the incident numbers and titles with the option to
+    click on an incident to get the more detailed information.
+  </listitem>
+
+  <listitem>
+    Make a <quote>word cloud</quote> for the terms that appear in the
+    definitions.
+  </listitem>
+</itemizedlist>
+
+<para>
+  Do not feel constrained by this list.  You can do anything that you
+  think would be useful for someone interested in quickly scanning
+  Ushahidi data.
+</para>
+
+<para>
+  Do not feel you have to go overboard with features.  This assignment
+  is primarily a chance for you to play with Android and to think about
+  features that might be useful to someone using Android.  If all you
+  want to do is show five incidents, that's fine and will certainly
+  earn you a check (provided your code is reasonable).
+</para>
+
+</section> <!-- id="assignment06-assignment" -->
+
+<section id="assignment06-citations"><title>Citations</title>
+
+<para>
+  The Simple Ushahidi API was originally written by Daniel Torres.
+  The overall design of the current API is due to Samuel A. Rebelsky,
+  but much of the underlying code draws upon Mr. Torres' work.
+</para>
+
+<para>
+  Anything I know about Android I learned from Lea.
+</para>
+
+</section> <!-- citations -->
+
+</section> <!-- id="assignment06" -->

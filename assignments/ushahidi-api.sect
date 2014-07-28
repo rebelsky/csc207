@@ -1,0 +1,302 @@
+<section id="assignment05"><title>Assignment 5: Exploring APIs</title>
+
+<para>
+  <emphasis type="strong">This assignment is currently in draft form.
+  </emphasis>
+</para>
+
+<para>
+  <emphasis>Due:</emphasis> &assignment05-due;
+</para>
+
+<para>
+  <emphasis>Summary:</emphasis>
+  In this assignment, you will build a variety of small programs that
+  let you think about data representation, APIs, and output, using the
+  Ushahidi crowd mapping framework as your data source.  You will explore
+  a variety of issues related to Java programming.
+</para>
+
+<para>
+  <emphasis>Purposes:</emphasis>  
+  To give you experience using APIs, including incompletely documented
+  APIs.  To give you more experience with arrays and loops in Java.
+  To expand your consideration of objects.  To start your consideration
+  of polymorphism (which is not addressed explicitly in this assignment,
+  but which is nonethless part of the assignment).
+</para>
+
+<para>
+  <emphasis>Collaboration:</emphasis>  
+  I encourage you to work in groups of size three. You may, however,
+  work alone or work in a group of size two or size four. You may discuss
+  this assignment with anyone, provided you credit such discussions when
+  you submit the assignment.
+</para>
+
+<para>
+  <emphasis>Wrapper (Prologue):</emphasis> Individually read through
+  this assignment and make sure that you understand what is required.
+  Then use the form available at <ulink url="http://bit.ly/207hw5pro"/>
+  to indicate (a) how long you think this assignment will take and (b)
+  what you think will be the most challenging aspect of this assignment.
+</para>
+
+<para>
+  <emphasis>Wrapper (Epilogue):</emphasis> When you are done
+  with the assignment, fill out the form available at <ulink
+  url="http://bit.ly/207hw5epi"/> to indicate (a) how long the
+  assignment took, (b) what the most challenging part of the assignment
+  was, and (c) something important you learned from doing the assignment.
+  If you find that the assignment took much less or much more time than
+  you expected, also include (d) a note as to what might have led to
+  that difference.
+</para>
+
+<para>
+  <emphasis>Submitting:</emphasis> 
+  Please put all of your work in a GitHub repository named
+  <code>csc207-hw5</code>.  Email me the address of that repository.
+  Please title your email <quote>CSC207 2013F Assignment 5
+  (<emphasis>Your Names</emphasis>)</quote>.
+</para>
+
+<para>
+  <emphasis>Warning:</emphasis> 
+  So that this assignment is a learning experience for everyone, we may
+  spend class time publicly critiquing your work.
+</para>
+
+<section id="assignment05-intro"><title>Introduction</title>
+
+<para>
+  In this assignment, we will be working with the Ushahidi
+  crowdsourcing platform, <code><ulink url="http://www.ushahidi.com/"/></code>.
+  In particular, we will be grabbing data from simulated and real
+  Ushahidi installations.
+</para>
+
+<para>
+  To interact with Ushahidi, we will be using a simple API designed and
+  implemented by Grinnell students and faculty.
+</para>
+
+<para>
+  This assignment asks you to learn more about Ushahidi and that API.
+  As you learn more (and write programs that express your learning),
+  you will be developing a variety of skills in developing software
+  and thinking from an object-oriented perspective.
+</para>
+
+</section> <!-- assignment05-intro -->
+
+<section id="assignment-05-prelim"><title>Preliminaries</title>
+
+<para>
+  <emphasis>Although you will not submit your work on this section
+  of the assignment, you should take it as seriously as you would the
+  graded parts of the assignment.  The gain is not from the grading,
+  it's from considering the issues carefully.</emphasis>
+</para>
+
+<para>
+  a. Spend about ten to fifteen minutes reading about Ushahidi and
+  identifying at least one interesting Ushahidi installation.
+</para>
+
+<para>
+  b. Make a list of fields you would expect to see in an object
+  that represents one incident in a simple Ushahidi installation.
+  That is, what data would you want stored for an incident and what
+  type would each part of the data have?
+</para>
+
+<para>
+  c. Make a list of methods you would want as a Java programmer who
+  needs to interact with an Ushahidi site.
+</para>
+
+<para>
+  d. Look at the Java documentation for the simple Ushahidi API, available
+  at <code><ulink url="http://www.cs.grinnell.edu/~rebelsky/Glimmer/Ushahidi/docs/"/></code>.  Focus on 
+</para>
+
+<itemizedlist>
+  <listitem>
+    the constants and methods in <code>UshahidiIncident</code>, which
+    represents incidents;
+  </listitem>
+
+  <listitem>
+    the constants and methods in <code>UshahidiLocation</code>, which
+    represents locations;
+  </listitem>
+
+  <listitem>
+    the methods in <code>UshahidiClient</code> and
+    <code>UshahidiAdmin</code>, which provide client and administrative
+    access to an Ushahidi installation; and
+  </listitem>
+
+  <listitem>
+    the constants and methods in <code>UshahidiUtils</code>, which
+    provides some utility methods for incidents.
+  </listitem>
+</itemizedlist>
+
+<para>
+  You will note that we did not tell you to look at the fields.  As
+  a client of these classes, you should not care what the fields are.
+</para>
+
+<para>
+  After examining the documentation, You may find it helpful to note
+  what methods you expected to find but did not find, and what methods
+  you found that you did not expect to find.  (If there are methods that
+  you think would be helpful, you might want to let me know.  I may
+  add them or I may explain why they aren't there.)
+</para>
+
+</section> <!-- assignment-05-prelim -->
+
+<section id="assignment-05-prep"><title>Preparation</title>
+
+<para>
+  a. Create a new Eclipse project for this assignment.  You can name
+  the project whatever you like, provided it's not in bad taste.
+</para>
+
+<para>
+  b. Make a copy <code>simple-ushahidi-api.jar</code>, the 
+  JAR file for the simple Ushahidi API, available at 
+  <code><ulink url="http://www.cs.grinnell.edu/~rebelsky/Glimmer/Ushahidi/code/simple-ushahidi-api.jar"/></code>.  
+  A JAR is a Java Archive, a standard way to group compiled Java code
+  for use in other projects.
+</para>
+
+<para>
+  c. The Ushahidi API relies on JSON.  (You can look it up.)  Make a
+  copy of the JAR file for JSON, available at
+  <code><ulink url="http://www.cs.grinnell.edu/~rebelsky/Glimmer/Ushahidi/code/json.jar"/></code>.  
+</para>
+
+<para>
+  d. Import those JARs into your project using the instructions
+  available at
+  <code><ulink url="http://www.wikihow.com/Add-JARs-to-Project-Build-Paths-in-Eclipse-(Java)"/></code>.  (If you find and follow other instructions, that's fine.)
+</para>
+
+</section> <!-- assignment-05-preparation -->
+
+<section id="assignment-05-assignment"><title>Assignment</title>
+
+<section id="assignment-05-A"><title>Part A: Printing Incidents</title>
+
+<para>
+  1. Create a new utility class, <code>UshahidiExtensions.java</code>,
+  that has one static method, <methodname>printIncident</methodname>,
+  that takes as input a <code>PrintWriter</code> and an
+  <code>UshahidiIncident</code> and prints the incident out using a
+  format something like the following (things in all caps should be
+  replaced by the corresponding value).
+</para>
+
+<programlisting>
+Incident #: TITLE
+  DESCRIPTION
+  Location: LOCATION
+  Status: (MODE, ACTIVE, VERIFIED)
+</programlisting>
+
+<para>
+  2. Create a new main class, <code>PrintIncidentExperiment.java</code>, 
+  with the following method:
+</para>
+
+<programlisting>
+    public static void main(String[] args) {
+        // Create the output device
+        PrintWriter pen = new PrintWriter(System.out, true);
+
+        // A few basic incidents
+        UshahidiExtensions.printIncident(pen, UshahidiUtils.SAMPLE_INCIDENT);
+        UshahidiExtensions.printIncident(pen, UshahidiUtils.randomIncident());
+        UshahidiExtensions.printIncident(pen, UshahidiUtils.randomIncident());
+
+        // A newly created incident
+        UshahidiIncident myIncident = new UshahidiIncident(...);
+        UshahidiExtensions.printIncident(pen, myIncident);
+
+        // One from a list
+        UshahidiClient client = UshahidiUtils.SAMPLE_CLIENT;
+        UshahidiExtensions.printIncident(pen, client.nextIncident());
+
+        // One that requires connecting to the server
+        UshahidiClient webclient = new UshahidiWebClient(URL);
+        UshahidiExtensions.printIncident(pen, webclient.nextIncident());
+    } // main(String[])
+</programlisting>
+
+</section> <!-- assignment-05-A -->
+
+<section id="assignment-05-B"><title>Part B: Incident Lists</title>
+
+<para>
+  While we will generally be working with incidents taken from a server,
+  it can be helpful for testing to build our own incident list.
+  Write a method that creates an <code>UshahidiIncidentList</code> of
+  about a dozen incidents that you can use for experiments.  You should
+  try different dates, different locations, and so on and so forth.
+</para>
+
+</section> <!-- assignment-05-B -->
+
+<section id="assignment-05-C"><title>Part C: Extreme Incidents</title>
+
+<para>
+  Write a method that, given an <code>UshahidiClient</code>, prints
+  out the incident with the lowest and highest id.  You can use only
+  <code>nextIncident</code> and <code>hasMoreIncidents</code>.
+</para>
+
+<para>
+  Try your method with our custom incident list.  Then try it using
+  an Ushahidi installation.
+</para>
+
+</section> <!-- assignment-05-C -->
+
+<section id="assignment-05-D"><title>Part D: Identifying Incidents</title>
+
+<para>
+  Write a method that, given a start date and an end date, prints all 
+  incidents that happen between the two dates (in any order).  You can
+  use only <code>nextIncident</code> and <code>hasMoreIncidents</code>.
+</para>
+
+</section> <!-- assignment-05-D -->
+
+<section id="assignment-05-E"><title>Part E: Selecting Incidents</title>
+
+<para>
+  Write a method that, given a start date and an end date, builds and
+  returns an array of all the incidents that fall between those two dates.
+  (In solving this problem, you may find it useful to grab the array of
+  all incidents.)
+</para>
+
+</section> <!-- assignment-05-E -->
+
+</section> <!-- id="assignment05-assignment" -->
+
+<section id="assignment05-citations"><title>Citations</title>
+
+<para>
+  The Simple Ushahidi API was originally written by Daniel Torres.
+  The overall design of the current API is due to Samuel A. Rebelsky,
+  but much of the underlying code draws upon Mr. Torres' work.
+</para>
+
+</section> <!-- citations -->
+
+</section> <!-- id="assignment05" -->
