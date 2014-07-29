@@ -40,81 +40,6 @@ want paper copies of pages, please read the notes on printing copies.
 If you find that you are regularly printing pages, let me know and I
 can provide them for you.
 
-Learning Outcomes
------------------
-
-*(Still a work in progress.)*
-
-### Object-Oriented Design
-
-I expect that at the end of the semester, you will have mastered the
-basics of object-oriented design.  In particular, I expect that you will 
-be able to
-
-* describe and use the three pillars of object-oriented
-  design: encapsulation, inheritance, and polymorphism; and
-* identify objects that will contribute to a program or solution,
-  design those objects, and implement those objects.
-
-### Analysis and Design of Algorithms
-
-I expect that at the end of the semester, you will have significantly
-extended your skills in the design, implementation, and analysis of
-algorithms.  In particular, I expect that you will be able to
-
-* describe and implement classic algorithms, including
-  binary search, sequential search, insertion sort, selection sort, heap sort, 
-  Quicksort, and merge sort;
-* design new algorithms* using a variety of approaches
-  including greed, divide and conquer, and dynamic programming;
-* analyze the running time efficiency of algorithms
-  using big-O notation; and
-* use loop invariants* to better design and verify
-  iterative algorithms.
-
-### Analysis and Design of Abstract Data Types and Data Structures 
-
-I expect that at the end of the semester, you will have significantly
-extended your skills in the design, implementation, and analysis of
-abstract data types and algorithms.  In particular, I expect that you
-will be able to
-
-* describe and distinguish abstract data types and data structures;
-* describe and implement classic ADTs and data
-  structures, including expandable arrays, lists, stacks, queues, hash 
-  tables, binary search trees, and trees;
-* design new ADTs using the PUM (philosophy, uses, methods) approach; and
-* design new data structures using the LIA (layout,
-  implement, analyze) approach.
-
-### Software Construction
-
-I expect that at the end of the semester, you will be a competent 
-beginning software developer.  In particular, in addition to having
-the skills described above, I expect that you will be able to
-
-* design, implement, and run unit tests;
-* develop software using an integrated development
-  environment (in our case, Eclipse).
-* collaborate on and keep track of the development history of code using 
-  a version control system* (in our case, Git); 
-* read, understand, and modify code that you did not write; 
-* design and develop libraries for use in other programs;
-* use libraries in your own programs; and
-* responsibly incorporate code that you did not use into your own
-  program.
-
-### Java
-
-I expect that at the end of the semester, you will be a compent beginning
-Java programmer.  In particular, I expect that you will also be able to
-
-* write programs using the imperative core of Java;
-* signal and recover from errors* using Java's exceptions;
-* construct simple graphical user interfaces using JavaFX; and
-* describe and use a variety of special Java
-  constructs including anonyous inner classes and "lambdas".
-
 Important Warnings
 ------------------
 
@@ -140,7 +65,7 @@ I also tend to follow an open door policy: Feel
 free to stop by when my door is open or to make an appointment for
 another time.
 
-*Class Mentor*: Mira Hall <email>hallmira@grinnell.edu</email>.
+*Class Mentor*: Mira Hall, <email>hallmira@grinnell.edu</email>.
 Office hours TBD.
 
 *Grading* (subject to change):
@@ -211,7 +136,7 @@ Computer science is the study of problem solving.  So, as we study CS,
 we can choose particular domains for solving problems.  As you know,
 in CSC 151 we use image making as our problem domain and in CSC 161 we
 use robotics as our problem domain.  For this course, we will explore
-some basic issues of computing for social good as our probelm domain.
+some basic issues of computing for social good as our problem domain.
 Many, but not all, of our activities will emphasize these issues.
 
 ### The Role of Ushahidi
