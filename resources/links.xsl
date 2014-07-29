@@ -19,6 +19,7 @@
   [<a href="../handouts/disabilities.html">Disabilities</a>]
   [<a href="../handouts/email.html">Email</a>]
   -
+  [<a href="../handouts/outcomes.html">Learning Outcomes</a>]
   [<a href="../handouts/faq.html">FAQ</a>]
   [<a href="../handouts/teaching.html">Teaching &amp; Learning</a>]
   [<a href="../handouts/grading.html">Grading</a>]
@@ -44,14 +45,16 @@
   [<a href="../readings/">Readings</a>]
 </p>
 <p class="links"> <b>Reference:</b> 
-  [<a href="http://docs.oracle.com/javase/7/docs/api/">Java 7 API</a>]
+  [<a href="../handouts/resources.html">Student-Curated Resources</a>]
+  [<a href="http://docs.oracle.com/javase/8/docs/api/">Java 8 API</a>]
+  [<a href="http://docs.oracle.com/javase/tutorial/">Java 8 Tutorials</a>]
   [<a href="http://www.oracle.com/technetwork/java/codeconv-138413.html">Java Code Conventions</a>]
   [<a href="http://www.gnu.org/prep/standards/html_node/">GNU Code Conventions</a>]
 </p>
 <p class="links"><b>Related Courses:</b>
   [<a href="http://www.cs.grinnell.edu/~rebelsky/Courses/CS152/2006S/">CSC 152 2006S (Rebelsky)</a>]
-  [<a href="http://www.cs.grinnell.edu/~rebelsky/Courses/CSC207/2013F/">CSC 207 2013F (Rebelsky)</a>]
-  [<a href="http://www.cs.grinnell.edu/~walker/courses/207.sp13/">CSC 207 2013S (Walker)</a>]
+  [<a href="http://www.cs.grinnell.edu/~rebelsky/Courses/CSC207/2014S/">CSC 207 2014S (Rebelsky)</a>]
+  [<a href="http://www.cs.grinnell.edu/~walker/courses/207.fa14/">CSC 207 2014F (Walker)</a>]
   [<a href="http://www.cs.grinnell.edu/~weinman/courses/CSC207/2011S/">CSC 207 2011S (Weinman)</a>]
 </p>
 <p class="links"> <b>Misc:</b> 
