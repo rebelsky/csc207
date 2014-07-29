@@ -48,30 +48,47 @@
   and learning</ulink>, I don't think you learn the material as well if you
   don't participate actively in the class.  I also know that if you're not
   here, you can't participate.  Hence, a portion of your grade is based on
-  participation and attendance.  Students who miss no more than two classes
-  and who regularly answer questions or make comments in class receive 90
-  for participation.  Missing 3-5 classes results in a 20 point penalty.
-  Missing 6-8 classes results in a 40 point penalty.  Missing 9 or more
-  classes results in a 60 point penalty.  Particularly good answers,
-  comments, and questions result in bonus points for participation.
+  a combination of your participation and attendance.
 </para>
 
 <para>
-  <emphasis>Because I do not want you to come to class when you are ill
-  (and likely to infect others), I do not count absences due to illness
-  as absences.</emphasis> I also realize that there are other exceptional
-  circumstances, such as academic and athletic responsibilities that call
-  you away from Grinnell.  With appropriate notification, such absences
-  are not included in the computation above.
+  <emphasis>Because I do not want you to come to class when you are
+  ill (and likely to infect others), I excuse most absences due to
+  illness.</emphasis> I also realize that there are other exceptional
+  circumstances, such as academic and athletic responsibilities that
+  call you away from Grinnell.  If you provide appropriate notification,
+  I am likely to excuse such absences.  However, I do expect you to limit
+  excused absences.
 </para>
 
 <para>
-  If you miss class for any reason, you are responsible for notifying me
-  about the reason for that absence.  I would prefer that you notify me
-  before you miss class.  If that is not possible, you should notify me
-  by 5 p.m. on the day that you missed class.  With very few exceptions,
+  If you miss class for any reason, you are responsible for notifying
+  me about the reason for that absence.  I would prefer that you notify
+  me via email before the class period.  If that is not possible, you
+  should notify me via email by 5 p.m. on the day that you missed class.
   With very few exceptions, I will not excuse an absence if you do not
-  notify me of the reason for your absence within this time frame.
+  notify me of the reason for your absence within this time frame.  Note
+  that you are also responsible for explaining your absence, even though
+  it may not qualify as an excused absence.
+</para>
+
+<para>
+  Students who regularly answer or ask questions and make comments in
+  class will receive a base grade of 90 for participation.  Students
+  who make particularly good contributions are likely to receive a 
+  higher grade.  Students who do not contribute regularly or who make
+  comments that interfere with class are likely to receive a lower grade.
+</para>
+
+<para>
+  I scale your base participation grade based on your attendance.
+  If you have two or fewer unexcused absences or equivalent (each
+  excused absence counts as half an unexcused absence), I just use your
+  base grade.  Otherwise, I scale your base grade by 1-((A-2)/8), where
+  A is the number of unexcused absences or equivalent.  For example, if
+  you have the equivalent of four unexcused absences (say, two unexcused
+  absences and four excused absences), I will scale your base grade by
+  (1-(4-2)/8), or 0.75.
 </para>
 
 </section>  <!-- participation -->
@@ -98,7 +115,7 @@
 
 <para>
   I have tried a variety of approaches to grading homework.  I admit
-  to some fondness for plus/check/minus grading, which looks at the
+  to some fondness for a excellent/good/fair/poor scale, which looks at the
   big picture and not niggling details.  But I also like using a 
   detailed rubric that covers the various aspects of the assignment.
   I may be experimenting with multiple approaches this semester.
@@ -106,18 +123,17 @@
 
 <para>
   Since different people have different opinions, I thought I should
-  let you know about my plus/check/minus/zero system, that I do plan
+  let you know about my scale, that I do plan
   to employ from time to time.  Homework that is primarily correct will
-  earn you a check.   Errors will earn you a check-minus or a minus.
+  earn you a good (or, sometimes, a <quote>check</quote>).   Errors will earn you a fair or poor.
   Significant errors may earn you a zero.  Failure to turn the assignment
   in will earn you a zero.  Particularly nice work will earn you a
-  check-plus or a plus.  At the end of the semester, I will convert
+  very good or excellent.  At the end of the semester, I will convert
   the symbols to a letter or numeric grade.  If your grades are mostly
-  checks, you will earn a B on the homework component of your grade.
-  Plus grades on approximately 1/4 of the graded assignments and plus
-  checks on remaining assignments will earn you an A.  Minus grades on
-  the majority of the assignments will earn you a C.  Zero grades will
-  earn you an even lower grade.
+  good, you will earn a B on the homework component of your grade.  Very
+  good and excellent grades will increase the letter grade.  (Students who
+  earn very good or excellent on at least 1/4 on the assignments are likely
+  to earn A's.)  Fair or poor grades will decrease the letter grade.
 </para>
 
 <para>
@@ -147,10 +163,9 @@
 </para>
 
 <para>
-  To encourage you to think carefully about the material, for a few
-  labs I will ask you to write up one or two exercises and submit them
-  for review.  I will do my best to let you know which exercises to
-  write up, and will also post them on the course web site.
+  To encourage you to think carefully about the material, for most labs
+  I will ask you to summarize the most important points from the lab or
+  topic.  You will submit your answers online.
 </para>
 
 <para>
@@ -158,23 +173,6 @@
   individually; you should decide which by the end of class. If you 
   do the lab writeup on your own, you must acknowledge your partner 
   (any anyone else who gave you help) in your writeup.
-</para>
-
-<para>
-  Your writeup should include your solution to each assigned exercise. 
-  If the exercise directs you to write Java code, include your Java
-  code. If the exercise directs you to find out what the output of some
-  code is, copy and paste the output from Eclipse.  If the exercise
-  asks a question or asks you to explain something, write an answer in
-  English. You do not need to copy instructions or problem statements
-  from the lab exercises into your writeup, but do number your solutions.
-</para>
-
-<para>
-  Send your lab writeup to <email>rebelsky@grinnell.edu</email>. 
-  That email address goes to me and to your grader (who I prefer remain
-  anonymous).  The subject of the email should take the form
-  <quote>CSC 207 Lab: <emphasis>Title of Lab</emphasis></quote>.
 </para>
 
 <para>
@@ -191,25 +189,6 @@
 
 </section> <!-- lab-writeups -->
 
-<section id="lab-assessments"><title>Lab Assessments</title>
-
-<para>
-  All of the labs for this semester are new or significantly revised.
-  Hence, we'd like to hear from you what went well and what went
-  poorly.  If all goes well, I will have a Google survey prepared for
-  each of my labs.  You are required to fill out fifteen of those
-  surveys (for about a third of the labs).  I would like you to fill
-  out more than that, but only require you to fill out fifteen.
-</para>
-
-<para>
-  So that I know you filled out the labs, I will ask you to include
-  your name when you fill out a survey.  I will have an assistant to
-  record and remove the names before I look at the survey data.
-</para>
-
-</section> <!-- lab-assessments -->
-
 <section id="exams"><title>Examinations</title>
 
 <para>
@@ -224,6 +203,12 @@
   on one problem will earn you a D.  I will probably include a wellness
   policy on exams (e.g., if you stop at eight hours, I guarantee you a
   C or better on the exam).
+</para>
+
+<para>
+  After two semesters of finding that students do not significantly improve
+  their grade by redoing problems or doing alternative makeup problems, I
+  have decided that I will not permit makeups for examinations.
 </para>
 
 </section>  <!-- exams -->
