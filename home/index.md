@@ -43,7 +43,7 @@ can provide them for you.
 Learning Outcomes
 -----------------
 
-*A work in progress*
+*(Still a work in progress.)*
 
 ### Object-Oriented Design
 
@@ -157,7 +157,6 @@ More information on grading can be found in the
 [grading policies](../handouts/grading.html) page.
 
 *Labs*: 
-
 Like many courses in our department, computer science 207 is taught in
 a *collaborative workshop style*.  Each day, you'll work on laboratory
 problems with other students in the class.  On most days, you will need
@@ -167,7 +166,6 @@ things you learned, and I'm going with that.)  We may also start or end
 each lab session with a short lecture/discussion or a clicker activity.
 
 *Extra Credit*:
-
 I will often offer one unit of extra credit for attending a specified
 academic event (e.g., a computer science talk or College convocation)
 or for supporting your classmates in their public endeavors (e.g.,
@@ -179,14 +177,17 @@ toward your final grade.  For any activity you wish to credit this way,
 you must send me a short (one paragraph) note about the activity within
 two days of the activity.
 
-*Tutoring*:
+This semester, I've started a page of [useful
+resources](../handouts/resources.html).  Each link you contribute to
+that page that I then incorporate will earn you one unit of extra credit.
+I will also cap these units of extra credit.
 
-Evening tutors are not required to know 207 materials.  Some will be
-able to help you.  Many will not.  I recommend that you rely on your
-me, on your class mentor, and on each other.
+*Tutoring*:
+Evening tutors are not required to know the material for CSC 207.
+Some will be able to help you.  Many will not.  I recommend that you
+rely on your me, on your class mentor, and on each other.
 
 *Class Software*:
-
 For this course, we will be using a wide variety of plain off-the-shelf
 software (POTS) as well as some locally developed software.  Tools you
 will use include Git (and [GitHub](http://github.com)), Java 8, Eclipse,
@@ -194,7 +195,6 @@ JUnit, and Ushahidi.  Locally developed software includes a simplified
 API for Ushahidi and a few implementations of ADTs.
 
 *Printing Pages*:
-
 Most of the pages in the course web are designed for viewing onscreen.
 If you'd like to print them, you may want to use PDF versions, which
 are designed for paper.  To find the PDF version, simply replace
@@ -230,6 +230,14 @@ in designing and implementing algorithms, abstract data types, and data
 structures.  After fall break, you will also employ Ushahidi in a small
 consulting project that you will do in a group with a community partner.
 Further details on that project will come right before fall break.
+
+### GUI Building with JavaFX
+
+Traditionally, we have not included GUI construction in CSC 207 (or
+its predecessor, CSC 152).  However, I think that GUI's can help reveal
+important aspects of object-oriented design. Hence, as an experiment, we
+will be using a small bit of JavaFX, which is the new *de facto* GUI
+toolkit for Java.
 
 Optional Books and Other Readings
 ---------------------------------
