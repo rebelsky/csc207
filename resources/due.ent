@@ -1,53 +1,58 @@
-<!ENTITY assignment01 "<ulink url='../assignments/assignment.01.html'>HW 1: Course Details and RISC Survey</ulink>">
-<!ENTITY survey-due "10:30 p.m., &tue01;">
+<!ENTITY assignment01 "<ulink url='../assignments/assignment.02.html'>HW 1: Course Details and RISC Survey</ulink>">
+<!ENTITY survey-due "10:30 p.m., &mon01;">
 <!ENTITY assignment01-due "&survey-due;">
 
-<!ENTITY assignment02 "<ulink url='../assignments/assignment.02.html'>HW 2: Getting Started with Java and Testing</ulink>">
-<!ENTITY assignment02-due "10:30 p.m., &wed02;">
+<!ENTITY assignment02 "HW 2: Exploring an Expandable Array ADT">
+<!ENTITY assignment-02-due "10:30 p.m., &sun01;">
 
-<!ENTITY assignment03 "<ulink url='../assignments/assignment.03.html'>HW 3: Basic Types in Java</ulink>">
-<!ENTITY assignment03-due "10:30 p.m., &wed03;">
+<!ENTITY assignment03 "HW 3: Getting started with Java and testing">
+<!ENTITY assignment03-due "10:30 p.m., &tue02;">
 
-<!ENTITY assignment04 "<ulink url='../assignments/assignment.04.html'>HW 4: More Fun with Fractions</ulink>">
-<!ENTITY assignment04-due "10:30 p.m., &wed04;">
+<!ENTITY assignment04 "HW 4: Type Basics in Java">
+<!ENTITY assignment04-due "10:30 p.m., &tue03;">
 
-<!ENTITY assignment05 "<ulink url='../assignments/assignment.05.html'>HW 5: Algorithm Design and Analysis</ulink>">
-<!ENTITY assignment05-due "10:30 p.m., &wed07;">
+<!ENTITY assignment05 "HW 5">
+<!ENTITY assignment05-due "10:30 p.m., &tue04;">
 
-<!ENTITY assignment06 "<ulink url='../assignments/assignment.06.html'>HW 6: Linear Structures</ulink>">
-<!ENTITY assignment06-due "10:30 p.m., &wed10;">
+<!ENTITY assignment06 "HW 6">
+<!ENTITY assignment06-due "10:30 p.m., &tue05;">
 
-<!ENTITY assignment07 "<ulink url='../assignments/assignment.07.html'>HW 7: TO BE DETERMINED</ulink>">
-<!ENTITY assignment07-due "10:30 p.m., &wed11;">
+<!ENTITY assignment07 "HW 7">
+<!ENTITY assignment07-due "10:30 p.m., &tue06;">
+
+<!ENTITY assignment08 "HW 8">
+<!ENTITY assignment08-due "10:30 p.m., &tue09;">
+
+<!ENTITY assignment09 "HW 9">
+<!ENTITY assignment09-due "10:30 p.m., &tue10;">
 
 <!ENTITY due01 "">
-<!ENTITY due01 "">
-<!ENTITY due02 "&assignment01;">
+<!ENTITY due02 "&assignment01; and &assignment02; (due 10:30 p.m. Sunday)">
 <!ENTITY due03 "">
 <!ENTITY due04 "">
 <!ENTITY due05 "">
 <!ENTITY due06 "">
-<!ENTITY due07 "&assignment02; (due 10:30 p.m.)">
+<!ENTITY due07 "&assignment03; (due 10:30 p.m.)">
 <!ENTITY due08 "">
 <!ENTITY due09 "">
 <!ENTITY due10 "">
-<!ENTITY due11 "&assignment03; (due 10:30 p.m.)">
+<!ENTITY due11 "&assignment04; (due 10:30 p.m.)">
 <!ENTITY due12 "">
 <!ENTITY due13 "">
 <!ENTITY due14 "">
-<!ENTITY due15 "&assignment04; (due 10:30 p.m.)">
+<!ENTITY due15 "&assignment05; (due 10:30 p.m.)">
 <!ENTITY due16 "">
 <!ENTITY due17 "">
 <!ENTITY due18 "">
-<!ENTITY due19 "<ulink url='../assignments/exam.01.html'>Exam 1</ulink>">
+<!ENTITY due19 "&assignment06; (due 10:30 p.m.)">
 <!ENTITY due20 "">
 <!ENTITY due21 "">
 <!ENTITY due22 "">
-<!ENTITY due23 "">
+<!ENTITY due23 "&assignment07; (due 10:30 p.m.)">
 <!ENTITY due24 "">
 <!ENTITY due25 "">
 <!ENTITY due26 "">
-<!ENTITY due27 "&assignment05; (due 10:30 p.m.)">
+<!ENTITY due27 "Exam 1 (due 10:30 p.m.)">
 <!ENTITY due28 "">
 <!ENTITY due29 "">
 <!ENTITY due30 "">
@@ -55,11 +60,11 @@
 <!ENTITY due32 "">
 <!ENTITY due33 "">
 <!ENTITY due34 "">
-<!ENTITY due35 "">
-<!ENTITY due36 "<ulink url='../assignments/exam.02.html'>Exam 2</ulink>">
+<!ENTITY due35 "&assignment08; (due 10:30 p.m.)">
+<!ENTITY due36 "">
 <!ENTITY due37 "">
 <!ENTITY due38 "">
-<!ENTITY due39 "&assignment06; (due 10:30 p.m.)">
+<!ENTITY due39 "&assignment09; (due 10:30 p.m.)">
 <!ENTITY due40 "">
 <!ENTITY due41 "">
 <!ENTITY due42 "">
@@ -71,9 +76,9 @@
 <!ENTITY due48 "">
 <!ENTITY due49 "">
 <!ENTITY due50 "">
-<!ENTITY due51 "&assignment07; (due 10:30 p.m.)">
+<!ENTITY due51 "">
 <!ENTITY due52 "">
-<!ENTITY due53 "">
-<!ENTITY due54 "<ulink url='../assignments/exam.03.html'>Exam 3</ulink>">
+<!ENTITY due53 "Exam 2 (due 10:50 p.m.)">
+<!ENTITY due54 "">
 <!ENTITY due55 "">
 <!ENTITY due56 "">
