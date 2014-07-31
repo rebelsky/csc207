@@ -1,4 +1,4 @@
-CSC 207 Grading Sheet, v 0.1.2
+CSC 207 Grading Sheet, v 0.1.3
 ==============================
 
 Assignment: 
@@ -80,8 +80,11 @@ creative, efficient, or elegant solutions to some problems?
     Increase by two grades.
 [ ] The assignment goes beyond the basic requirements in a few ways (e.g.,
     on one problem out of three).  Increase by one grade.
-[ ] While the assignment meets the basic requirements, it does not go beyond
-    those requirements.
+[ ] While the assignment meets the basic requirements, it does not go
+    beyond those requirements.  No modifications to base grade.
+[ ] The assignment does not meet the basic requirements.  No modifications
+    to base grade, as failure to meet the basic requirements should have
+    been addressed earlier.
 
 Please summarize any special characteristics of this assignment.  (Copying
 and pasting code is fine.)
