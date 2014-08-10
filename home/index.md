@@ -121,9 +121,6 @@ API for Ushahidi and a few implementations of ADTs.
 
 *Printing Pages*:
 Most of the pages in the course web are designed for viewing onscreen.
-If you'd like to print them, you may want to use PDF versions, which
-are designed for paper.  To find the PDF version, simply replace
-the `html` at the end of the URL with `pdf`.
 If you do decide to print, you should consider printing the document
 double-sided and two-up (that is, two pages side-by-side on one
 physical page) so as to conserve paper.  When I distribute documents,
