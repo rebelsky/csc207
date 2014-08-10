@@ -48,8 +48,7 @@
   [<a href="../handouts/resources.html">Student-Curated Resources</a>]
   [<a href="http://docs.oracle.com/javase/8/docs/api/">Java 8 API</a>]
   [<a href="http://docs.oracle.com/javase/tutorial/">Java 8 Tutorials</a>]
-  [<a href="http://www.oracle.com/technetwork/java/codeconv-138413.html">Java Code Conventions</a>]
-  [<a href="http://www.gnu.org/prep/standards/html_node/">GNU Code Conventions</a>]
+  [<a href="../handouts/code-conventions">Code Conventions</a>]
 </p>
 <p class="links"><b>Related Courses:</b>
   [<a href="http://www.cs.grinnell.edu/~rebelsky/Courses/CS152/2006S/">CSC 152 2006S (Rebelsky)</a>]
