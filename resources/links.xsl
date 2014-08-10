@@ -66,8 +66,10 @@
   [<a href="https://github.com/Grinnell-CSC207/tao-of-java/issues">Issue Tracker (Textbook)</a>]
 </p>
 <form class="search" method="get" action="../home/search.cgi">
-  Search:
-  <input type="text" name="keyword"/>
+  <label>
+    Search:
+    <input type="text" name="keyword"/>
+  </label>
 </form>
 </div><!--noprint-->
 </xsl:template>
