@@ -57,10 +57,13 @@
   [<a href="http://www.cs.grinnell.edu/~weinman/courses/CSC207/2011S/">CSC 207 2011S (Weinman)</a>]
 </p>
 <p class="links"> <b>Misc:</b> 
+  [<a href="http://bit.ly/207questions">Submit Questions</a>] 
+  -
   [<a href="http://www.cs.grinnell.edu/~rebelsky/">SamR</a>]
   [<a href="http://www.cs.grinnell.edu/glimmer/">Glimmer Labs</a>]
   [<a href="http://www.cs.grinnell.edu/">CS@Grinnell</a>]
   [<a href="http://www.grinnell.edu/">Grinnell</a>]
+  -
   [<a href="https://github.com/rebelsky/csc207/issues">Issue Tracker (Course)</a>]
   [<a href="https://github.com/Grinnell-CSC207/tao-of-java/issues">Issue Tracker (Textbook)</a>]
 </p>
