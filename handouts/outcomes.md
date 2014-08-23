@@ -3,6 +3,8 @@ Learning Outcomes
 
 *(Still a work in progress.)*
 
+This document describes the learning outcomes I expect for this course.
+
 ## Object-Oriented Design
 
 I expect that at the end of the semester, you will have mastered the
