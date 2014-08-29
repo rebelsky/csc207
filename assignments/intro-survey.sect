@@ -42,15 +42,19 @@
 <para>
   <emphasis role="strong">Submitting:</emphasis> Email your answers to
   part one to <email>rebelsky@grinnell.edu</email>, using a subject
-  of <quote>CSC 207 Course Details (<emphasis>*Your Name*</emphasis>)</quote>
+  of <quote>CSC 207 Course Details (<emphasis>Your Name</emphasis>)</quote>.
   For example, if I were to submit answers to the first set of
   questions, it would be titled <quote>CSC 207 Course Details (Samuel
-  A. Rebelsky)</quote>.
+  A. Rebelsky)</quote>.  Email your answers to part two to
+  <email>rebelsky@grinnell.edu</email>, using a subject of 
+  <quote>CSC 207 Intro Survey (<emphasis>Your Name</emphasis>)</quote>.
 </para>
 
 <para>
-  You do not need to submit anything for parts two, three, and four.
-  You do, however, need to meet with me as part of your work for part two.
+  You do not need to submit anything to me for parts three and four.
+  You do, however, need to submit the RISC form online.  (I will not
+  know that who submitted it, but I will be able to tell how many
+  people did.)
 </para>
 
 <para>
@@ -93,6 +97,11 @@
   <listitem>
     My additional notes on grading, available at
     <code><ulink url="&url;handouts/grading.html"/></code>.
+  </listitem>
+
+  <listitem>
+    The current version of the course grading rubric, available at
+    <code><ulink url="&url;handouts/rubric.txt"/></code>.
   </listitem>
 
   <listitem>
