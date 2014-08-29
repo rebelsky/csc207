@@ -1,0 +1,16 @@
+<section id="intro-design"><title>An Introduction to ADT and Data Structure Design</title>
+
+<para>
+  There are two readings for today.
+</para>
+
+<itemizedlist>
+  <listitem><ulink url='../readings/design-adt.html'>Designing Abstract Data Types</ulink> and</listitem>
+  <listitem><ulink url='../readings/design-data-structures.html'>Designing Data Structures</ulink></listitem>
+</itemizedlist>
+
+<para>
+  Read both.
+</para>
+
+</section> <!-- intro-design -->
