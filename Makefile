@@ -59,6 +59,14 @@ touch:
 	touch eboards/eboard.*.html
 	touch eboards/eboard.*.pdf
 
+# Quickly rebuild only necessary stuff
+quick: .quick
+.quick: resources/subjects.var resources/due.ent
+	cd resources; make
+	make touch
+	make
+	touch .quick
+
 # +--------------+----------------------------------------------------
 # | Fun with git |
 # +--------------+
