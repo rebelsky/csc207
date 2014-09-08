@@ -1,0 +1,16 @@
+<section id="getting-started"><title>Getting Started</title>
+
+<para>
+  There are two assignments due before the second day of class.
+</para>
+
+<itemizedlist>
+  <listitem><ulink url='../assignments/assignment.01.html'>Assignment 1: Course Details and Surveys</ulink> and</listitem>
+  <listitem><ulink url='../assignments/assignment.02.html'>Assignment 2: An Expandable Array ADT</ulink></listitem>
+</itemizedlist>
+
+<para>
+  Do both.
+</para>
+
+</section> <!-- intro-design -->
