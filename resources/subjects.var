@@ -22,7 +22,7 @@
 +day
 <!ENTITY title{$day} "An Introduction to ADT Design">
 <!ENTITY abbrev{$day} "adt-intro">
-<!ENTITY reading{$day} "An Introduction to ADT Design (Not Yet Available) and An Introduction to Data Structure Design (Not Yet Available)">
+<!ENTITY reading{$day} "<ulink url='../readings/design-adt'>Designing Abstract Data Types</ulink> and <ulink url='../readings/design-data-structures.html'>Designing Data Structures</ulink>">
 <!ENTITY lab{$day} "">
 
 +day
@@ -47,7 +47,7 @@
 <!ENTITY title{$day} "Classes and Objects">
 <!ENTITY abbrev{$day} "objects">
 <!ENTITY reading{$day} "<ulink url='../readings/classes.html'>Writing Your Own Classes</ulink>, <ulink url='../readings/standard-methods.html'>Standard Object Methods</ulink>">
-<!ENTITY lab{$day} "">
+<!ENTITY lab{$day} "<ulink url='../labs/classes.html'>Writing Your Own Classes</ulink>">
 <!ENTITY deletedlab{$day} "<ulink url='../labs/classes.html'>Writing Your Own Classes</ulink>">
 
 +day

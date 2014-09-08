@@ -1,11 +1,14 @@
-<!ENTITY assignment01 "<ulink url='../assignments/assignment.02.html'>HW 1: Course Details and RISC Survey</ulink>">
-<!ENTITY survey-due "10:30 p.m., &mon01;">
+<!ENTITY assignment01 "<ulink url='../assignments/assignment.01.html'>HW 1: Course Details and RISC Survey</ulink>">
+<!ENTITY survey-due "10:30 p.m., &sun00;">
 <!ENTITY assignment01-due "&survey-due;">
 
-<!ENTITY assignment02 "HW 2: Exploring an Expandable Array ADT">
-<!ENTITY assignment-02-due "10:30 p.m., &sun01;">
+<!ENTITY assignment02 "<ulink url='../assignments/assignment.02.html'>HW 2: Exploring an Expandable Array ADT</ulink>">
+<!ENTITY expandable-array-adt-due "10:30 p.m., &sun00;">
+<!ENTITY assignment02-due "10:30 p.m., &sun00;">
 
-<!ENTITY assignment03 "HW 3: Getting started with Java and testing">
+<!ENTITY assignment03 "<ulink url='../assignments/assignment.03.html'>HW 3: Getting started with Java, Testing, and Objects</ulink>">
+<!ENTITY starting-java-due "10:30 p.m., &tue02;">
+<!ENTITY starting-java-number "3">
 <!ENTITY assignment03-due "10:30 p.m., &tue02;">
 
 <!ENTITY assignment04 "HW 4: Type Basics in Java">
