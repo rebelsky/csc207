@@ -1,0 +1,330 @@
+<section id="playful-parsing"><title>Assignment &playful-parsing-number;: Playful Parsing in Java</title>
+
+<para>
+  <emphasis>Due:</emphasis> &playful-parsing-due;
+</para>
+
+<para>
+  <emphasis>Summary:</emphasis>
+  In this assignment, you will explore strings and the parsing of strings.
+  Along the way, you will consider the design and implementation of some
+  simple classes, some issues in numeric computation, and the use of arrays
+  in Java.
+</para>
+
+<para>
+  <emphasis>Purposes:</emphasis>  
+  To help you think about types in Java.  To give you experience reading
+  the Java API.  To improve your skills at string processing (in Java and
+  beyond).  To continue exploring the relationships between C and Java.
+</para>
+
+<para>
+  <emphasis>Collaboration:</emphasis>  
+  You must do this assignment in groups of two, three, or four students.
+  You may form a group yourself or you may ask me to randomly assign you
+  to a group.  If you form your group yourself, you may not choose
+  partners who you worked with on the previous assignment.  You may
+  discuss this assignment with anyone, provided you credit such
+  discussions when you submit the assignment.
+</para>
+
+<para>
+  <emphasis>Wrapper (Prologue):</emphasis> Individually read through
+  this assignment and make sure that you understand what is required.
+  Then use the form available at <ulink url="http://bit.ly/207hw4pro"/>
+  to indicate (a) how long you think this assignment will take and (b)
+  what you think will be the most challenging aspect of this assignment.
+</para>
+
+<para>
+  <emphasis>Wrapper (Epilogue):</emphasis> When you are done
+  with the assignment, fill out the form available at <ulink
+  url="http://bit.ly/207hw4epi"/> to indicate (a) how long the
+  assignment took, (b) what the most challenging part of the assignment
+  was, and (c) something important you learned from doing the assignment.
+  If you find that the assignment took much less or much more time than
+  you expected, also include (d) a note as to what might have led to
+  that difference.
+</para>
+
+<para>
+  <emphasis>Submitting:</emphasis> 
+  Please put all of your work in a GitHub repository named
+  <code>csc207-hw&playful-parsing-number;</code>.  Email the address of that 
+  repository to
+  grader-207-01@cs.grinnell.edu.  Please use a subject of <quote>CSC207
+  &semester; Assignment &playful-parsing-number; (<emphasis>Your Name</emphasis>)</quote>.
+</para>
+
+<para>
+  <emphasis>Warning:</emphasis> 
+  So that this assignment is a learning experience for everyone, we may
+  spend class time publicly critiquing your work.
+</para>
+
+<section id="playful-parsing-prelim"><title>Preliminaries</title>
+
+<para>
+  Since we'll be testing array procedures in this lab, you may find
+  the <methodname>assertArrayEquals</methodname> is helpful.  You'll find that
+  the <methodname>assertArrayEquals</methodname> has the expected parameters.
+  You can read more at <code><ulink url="http://junit.sourceforge.net/javadoc/org/junit/Assert.html"/></code>
+</para>
+
+</section> <!-- playful-parsing-prelim -->
+
+<section id="playful-parsing-prep"><title>Preparation</title>
+
+<para>
+  a. Create a new Eclipse project for this assignment.  You can name
+  the project whatever you like, provided it's not in bad taste.
+</para>
+
+<para>
+  b. Create a new package in the project.  You may choose the name
+  (again, provided it's in good taste).  I would suggest 
+  <code>edu.grinnell.csc207.<emphasis>username</emphasis>.utils</code>.
+</para>
+
+<para>
+  c. Copy the <code>Fraction</code> class from a recent lab into your
+  project.  Make sure to add a note to the top of the class citing the
+  original authors of the class and the peers who helped you update the
+  class.
+</para>
+
+<para>
+  d. Create two utility classes, <code>StringUtils.java</code> and
+  <code>Calculator.java</code>.
+</para>
+
+</section> <!-- playful-parsing-prep -->
+
+<section id="playful-parsing-assignment"><title>Assignment</title>
+
+<section id="playful-parsing-A"><title>Part A: Fixing Fractions</title>
+
+<para>
+  Your fraction class will need the following constructors and methods,
+  many of which you may have created in a previous laboratory.  Add any
+  that it does not yet include.
+</para>
+
+<itemizedlist>
+  <listitem>
+    A <code>Fraction(String str)</code> constuctor.  Your constructor
+    should accept all reasonable strings that describe fractions, 
+    including strings that do and do not include a slash (e.g.,
+    <code>new Fraction("1/2")</code> should create the fraction 1/2
+    and <code>new Fraction("17")</code> should create the fraction
+    17/1).  You need not handle strings that represent decimal values.
+    (You are aslo free to handle such strings, if you'd like.)
+  </listitem>
+  <listitem>
+    A <code>negate()</code> method that returns a new
+    fraction which is the additive inverse of the original fraction.
+  </listitem>
+  <listitem>
+    A <code>multiply(Fraction multiplicand)</code> method
+    that returns the new fraction that results of multiplying the fraction 
+    by the multiplicand.
+  </listitem>
+  <listitem>
+    A <code>subtract(Fraction subtrahend)</code> method that returns the
+    new fraction that results from subtracting the subtrahend from the fraction.
+  </listitem>
+  <listitem>
+    A <code>divide(Fraction divisor)</code> method that returns the
+    new fraction that results from dividing the fraction by the divisor.
+  </listitem>
+  <listitem>
+    A <code>pow(int expt)</code> method that returns the new fraction that
+    results from raising the given fraction to the given exponent, which
+    may be positive, negative, or zero.
+  </listitem>
+</itemizedlist>
+
+</section> <!-- playful-parsing-A -->
+
+<section id="playful-parsing-B"><title>Part B: Further Fixing Fractions</title>
+
+<para>
+  Suppose we decide that fractions are always represented in simplest
+  form.  That is, the numerator and denominator have no common fractors,
+  the denominator is always positive, and if the numerator is 0, then
+  the denominator is 1.
+</para>
+
+<para>
+  Update the <code>Fraction</code> class so that it follows this policy.
+</para>
+
+</section> <!-- playful-parsing-B -->
+
+<section id="playful-parsing-C"><title>Part C: Segmenting Strings</title>
+
+<para>
+  Programmers often find it convenient to store compound data in a
+  text file with one line per entry. To separate the components of the
+  entry, they use some designated symbol, such as a colon. For example,
+  we might store movie ratings in a form like the following:
+</para>
+
+<programlisting>
+movietitle:rating:rater:date
+</programlisting>
+
+<para>
+  Write and test a procedure, <code>StringUtils.splitAt</code>, that takes as
+  input a string and a character to use in splitting the string and
+  returns an array of the appropriate substrings.  For example,
+</para>
+
+<programlisting>
+assertArrayEquals(new String[] { "a", "b", "c" },
+                  StringUtils.splitAt("a:b:c", ':'));
+assertArrayEquals(new String[] { "a", "b", "c" },
+                  StringUtils.splitAt("a b c", ' '));
+assertArrayEquals(new String[] { "a:b:c" },
+                  StringUtils.splitAt("a:b:c", ' '));
+assertArrayEquals("one field", new String[] { "a" },
+                  StringUtils.splitAt("a", ':'));
+assertArrayEquals("empty inner field", new String[] { "a", "", "c" },
+                  StringUtils.splitAt("a::c", ':'));
+assertArrayEquals("leading empty field", new String[] { "", "a" },
+                  StringUtils.splitAt(":a", ':'));
+assertArrayEquals("trailing empty field", new String[] { "a", "" },
+                  StringUtils.splitAt("a:", ':'));
+</programlisting>
+
+<para>
+  In implementing <code>splitAt</code> you may not use use the
+  <code>split</code> method of <code>java.util.String</code>.
+  (Yes, that's right, you have to implement a simpler version of
+  that method by hand.  Don't worry, it's good experience.)
+</para>
+
+</section> <!-- playful-parsing-C -->
+
+<section id="playful-parsing-D"><title>Part D: Segmenting Strings, Supplemented</title>
+
+<para>
+  One disadvantage of the <quote>split at this character</quote> strategy
+  is that you cannot easily use the separator within one of the fields.
+  Data designers have chosen a variety of approaches to handle the issue.
+  One of the most common is to say <quote>if the separator appears within
+  text surrounded by double quotation marks, take it as part of the field,
+  rather than as a separator</quote>.
+</para>
+
+<para>
+  But even that approach has its own potential problems.  For example, what
+  if we want both the separator and a quote in a field.  Once again, there
+  is a common solution: <quote>if two double quotation marks appear in
+  sequence, treat them as a single character, rather than as the end of
+  a string</quote>.
+</para>
+
+<para>
+  Write and test a procedure, <methodname>StringUtils.splitCSV</methodname>, that splits a
+  string using those policies, with a comma as the separator.  For example,
+</para>
+
+<programlisting>
+assertArrayEquals (new String[] { "a", "b", "c" },
+                   StringUtils.splitCSV("a,b,c"));
+assertArrayEquals (new String[] { "a,b", "c" },
+                   StringUtils.splitCSV("\"a,b\",c"));
+assertArrayEquals (new String[] { "a", "b,b\"", "c" },
+                   StringUtils.splitCSV("a,\"b,b\"\"\",c"));
+</programlisting>
+
+<para>
+  (Yeah, aren't backslash quotation marks a wonder in C-like languages?)
+</para>
+
+<para>
+  You may assume that the input is in correct CSV format.  (So you don't need
+  to deal with strings that have an odd number of quotation marks.)   Of course,
+  those who want to do an exceptional job probably deal with erroneous input in
+  a sensible way, reporting where the error occurred.
+</para>
+
+</section> <!-- playful-parsing-D -->
+
+<section id="playful-parsing-E"><title>Part E: A Simple Calculator</title>
+
+<para>
+  As you know, one of the primary uses of computers is to compute
+  with numbers - that is, to calculate.  A typical computer calculator
+  needs to read and parse textual input, do the computation, and return
+  a result.  In this part of the assignment, we will simulate that
+  behavior.
+</para>
+
+<para>
+  Write a method, <methodname>Calculator.eval0</methodname>, that takes
+  as input a string that represents an arithmetic expression over the
+  integers and returns the result of evaluating that expression (as a
+  <code>BigInteger</code>).  You may assume that numbers and operators
+  are separated by spaces.  You should use the <quote>naive</quote>
+  approach to calculation: Do operations in the order they appear,
+  rather than paying attention to precedence.  You should support the
+  operations +, -, *, /, and ^ (exponentation).  For example,
+</para>
+
+<programlisting>
+assertEquals(BigInteger.valueOf(0), Calculator.eval0("0"));
+assertEquals(BigInteger.valueOf(2), Calculator.eval0("1 + 1"));
+assertEquals(BigInteger.valueOf(4), Calculator.eval0("1 + 2 + 1"));
+assertEquals(BigInteger.valueOf(9), Calculator.eval0("1 + 2 * 3"));
+</programlisting>
+
+<para>
+  Your calculator must support arbitrarily large integers.  For example,
+  you should get the correct answer for <code>Calculator.eval0
+  ("2 ^ 64")</code>.  You can achieve this result by using
+  <code>java.lang.BigInteger</code> for your data values.
+</para>
+
+</section> <!-- playful-parsing-E -->
+
+<section id="playful-parsing-F"><title>Part F: A Fractional Calculator</title>
+
+<para>
+  Write a method, <methodname>Calculator.eval1</methodname>, that takes
+  as input a string that represents an arithmetic expression over 
+  fractions and returns the result of evaluating that expression (as a
+  <code>Fraction</code>).  You may assume that numbers and operators
+  are separated by spaces.  You should use the <quote>naive</quote>
+  approach to calculation: Do operations in the order they appear,
+  rather than paying attention to precedence.  You should support the
+  operations +, -, *, /, and ^ (exponentation).  
+</para>
+
+</section> <!-- playful-parsing-F -->
+
+</section> <!-- id="playful-parsing-assignment" -->
+
+<section id="playful-parsing-citations"><title>Citations</title>
+
+<para>
+  The string segmentation problems stem from a laboratory on strings
+  that I wrote in the distant past.
+</para>
+
+<para>
+  The first two fraction problems were inspired by the lab on fractions.
+</para>
+
+<para>
+  I've assigned variants of the calculator problems over the years.  
+  The first is copied directly form an assignment given in a previous
+  semester.  The second is new (at least in the current form), although
+  the idea is not.
+</para>
+
+</section> <!-- citations -->
+
+</section> <!-- id="playful-parsing" -->
